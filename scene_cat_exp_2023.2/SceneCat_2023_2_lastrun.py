@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on Fri Apr  5 13:34:13 2024
+    on Fri Apr  5 18:43:46 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -66,7 +66,7 @@ time=random.uniform(1,2)
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # Store info about the experiment session
 psychopyVersion = '2023.2.3'
-expName = 'V_1_memo_end'  # from the Builder filename that created this script
+expName = 'SceneCat_2023_2'  # from the Builder filename that created this script
 expInfo = {
     'participant': '',
     'Alter': '',
@@ -137,7 +137,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/teresaberther/Psychologie/AE_Busch/Niko/Memorability_Exp_V2/SceneCat_2023_2_lastrun.py',
+        originPath='/Users/teresaberther/Psychologie/AE_Busch/scene_cat_exp/scene_cat_exp_2023.2/SceneCat_2023_2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -724,6 +724,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=-4.0);
     kitchen_picture_resp = keyboard.Keyboard()
     
+    # --- Initialize components for Routine "kitchen_a_memo_instr" ---
+    kitchen_a_memo_instr_text = visual.TextStim(win=win, name='kitchen_a_memo_instr_text',
+        text='Memotest fängt an, Start mit LEERTASTE',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    kitchen_a_memo_instr_resp = keyboard.Keyboard()
+    
     # --- Initialize components for Routine "memo_fix_isi" ---
     memo_fix_pic = visual.ImageStim(
         win=win,
@@ -845,6 +855,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-4.0);
     kitchen_picture_resp = keyboard.Keyboard()
+    
+    # --- Initialize components for Routine "kitchen_b_memo_instr" ---
+    kitchen_b_memo_instr_text = visual.TextStim(win=win, name='kitchen_b_memo_instr_text',
+        text='Memotest fängt an, Start mit LEERTASTE',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    kitchen_b_memo_instr_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "memo_fix_isi" ---
     memo_fix_pic = visual.ImageStim(
@@ -968,6 +988,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-5.0);
     
+    # --- Initialize components for Routine "living_a_memotest_instr" ---
+    living_a_memo_instr_text = visual.TextStim(win=win, name='living_a_memo_instr_text',
+        text='Memotest fängt an, Start mit LEERTASTE',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    living_a_memo_instr_resp = keyboard.Keyboard()
+    
     # --- Initialize components for Routine "memo_fix_isi" ---
     memo_fix_pic = visual.ImageStim(
         win=win,
@@ -1089,6 +1119,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
+    
+    # --- Initialize components for Routine "living_b_memotest_instr" ---
+    living_b_memo_instr_text = visual.TextStim(win=win, name='living_b_memo_instr_text',
+        text='Memotest fängt an, Start mit LEERTASTE',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    living_b_memo_instr_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "memo_fix_isi" ---
     memo_fix_pic = visual.ImageStim(
@@ -1212,6 +1252,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-5.0);
     
+    # --- Initialize components for Routine "bed_a_memotest_instr" ---
+    bed_a_memo_instr_text = visual.TextStim(win=win, name='bed_a_memo_instr_text',
+        text='Memotest fängt an, Start mit LEERTASTE',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    bed_a_memo_instr_resp = keyboard.Keyboard()
+    
     # --- Initialize components for Routine "memo_fix_isi" ---
     memo_fix_pic = visual.ImageStim(
         win=win,
@@ -1334,6 +1384,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-5.0);
     
+    # --- Initialize components for Routine "bed_b_memotest_instr" ---
+    bed_b_memo_instr_text = visual.TextStim(win=win, name='bed_b_memo_instr_text',
+        text='Memotest fängt an, Start mit LEERTASTE',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    bed_b_memo_instr_resp = keyboard.Keyboard()
+    
     # --- Initialize components for Routine "memo_fix_isi" ---
     memo_fix_pic = visual.ImageStim(
         win=win,
@@ -1402,7 +1462,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "intro" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('intro.started', globalClock.getTime())
     intro_resp.keys = []
     intro_resp.rt = []
     _intro_resp_allKeys = []
@@ -1499,14 +1558,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in introComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('intro.stopped', globalClock.getTime())
     # the Routine "intro" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "consent" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('consent.started', globalClock.getTime())
     consent_resp.keys = []
     consent_resp.rt = []
     _consent_resp_allKeys = []
@@ -1543,8 +1600,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             consent_text.tStart = t  # local t and not account for scr refresh
             consent_text.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(consent_text, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'consent_text.started')
             # update status
             consent_text.status = STARTED
             consent_text.setAutoDraw(True)
@@ -1561,8 +1616,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # keep track of stop time/frame for later
                 consent_text.tStop = t  # not accounting for scr refresh
                 consent_text.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'consent_text.stopped')
                 # update status
                 consent_text.status = FINISHED
                 consent_text.setAutoDraw(False)
@@ -1636,14 +1689,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in consentComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('consent.stopped', globalClock.getTime())
     # the Routine "consent" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "data_safety" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('data_safety.started', globalClock.getTime())
     data_safety_resp.keys = []
     data_safety_resp.rt = []
     _data_safety_resp_allKeys = []
@@ -1769,14 +1820,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in data_safetyComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('data_safety.stopped', globalClock.getTime())
     # the Routine "data_safety" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "data_safety_2" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('data_safety_2.started', globalClock.getTime())
     data_safety_2_resp.keys = []
     data_safety_2_resp.rt = []
     _data_safety_2_resp_allKeys = []
@@ -1902,14 +1951,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in data_safety_2Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('data_safety_2.stopped', globalClock.getTime())
     # the Routine "data_safety_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "instructions_cat" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('instructions_cat.started', globalClock.getTime())
     instructions_cat_resp.keys = []
     instructions_cat_resp.rt = []
     _instructions_cat_resp_allKeys = []
@@ -2035,14 +2082,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in instructions_catComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('instructions_cat.stopped', globalClock.getTime())
     # the Routine "instructions_cat" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "category_test_text" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('category_test_text.started', globalClock.getTime())
     # keep track of which components have finished
     category_test_textComponents = [category_test_word]
     for thisComponent in category_test_textComponents:
@@ -2121,7 +2166,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in category_test_textComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('category_test_text.stopped', globalClock.getTime())
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -2160,7 +2204,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "fix_categorization_training" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('fix_categorization_training.started', globalClock.getTime())
         # Run 'Begin Routine' code from random_isi_code_cat_training
         # Random Zeit ziehen für Fixationskreuzpräsentation
         import random
@@ -2330,14 +2373,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in fix_categorization_trainingComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('fix_categorization_training.stopped', globalClock.getTime())
         # the Routine "fix_categorization_training" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
         # --- Prepare to start Routine "categorization_training" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('categorization_training.started', globalClock.getTime())
         cat_training_stim.setImage(stimulus)
         cat_training_key.keys = []
         cat_training_key.rt = []
@@ -2523,7 +2564,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in categorization_trainingComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('categorization_training.stopped', globalClock.getTime())
         # check responses
         if cat_training_key.keys in ['', [], None]:  # No response was made
             cat_training_key.keys = None
@@ -2544,7 +2584,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "cat_training_feedback" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('cat_training_feedback.started', globalClock.getTime())
         # Run 'Begin Routine' code from cat_train_feedb_code
         if cat_training_key.corr == 1:
             cat_training_feedb_eval = "korrekt"
@@ -2716,7 +2755,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in cat_training_feedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('cat_training_feedback.stopped', globalClock.getTime())
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -2733,7 +2771,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "instruction_memo" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('instruction_memo.started', globalClock.getTime())
     instructions_memo_resp.keys = []
     instructions_memo_resp.rt = []
     _instructions_memo_resp_allKeys = []
@@ -2830,7 +2867,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in instruction_memoComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('instruction_memo.stopped', globalClock.getTime())
     # the Routine "instruction_memo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2866,7 +2902,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "memo_fix_isi" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memo_fix_isi.started', globalClock.getTime())
         # keep track of which components have finished
         memo_fix_isiComponents = [memo_fix_pic]
         for thisComponent in memo_fix_isiComponents:
@@ -2945,14 +2980,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_fix_isiComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
         # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
         # --- Prepare to start Routine "memo_training" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memo_training.started', globalClock.getTime())
         memo_training_stim.setImage(stimulus)
         memo_training_slider.reset()
         # keep track of which components have finished
@@ -3073,7 +3106,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_trainingComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memo_training.stopped', globalClock.getTime())
         memo_training_trials.addData('memo_training_slider.response', memo_training_slider.getRating())
         memo_training_trials.addData('memo_training_slider.rt', memo_training_slider.getRT())
         # the Routine "memo_training" was not non-slip safe, so reset the non-slip timer
@@ -3082,7 +3114,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "memo_training_feedback" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memo_training_feedback.started', globalClock.getTime())
         # Run 'Begin Routine' code from memo_train_feedb_code
         if 'alt' in memo_training_slider.getRating(): 
             rating = 1
@@ -3172,7 +3203,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_training_feedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memo_training_feedback.stopped', globalClock.getTime())
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -3189,7 +3219,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "start_categorization" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('start_categorization.started', globalClock.getTime())
     start_cat_resp.keys = []
     start_cat_resp.rt = []
     _start_cat_resp_allKeys = []
@@ -3286,7 +3315,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in start_categorizationComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('start_categorization.stopped', globalClock.getTime())
     # the Routine "start_categorization" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -3351,9 +3379,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "kitchen_a" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_a.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
-            continueRoutine = continueRoutine and not (kitchen_a_categorization_trial.thisN > 0)
+            continueRoutine = continueRoutine and not (kitchen_a_categorization_trials.thisN > 0)
             kitchen_a_resp.keys = []
             kitchen_a_resp.rt = []
             _kitchen_a_resp_allKeys = []
@@ -3487,14 +3514,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_aComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_a.stopped', globalClock.getTime())
             # the Routine "kitchen_a" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from random_isi_kitchen_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -3664,14 +3689,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_random_isi.stopped', globalClock.getTime())
             # the Routine "kitchen_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_picture.started', globalClock.getTime())
             kitchen_image.setImage(stimulus)
             kitchen_picture_resp.keys = []
             kitchen_picture_resp.rt = []
@@ -3859,7 +3882,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_picture.stopped', globalClock.getTime())
             # check responses
             if kitchen_picture_resp.keys in ['', [], None]:  # No response was made
                 kitchen_picture_resp.keys = None
@@ -3913,10 +3935,113 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisKitchen_a_memotest:
                     globals()[paramName] = thisKitchen_a_memotest[paramName]
             
+            # --- Prepare to start Routine "kitchen_a_memo_instr" ---
+            continueRoutine = True
+            # update component parameters for each repeat
+            # skip this Routine if its 'Skip if' condition is True
+            continueRoutine = continueRoutine and not (kitchen_a_memotest.thisN > 0)
+            kitchen_a_memo_instr_resp.keys = []
+            kitchen_a_memo_instr_resp.rt = []
+            _kitchen_a_memo_instr_resp_allKeys = []
+            # keep track of which components have finished
+            kitchen_a_memo_instrComponents = [kitchen_a_memo_instr_text, kitchen_a_memo_instr_resp]
+            for thisComponent in kitchen_a_memo_instrComponents:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "kitchen_a_memo_instr" ---
+            routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *kitchen_a_memo_instr_text* updates
+                
+                # if kitchen_a_memo_instr_text is starting this frame...
+                if kitchen_a_memo_instr_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    kitchen_a_memo_instr_text.frameNStart = frameN  # exact frame index
+                    kitchen_a_memo_instr_text.tStart = t  # local t and not account for scr refresh
+                    kitchen_a_memo_instr_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(kitchen_a_memo_instr_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    kitchen_a_memo_instr_text.status = STARTED
+                    kitchen_a_memo_instr_text.setAutoDraw(True)
+                
+                # if kitchen_a_memo_instr_text is active this frame...
+                if kitchen_a_memo_instr_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *kitchen_a_memo_instr_resp* updates
+                waitOnFlip = False
+                
+                # if kitchen_a_memo_instr_resp is starting this frame...
+                if kitchen_a_memo_instr_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    kitchen_a_memo_instr_resp.frameNStart = frameN  # exact frame index
+                    kitchen_a_memo_instr_resp.tStart = t  # local t and not account for scr refresh
+                    kitchen_a_memo_instr_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(kitchen_a_memo_instr_resp, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    kitchen_a_memo_instr_resp.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(kitchen_a_memo_instr_resp.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(kitchen_a_memo_instr_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if kitchen_a_memo_instr_resp.status == STARTED and not waitOnFlip:
+                    theseKeys = kitchen_a_memo_instr_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _kitchen_a_memo_instr_resp_allKeys.extend(theseKeys)
+                    if len(_kitchen_a_memo_instr_resp_allKeys):
+                        kitchen_a_memo_instr_resp.keys = _kitchen_a_memo_instr_resp_allKeys[-1].name  # just the last key pressed
+                        kitchen_a_memo_instr_resp.rt = _kitchen_a_memo_instr_resp_allKeys[-1].rt
+                        kitchen_a_memo_instr_resp.duration = _kitchen_a_memo_instr_resp_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, inputs=inputs, win=win)
+                    return
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in kitchen_a_memo_instrComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "kitchen_a_memo_instr" ---
+            for thisComponent in kitchen_a_memo_instrComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # the Routine "kitchen_a_memo_instr" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memo_fix_isi.started', globalClock.getTime())
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -3995,14 +4120,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memo_fix_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
             # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "memotest_task" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memotest_task.started', globalClock.getTime())
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
             # keep track of which components have finished
@@ -4094,7 +4217,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memotest_task.stopped', globalClock.getTime())
             kitchen_a_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
             kitchen_a_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -4139,7 +4261,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "kitchen_b" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_b.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
             continueRoutine = continueRoutine and not (kitchen_b_categorization_trials.thisN > 0)
             kitchen_b_resp.keys = []
@@ -4275,14 +4396,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_bComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_b.stopped', globalClock.getTime())
             # the Routine "kitchen_b" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from random_isi_kitchen_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -4452,14 +4571,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_random_isi.stopped', globalClock.getTime())
             # the Routine "kitchen_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_picture.started', globalClock.getTime())
             kitchen_image.setImage(stimulus)
             kitchen_picture_resp.keys = []
             kitchen_picture_resp.rt = []
@@ -4647,7 +4764,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_picture.stopped', globalClock.getTime())
             # check responses
             if kitchen_picture_resp.keys in ['', [], None]:  # No response was made
                 kitchen_picture_resp.keys = None
@@ -4701,10 +4817,113 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisKitchen_b_memotest:
                     globals()[paramName] = thisKitchen_b_memotest[paramName]
             
+            # --- Prepare to start Routine "kitchen_b_memo_instr" ---
+            continueRoutine = True
+            # update component parameters for each repeat
+            # skip this Routine if its 'Skip if' condition is True
+            continueRoutine = continueRoutine and not (kitchen_b_memotest.thisN > 0)
+            kitchen_b_memo_instr_resp.keys = []
+            kitchen_b_memo_instr_resp.rt = []
+            _kitchen_b_memo_instr_resp_allKeys = []
+            # keep track of which components have finished
+            kitchen_b_memo_instrComponents = [kitchen_b_memo_instr_text, kitchen_b_memo_instr_resp]
+            for thisComponent in kitchen_b_memo_instrComponents:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "kitchen_b_memo_instr" ---
+            routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *kitchen_b_memo_instr_text* updates
+                
+                # if kitchen_b_memo_instr_text is starting this frame...
+                if kitchen_b_memo_instr_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    kitchen_b_memo_instr_text.frameNStart = frameN  # exact frame index
+                    kitchen_b_memo_instr_text.tStart = t  # local t and not account for scr refresh
+                    kitchen_b_memo_instr_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(kitchen_b_memo_instr_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    kitchen_b_memo_instr_text.status = STARTED
+                    kitchen_b_memo_instr_text.setAutoDraw(True)
+                
+                # if kitchen_b_memo_instr_text is active this frame...
+                if kitchen_b_memo_instr_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *kitchen_b_memo_instr_resp* updates
+                waitOnFlip = False
+                
+                # if kitchen_b_memo_instr_resp is starting this frame...
+                if kitchen_b_memo_instr_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    kitchen_b_memo_instr_resp.frameNStart = frameN  # exact frame index
+                    kitchen_b_memo_instr_resp.tStart = t  # local t and not account for scr refresh
+                    kitchen_b_memo_instr_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(kitchen_b_memo_instr_resp, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    kitchen_b_memo_instr_resp.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(kitchen_b_memo_instr_resp.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(kitchen_b_memo_instr_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if kitchen_b_memo_instr_resp.status == STARTED and not waitOnFlip:
+                    theseKeys = kitchen_b_memo_instr_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _kitchen_b_memo_instr_resp_allKeys.extend(theseKeys)
+                    if len(_kitchen_b_memo_instr_resp_allKeys):
+                        kitchen_b_memo_instr_resp.keys = _kitchen_b_memo_instr_resp_allKeys[-1].name  # just the last key pressed
+                        kitchen_b_memo_instr_resp.rt = _kitchen_b_memo_instr_resp_allKeys[-1].rt
+                        kitchen_b_memo_instr_resp.duration = _kitchen_b_memo_instr_resp_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, inputs=inputs, win=win)
+                    return
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in kitchen_b_memo_instrComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "kitchen_b_memo_instr" ---
+            for thisComponent in kitchen_b_memo_instrComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # the Routine "kitchen_b_memo_instr" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memo_fix_isi.started', globalClock.getTime())
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -4783,14 +5002,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memo_fix_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
             # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "memotest_task" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memotest_task.started', globalClock.getTime())
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
             # keep track of which components have finished
@@ -4882,7 +5099,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memotest_task.stopped', globalClock.getTime())
             kitchen_b_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
             kitchen_b_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -4927,9 +5143,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "living_a" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_a.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
-            continueRoutine = continueRoutine and not (living_a_categorization_trials > 0)
+            continueRoutine = continueRoutine and not (living_a_categorization_trials.thisN > 0)
             living_a_resp.keys = []
             living_a_resp.rt = []
             _living_a_resp_allKeys = []
@@ -5067,14 +5282,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_aComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_a.stopped', globalClock.getTime())
             # the Routine "living_a" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from living_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -5244,14 +5457,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_random_isi.stopped', globalClock.getTime())
             # the Routine "living_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_picture.started', globalClock.getTime())
             living_picture_image.setImage(stimulus)
             living_picture_resp.keys = []
             living_picture_resp.rt = []
@@ -5441,7 +5652,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_picture.stopped', globalClock.getTime())
             # check responses
             if living_picture_resp.keys in ['', [], None]:  # No response was made
                 living_picture_resp.keys = None
@@ -5495,10 +5705,113 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisLiving_a_memotest:
                     globals()[paramName] = thisLiving_a_memotest[paramName]
             
+            # --- Prepare to start Routine "living_a_memotest_instr" ---
+            continueRoutine = True
+            # update component parameters for each repeat
+            # skip this Routine if its 'Skip if' condition is True
+            continueRoutine = continueRoutine and not (living_a_memotest.thisN > 0)
+            living_a_memo_instr_resp.keys = []
+            living_a_memo_instr_resp.rt = []
+            _living_a_memo_instr_resp_allKeys = []
+            # keep track of which components have finished
+            living_a_memotest_instrComponents = [living_a_memo_instr_text, living_a_memo_instr_resp]
+            for thisComponent in living_a_memotest_instrComponents:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "living_a_memotest_instr" ---
+            routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *living_a_memo_instr_text* updates
+                
+                # if living_a_memo_instr_text is starting this frame...
+                if living_a_memo_instr_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_a_memo_instr_text.frameNStart = frameN  # exact frame index
+                    living_a_memo_instr_text.tStart = t  # local t and not account for scr refresh
+                    living_a_memo_instr_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_a_memo_instr_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_a_memo_instr_text.status = STARTED
+                    living_a_memo_instr_text.setAutoDraw(True)
+                
+                # if living_a_memo_instr_text is active this frame...
+                if living_a_memo_instr_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *living_a_memo_instr_resp* updates
+                waitOnFlip = False
+                
+                # if living_a_memo_instr_resp is starting this frame...
+                if living_a_memo_instr_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_a_memo_instr_resp.frameNStart = frameN  # exact frame index
+                    living_a_memo_instr_resp.tStart = t  # local t and not account for scr refresh
+                    living_a_memo_instr_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_a_memo_instr_resp, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_a_memo_instr_resp.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(living_a_memo_instr_resp.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(living_a_memo_instr_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if living_a_memo_instr_resp.status == STARTED and not waitOnFlip:
+                    theseKeys = living_a_memo_instr_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _living_a_memo_instr_resp_allKeys.extend(theseKeys)
+                    if len(_living_a_memo_instr_resp_allKeys):
+                        living_a_memo_instr_resp.keys = _living_a_memo_instr_resp_allKeys[-1].name  # just the last key pressed
+                        living_a_memo_instr_resp.rt = _living_a_memo_instr_resp_allKeys[-1].rt
+                        living_a_memo_instr_resp.duration = _living_a_memo_instr_resp_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, inputs=inputs, win=win)
+                    return
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in living_a_memotest_instrComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "living_a_memotest_instr" ---
+            for thisComponent in living_a_memotest_instrComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # the Routine "living_a_memotest_instr" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memo_fix_isi.started', globalClock.getTime())
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -5577,14 +5890,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memo_fix_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
             # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "memotest_task" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memotest_task.started', globalClock.getTime())
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
             # keep track of which components have finished
@@ -5676,7 +5987,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memotest_task.stopped', globalClock.getTime())
             living_a_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
             living_a_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -5721,9 +6031,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "living_b" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_b.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
-            continueRoutine = continueRoutine and not (living_b_categorization_trials.thisN < 0)
+            continueRoutine = continueRoutine and not (living_b_categorization_trials.thisN > 0)
             living_b_resp.keys = []
             living_b_resp.rt = []
             _living_b_resp_allKeys = []
@@ -5861,14 +6170,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_bComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_b.stopped', globalClock.getTime())
             # the Routine "living_b" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from living_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -6038,14 +6345,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_random_isi.stopped', globalClock.getTime())
             # the Routine "living_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_picture.started', globalClock.getTime())
             living_picture_image.setImage(stimulus)
             living_picture_resp.keys = []
             living_picture_resp.rt = []
@@ -6235,7 +6540,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_picture.stopped', globalClock.getTime())
             # check responses
             if living_picture_resp.keys in ['', [], None]:  # No response was made
                 living_picture_resp.keys = None
@@ -6261,7 +6565,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         
         # set up handler to look after randomisation of conditions etc
-        living_b_memotest = data.TrialHandler(nReps=1.0, method='sequential', 
+        living_b_memotest = data.TrialHandler(nReps=living_room_2, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_living_b),
             seed=None, name='living_b_memotest')
@@ -6289,10 +6593,113 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisLiving_b_memotest:
                     globals()[paramName] = thisLiving_b_memotest[paramName]
             
+            # --- Prepare to start Routine "living_b_memotest_instr" ---
+            continueRoutine = True
+            # update component parameters for each repeat
+            # skip this Routine if its 'Skip if' condition is True
+            continueRoutine = continueRoutine and not (living_b_memotest.thisN > 0)
+            living_b_memo_instr_resp.keys = []
+            living_b_memo_instr_resp.rt = []
+            _living_b_memo_instr_resp_allKeys = []
+            # keep track of which components have finished
+            living_b_memotest_instrComponents = [living_b_memo_instr_text, living_b_memo_instr_resp]
+            for thisComponent in living_b_memotest_instrComponents:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "living_b_memotest_instr" ---
+            routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *living_b_memo_instr_text* updates
+                
+                # if living_b_memo_instr_text is starting this frame...
+                if living_b_memo_instr_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_b_memo_instr_text.frameNStart = frameN  # exact frame index
+                    living_b_memo_instr_text.tStart = t  # local t and not account for scr refresh
+                    living_b_memo_instr_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_b_memo_instr_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_b_memo_instr_text.status = STARTED
+                    living_b_memo_instr_text.setAutoDraw(True)
+                
+                # if living_b_memo_instr_text is active this frame...
+                if living_b_memo_instr_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *living_b_memo_instr_resp* updates
+                waitOnFlip = False
+                
+                # if living_b_memo_instr_resp is starting this frame...
+                if living_b_memo_instr_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_b_memo_instr_resp.frameNStart = frameN  # exact frame index
+                    living_b_memo_instr_resp.tStart = t  # local t and not account for scr refresh
+                    living_b_memo_instr_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_b_memo_instr_resp, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_b_memo_instr_resp.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(living_b_memo_instr_resp.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(living_b_memo_instr_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if living_b_memo_instr_resp.status == STARTED and not waitOnFlip:
+                    theseKeys = living_b_memo_instr_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _living_b_memo_instr_resp_allKeys.extend(theseKeys)
+                    if len(_living_b_memo_instr_resp_allKeys):
+                        living_b_memo_instr_resp.keys = _living_b_memo_instr_resp_allKeys[-1].name  # just the last key pressed
+                        living_b_memo_instr_resp.rt = _living_b_memo_instr_resp_allKeys[-1].rt
+                        living_b_memo_instr_resp.duration = _living_b_memo_instr_resp_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, inputs=inputs, win=win)
+                    return
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in living_b_memotest_instrComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "living_b_memotest_instr" ---
+            for thisComponent in living_b_memotest_instrComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # the Routine "living_b_memotest_instr" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memo_fix_isi.started', globalClock.getTime())
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -6371,14 +6778,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memo_fix_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
             # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "memotest_task" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memotest_task.started', globalClock.getTime())
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
             # keep track of which components have finished
@@ -6470,7 +6875,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memotest_task.stopped', globalClock.getTime())
             living_b_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
             living_b_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -6480,7 +6884,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed 1.0 repeats of 'living_b_memotest'
+        # completed living_room_2 repeats of 'living_b_memotest'
         
         
         # set up handler to look after randomisation of conditions etc
@@ -6515,7 +6919,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "sleep_a" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_a.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
             continueRoutine = continueRoutine and not (bed_a_categorization_trials.thisN > 0)
             bed_a_resp.keys = []
@@ -6655,14 +7058,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_aComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_a.stopped', globalClock.getTime())
             # the Routine "sleep_a" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from bed_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -6832,14 +7233,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_random_isi.stopped', globalClock.getTime())
             # the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_picture.started', globalClock.getTime())
             bed_picture_image.setImage(stimulus)
             bed_picture_resp.keys = []
             bed_picture_resp.rt = []
@@ -7029,7 +7428,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_picture.stopped', globalClock.getTime())
             # check responses
             if bed_picture_resp.keys in ['', [], None]:  # No response was made
                 bed_picture_resp.keys = None
@@ -7055,7 +7453,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         
         # set up handler to look after randomisation of conditions etc
-        bed_a_memotest = data.TrialHandler(nReps=1.0, method='random', 
+        bed_a_memotest = data.TrialHandler(nReps=bedroom_1, method='random', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_sleep_a),
             seed=None, name='bed_a_memotest')
@@ -7083,10 +7481,113 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisBed_a_memotest:
                     globals()[paramName] = thisBed_a_memotest[paramName]
             
+            # --- Prepare to start Routine "bed_a_memotest_instr" ---
+            continueRoutine = True
+            # update component parameters for each repeat
+            # skip this Routine if its 'Skip if' condition is True
+            continueRoutine = continueRoutine and not (bed_a_memotest.thisN > 0)
+            bed_a_memo_instr_resp.keys = []
+            bed_a_memo_instr_resp.rt = []
+            _bed_a_memo_instr_resp_allKeys = []
+            # keep track of which components have finished
+            bed_a_memotest_instrComponents = [bed_a_memo_instr_text, bed_a_memo_instr_resp]
+            for thisComponent in bed_a_memotest_instrComponents:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "bed_a_memotest_instr" ---
+            routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *bed_a_memo_instr_text* updates
+                
+                # if bed_a_memo_instr_text is starting this frame...
+                if bed_a_memo_instr_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_a_memo_instr_text.frameNStart = frameN  # exact frame index
+                    bed_a_memo_instr_text.tStart = t  # local t and not account for scr refresh
+                    bed_a_memo_instr_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_a_memo_instr_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_a_memo_instr_text.status = STARTED
+                    bed_a_memo_instr_text.setAutoDraw(True)
+                
+                # if bed_a_memo_instr_text is active this frame...
+                if bed_a_memo_instr_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *bed_a_memo_instr_resp* updates
+                waitOnFlip = False
+                
+                # if bed_a_memo_instr_resp is starting this frame...
+                if bed_a_memo_instr_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_a_memo_instr_resp.frameNStart = frameN  # exact frame index
+                    bed_a_memo_instr_resp.tStart = t  # local t and not account for scr refresh
+                    bed_a_memo_instr_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_a_memo_instr_resp, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_a_memo_instr_resp.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(bed_a_memo_instr_resp.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(bed_a_memo_instr_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if bed_a_memo_instr_resp.status == STARTED and not waitOnFlip:
+                    theseKeys = bed_a_memo_instr_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _bed_a_memo_instr_resp_allKeys.extend(theseKeys)
+                    if len(_bed_a_memo_instr_resp_allKeys):
+                        bed_a_memo_instr_resp.keys = _bed_a_memo_instr_resp_allKeys[-1].name  # just the last key pressed
+                        bed_a_memo_instr_resp.rt = _bed_a_memo_instr_resp_allKeys[-1].rt
+                        bed_a_memo_instr_resp.duration = _bed_a_memo_instr_resp_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, inputs=inputs, win=win)
+                    return
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in bed_a_memotest_instrComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "bed_a_memotest_instr" ---
+            for thisComponent in bed_a_memotest_instrComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # the Routine "bed_a_memotest_instr" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memo_fix_isi.started', globalClock.getTime())
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -7165,14 +7666,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memo_fix_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
             # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "memotest_task" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memotest_task.started', globalClock.getTime())
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
             # keep track of which components have finished
@@ -7264,7 +7763,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memotest_task.stopped', globalClock.getTime())
             bed_a_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
             bed_a_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -7274,7 +7772,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed 1.0 repeats of 'bed_a_memotest'
+        # completed bedroom_1 repeats of 'bed_a_memotest'
         
         
         # set up handler to look after randomisation of conditions etc
@@ -7309,7 +7807,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "sleep_b" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_b.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
             continueRoutine = continueRoutine and not (bed_b_categorization_trials.thisN > 0)
             bed_b_resp.keys = []
@@ -7449,14 +7946,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_bComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_b.stopped', globalClock.getTime())
             # the Routine "sleep_b" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from bed_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -7626,14 +8121,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_random_isi.stopped', globalClock.getTime())
             # the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_picture.started', globalClock.getTime())
             bed_picture_image.setImage(stimulus)
             bed_picture_resp.keys = []
             bed_picture_resp.rt = []
@@ -7823,7 +8316,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_picture.stopped', globalClock.getTime())
             # check responses
             if bed_picture_resp.keys in ['', [], None]:  # No response was made
                 bed_picture_resp.keys = None
@@ -7849,7 +8341,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         
         # set up handler to look after randomisation of conditions etc
-        bed_b_memotest = data.TrialHandler(nReps=1.0, method='sequential', 
+        bed_b_memotest = data.TrialHandler(nReps=bedroom_2, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_sleep_b),
             seed=None, name='bed_b_memotest')
@@ -7877,10 +8369,113 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisBed_b_memotest:
                     globals()[paramName] = thisBed_b_memotest[paramName]
             
+            # --- Prepare to start Routine "bed_b_memotest_instr" ---
+            continueRoutine = True
+            # update component parameters for each repeat
+            # skip this Routine if its 'Skip if' condition is True
+            continueRoutine = continueRoutine and not (bed_b_memotest.thisN > 0)
+            bed_b_memo_instr_resp.keys = []
+            bed_b_memo_instr_resp.rt = []
+            _bed_b_memo_instr_resp_allKeys = []
+            # keep track of which components have finished
+            bed_b_memotest_instrComponents = [bed_b_memo_instr_text, bed_b_memo_instr_resp]
+            for thisComponent in bed_b_memotest_instrComponents:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "bed_b_memotest_instr" ---
+            routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *bed_b_memo_instr_text* updates
+                
+                # if bed_b_memo_instr_text is starting this frame...
+                if bed_b_memo_instr_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_b_memo_instr_text.frameNStart = frameN  # exact frame index
+                    bed_b_memo_instr_text.tStart = t  # local t and not account for scr refresh
+                    bed_b_memo_instr_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_b_memo_instr_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_b_memo_instr_text.status = STARTED
+                    bed_b_memo_instr_text.setAutoDraw(True)
+                
+                # if bed_b_memo_instr_text is active this frame...
+                if bed_b_memo_instr_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *bed_b_memo_instr_resp* updates
+                waitOnFlip = False
+                
+                # if bed_b_memo_instr_resp is starting this frame...
+                if bed_b_memo_instr_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_b_memo_instr_resp.frameNStart = frameN  # exact frame index
+                    bed_b_memo_instr_resp.tStart = t  # local t and not account for scr refresh
+                    bed_b_memo_instr_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_b_memo_instr_resp, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_b_memo_instr_resp.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(bed_b_memo_instr_resp.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(bed_b_memo_instr_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if bed_b_memo_instr_resp.status == STARTED and not waitOnFlip:
+                    theseKeys = bed_b_memo_instr_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _bed_b_memo_instr_resp_allKeys.extend(theseKeys)
+                    if len(_bed_b_memo_instr_resp_allKeys):
+                        bed_b_memo_instr_resp.keys = _bed_b_memo_instr_resp_allKeys[-1].name  # just the last key pressed
+                        bed_b_memo_instr_resp.rt = _bed_b_memo_instr_resp_allKeys[-1].rt
+                        bed_b_memo_instr_resp.duration = _bed_b_memo_instr_resp_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, inputs=inputs, win=win)
+                    return
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in bed_b_memotest_instrComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "bed_b_memotest_instr" ---
+            for thisComponent in bed_b_memotest_instrComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # the Routine "bed_b_memotest_instr" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memo_fix_isi.started', globalClock.getTime())
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -7959,14 +8554,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memo_fix_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
             # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "memotest_task" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('memotest_task.started', globalClock.getTime())
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
             # keep track of which components have finished
@@ -8058,7 +8651,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('memotest_task.stopped', globalClock.getTime())
             bed_b_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
             bed_b_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -8068,13 +8660,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed 1.0 repeats of 'bed_b_memotest'
+        # completed bedroom_2 repeats of 'bed_b_memotest'
         
         
         # --- Prepare to start Routine "middle_break" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('middle_break.started', globalClock.getTime())
         break_resp.keys = []
         break_resp.rt = []
         _break_resp_allKeys = []
@@ -8171,7 +8762,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in middle_breakComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('middle_break.stopped', globalClock.getTime())
         # the Routine "middle_break" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -8185,7 +8775,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "end" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('end.started', globalClock.getTime())
     # Run 'Begin Routine' code from vpcode_code
     import random
     vpcode = random.randint(100000, 999999)
@@ -8304,7 +8893,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in endComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('end.stopped', globalClock.getTime())
     # Run 'End Routine' code from vpcode_code
     thisExp.addData('vpcode', vpcode)
     # the Routine "end" was not non-slip safe, so reset the non-slip timer
