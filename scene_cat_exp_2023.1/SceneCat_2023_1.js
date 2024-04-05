@@ -446,7 +446,7 @@ async function experimentInit() {
   data_safety_2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'data_safety_2_text',
-    text: '3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: r.michel@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\n',
+    text: '3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: niko.busch@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\n',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.028,  wrapWidth: undefined, ori: 0.0,
@@ -1436,7 +1436,6 @@ function introRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('intro.started', globalClock.getTime());
     intro_resp.keys = undefined;
     intro_resp.rt = undefined;
     _intro_resp_allKeys = [];
@@ -1530,7 +1529,6 @@ function introRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('intro.stopped', globalClock.getTime());
     intro_resp.stop();
     // the Routine "intro" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -1556,7 +1554,6 @@ function consentRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('consent.started', globalClock.getTime());
     consent_resp.keys = undefined;
     consent_resp.rt = undefined;
     _consent_resp_allKeys = [];
@@ -1600,7 +1597,7 @@ function consentRoutineEachFrame() {
     // start downloading resources specified by component resources_consent
     if (t >= 0 && resources_consent.status === PsychoJS.Status.NOT_STARTED) {
       console.log('register and start downloading resources specified by component resources_consent');
-      psychoJS._serverManager.prepareResources([conditions_sleep_b, conditions_sleep_a, conditions_living_b, conditions_living_a, conditions_kitchen_b, conditions_kitchen_a, conditions_memo_test, conditions_block_order, 'stimuli/asdfgh.jpg', 'stimuli/asdfghertghvgh.jpg', 'stimuli/asdfghjkjhg.jpg', 'stimuli/asdfghjkloelkjhg.jpg', 'stimuli/dfghjhgf.jpg', 'stimuli/erhvgh.jpg', 'stimuli/erthjnbvcfg.jpg', 'stimuli/fvbjgv.jpg', 'stimuli/gfdfghjgf.jpg', 'stimuli/gfvbnbg.jpg', 'stimuli/hhhh.jpg', 'stimuli/ihnbvcfgd.jpg', 'stimuli/ijnbgzuik.jpg', 'stimuli/img_0adz5.jpg', 'stimuli/img_0bah1.jpg', 'stimuli/img_0dege.jpg', 'stimuli/img_0eflx.jpg', 'stimuli/img_0ej0y.jpg', 'stimuli/img_0ekxv.jpg', 'stimuli/img_0ez70.jpg', 'stimuli/img_0j24m.jpg', 'stimuli/img_0jzz7.jpg', 'stimuli/img_0kmfo.jpg', 'stimuli/img_0kqc0.jpg', 'stimuli/img_0mhms.jpg', 'stimuli/img_0nckg.jpg', 'stimuli/img_0noah.jpg', 'stimuli/img_00ojb.jpg', 'stimuli/img_0pt3z.jpg', 'stimuli/img_0qndh.jpg', 'stimuli/img_0rbu4.jpg', 'stimuli/img_0si9u.jpg', 'stimuli/img_0t206.jpg', 'stimuli/img_0ugsg.jpg', 'stimuli/img_0uiwg.jpg', 'stimuli/img_0urnu.jpg', 'stimuli/img_0wv81.jpg', 'stimuli/img_0wzeq.jpg', 'stimuli/img_0x4kb.jpg', 'stimuli/img_0xwtf.jpg', 'stimuli/img_0zzo4.jpg', 'stimuli/img_1ao2d.jpg', 'stimuli/img_1b74f.jpg', 'stimuli/img_1ccse.jpg', 'stimuli/img_1cdqc.jpg', 'stimuli/img_1cm9s.jpg', 'stimuli/img_1d1l9.jpg', 'stimuli/img_1etij.jpg', 'stimuli/img_1fjfz.jpg', 'stimuli/img_1gr78.jpg', 'stimuli/img_1i6q5.jpg', 'stimuli/img_1iam9.jpg', 'stimuli/img_1ibl4.jpg', 'stimuli/img_1m0fn.jpg', 'stimuli/img_1n8b9.jpg', 'stimuli/img_1ojyk.jpg', 'stimuli/img_1plu7.jpg', 'stimuli/img_1q8pa.jpg', 'stimuli/img_1qa4t.jpg', 'stimuli/img_1ql54.jpg', 'stimuli/img_1qye0.jpg', 'stimuli/img_1r2ri.jpg', 'stimuli/img_1r08n.jpg', 'stimuli/img_1s8dl.jpg', 'stimuli/img_1scr4.jpg', 'stimuli/img_1twlp.jpg', 'stimuli/img_1uwbl.jpg', 'stimuli/img_1vq1v.jpg', 'stimuli/img_1vukv.jpg', 'stimuli/img_01w8b.jpg', 'stimuli/img_1wxyo.jpg', 'stimuli/img_1xdqe.jpg', 'stimuli/img_1yffi.jpg', 'stimuli/img_1zhz6.jpg', 'stimuli/img_02alv.jpg', 'stimuli/img_2b8fp.jpg', 'stimuli/img_2c9w1.jpg', 'stimuli/img_2cebl.jpg', 'stimuli/img_002cv.jpg', 'stimuli/img_2d000.jpg', 'stimuli/img_2d3c2.jpg', 'stimuli/img_2d82m.jpg', 'stimuli/img_2dnfy.jpg', 'stimuli/img_2ehfe.jpg', 'stimuli/img_2fe41.jpg', 'stimuli/img_2g129.jpg', 'stimuli/img_2i925.jpg', 'stimuli/img_2imrl.jpg', 'stimuli/img_2jgpo.jpg', 'stimuli/img_2js6m.jpg', 'stimuli/img_2lcxi.jpg', 'stimuli/img_2lqsf.jpg', 'stimuli/img_2na1o.jpg', 'stimuli/img_2pk6v.jpg', 'stimuli/img_2pnl2.jpg', 'stimuli/img_2qdvq.jpg', 'stimuli/img_2qhro.jpg', 'stimuli/img_2qkvm.jpg', 'stimuli/img_2rtxu.jpg', 'stimuli/img_2rwes.jpg', 'stimuli/img_2rylq.jpg', 'stimuli/img_2s780.jpg', 'stimuli/img_2vqdc.jpg', 'stimuli/img_2wkab.jpg', 'stimuli/img_2ygqr.jpg', 'stimuli/img_3a2r2.jpg', 'stimuli/img_3a6lc.jpg', 'stimuli/img_3ar9q.jpg', 'stimuli/img_3arcv.jpg', 'stimuli/img_3aueq.jpg', 'stimuli/img_3bp7b.jpg', 'stimuli/img_3bxjb.jpg', 'stimuli/img_3cp3s.jpg', 'stimuli/img_3eusg.jpg', 'stimuli/img_3fldm.jpg', 'stimuli/img_3gm8h.jpg', 'stimuli/img_3h4c9.jpg', 'stimuli/img_3hmlp.jpg', 'stimuli/img_3i80k.jpg', 'stimuli/img_3ialr.jpg', 'stimuli/img_3jnt7.jpg', 'stimuli/img_3kho5.jpg', 'stimuli/img_3lli8.jpg', 'stimuli/img_3lvof.jpg', 'stimuli/img_3m2h0.jpg', 'stimuli/img_3m61b.jpg', 'stimuli/img_3miwe.jpg', 'stimuli/img_3mp24.jpg', 'stimuli/img_3nswx.jpg', 'stimuli/img_3oyah.jpg', 'stimuli/img_3p0zv.jpg', 'stimuli/img_3ph9o.jpg', 'stimuli/img_3q6t4.jpg', 'stimuli/img_3ro4n.jpg', 'stimuli/img_3s357.jpg', 'stimuli/img_3shmp.jpg', 'stimuli/img_3sw8t.jpg', 'stimuli/img_3tnh4.jpg', 'stimuli/img_3v5w3.jpg', 'stimuli/img_3w4dt.jpg', 'stimuli/img_3wj63.jpg', 'stimuli/img_3y35o.jpg', 'stimuli/img_3ze38.jpg', 'stimuli/img_4bef4.jpg', 'stimuli/img_4bxxj.jpg', 'stimuli/img_4c48i.jpg', 'stimuli/img_4d0aw.jpg', 'stimuli/img_4dxo4.jpg', 'stimuli/img_4g6yq.jpg', 'stimuli/img_4glfv.jpg', 'stimuli/img_4jra4.jpg', 'stimuli/img_4k1j9.jpg', 'stimuli/img_4kzor.jpg', 'stimuli/img_4lyad.jpg', 'stimuli/img_4m9ud.jpg', 'stimuli/img_4o8l0.jpg', 'stimuli/img_4p9dc.jpg', 'stimuli/img_4q2n8.jpg', 'stimuli/img_4s67y.jpg', 'stimuli/img_4spc8.jpg', 'stimuli/img_4td0x.jpg', 'stimuli/img_4ufga.jpg', 'stimuli/img_4utvc.jpg', 'stimuli/img_4wq98.jpg', 'stimuli/img_4xr0x.jpg', 'stimuli/img_4xxuf.jpg', 'stimuli/img_4y7mh.jpg', 'stimuli/img_4yy1j.jpg', 'stimuli/img_5a1ke.jpg', 'stimuli/img_5alzj.jpg', 'stimuli/img_05c3h.jpg', 'stimuli/img_5e7iu.jpg', 'stimuli/img_5ecez.jpg', 'stimuli/img_5ewoj.jpg', 'stimuli/img_5f8ha.jpg', 'stimuli/img_5fkbp.jpg', 'stimuli/img_05flq.jpg', 'stimuli/img_5fr9m.jpg', 'stimuli/img_5il0t.jpg', 'stimuli/img_5jp4f.jpg', 'stimuli/img_5jy9c.jpg', 'stimuli/img_5k4cy.jpg', 'stimuli/img_5m6x4.jpg', 'stimuli/img_5m75u.jpg', 'stimuli/img_5mw7y.jpg', 'stimuli/img_5nfmx.jpg', 'stimuli/img_5nlnv.jpg', 'stimuli/img_5nlyi.jpg', 'stimuli/img_5o1x3.jpg', 'stimuli/img_5oubg.jpg', 'stimuli/img_5ovr5.jpg', 'stimuli/img_5p2ql.jpg', 'stimuli/img_5pmhd.jpg', 'stimuli/img_5qdyh.jpg', 'stimuli/img_5t91y.jpg', 'stimuli/img_5tr4v.jpg', 'stimuli/img_5udo9.jpg', 'stimuli/img_5vc3c.jpg', 'stimuli/img_5w83x.jpg', 'stimuli/img_5x1u3.jpg', 'stimuli/img_5yhe7.jpg', 'stimuli/img_5yhyk.jpg', 'stimuli/img_6a0hu.jpg', 'stimuli/img_6cg5g.jpg', 'stimuli/img_6ddrx.jpg', 'stimuli/img_6dl6t.jpg', 'stimuli/img_6dvd0.jpg', 'stimuli/img_6dves.jpg', 'stimuli/img_6fo9f.jpg', 'stimuli/img_6funa.jpg', 'stimuli/img_6hyyt.jpg', 'stimuli/img_6iqem.jpg', 'stimuli/img_6j727.jpg', 'stimuli/img_6jjvh.jpg', 'stimuli/img_6jsgr.jpg', 'stimuli/img_6lpz9.jpg', 'stimuli/img_6mdbc.jpg', 'stimuli/img_6nbgt.jpg', 'stimuli/img_6p0lz.jpg', 'stimuli/img_6qetq.jpg', 'stimuli/img_6syr3.jpg', 'stimuli/img_6tou7.jpg', 'stimuli/img_6umgp.jpg', 'stimuli/img_6v5oo.jpg', 'stimuli/img_6vila.jpg', 'stimuli/img_6vta6.jpg', 'stimuli/img_6w2lk.jpg', 'stimuli/img_6wne4.jpg', 'stimuli/img_6wr5y.jpg', 'stimuli/img_6wshc.jpg', 'stimuli/img_6xg4l.jpg', 'stimuli/img_6zla6.jpg', 'stimuli/img_6zz63.jpg', 'stimuli/img_7a0c1.jpg', 'stimuli/img_7a2m9.jpg', 'stimuli/img_07c1w.jpg', 'stimuli/img_7caxh.jpg', 'stimuli/img_7e06w.jpg', 'stimuli/img_7ed9m.jpg', 'stimuli/img_7f11q.jpg', 'stimuli/img_7fwp2.jpg', 'stimuli/img_7hti2.jpg', 'stimuli/img_7i6d8.jpg', 'stimuli/img_7likj.jpg', 'stimuli/img_7lron.jpg', 'stimuli/img_7lz7m.jpg', 'stimuli/img_7m3wh.jpg', 'stimuli/img_7m07e.jpg', 'stimuli/img_7mqbh.jpg', 'stimuli/img_7os7q.jpg', 'stimuli/img_7pgd2.jpg', 'stimuli/img_7q6ry.jpg', 'stimuli/img_7rss9.jpg', 'stimuli/img_07tdb.jpg', 'stimuli/img_7ucnr.jpg', 'stimuli/img_7w5tw.jpg', 'stimuli/img_7wquy.jpg', 'stimuli/img_7wul8.jpg', 'stimuli/img_7wxuy.jpg', 'stimuli/img_7xzhf.jpg', 'stimuli/img_7y67w.jpg', 'stimuli/img_7z2tj.jpg', 'stimuli/img_8cnbp.jpg', 'stimuli/img_8dacu.jpg', 'stimuli/img_8df2e.jpg', 'stimuli/img_08dll.jpg', 'stimuli/img_8dmpq.jpg', 'stimuli/img_8fpog.jpg', 'stimuli/img_8i1jb.jpg', 'stimuli/img_8i3q8.jpg', 'stimuli/img_8jy3h.jpg', 'stimuli/img_8l8qo.jpg', 'stimuli/img_8mkbv.jpg', 'stimuli/img_8qkmd.jpg', 'stimuli/img_8qt7d.jpg', 'stimuli/img_8tc8e.jpg', 'stimuli/img_08tlm.jpg', 'stimuli/img_8vcm6.jpg', 'stimuli/img_8vygl.jpg', 'stimuli/img_8wa09.jpg', 'stimuli/img_8ybbp.jpg', 'stimuli/img_8zf2f.jpg', 'stimuli/img_09a3o.jpg', 'stimuli/img_9ann0.jpg', 'stimuli/img_9b6yl.jpg', 'stimuli/img_9bkl9.jpg', 'stimuli/img_9ck2q.jpg', 'stimuli/img_9d84u.jpg', 'stimuli/img_9dg1v.jpg', 'stimuli/img_9g4tp.jpg', 'stimuli/img_9g12g.jpg', 'stimuli/img_9jgbc.jpg', 'stimuli/img_09jt1.jpg', 'stimuli/img_09lgm.jpg', 'stimuli/img_9mcah.jpg', 'stimuli/img_9mky8.jpg', 'stimuli/img_9mlzp.jpg', 'stimuli/img_9n6al.jpg', 'stimuli/img_9nnrj.jpg', 'stimuli/img_9o0wl.jpg', 'stimuli/img_9oofc.jpg', 'stimuli/img_9os15.jpg', 'stimuli/img_9pfbj.jpg', 'stimuli/img_9qg3g.jpg', 'stimuli/img_9qmek.jpg', 'stimuli/img_09ram.jpg', 'stimuli/img_9ro1y.jpg', 'stimuli/img_9stvt.jpg', 'stimuli/img_9tgq9.jpg', 'stimuli/img_9ugw8.jpg', 'stimuli/img_9wc9w.jpg', 'stimuli/img_9wgjs.jpg', 'stimuli/img_9wmp8.jpg', 'stimuli/img_9x6du.jpg', 'stimuli/img_9z99v.jpg', 'stimuli/img_10t4k.jpg', 'stimuli/img_11anu.jpg', 'stimuli/img_12lvj.jpg', 'stimuli/img_13ozs.jpg', 'stimuli/img_13ymo.jpg', 'stimuli/img_14hyn.jpg', 'stimuli/img_15bss.jpg', 'stimuli/img_16kib.jpg', 'stimuli/img_17p17.jpg', 'stimuli/img_18r80.jpg', 'stimuli/img_23ged.jpg', 'stimuli/img_24rt2.jpg', 'stimuli/img_25zj9.jpg', 'stimuli/img_26n4i.jpg', 'stimuli/img_28eqs.jpg', 'stimuli/img_29cw5.jpg', 'stimuli/img_29gyt.jpg', 'stimuli/img_29td3.jpg', 'stimuli/img_30vz5.jpg', 'stimuli/img_33ka1.jpg', 'stimuli/img_34vo5.jpg', 'stimuli/img_35zbz.jpg', 'stimuli/img_37hgm.jpg', 'stimuli/img_37uwk.jpg', 'stimuli/img_38iec.jpg', 'stimuli/img_39hz5.jpg', 'stimuli/img_43unx.jpg', 'stimuli/img_43xbt.jpg', 'stimuli/img_43xdp.jpg', 'stimuli/img_46tsn.jpg', 'stimuli/img_47k1j.jpg', 'stimuli/img_47zvc.jpg', 'stimuli/img_048l0.jpg', 'stimuli/img_48r6i.jpg', 'stimuli/img_49h18.jpg', 'stimuli/img_52i74.jpg', 'stimuli/img_53nbn.jpg', 'stimuli/img_56f8c.jpg', 'stimuli/img_57os5.jpg', 'stimuli/img_58n4j.jpg', 'stimuli/img_58ujj.jpg', 'stimuli/img_60x5k.jpg', 'stimuli/img_62xpv.jpg', 'stimuli/img_63slq.jpg', 'stimuli/img_64ite.jpg', 'stimuli/img_65cdi.jpg', 'stimuli/img_65zmd.jpg', 'stimuli/img_66fuf.jpg', 'stimuli/img_66ncr.jpg', 'stimuli/img_66sfd.jpg', 'stimuli/img_66zut.jpg', 'stimuli/img_68aqt.jpg', 'stimuli/img_68bu5.jpg', 'stimuli/img_68d11.jpg', 'stimuli/img_68f2l.jpg', 'stimuli/img_68wfw.jpg', 'stimuli/img_70ji9.jpg', 'stimuli/img_70x14.jpg', 'stimuli/img_71mhq.jpg', 'stimuli/img_72fmj.jpg', 'stimuli/img_72hmj.jpg', 'stimuli/img_72hyg.jpg', 'stimuli/img_72wnn.jpg', 'stimuli/img_73pyk.jpg', 'stimuli/img_76tei.jpg', 'stimuli/img_77pme.jpg', 'stimuli/img_78fxr.jpg', 'stimuli/img_78p4f.jpg', 'stimuli/img_78zcn.jpg', 'stimuli/img_79b5l.jpg', 'stimuli/img_80mdz.jpg', 'stimuli/img_81nb0.jpg', 'stimuli/img_82bie.jpg', 'stimuli/img_84s7n.jpg', 'stimuli/img_85xkk.jpg', 'stimuli/img_86s60.jpg', 'stimuli/img_88h71.jpg', 'stimuli/img_88mrj.jpg', 'stimuli/img_088sa.jpg', 'stimuli/img_89dvt.jpg', 'stimuli/img_89rmb.jpg', 'stimuli/img_91csq.jpg', 'stimuli/img_91ht8.jpg', 'stimuli/img_91lbx.jpg', 'stimuli/img_92eyc.jpg', 'stimuli/img_92f93.jpg', 'stimuli/img_93vg8.jpg', 'stimuli/img_93vmh.jpg', 'stimuli/img_95hiv.jpg', 'stimuli/img_97f62.jpg', 'stimuli/img_99exx.jpg', 'stimuli/img_99qvn.jpg', 'stimuli/img_165pk.jpg', 'stimuli/img_190ub.jpg', 'stimuli/img_196rk.jpg', 'stimuli/img_287jq.jpg', 'stimuli/img_301af.jpg', 'stimuli/img_314bq.jpg', 'stimuli/img_319z4.jpg', 'stimuli/img_328s0.jpg', 'stimuli/img_411xa.jpg', 'stimuli/img_463mq.jpg', 'stimuli/img_520au.jpg', 'stimuli/img_0548r.jpg', 'stimuli/img_552an.jpg', 'stimuli/img_667w7.jpg', 'stimuli/img_753pq.jpg', 'stimuli/img_782qs.jpg', 'stimuli/img_791d1.jpg', 'stimuli/img_818nk.jpg', 'stimuli/img_936g7.jpg', 'stimuli/img_948n5.jpg', 'stimuli/img_4800h.jpg', 'stimuli/img_4974k.jpg', 'stimuli/img_5949k.jpg', 'stimuli/img_7147j.jpg', 'stimuli/img_8297a.jpg', 'stimuli/img_9684y.jpg', 'stimuli/img_60242.jpg', 'stimuli/img_93366.jpg', 'stimuli/img_a1erh.jpg', 'stimuli/img_a2mx2.jpg', 'stimuli/img_a2pkp.jpg', 'stimuli/img_a3jds.jpg', 'stimuli/img_a6u3n.jpg', 'stimuli/img_a7bdg.jpg', 'stimuli/img_a8irr.jpg', 'stimuli/img_a8wvq.jpg', 'stimuli/img_a8y4y.jpg', 'stimuli/img_a9acb.jpg', 'stimuli/img_a9he3.jpg', 'stimuli/img_a09k2.jpg', 'stimuli/img_a220l.jpg', 'stimuli/img_abobq.jpg', 'stimuli/img_ac0ey.jpg', 'stimuli/img_aellb.jpg', 'stimuli/img_af3l2.jpg', 'stimuli/img_afcbj.jpg', 'stimuli/img_afmdp.jpg', 'stimuli/img_agwon.jpg', 'stimuli/img_ah5vo.jpg', 'stimuli/img_aki78.jpg', 'stimuli/img_allt1.jpg', 'stimuli/img_amsgw.jpg', 'stimuli/img_amsko.jpg', 'stimuli/img_anakd.jpg', 'stimuli/img_and1v.jpg', 'stimuli/img_anfk9.jpg', 'stimuli/img_anhzn.jpg', 'stimuli/img_anjr0.jpg', 'stimuli/img_anzgh.jpg', 'stimuli/img_aplao.jpg', 'stimuli/img_aqu2d.jpg', 'stimuli/img_arx94.jpg', 'stimuli/img_as3da.jpg', 'stimuli/img_astid.jpg', 'stimuli/img_aswbu.jpg', 'stimuli/img_atzjw.jpg', 'stimuli/img_aweye.jpg', 'stimuli/img_awuev.jpg', 'stimuli/img_ay56d.jpg', 'stimuli/img_b0yct.jpg', 'stimuli/img_b2jli.jpg', 'stimuli/img_b2xn0.jpg', 'stimuli/img_b3fi1.jpg', 'stimuli/img_b7gom.jpg', 'stimuli/img_b7ycd.jpg', 'stimuli/img_b17ma.jpg', 'stimuli/img_b21d7.jpg', 'stimuli/img_b34c4.jpg', 'stimuli/img_b36ne.jpg', 'stimuli/img_b55q0.jpg', 'stimuli/img_b89t4.jpg', 'stimuli/img_b971s.jpg', 'stimuli/img_ba2q4.jpg', 'stimuli/img_badai.jpg', 'stimuli/img_bbs77.jpg', 'stimuli/img_bbt0k.jpg', 'stimuli/img_bdqmg.jpg', 'stimuli/img_bdz92.jpg', 'stimuli/img_be0j0.jpg', 'stimuli/img_bendp.jpg', 'stimuli/img_bf4eh.jpg', 'stimuli/img_bf8nx.jpg', 'stimuli/img_bflfy.jpg', 'stimuli/img_bg264.jpg', 'stimuli/img_bj2gr.jpg', 'stimuli/img_bj99b.jpg', 'stimuli/img_bklr1.jpg', 'stimuli/img_bl2f1.jpg', 'stimuli/img_bnetw.jpg', 'stimuli/img_bntrh.jpg', 'stimuli/img_bp226.jpg', 'stimuli/img_bpgb3.jpg', 'stimuli/img_bpyv5.jpg', 'stimuli/img_bs3m7.jpg', 'stimuli/img_bsr0p.jpg', 'stimuli/img_bwo9g.jpg', 'stimuli/img_bwx3i.jpg', 'stimuli/img_bysq2.jpg', 'stimuli/img_bzuyx.jpg', 'stimuli/img_c0ecw.jpg', 'stimuli/img_c0kt4.jpg', 'stimuli/img_c0me7.jpg', 'stimuli/img_c0vzo.jpg', 'stimuli/img_c2pbs.jpg', 'stimuli/img_c3ipx.jpg', 'stimuli/img_c3r29.jpg', 'stimuli/img_c4ljf.jpg', 'stimuli/img_c4uwt.jpg', 'stimuli/img_c4vkt.jpg', 'stimuli/img_c6tg4.jpg', 'stimuli/img_c7bpx.jpg', 'stimuli/img_c30d1.jpg', 'stimuli/img_c79r7.jpg', 'stimuli/img_c89x3.jpg', 'stimuli/img_ca8kd.jpg', 'stimuli/img_caqzp.jpg', 'stimuli/img_ccn2w.jpg', 'stimuli/img_ce9vx.jpg', 'stimuli/img_ce55l.jpg', 'stimuli/img_cehin.jpg', 'stimuli/img_cel9k.jpg', 'stimuli/img_ceqfs.jpg', 'stimuli/img_cf2bd.jpg', 'stimuli/img_cf9gk.jpg', 'stimuli/img_cfarv.jpg', 'stimuli/img_cgdyc.jpg', 'stimuli/img_cht1k.jpg', 'stimuli/img_ciboa.jpg', 'stimuli/img_cic06.jpg', 'stimuli/img_cjvod.jpg', 'stimuli/img_ck3m4.jpg', 'stimuli/img_clbu4.jpg', 'stimuli/img_cmjji.jpg', 'stimuli/img_cmyvx.jpg', 'stimuli/img_cn574.jpg', 'stimuli/img_cnxex.jpg', 'stimuli/img_cnyac.jpg', 'stimuli/img_cogrz.jpg', 'stimuli/img_cpsdh.jpg', 'stimuli/img_cqot9.jpg', 'stimuli/img_ct6bx.jpg', 'stimuli/img_ct240.jpg', 'stimuli/img_cust8.jpg', 'stimuli/img_cv6mf.jpg', 'stimuli/img_cv9qj.jpg', 'stimuli/img_cvyc3.jpg', 'stimuli/img_cwokj.jpg', 'stimuli/img_cxpff.jpg', 'stimuli/img_cxqey.jpg', 'stimuli/img_cy08j.jpg', 'stimuli/img_czjk5.jpg', 'stimuli/img_d0k76.jpg', 'stimuli/img_d0sj6.jpg', 'stimuli/img_d1e9h.jpg', 'stimuli/img_d3t0o.jpg', 'stimuli/img_d3wwy.jpg', 'stimuli/img_d4rmg.jpg', 'stimuli/img_d6jnd.jpg', 'stimuli/img_d7iri.jpg', 'stimuli/img_d7nng.jpg', 'stimuli/img_d8xbu.jpg', 'stimuli/img_d9ogj.jpg', 'stimuli/img_d26ik.jpg', 'stimuli/img_d55q7.jpg', 'stimuli/img_d90m7.jpg', 'stimuli/img_d480g.jpg', 'stimuli/img_d5947.jpg', 'stimuli/img_daqxs.jpg', 'stimuli/img_db1ke.jpg', 'stimuli/img_dbf9a.jpg', 'stimuli/img_dg5h7.jpg', 'stimuli/img_dh5no.jpg', 'stimuli/img_dhjnr.jpg', 'stimuli/img_di6f0.jpg', 'stimuli/img_di9lr.jpg']);
+      psychoJS._serverManager.prepareResources([conditions_sleep_b, conditions_sleep_a, conditions_living_b, conditions_living_a, conditions_kitchen_b, conditions_kitchen_a, conditions_memo_test, conditions_block_order, "stimuli/asdfgh.jpg", "stimuli/asdfghertghvgh.jpg", "stimuli/asdfghjkjhg.jpg", "stimuli/asdfghjkloelkjhg.jpg", "stimuli/dfghjhgf.jpg", "stimuli/erhvgh.jpg", "stimuli/erthjnbvcfg.jpg", "stimuli/fvbjgv.jpg", "stimuli/gfdfghjgf.jpg", "stimuli/gfvbnbg.jpg", "stimuli/hhhh.jpg", "stimuli/ihnbvcfgd.jpg", "stimuli/ijnbgzuik.jpg", "stimuli/img_0adz5.jpg", "stimuli/img_0bah1.jpg", "stimuli/img_0dege.jpg", "stimuli/img_0eflx.jpg", "stimuli/img_0ej0y.jpg", "stimuli/img_0ekxv.jpg", "stimuli/img_0ez70.jpg", "stimuli/img_0j24m.jpg", "stimuli/img_0jzz7.jpg", "stimuli/img_0kmfo.jpg", "stimuli/img_0kqc0.jpg", "stimuli/img_0mhms.jpg", "stimuli/img_0nckg.jpg", "stimuli/img_0noah.jpg", "stimuli/img_00ojb.jpg", "stimuli/img_0pt3z.jpg", "stimuli/img_0qndh.jpg", "stimuli/img_0rbu4.jpg", "stimuli/img_0si9u.jpg", "stimuli/img_0t206.jpg", "stimuli/img_0ugsg.jpg", "stimuli/img_0uiwg.jpg", "stimuli/img_0urnu.jpg", "stimuli/img_0wv81.jpg", "stimuli/img_0wzeq.jpg", "stimuli/img_0x4kb.jpg", "stimuli/img_0xwtf.jpg", "stimuli/img_0zzo4.jpg", "stimuli/img_1ao2d.jpg", "stimuli/img_1b74f.jpg", "stimuli/img_1ccse.jpg", "stimuli/img_1cdqc.jpg", "stimuli/img_1cm9s.jpg", "stimuli/img_1d1l9.jpg", "stimuli/img_1etij.jpg", "stimuli/img_1fjfz.jpg", "stimuli/img_1gr78.jpg", "stimuli/img_1i6q5.jpg", "stimuli/img_1iam9.jpg", "stimuli/img_1ibl4.jpg", "stimuli/img_1m0fn.jpg", "stimuli/img_1n8b9.jpg", "stimuli/img_1ojyk.jpg", "stimuli/img_1plu7.jpg", "stimuli/img_1q8pa.jpg", "stimuli/img_1qa4t.jpg", "stimuli/img_1ql54.jpg", "stimuli/img_1qye0.jpg", "stimuli/img_1r2ri.jpg", "stimuli/img_1r08n.jpg", "stimuli/img_1s8dl.jpg", "stimuli/img_1scr4.jpg", "stimuli/img_1twlp.jpg", "stimuli/img_1uwbl.jpg", "stimuli/img_1vq1v.jpg", "stimuli/img_1vukv.jpg", "stimuli/img_01w8b.jpg", "stimuli/img_1wxyo.jpg", "stimuli/img_1xdqe.jpg", "stimuli/img_1yffi.jpg", "stimuli/img_1zhz6.jpg", "stimuli/img_02alv.jpg", "stimuli/img_2b8fp.jpg", "stimuli/img_2c9w1.jpg", "stimuli/img_2cebl.jpg", "stimuli/img_002cv.jpg", "stimuli/img_2d000.jpg", "stimuli/img_2d3c2.jpg", "stimuli/img_2d82m.jpg", "stimuli/img_2dnfy.jpg", "stimuli/img_2ehfe.jpg", "stimuli/img_2fe41.jpg", "stimuli/img_2g129.jpg", "stimuli/img_2i925.jpg", "stimuli/img_2imrl.jpg", "stimuli/img_2jgpo.jpg", "stimuli/img_2js6m.jpg", "stimuli/img_2lcxi.jpg", "stimuli/img_2lqsf.jpg", "stimuli/img_2na1o.jpg", "stimuli/img_2pk6v.jpg", "stimuli/img_2pnl2.jpg", "stimuli/img_2qdvq.jpg", "stimuli/img_2qhro.jpg", "stimuli/img_2qkvm.jpg", "stimuli/img_2rtxu.jpg", "stimuli/img_2rwes.jpg", "stimuli/img_2rylq.jpg", "stimuli/img_2s780.jpg", "stimuli/img_2vqdc.jpg", "stimuli/img_2wkab.jpg", "stimuli/img_2ygqr.jpg", "stimuli/img_3a2r2.jpg", "stimuli/img_3a6lc.jpg", "stimuli/img_3ar9q.jpg", "stimuli/img_3arcv.jpg", "stimuli/img_3aueq.jpg", "stimuli/img_3bp7b.jpg", "stimuli/img_3bxjb.jpg", "stimuli/img_3cp3s.jpg", "stimuli/img_3eusg.jpg", "stimuli/img_3fldm.jpg", "stimuli/img_3gm8h.jpg", "stimuli/img_3h4c9.jpg", "stimuli/img_3hmlp.jpg", "stimuli/img_3i80k.jpg", "stimuli/img_3ialr.jpg", "stimuli/img_3jnt7.jpg", "stimuli/img_3kho5.jpg", "stimuli/img_3lli8.jpg", "stimuli/img_3lvof.jpg", "stimuli/img_3m2h0.jpg", "stimuli/img_3m61b.jpg", "stimuli/img_3miwe.jpg", "stimuli/img_3mp24.jpg", "stimuli/img_3nswx.jpg", "stimuli/img_3oyah.jpg", "stimuli/img_3p0zv.jpg", "stimuli/img_3ph9o.jpg", "stimuli/img_3q6t4.jpg", "stimuli/img_3ro4n.jpg", "stimuli/img_3s357.jpg", "stimuli/img_3shmp.jpg", "stimuli/img_3sw8t.jpg", "stimuli/img_3tnh4.jpg", "stimuli/img_3v5w3.jpg", "stimuli/img_3w4dt.jpg", "stimuli/img_3wj63.jpg", "stimuli/img_3y35o.jpg", "stimuli/img_3ze38.jpg", "stimuli/img_4bef4.jpg", "stimuli/img_4bxxj.jpg", "stimuli/img_4c48i.jpg", "stimuli/img_4d0aw.jpg", "stimuli/img_4dxo4.jpg", "stimuli/img_4g6yq.jpg", "stimuli/img_4glfv.jpg", "stimuli/img_4jra4.jpg", "stimuli/img_4k1j9.jpg", "stimuli/img_4kzor.jpg", "stimuli/img_4lyad.jpg", "stimuli/img_4m9ud.jpg", "stimuli/img_4o8l0.jpg", "stimuli/img_4p9dc.jpg", "stimuli/img_4q2n8.jpg", "stimuli/img_4s67y.jpg", "stimuli/img_4spc8.jpg", "stimuli/img_4td0x.jpg", "stimuli/img_4ufga.jpg", "stimuli/img_4utvc.jpg", "stimuli/img_4wq98.jpg", "stimuli/img_4xr0x.jpg", "stimuli/img_4xxuf.jpg", "stimuli/img_4y7mh.jpg", "stimuli/img_4yy1j.jpg", "stimuli/img_5a1ke.jpg", "stimuli/img_5alzj.jpg", "stimuli/img_05c3h.jpg", "stimuli/img_5e7iu.jpg", "stimuli/img_5ecez.jpg", "stimuli/img_5ewoj.jpg", "stimuli/img_5f8ha.jpg", "stimuli/img_5fkbp.jpg", "stimuli/img_05flq.jpg", "stimuli/img_5fr9m.jpg", "stimuli/img_5il0t.jpg", "stimuli/img_5jp4f.jpg", "stimuli/img_5jy9c.jpg", "stimuli/img_5k4cy.jpg", "stimuli/img_5m6x4.jpg", "stimuli/img_5m75u.jpg", "stimuli/img_5mw7y.jpg", "stimuli/img_5nfmx.jpg", "stimuli/img_5nlnv.jpg", "stimuli/img_5nlyi.jpg", "stimuli/img_5o1x3.jpg", "stimuli/img_5oubg.jpg", "stimuli/img_5ovr5.jpg", "stimuli/img_5p2ql.jpg", "stimuli/img_5pmhd.jpg", "stimuli/img_5qdyh.jpg", "stimuli/img_5t91y.jpg", "stimuli/img_5tr4v.jpg", "stimuli/img_5udo9.jpg", "stimuli/img_5vc3c.jpg", "stimuli/img_5w83x.jpg", "stimuli/img_5x1u3.jpg", "stimuli/img_5yhe7.jpg", "stimuli/img_5yhyk.jpg", "stimuli/img_6a0hu.jpg", "stimuli/img_6cg5g.jpg", "stimuli/img_6ddrx.jpg", "stimuli/img_6dl6t.jpg", "stimuli/img_6dvd0.jpg", "stimuli/img_6dves.jpg", "stimuli/img_6fo9f.jpg", "stimuli/img_6funa.jpg", "stimuli/img_6hyyt.jpg", "stimuli/img_6iqem.jpg", "stimuli/img_6j727.jpg", "stimuli/img_6jjvh.jpg", "stimuli/img_6jsgr.jpg", "stimuli/img_6lpz9.jpg", "stimuli/img_6mdbc.jpg", "stimuli/img_6nbgt.jpg", "stimuli/img_6p0lz.jpg", "stimuli/img_6qetq.jpg", "stimuli/img_6syr3.jpg", "stimuli/img_6tou7.jpg", "stimuli/img_6umgp.jpg", "stimuli/img_6v5oo.jpg", "stimuli/img_6vila.jpg", "stimuli/img_6vta6.jpg", "stimuli/img_6w2lk.jpg", "stimuli/img_6wne4.jpg", "stimuli/img_6wr5y.jpg", "stimuli/img_6wshc.jpg", "stimuli/img_6xg4l.jpg", "stimuli/img_6zla6.jpg", "stimuli/img_6zz63.jpg", "stimuli/img_7a0c1.jpg", "stimuli/img_7a2m9.jpg", "stimuli/img_07c1w.jpg", "stimuli/img_7caxh.jpg", "stimuli/img_7e06w.jpg", "stimuli/img_7ed9m.jpg", "stimuli/img_7f11q.jpg", "stimuli/img_7fwp2.jpg", "stimuli/img_7hti2.jpg", "stimuli/img_7i6d8.jpg", "stimuli/img_7likj.jpg", "stimuli/img_7lron.jpg", "stimuli/img_7lz7m.jpg", "stimuli/img_7m3wh.jpg", "stimuli/img_7m07e.jpg", "stimuli/img_7mqbh.jpg", "stimuli/img_7os7q.jpg", "stimuli/img_7pgd2.jpg", "stimuli/img_7q6ry.jpg", "stimuli/img_7rss9.jpg", "stimuli/img_07tdb.jpg", "stimuli/img_7ucnr.jpg", "stimuli/img_7w5tw.jpg", "stimuli/img_7wquy.jpg", "stimuli/img_7wul8.jpg", "stimuli/img_7wxuy.jpg", "stimuli/img_7xzhf.jpg", "stimuli/img_7y67w.jpg", "stimuli/img_7z2tj.jpg", "stimuli/img_8cnbp.jpg", "stimuli/img_8dacu.jpg", "stimuli/img_8df2e.jpg", "stimuli/img_08dll.jpg", "stimuli/img_8dmpq.jpg", "stimuli/img_8fpog.jpg", "stimuli/img_8i1jb.jpg", "stimuli/img_8i3q8.jpg", "stimuli/img_8jy3h.jpg", "stimuli/img_8l8qo.jpg", "stimuli/img_8mkbv.jpg", "stimuli/img_8qkmd.jpg", "stimuli/img_8qt7d.jpg", "stimuli/img_8tc8e.jpg", "stimuli/img_08tlm.jpg", "stimuli/img_8vcm6.jpg", "stimuli/img_8vygl.jpg", "stimuli/img_8wa09.jpg", "stimuli/img_8ybbp.jpg", "stimuli/img_8zf2f.jpg", "stimuli/img_09a3o.jpg", "stimuli/img_9ann0.jpg", "stimuli/img_9b6yl.jpg", "stimuli/img_9bkl9.jpg", "stimuli/img_9ck2q.jpg", "stimuli/img_9d84u.jpg", "stimuli/img_9dg1v.jpg", "stimuli/img_9g4tp.jpg", "stimuli/img_9g12g.jpg", "stimuli/img_9jgbc.jpg", "stimuli/img_09jt1.jpg", "stimuli/img_09lgm.jpg", "stimuli/img_9mcah.jpg", "stimuli/img_9mky8.jpg", "stimuli/img_9mlzp.jpg", "stimuli/img_9n6al.jpg", "stimuli/img_9nnrj.jpg", "stimuli/img_9o0wl.jpg", "stimuli/img_9oofc.jpg", "stimuli/img_9os15.jpg", "stimuli/img_9pfbj.jpg", "stimuli/img_9qg3g.jpg", "stimuli/img_9qmek.jpg", "stimuli/img_09ram.jpg", "stimuli/img_9ro1y.jpg", "stimuli/img_9stvt.jpg", "stimuli/img_9tgq9.jpg", "stimuli/img_9ugw8.jpg", "stimuli/img_9wc9w.jpg", "stimuli/img_9wgjs.jpg", "stimuli/img_9wmp8.jpg", "stimuli/img_9x6du.jpg", "stimuli/img_9z99v.jpg", "stimuli/img_10t4k.jpg", "stimuli/img_11anu.jpg", "stimuli/img_12lvj.jpg", "stimuli/img_13ozs.jpg", "stimuli/img_13ymo.jpg", "stimuli/img_14hyn.jpg", "stimuli/img_15bss.jpg", "stimuli/img_16kib.jpg", "stimuli/img_17p17.jpg", "stimuli/img_18r80.jpg", "stimuli/img_23ged.jpg", "stimuli/img_24rt2.jpg", "stimuli/img_25zj9.jpg", "stimuli/img_26n4i.jpg", "stimuli/img_28eqs.jpg", "stimuli/img_29cw5.jpg", "stimuli/img_29gyt.jpg", "stimuli/img_29td3.jpg", "stimuli/img_30vz5.jpg", "stimuli/img_33ka1.jpg", "stimuli/img_34vo5.jpg", "stimuli/img_35zbz.jpg", "stimuli/img_37hgm.jpg", "stimuli/img_37uwk.jpg", "stimuli/img_38iec.jpg", "stimuli/img_39hz5.jpg", "stimuli/img_43unx.jpg", "stimuli/img_43xbt.jpg", "stimuli/img_43xdp.jpg", "stimuli/img_46tsn.jpg", "stimuli/img_47k1j.jpg", "stimuli/img_47zvc.jpg", "stimuli/img_048l0.jpg", "stimuli/img_48r6i.jpg", "stimuli/img_49h18.jpg", "stimuli/img_52i74.jpg", "stimuli/img_53nbn.jpg", "stimuli/img_56f8c.jpg", "stimuli/img_57os5.jpg", "stimuli/img_58n4j.jpg", "stimuli/img_58ujj.jpg", "stimuli/img_60x5k.jpg", "stimuli/img_62xpv.jpg", "stimuli/img_63slq.jpg", "stimuli/img_64ite.jpg", "stimuli/img_65cdi.jpg", "stimuli/img_65zmd.jpg", "stimuli/img_66fuf.jpg", "stimuli/img_66ncr.jpg", "stimuli/img_66sfd.jpg", "stimuli/img_66zut.jpg", "stimuli/img_68aqt.jpg", "stimuli/img_68bu5.jpg", "stimuli/img_68d11.jpg", "stimuli/img_68f2l.jpg", "stimuli/img_68wfw.jpg", "stimuli/img_70ji9.jpg", "stimuli/img_70x14.jpg", "stimuli/img_71mhq.jpg", "stimuli/img_72fmj.jpg", "stimuli/img_72hmj.jpg", "stimuli/img_72hyg.jpg", "stimuli/img_72wnn.jpg", "stimuli/img_73pyk.jpg", "stimuli/img_76tei.jpg", "stimuli/img_77pme.jpg", "stimuli/img_78fxr.jpg", "stimuli/img_78p4f.jpg", "stimuli/img_78zcn.jpg", "stimuli/img_79b5l.jpg", "stimuli/img_80mdz.jpg", "stimuli/img_81nb0.jpg", "stimuli/img_82bie.jpg", "stimuli/img_84s7n.jpg", "stimuli/img_85xkk.jpg", "stimuli/img_86s60.jpg", "stimuli/img_88h71.jpg", "stimuli/img_88mrj.jpg", "stimuli/img_088sa.jpg", "stimuli/img_89dvt.jpg", "stimuli/img_89rmb.jpg", "stimuli/img_91csq.jpg", "stimuli/img_91ht8.jpg", "stimuli/img_91lbx.jpg", "stimuli/img_92eyc.jpg", "stimuli/img_92f93.jpg", "stimuli/img_93vg8.jpg", "stimuli/img_93vmh.jpg", "stimuli/img_95hiv.jpg", "stimuli/img_97f62.jpg", "stimuli/img_99exx.jpg", "stimuli/img_99qvn.jpg", "stimuli/img_165pk.jpg", "stimuli/img_190ub.jpg", "stimuli/img_196rk.jpg", "stimuli/img_287jq.jpg", "stimuli/img_301af.jpg", "stimuli/img_314bq.jpg", "stimuli/img_319z4.jpg", "stimuli/img_328s0.jpg", "stimuli/img_411xa.jpg", "stimuli/img_463mq.jpg", "stimuli/img_520au.jpg", "stimuli/img_0548r.jpg", "stimuli/img_552an.jpg", "stimuli/img_667w7.jpg", "stimuli/img_753pq.jpg", "stimuli/img_782qs.jpg", "stimuli/img_791d1.jpg", "stimuli/img_818nk.jpg", "stimuli/img_936g7.jpg", "stimuli/img_948n5.jpg", "stimuli/img_4800h.jpg", "stimuli/img_4974k.jpg", "stimuli/img_5949k.jpg", "stimuli/img_7147j.jpg", "stimuli/img_8297a.jpg", "stimuli/img_9684y.jpg", "stimuli/img_60242.jpg", "stimuli/img_93366.jpg", "stimuli/img_a1erh.jpg", "stimuli/img_a2mx2.jpg", "stimuli/img_a2pkp.jpg", "stimuli/img_a3jds.jpg", "stimuli/img_a6u3n.jpg", "stimuli/img_a7bdg.jpg", "stimuli/img_a8irr.jpg", "stimuli/img_a8wvq.jpg", "stimuli/img_a8y4y.jpg", "stimuli/img_a9acb.jpg", "stimuli/img_a9he3.jpg", "stimuli/img_a09k2.jpg", "stimuli/img_a220l.jpg", "stimuli/img_abobq.jpg", "stimuli/img_ac0ey.jpg", "stimuli/img_aellb.jpg", "stimuli/img_af3l2.jpg", "stimuli/img_afcbj.jpg", "stimuli/img_afmdp.jpg", "stimuli/img_agwon.jpg", "stimuli/img_ah5vo.jpg", "stimuli/img_aki78.jpg", "stimuli/img_allt1.jpg", "stimuli/img_amsgw.jpg", "stimuli/img_amsko.jpg", "stimuli/img_anakd.jpg", "stimuli/img_and1v.jpg", "stimuli/img_anfk9.jpg", "stimuli/img_anhzn.jpg", "stimuli/img_anjr0.jpg", "stimuli/img_anzgh.jpg", "stimuli/img_aplao.jpg", "stimuli/img_aqu2d.jpg", "stimuli/img_arx94.jpg", "stimuli/img_as3da.jpg", "stimuli/img_astid.jpg", "stimuli/img_aswbu.jpg", "stimuli/img_atzjw.jpg", "stimuli/img_aweye.jpg", "stimuli/img_awuev.jpg", "stimuli/img_ay56d.jpg", "stimuli/img_b0yct.jpg", "stimuli/img_b2jli.jpg", "stimuli/img_b2xn0.jpg", "stimuli/img_b3fi1.jpg", "stimuli/img_b7gom.jpg", "stimuli/img_b7ycd.jpg", "stimuli/img_b17ma.jpg", "stimuli/img_b21d7.jpg", "stimuli/img_b34c4.jpg", "stimuli/img_b36ne.jpg", "stimuli/img_b55q0.jpg", "stimuli/img_b89t4.jpg", "stimuli/img_b971s.jpg", "stimuli/img_ba2q4.jpg", "stimuli/img_badai.jpg", "stimuli/img_bbs77.jpg", "stimuli/img_bbt0k.jpg", "stimuli/img_bdqmg.jpg", "stimuli/img_bdz92.jpg", "stimuli/img_be0j0.jpg", "stimuli/img_bendp.jpg", "stimuli/img_bf4eh.jpg", "stimuli/img_bf8nx.jpg", "stimuli/img_bflfy.jpg", "stimuli/img_bg264.jpg", "stimuli/img_bj2gr.jpg", "stimuli/img_bj99b.jpg", "stimuli/img_bklr1.jpg", "stimuli/img_bl2f1.jpg", "stimuli/img_bnetw.jpg", "stimuli/img_bntrh.jpg", "stimuli/img_bp226.jpg", "stimuli/img_bpgb3.jpg", "stimuli/img_bpyv5.jpg", "stimuli/img_bs3m7.jpg", "stimuli/img_bsr0p.jpg", "stimuli/img_bwo9g.jpg", "stimuli/img_bwx3i.jpg", "stimuli/img_bysq2.jpg", "stimuli/img_bzuyx.jpg", "stimuli/img_c0ecw.jpg", "stimuli/img_c0kt4.jpg", "stimuli/img_c0me7.jpg", "stimuli/img_c0vzo.jpg", "stimuli/img_c2pbs.jpg", "stimuli/img_c3ipx.jpg", "stimuli/img_c3r29.jpg", "stimuli/img_c4ljf.jpg", "stimuli/img_c4uwt.jpg", "stimuli/img_c4vkt.jpg", "stimuli/img_c6tg4.jpg", "stimuli/img_c7bpx.jpg", "stimuli/img_c30d1.jpg", "stimuli/img_c79r7.jpg", "stimuli/img_c89x3.jpg", "stimuli/img_ca8kd.jpg", "stimuli/img_caqzp.jpg", "stimuli/img_ccn2w.jpg", "stimuli/img_ce9vx.jpg", "stimuli/img_ce55l.jpg", "stimuli/img_cehin.jpg", "stimuli/img_cel9k.jpg", "stimuli/img_ceqfs.jpg", "stimuli/img_cf2bd.jpg", "stimuli/img_cf9gk.jpg", "stimuli/img_cfarv.jpg", "stimuli/img_cgdyc.jpg", "stimuli/img_cht1k.jpg", "stimuli/img_ciboa.jpg", "stimuli/img_cic06.jpg", "stimuli/img_cjvod.jpg", "stimuli/img_ck3m4.jpg", "stimuli/img_clbu4.jpg", "stimuli/img_cmjji.jpg", "stimuli/img_cmyvx.jpg", "stimuli/img_cn574.jpg", "stimuli/img_cnxex.jpg", "stimuli/img_cnyac.jpg", "stimuli/img_cogrz.jpg", "stimuli/img_cpsdh.jpg", "stimuli/img_cqot9.jpg", "stimuli/img_ct6bx.jpg", "stimuli/img_ct240.jpg", "stimuli/img_cust8.jpg", "stimuli/img_cv6mf.jpg", "stimuli/img_cv9qj.jpg", "stimuli/img_cvyc3.jpg", "stimuli/img_cwokj.jpg", "stimuli/img_cxpff.jpg", "stimuli/img_cxqey.jpg", "stimuli/img_cy08j.jpg", "stimuli/img_czjk5.jpg", "stimuli/img_d0k76.jpg", "stimuli/img_d0sj6.jpg", "stimuli/img_d1e9h.jpg", "stimuli/img_d3t0o.jpg", "stimuli/img_d3wwy.jpg", "stimuli/img_d4rmg.jpg", "stimuli/img_d6jnd.jpg", "stimuli/img_d7iri.jpg", "stimuli/img_d7nng.jpg", "stimuli/img_d8xbu.jpg", "stimuli/img_d9ogj.jpg", "stimuli/img_d26ik.jpg", "stimuli/img_d55q7.jpg", "stimuli/img_d90m7.jpg", "stimuli/img_d480g.jpg", "stimuli/img_d5947.jpg", "stimuli/img_daqxs.jpg", "stimuli/img_db1ke.jpg", "stimuli/img_dbf9a.jpg", "stimuli/img_dg5h7.jpg", "stimuli/img_dh5no.jpg", "stimuli/img_dhjnr.jpg", "stimuli/img_di6f0.jpg", "stimuli/img_di9lr.jpg"]);
       resources_consent.status = PsychoJS.Status.STARTED;
     }
     
@@ -1673,7 +1670,6 @@ function consentRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('consent.stopped', globalClock.getTime());
     consent_resp.stop();
     // the Routine "consent" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -1699,7 +1695,6 @@ function data_safetyRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('data_safety.started', globalClock.getTime());
     data_safety_resp.keys = undefined;
     data_safety_resp.rt = undefined;
     _data_safety_resp_allKeys = [];
@@ -1815,7 +1810,6 @@ function data_safetyRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('data_safety.stopped', globalClock.getTime());
     data_safety_resp.stop();
     // the Routine "data_safety" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -1841,7 +1835,6 @@ function data_safety_2RoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('data_safety_2.started', globalClock.getTime());
     data_safety_2_resp.keys = undefined;
     data_safety_2_resp.rt = undefined;
     _data_safety_2_resp_allKeys = [];
@@ -1957,7 +1950,6 @@ function data_safety_2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('data_safety_2.stopped', globalClock.getTime());
     data_safety_2_resp.stop();
     // the Routine "data_safety_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -1983,7 +1975,6 @@ function instructions_catRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('instructions_cat.started', globalClock.getTime());
     instructions_cat_resp.keys = undefined;
     instructions_cat_resp.rt = undefined;
     _instructions_cat_resp_allKeys = [];
@@ -2099,7 +2090,6 @@ function instructions_catRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('instructions_cat.stopped', globalClock.getTime());
     instructions_cat_resp.stop();
     // the Routine "instructions_cat" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -2125,7 +2115,6 @@ function category_test_textRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     routineTimer.add(2.500000);
     // update component parameters for each repeat
-    psychoJS.experiment.addData('category_test_text.started', globalClock.getTime());
     // keep track of which components have finished
     category_test_textComponents = [];
     category_test_textComponents.push(category_test_word);
@@ -2194,7 +2183,6 @@ function category_test_textRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('category_test_text.stopped', globalClock.getTime());
     // Routines running outside a loop should always advance the datafile row
     if (currentLoop === psychoJS.experiment) {
       psychoJS.experiment.nextEntry(snapshot);
@@ -2918,7 +2906,6 @@ function fix_categorization_trainingRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('fix_categorization_training.started', globalClock.getTime());
     // Run 'Begin Routine' code from random_isi_code_cat_training
     time = 1 + Math.random();
     // keep track of which components have finished
@@ -3034,7 +3021,6 @@ function fix_categorization_trainingRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('fix_categorization_training.stopped', globalClock.getTime());
     // the Routine "fix_categorization_training" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -3059,7 +3045,6 @@ function categorization_trainingRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('categorization_training.started', globalClock.getTime());
     cat_training_stim.setImage(stimulus);
     cat_training_key.keys = undefined;
     cat_training_key.rt = undefined;
@@ -3208,7 +3193,6 @@ function categorization_trainingRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('categorization_training.stopped', globalClock.getTime());
     // was no response the correct answer?!
     if (cat_training_key.keys === undefined) {
       if (['None','none',undefined].includes(correct_answer)) {
@@ -3256,7 +3240,6 @@ function cat_training_feedbackRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     routineTimer.add(1.000000);
     // update component parameters for each repeat
-    psychoJS.experiment.addData('cat_training_feedback.started', globalClock.getTime());
     // Run 'Begin Routine' code from cat_train_feedb_code
     if ((cat_training_key.corr === 1)) {
         cat_training_feedb_eval = "korrekt";
@@ -3378,7 +3361,6 @@ function cat_training_feedbackRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('cat_training_feedback.stopped', globalClock.getTime());
     // Routines running outside a loop should always advance the datafile row
     if (currentLoop === psychoJS.experiment) {
       psychoJS.experiment.nextEntry(snapshot);
@@ -3400,7 +3382,6 @@ function start_categorizationRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('start_categorization.started', globalClock.getTime());
     start_cat_resp.keys = undefined;
     start_cat_resp.rt = undefined;
     _start_cat_resp_allKeys = [];
@@ -3494,7 +3475,6 @@ function start_categorizationRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('start_categorization.stopped', globalClock.getTime());
     start_cat_resp.stop();
     // the Routine "start_categorization" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -3520,9 +3500,8 @@ function kitchen_aRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('kitchen_a.started', globalClock.getTime());
     // skip this Routine if its 'Skip if' condition is True
-    continueRoutine = continueRoutine && !((kitchen_a_categorization_trial.thisN > 0));
+    continueRoutine = continueRoutine && !((kitchen_a_categorization_trials.thisN > 0));
     kitchen_a_resp.keys = undefined;
     kitchen_a_resp.rt = undefined;
     _kitchen_a_resp_allKeys = [];
@@ -3639,7 +3618,6 @@ function kitchen_aRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('kitchen_a.stopped', globalClock.getTime());
     kitchen_a_resp.stop();
     // the Routine "kitchen_a" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -3664,7 +3642,6 @@ function kitchen_random_isiRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('kitchen_random_isi.started', globalClock.getTime());
     // Run 'Begin Routine' code from random_isi_kitchen_code
     time = 1 + Math.random();
     
@@ -3781,7 +3758,6 @@ function kitchen_random_isiRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('kitchen_random_isi.stopped', globalClock.getTime());
     // the Routine "kitchen_random_isi" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -3806,7 +3782,6 @@ function kitchen_pictureRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('kitchen_picture.started', globalClock.getTime());
     kitchen_image.setImage(stimulus);
     kitchen_picture_resp.keys = undefined;
     kitchen_picture_resp.rt = undefined;
@@ -3955,7 +3930,6 @@ function kitchen_pictureRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('kitchen_picture.stopped', globalClock.getTime());
     // was no response the correct answer?!
     if (kitchen_picture_resp.keys === undefined) {
       if (['None','none',undefined].includes(correct_answer)) {
@@ -4002,7 +3976,6 @@ function kitchen_bRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('kitchen_b.started', globalClock.getTime());
     // skip this Routine if its 'Skip if' condition is True
     continueRoutine = continueRoutine && !((kitchen_b_categorization_trials.thisN > 0));
     kitchen_b_resp.keys = undefined;
@@ -4121,7 +4094,6 @@ function kitchen_bRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('kitchen_b.stopped', globalClock.getTime());
     kitchen_b_resp.stop();
     // the Routine "kitchen_b" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -4147,9 +4119,8 @@ function living_aRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('living_a.started', globalClock.getTime());
     // skip this Routine if its 'Skip if' condition is True
-    continueRoutine = continueRoutine && !((living_a_categorization_trials > 0));
+    continueRoutine = continueRoutine && !((living_a_categorization_trials.thisN > 0));
     living_a_resp.keys = undefined;
     living_a_resp.rt = undefined;
     _living_a_resp_allKeys = [];
@@ -4266,7 +4237,6 @@ function living_aRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('living_a.stopped', globalClock.getTime());
     living_a_resp.stop();
     // the Routine "living_a" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -4291,7 +4261,6 @@ function living_random_isiRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('living_random_isi.started', globalClock.getTime());
     // Run 'Begin Routine' code from living_random_isi_code
     time = 1 + Math.random();
     // keep track of which components have finished
@@ -4407,7 +4376,6 @@ function living_random_isiRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('living_random_isi.stopped', globalClock.getTime());
     // the Routine "living_random_isi" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -4432,7 +4400,6 @@ function living_pictureRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('living_picture.started', globalClock.getTime());
     living_picture_image.setImage(stimulus);
     living_picture_resp.keys = undefined;
     living_picture_resp.rt = undefined;
@@ -4581,7 +4548,6 @@ function living_pictureRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('living_picture.stopped', globalClock.getTime());
     // was no response the correct answer?!
     if (living_picture_resp.keys === undefined) {
       if (['None','none',undefined].includes(correct_answer)) {
@@ -4628,9 +4594,8 @@ function living_bRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('living_b.started', globalClock.getTime());
     // skip this Routine if its 'Skip if' condition is True
-    continueRoutine = continueRoutine && !((living_b_categorization_trials.thisN < 0));
+    continueRoutine = continueRoutine && !((living_b_categorization_trials.thisN > 0));
     living_b_resp.keys = undefined;
     living_b_resp.rt = undefined;
     _living_b_resp_allKeys = [];
@@ -4747,7 +4712,6 @@ function living_bRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('living_b.stopped', globalClock.getTime());
     living_b_resp.stop();
     // the Routine "living_b" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -4773,7 +4737,6 @@ function sleep_aRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('sleep_a.started', globalClock.getTime());
     // skip this Routine if its 'Skip if' condition is True
     continueRoutine = continueRoutine && !((bed_a_categorization_trials.thisN > 0));
     bed_a_resp.keys = undefined;
@@ -4892,7 +4855,6 @@ function sleep_aRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('sleep_a.stopped', globalClock.getTime());
     bed_a_resp.stop();
     // the Routine "sleep_a" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -4917,7 +4879,6 @@ function sleep_random_isiRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('sleep_random_isi.started', globalClock.getTime());
     // Run 'Begin Routine' code from bed_random_isi_code
     time = 1 + Math.random();
     // keep track of which components have finished
@@ -5033,7 +4994,6 @@ function sleep_random_isiRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('sleep_random_isi.stopped', globalClock.getTime());
     // the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -5058,7 +5018,6 @@ function sleep_pictureRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('sleep_picture.started', globalClock.getTime());
     bed_picture_image.setImage(stimulus);
     bed_picture_resp.keys = undefined;
     bed_picture_resp.rt = undefined;
@@ -5207,7 +5166,6 @@ function sleep_pictureRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('sleep_picture.stopped', globalClock.getTime());
     // was no response the correct answer?!
     if (bed_picture_resp.keys === undefined) {
       if (['None','none',undefined].includes(correct_answer)) {
@@ -5254,7 +5212,6 @@ function sleep_bRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('sleep_b.started', globalClock.getTime());
     // skip this Routine if its 'Skip if' condition is True
     continueRoutine = continueRoutine && !((bed_b_categorization_trials.thisN > 0));
     bed_b_resp.keys = undefined;
@@ -5373,7 +5330,6 @@ function sleep_bRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('sleep_b.stopped', globalClock.getTime());
     bed_b_resp.stop();
     // the Routine "sleep_b" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -5399,7 +5355,6 @@ function middle_breakRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('middle_break.started', globalClock.getTime());
     break_resp.keys = undefined;
     break_resp.rt = undefined;
     _break_resp_allKeys = [];
@@ -5493,7 +5448,6 @@ function middle_breakRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('middle_break.stopped', globalClock.getTime());
     break_resp.stop();
     // the Routine "middle_break" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -5519,7 +5473,6 @@ function instruction_memoRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('instruction_memo.started', globalClock.getTime());
     instructions_memo_resp.keys = undefined;
     instructions_memo_resp.rt = undefined;
     _instructions_memo_resp_allKeys = [];
@@ -5613,7 +5566,6 @@ function instruction_memoRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('instruction_memo.stopped', globalClock.getTime());
     instructions_memo_resp.stop();
     // the Routine "instruction_memo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -5638,7 +5590,6 @@ function memo_fix_isiRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('memo_fix_isi.started', globalClock.getTime());
     // keep track of which components have finished
     memo_fix_isiComponents = [];
     memo_fix_isiComponents.push(memo_fix_pic);
@@ -5707,7 +5658,6 @@ function memo_fix_isiRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('memo_fix_isi.stopped', globalClock.getTime());
     // the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -5731,7 +5681,6 @@ function memo_trainingRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('memo_training.started', globalClock.getTime());
     memo_training_stim.setImage(stimulus);
     memo_training_slider.reset()
     // keep track of which components have finished
@@ -5828,7 +5777,6 @@ function memo_trainingRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('memo_training.stopped', globalClock.getTime());
     psychoJS.experiment.addData('memo_training_slider.response', memo_training_slider.getRating());
     psychoJS.experiment.addData('memo_training_slider.rt', memo_training_slider.getRT());
     // the Routine "memo_training" was not non-slip safe, so reset the non-slip timer
@@ -5858,7 +5806,6 @@ function memo_training_feedbackRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     routineTimer.add(1.500000);
     // update component parameters for each repeat
-    psychoJS.experiment.addData('memo_training_feedback.started', globalClock.getTime());
     // Run 'Begin Routine' code from memo_train_feedb_code
     var _pj;
     function _pj_snippets(container) {
@@ -5958,7 +5905,6 @@ function memo_training_feedbackRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('memo_training_feedback.stopped', globalClock.getTime());
     // Routines running outside a loop should always advance the datafile row
     if (currentLoop === psychoJS.experiment) {
       psychoJS.experiment.nextEntry(snapshot);
@@ -5980,7 +5926,6 @@ function start_memotestRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('start_memotest.started', globalClock.getTime());
     start_memotest_resp.keys = undefined;
     start_memotest_resp.rt = undefined;
     _start_memotest_resp_allKeys = [];
@@ -6074,7 +6019,6 @@ function start_memotestRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('start_memotest.stopped', globalClock.getTime());
     start_memotest_resp.stop();
     // the Routine "start_memotest" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -6099,7 +6043,6 @@ function memotest_taskRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('memotest_task.started', globalClock.getTime());
     memotest_task_stim.setImage(stimulus);
     memotest_task_slider.reset()
     // keep track of which components have finished
@@ -6181,7 +6124,6 @@ function memotest_taskRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('memotest_task.stopped', globalClock.getTime());
     psychoJS.experiment.addData('memotest_task_slider.response', memotest_task_slider.getRating());
     psychoJS.experiment.addData('memotest_task_slider.rt', memotest_task_slider.getRT());
     // the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -6209,7 +6151,6 @@ function endRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('end.started', globalClock.getTime());
     // Run 'Begin Routine' code from vpcode_code
     vpcode = Math.floor(Math.random() * 900000) + 100000;
     
@@ -6318,7 +6259,6 @@ function endRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('end.stopped', globalClock.getTime());
     // Run 'End Routine' code from vpcode_code
     psychoJS.experiment.addData("vpcode", vpcode);
     

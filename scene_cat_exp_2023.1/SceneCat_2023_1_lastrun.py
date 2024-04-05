@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on Fri Apr  5 12:03:21 2024
+    on Fri Apr  5 16:41:35 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -393,7 +393,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "data_safety_2" ---
     data_safety_2_text_ = visual.TextStim(win=win, name='data_safety_2_text_',
-        text='3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: r.michel@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\n',
+        text='3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: niko.busch@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\n',
         font='Open Sans',
         pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1247,7 +1247,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "intro" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('intro.started', globalClock.getTime())
     intro_resp.keys = []
     intro_resp.rt = []
     _intro_resp_allKeys = []
@@ -1344,14 +1343,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in introComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('intro.stopped', globalClock.getTime())
     # the Routine "intro" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "consent" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('consent.started', globalClock.getTime())
     consent_resp.keys = []
     consent_resp.rt = []
     _consent_resp_allKeys = []
@@ -1481,14 +1478,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in consentComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('consent.stopped', globalClock.getTime())
     # the Routine "consent" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "data_safety" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('data_safety.started', globalClock.getTime())
     data_safety_resp.keys = []
     data_safety_resp.rt = []
     _data_safety_resp_allKeys = []
@@ -1614,14 +1609,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in data_safetyComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('data_safety.stopped', globalClock.getTime())
     # the Routine "data_safety" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "data_safety_2" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('data_safety_2.started', globalClock.getTime())
     data_safety_2_resp.keys = []
     data_safety_2_resp.rt = []
     _data_safety_2_resp_allKeys = []
@@ -1747,14 +1740,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in data_safety_2Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('data_safety_2.stopped', globalClock.getTime())
     # the Routine "data_safety_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "instructions_cat" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('instructions_cat.started', globalClock.getTime())
     instructions_cat_resp.keys = []
     instructions_cat_resp.rt = []
     _instructions_cat_resp_allKeys = []
@@ -1880,14 +1871,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in instructions_catComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('instructions_cat.stopped', globalClock.getTime())
     # the Routine "instructions_cat" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "category_test_text" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('category_test_text.started', globalClock.getTime())
     # keep track of which components have finished
     category_test_textComponents = [category_test_word]
     for thisComponent in category_test_textComponents:
@@ -1966,7 +1955,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in category_test_textComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('category_test_text.stopped', globalClock.getTime())
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -2005,7 +1993,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "fix_categorization_training" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('fix_categorization_training.started', globalClock.getTime())
         # Run 'Begin Routine' code from random_isi_code_cat_training
         # Random Zeit ziehen für Fixationskreuzpräsentation
         import random
@@ -2175,14 +2162,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in fix_categorization_trainingComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('fix_categorization_training.stopped', globalClock.getTime())
         # the Routine "fix_categorization_training" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
         # --- Prepare to start Routine "categorization_training" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('categorization_training.started', globalClock.getTime())
         cat_training_stim.setImage(stimulus)
         cat_training_key.keys = []
         cat_training_key.rt = []
@@ -2368,7 +2353,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in categorization_trainingComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('categorization_training.stopped', globalClock.getTime())
         # check responses
         if cat_training_key.keys in ['', [], None]:  # No response was made
             cat_training_key.keys = None
@@ -2389,7 +2373,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "cat_training_feedback" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('cat_training_feedback.started', globalClock.getTime())
         # Run 'Begin Routine' code from cat_train_feedb_code
         if cat_training_key.corr == 1:
             cat_training_feedb_eval = "korrekt"
@@ -2561,7 +2544,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in cat_training_feedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('cat_training_feedback.stopped', globalClock.getTime())
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -2578,7 +2560,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "start_categorization" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('start_categorization.started', globalClock.getTime())
     start_cat_resp.keys = []
     start_cat_resp.rt = []
     _start_cat_resp_allKeys = []
@@ -2675,7 +2656,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in start_categorizationComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('start_categorization.stopped', globalClock.getTime())
     # the Routine "start_categorization" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2740,9 +2720,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "kitchen_a" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_a.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
-            continueRoutine = continueRoutine and not (kitchen_a_categorization_trial.thisN > 0)
+            continueRoutine = continueRoutine and not (kitchen_a_categorization_trials.thisN > 0)
             kitchen_a_resp.keys = []
             kitchen_a_resp.rt = []
             _kitchen_a_resp_allKeys = []
@@ -2876,14 +2855,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_aComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_a.stopped', globalClock.getTime())
             # the Routine "kitchen_a" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from random_isi_kitchen_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -3053,14 +3030,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_random_isi.stopped', globalClock.getTime())
             # the Routine "kitchen_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_picture.started', globalClock.getTime())
             kitchen_image.setImage(stimulus)
             kitchen_picture_resp.keys = []
             kitchen_picture_resp.rt = []
@@ -3248,7 +3223,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_picture.stopped', globalClock.getTime())
             # check responses
             if kitchen_picture_resp.keys in ['', [], None]:  # No response was made
                 kitchen_picture_resp.keys = None
@@ -3305,7 +3279,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "kitchen_b" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_b.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
             continueRoutine = continueRoutine and not (kitchen_b_categorization_trials.thisN > 0)
             kitchen_b_resp.keys = []
@@ -3441,14 +3414,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_bComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_b.stopped', globalClock.getTime())
             # the Routine "kitchen_b" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from random_isi_kitchen_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -3618,14 +3589,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_random_isi.stopped', globalClock.getTime())
             # the Routine "kitchen_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "kitchen_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('kitchen_picture.started', globalClock.getTime())
             kitchen_image.setImage(stimulus)
             kitchen_picture_resp.keys = []
             kitchen_picture_resp.rt = []
@@ -3813,7 +3782,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in kitchen_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('kitchen_picture.stopped', globalClock.getTime())
             # check responses
             if kitchen_picture_resp.keys in ['', [], None]:  # No response was made
                 kitchen_picture_resp.keys = None
@@ -3870,9 +3838,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "living_a" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_a.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
-            continueRoutine = continueRoutine and not (living_a_categorization_trials > 0)
+            continueRoutine = continueRoutine and not (living_a_categorization_trials.thisN > 0)
             living_a_resp.keys = []
             living_a_resp.rt = []
             _living_a_resp_allKeys = []
@@ -4010,14 +3977,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_aComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_a.stopped', globalClock.getTime())
             # the Routine "living_a" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from living_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -4187,14 +4152,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_random_isi.stopped', globalClock.getTime())
             # the Routine "living_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_picture.started', globalClock.getTime())
             living_picture_image.setImage(stimulus)
             living_picture_resp.keys = []
             living_picture_resp.rt = []
@@ -4384,7 +4347,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_picture.stopped', globalClock.getTime())
             # check responses
             if living_picture_resp.keys in ['', [], None]:  # No response was made
                 living_picture_resp.keys = None
@@ -4441,9 +4403,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "living_b" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_b.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
-            continueRoutine = continueRoutine and not (living_b_categorization_trials.thisN < 0)
+            continueRoutine = continueRoutine and not (living_b_categorization_trials.thisN > 0)
             living_b_resp.keys = []
             living_b_resp.rt = []
             _living_b_resp_allKeys = []
@@ -4581,14 +4542,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_bComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_b.stopped', globalClock.getTime())
             # the Routine "living_b" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from living_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -4758,14 +4717,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_random_isi.stopped', globalClock.getTime())
             # the Routine "living_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "living_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('living_picture.started', globalClock.getTime())
             living_picture_image.setImage(stimulus)
             living_picture_resp.keys = []
             living_picture_resp.rt = []
@@ -4955,7 +4912,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in living_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('living_picture.stopped', globalClock.getTime())
             # check responses
             if living_picture_resp.keys in ['', [], None]:  # No response was made
                 living_picture_resp.keys = None
@@ -5012,7 +4968,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "sleep_a" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_a.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
             continueRoutine = continueRoutine and not (bed_a_categorization_trials.thisN > 0)
             bed_a_resp.keys = []
@@ -5152,14 +5107,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_aComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_a.stopped', globalClock.getTime())
             # the Routine "sleep_a" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from bed_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -5329,14 +5282,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_random_isi.stopped', globalClock.getTime())
             # the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_picture.started', globalClock.getTime())
             bed_picture_image.setImage(stimulus)
             bed_picture_resp.keys = []
             bed_picture_resp.rt = []
@@ -5526,7 +5477,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_picture.stopped', globalClock.getTime())
             # check responses
             if bed_picture_resp.keys in ['', [], None]:  # No response was made
                 bed_picture_resp.keys = None
@@ -5583,7 +5533,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "sleep_b" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_b.started', globalClock.getTime())
             # skip this Routine if its 'Skip if' condition is True
             continueRoutine = continueRoutine and not (bed_b_categorization_trials.thisN > 0)
             bed_b_resp.keys = []
@@ -5723,14 +5672,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_bComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_b.stopped', globalClock.getTime())
             # the Routine "sleep_b" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_random_isi.started', globalClock.getTime())
             # Run 'Begin Routine' code from bed_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
@@ -5900,14 +5847,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_random_isi.stopped', globalClock.getTime())
             # the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
             # --- Prepare to start Routine "sleep_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
-            thisExp.addData('sleep_picture.started', globalClock.getTime())
             bed_picture_image.setImage(stimulus)
             bed_picture_resp.keys = []
             bed_picture_resp.rt = []
@@ -6097,7 +6042,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in sleep_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            thisExp.addData('sleep_picture.stopped', globalClock.getTime())
             # check responses
             if bed_picture_resp.keys in ['', [], None]:  # No response was made
                 bed_picture_resp.keys = None
@@ -6132,7 +6076,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "middle_break" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('middle_break.started', globalClock.getTime())
     break_resp.keys = []
     break_resp.rt = []
     _break_resp_allKeys = []
@@ -6229,14 +6172,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in middle_breakComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('middle_break.stopped', globalClock.getTime())
     # the Routine "middle_break" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "instruction_memo" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('instruction_memo.started', globalClock.getTime())
     instructions_memo_resp.keys = []
     instructions_memo_resp.rt = []
     _instructions_memo_resp_allKeys = []
@@ -6333,7 +6274,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in instruction_memoComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('instruction_memo.stopped', globalClock.getTime())
     # the Routine "instruction_memo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -6369,7 +6309,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "memo_fix_isi" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memo_fix_isi.started', globalClock.getTime())
         # keep track of which components have finished
         memo_fix_isiComponents = [memo_fix_pic]
         for thisComponent in memo_fix_isiComponents:
@@ -6448,14 +6387,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_fix_isiComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
         # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
         # --- Prepare to start Routine "memo_training" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memo_training.started', globalClock.getTime())
         memo_training_stim.setImage(stimulus)
         memo_training_slider.reset()
         # keep track of which components have finished
@@ -6576,7 +6513,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_trainingComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memo_training.stopped', globalClock.getTime())
         memo_training_trials.addData('memo_training_slider.response', memo_training_slider.getRating())
         memo_training_trials.addData('memo_training_slider.rt', memo_training_slider.getRT())
         # the Routine "memo_training" was not non-slip safe, so reset the non-slip timer
@@ -6585,7 +6521,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "memo_training_feedback" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memo_training_feedback.started', globalClock.getTime())
         # Run 'Begin Routine' code from memo_train_feedb_code
         if 'alt' in memo_training_slider.getRating(): 
             rating = 1
@@ -6675,7 +6610,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_training_feedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memo_training_feedback.stopped', globalClock.getTime())
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -6692,7 +6626,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "start_memotest" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('start_memotest.started', globalClock.getTime())
     start_memotest_resp.keys = []
     start_memotest_resp.rt = []
     _start_memotest_resp_allKeys = []
@@ -6789,7 +6722,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in start_memotestComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('start_memotest.stopped', globalClock.getTime())
     # the Routine "start_memotest" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -6825,7 +6757,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "memo_fix_isi" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memo_fix_isi.started', globalClock.getTime())
         # keep track of which components have finished
         memo_fix_isiComponents = [memo_fix_pic]
         for thisComponent in memo_fix_isiComponents:
@@ -6904,14 +6835,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_fix_isiComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memo_fix_isi.stopped', globalClock.getTime())
         # the Routine "memo_fix_isi" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
         # --- Prepare to start Routine "memotest_task" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('memotest_task.started', globalClock.getTime())
         memotest_task_stim.setImage(stimulus)
         memotest_task_slider.reset()
         # keep track of which components have finished
@@ -7003,7 +6932,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memotest_taskComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('memotest_task.stopped', globalClock.getTime())
         memotest_trials.addData('memotest_task_slider.response', memotest_task_slider.getRating())
         memotest_trials.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
         # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
@@ -7019,7 +6947,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "end" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('end.started', globalClock.getTime())
     # Run 'Begin Routine' code from vpcode_code
     import random
     vpcode = random.randint(100000, 999999)
@@ -7138,7 +7065,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in endComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('end.stopped', globalClock.getTime())
     # Run 'End Routine' code from vpcode_code
     thisExp.addData('vpcode', vpcode)
     # the Routine "end" was not non-slip safe, so reset the non-slip timer
