@@ -29,7 +29,8 @@ setwd(dirs$rcode)
 # Load packages and subfunctions.
 # -----------------------------------------------------------------------------
 library(dplyr)
-library(openxlsx)
+#library(openxlsx)
+library(writexl)
 library(data.table)
 
 

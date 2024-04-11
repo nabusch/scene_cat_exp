@@ -7,7 +7,7 @@ generate_input_mem_separateblocks <- function(vars, dirs, isubject){
  # subject's block order table.
  # -------------------------------------------------------------------------
  filename = sprintf("%s/%d_scenecat_block_order.xlsx", dirs$input_files, isubject)
- block_order_table  <- read.xlsx(filename)
+ block_order_table  <- read_xlsx(filename)
  
  cat_trials <- data.frame()
  
@@ -117,7 +117,7 @@ generate_input_mem_separateblocks <- function(vars, dirs, isubject){
  # Save the input file.
  # -------------------------------------------------------------------------
  filename = sprintf("%s/%d_scenecat_memory.xlsx", dirs$input_files, isubject)
- write.xlsx(mem_trials, filename, colNames=TRUE, rowNames = FALSE)
+ write_xlsx(mem_trials, filename, colNames=TRUE, rowNames = FALSE)
  
  
  

@@ -11,7 +11,7 @@ generate_input_cat_separateblocks <- function(vars, dirs, isubject){
  
  
  # Get a list of all available images.
- available_images <- read.xlsx(sprintf("%s/images_typicality_ranks.xlsx", dirs$images))
+ available_images <- read_xlsx(sprintf("%s/images_typicality_ranks.xlsx", dirs$images))
 # available_images <- available_images %>%
  # mutate(stimulus = paste("stimuli", stimulus, sep = "/")) # Put the directory name in front of image file name.
  
@@ -135,7 +135,7 @@ generate_input_cat_separateblocks <- function(vars, dirs, isubject){
   ### Save the input file for this block.
   ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   filename = sprintf("%s/%d_scenecat_categorize_%s_%d.xlsx", dirs$input_files, isubject, current_category, category_occurrences[iblock])
-  write.xlsx(input_list_cat_task, filename, colNames=TRUE, rowNames = FALSE)
+  write_xlsx(input_list_cat_task, filename, colNames=TRUE, rowNames = FALSE)
   #print(filename)
   
  }
