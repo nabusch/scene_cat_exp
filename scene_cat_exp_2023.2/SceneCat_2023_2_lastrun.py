@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on Fri Apr  5 18:43:46 2024
+    on Tue Apr 23 15:07:06 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -33,34 +33,6 @@ import sys  # to get file system encoding
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
-# Run 'Before Experiment' code from random_isi_code_memo
-# Random Zeit ziehen für Fixationskreuzpräsentation
-import random
-time=random.uniform(1,2)
-# Run 'Before Experiment' code from random_isi_code_memo
-# Random Zeit ziehen für Fixationskreuzpräsentation
-import random
-time=random.uniform(1,2)
-# Run 'Before Experiment' code from random_isi_code_memo
-# Random Zeit ziehen für Fixationskreuzpräsentation
-import random
-time=random.uniform(1,2)
-# Run 'Before Experiment' code from random_isi_code_memo
-# Random Zeit ziehen für Fixationskreuzpräsentation
-import random
-time=random.uniform(1,2)
-# Run 'Before Experiment' code from random_isi_code_memo
-# Random Zeit ziehen für Fixationskreuzpräsentation
-import random
-time=random.uniform(1,2)
-# Run 'Before Experiment' code from random_isi_code_memo
-# Random Zeit ziehen für Fixationskreuzpräsentation
-import random
-time=random.uniform(1,2)
-# Run 'Before Experiment' code from random_isi_code_memo
-# Random Zeit ziehen für Fixationskreuzpräsentation
-import random
-time=random.uniform(1,2)
 # --- Setup global variables (available in all functions) ---
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -430,7 +402,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     data_safety_2_text_2 = visual.TextStim(win=win, name='data_safety_2_text_2',
-        text='3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: r.michel@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\nDrücken Sie die LEERTASTE, um zu bestätigen und fortzufahren.',
+        text='3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: niko.busch@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\nDrücken Sie die LEERTASTE, um zu bestätigen und fortzufahren.',
         font='Open Sans',
         pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -2902,6 +2874,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "memo_fix_isi" ---
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from random_isi_code_memo
+        # Random Zeit ziehen für Fixationskreuzpräsentation
+        import random
+        time=random.uniform(1,2)
         # keep track of which components have finished
         memo_fix_isiComponents = [memo_fix_pic]
         for thisComponent in memo_fix_isiComponents:
@@ -4042,6 +4018,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from random_isi_code_memo
+            # Random Zeit ziehen für Fixationskreuzpräsentation
+            import random
+            time=random.uniform(1,2)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -4924,6 +4904,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from random_isi_code_memo
+            # Random Zeit ziehen für Fixationskreuzpräsentation
+            import random
+            time=random.uniform(1,2)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -5812,6 +5796,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from random_isi_code_memo
+            # Random Zeit ziehen für Fixationskreuzpräsentation
+            import random
+            time=random.uniform(1,2)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -6700,6 +6688,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from random_isi_code_memo
+            # Random Zeit ziehen für Fixationskreuzpräsentation
+            import random
+            time=random.uniform(1,2)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -7588,6 +7580,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from random_isi_code_memo
+            # Random Zeit ziehen für Fixationskreuzpräsentation
+            import random
+            time=random.uniform(1,2)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -8476,6 +8472,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # --- Prepare to start Routine "memo_fix_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from random_isi_code_memo
+            # Random Zeit ziehen für Fixationskreuzpräsentation
+            import random
+            time=random.uniform(1,2)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
