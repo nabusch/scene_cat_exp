@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on Tue Apr 23 15:07:06 2024
+    on Wed Apr 24 16:14:21 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -109,7 +109,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/teresaberther/Psychologie/AE_Busch/scene_cat_exp/scene_cat_exp_2023.2/SceneCat_2023_2_lastrun.py',
+        originPath='/Users/milenax/Desktop/Buschlab/scene_cat_exp/scene_cat_exp_2023.2/SceneCat_2023_2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -318,7 +318,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "intro" ---
     intro_text = visual.TextStim(win=win, name='intro_text',
-        text='Herzlich Willkommen zum Experiment\n\nDas Experiment besteht aus zwei Teilen und wird ca. 30 min in Anspruch nehmen.\nBitte begeben Sie sich für die Zeit des Experiments in eine Aufrechte Position.\n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
+        text='Herzlich Willkommen zum Experiment\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.\nBitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.\n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -412,20 +412,30 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions_cat" ---
     instructions_cat_text = visual.TextStim(win=win, name='instructions_cat_text',
-        text='Instruktion\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden.\nDas Experiment besteht aus zwei Teilen. Im ersten Teil ist die Aufgabe, die Bilder zu kategorisieren. Zu Beginn eines Blocks von Versuchsdurchgängen wird eine bestimmte Raum-Kategorie genannt (z.B. Wohnzimmer). In jedem der folgenden Versuchsdurchgänge soll dann so schnell es geht entschieden werden, ob das gezeigte Bild zu dieser Kategorie gehört.\nBitte halten sie während eines Blocks den Blick immer auf die Mitte des Bildschirms gerichtet, dort wo das kleine Fixationskreuz erscheint.\nDrücken Sie so schnell wie möglich „f“, falls das Bild zu dieser Kategorie gehört.\nDrücken Sie so schnell wie möglich „j“, falls das Bild NICHT zu dieser Kategorie gehört.\n\nBevor die Aufgabe beginnt, wird es einen Testlauf geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient zum besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter...',
+        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option.\n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter…',
+        font='Open Sans',
+        pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    instructions_cat_text_2 = visual.TextStim(win=win, name='instructions_cat_text_2',
+        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option.\n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
+        font='Open Sans',
+        pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    instructions_cat_resp = keyboard.Keyboard()
+    
+    # --- Initialize components for Routine "instructions_cat_2" ---
+    instructions_cat_2_text = visual.TextStim(win=win, name='instructions_cat_2_text',
+        text='Jetzt beginnt der Übungsteil für die Kategorisierungsaufgabe.\n\nIhnen wird gleich eine Kategorie genannt. Danach werden mehrere Bilder präsentiert. Geben Sie mit den Tasten "f" und "j" für jedes Bild so schnell wie möglich an, ob das Bild zur genannten Kategorie gehört.\n\nStarten Sie mit der LEERTASTE. ',
         font='Open Sans',
         pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
-    instructions_cat_text_2 = visual.TextStim(win=win, name='instructions_cat_text_2',
-        text='Instruktion\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden.\nDas Experiment besteht aus zwei Teilen. Im ersten Teil ist die Aufgabe, die Bilder zu kategorisieren. Zu Beginn eines Blocks von Versuchsdurchgängen wird eine bestimmte Raum-Kategorie genannt (z.B. Wohnzimmer). In jedem der folgenden Versuchsdurchgänge soll dann so schnell es geht entschieden werden, ob das gezeigte Bild zu dieser Kategorie gehört.\nBitte halten sie während eines Blocks den Blick immer auf die Mitte des Bildschirms gerichtet, dort wo das kleine Fixationskreuz erscheint.\nDrücken Sie so schnell wie möglich „f“, falls das Bild zu dieser Kategorie gehört.\nDrücken Sie so schnell wie möglich „j“, falls das Bild NICHT zu dieser Kategorie gehört.\n\nBevor die Aufgabe beginnt, wird es einen Testlauf geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient zum besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
-        font='Open Sans',
-        pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
-    instructions_cat_resp = keyboard.Keyboard()
+    instructions_cat_2_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "category_test_text" ---
     category_test_word = visual.TextStim(win=win, name='category_test_word',
@@ -539,7 +549,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instruction_memo" ---
     instructions_memo_text = visual.TextStim(win=win, name='instructions_memo_text',
-        text='Instruktion - Memo Test\nZweiter Teil\n\nEs werden nun wieder Bilder der drei bekannten Kategorien gezeigt. Dabei sollen Sie auf einer Skala einschätzen, ob es sich um ein altes Bild handelt, das Ihnen vorhin schon mal gezeigt wurde, oder ein komplett neues. Es geht in dieser Aufgabe NICHT mehr, darum schnellstmöglich zu antworten. Sie werden das Bild bis so lange sehen können, bis Sie antworten.\n\nDie Skala ist folgende:\nsicher alt\neher alt\neher neu\nsicher neu\n\nDie Skala wird Ihnen unter den Bildern angezeigt. Dabei sollen Sie die Kategorie auswählen, indem Sie mit der Maus darauf klicken.\n\nBevor die Aufgabe beginnt, wird es wieder einen Testlauf geben. Nach jeder Antwort wird Ihnen eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient zum besseren Verständnis der Aufgabe.\n\nDrücken Sie die LEERTASTE, um einen Testdurchlauf zu starten.',
+        text='Jetzt beginnt der Übungsteil für den Gedächtnistest. \n\nGeben Sie an, ob das gezeigte Bild in der vorherigen Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit der Antwort sind. Hierbei bedeutet "alt", dass das Bild im ersten Teil gezeigt wurde und "neu", dass das Bild NICHT im ersten Teil gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option. \n\nDrücken Sie die LEERTASTE, um einen Testdurchlauf zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.035, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -593,7 +603,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "start_categorization" ---
     start_cat_text = visual.TextStim(win=win, name='start_cat_text',
-        text='Der Testdurchlauf ist beendet.\n\nFür die folgende Aufgabe wird Ihnen keine Rückmeldung mehr eingeblendet, ob Sie korrekt oder falsch geantwortet haben.\n\nDrücken Sie die LEERTASTE, um das Experiment zu starten.',
+        text='Der Testdurchlauf ist beendet.\n\nWährend der folgenden Aufgabe wird Ihnen keine Rückmeldung mehr eingeblendet, ob Sie korrekt oder falsch geantwortet haben.\n\nDrücken Sie die LEERTASTE, um das Experiment zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -610,7 +620,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     kitchen_a_text_2 = visual.TextStim(win=win, name='kitchen_a_text_2',
-        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nVon 6',
+        text='Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -698,7 +708,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "kitchen_a_memo_instr" ---
     kitchen_a_memo_instr_text = visual.TextStim(win=win, name='kitchen_a_memo_instr_text',
-        text='Memotest fängt an, Start mit LEERTASTE',
+        text='Jetzt startet der Gedächtnistest zur Kategorie Küche.\n\nDrücken Sie die LEERTASTE, um zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -742,7 +752,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     kitchen_b_text_2 = visual.TextStim(win=win, name='kitchen_b_text_2',
-        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nVon 6',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -830,7 +840,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "kitchen_b_memo_instr" ---
     kitchen_b_memo_instr_text = visual.TextStim(win=win, name='kitchen_b_memo_instr_text',
-        text='Memotest fängt an, Start mit LEERTASTE',
+        text='Jetzt startet der Gedächtnistest zur Kategorie Küche.\n\nDrücken Sie die LEERTASTE, um zu starten.\n',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -874,7 +884,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     living_a_text_2 = visual.TextStim(win=win, name='living_a_text_2',
-        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nVon 6',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -962,7 +972,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "living_a_memotest_instr" ---
     living_a_memo_instr_text = visual.TextStim(win=win, name='living_a_memo_instr_text',
-        text='Memotest fängt an, Start mit LEERTASTE',
+        text='Jetzt startet der Gedächtnistest zur Kategorie Wohnzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1006,7 +1016,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     living_b_text_2 = visual.TextStim(win=win, name='living_b_text_2',
-        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nVon 6',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1094,7 +1104,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "living_b_memotest_instr" ---
     living_b_memo_instr_text = visual.TextStim(win=win, name='living_b_memo_instr_text',
-        text='Memotest fängt an, Start mit LEERTASTE',
+        text='Jetzt startet der Gedächtnistest zur Kategorie Wohnzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1129,7 +1139,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
     
-    # --- Initialize components for Routine "sleep_a" ---
+    # --- Initialize components for Routine "bed_a" ---
     bed_a_text = visual.TextStim(win=win, name='bed_a_text',
         text='Schlafzimmer',
         font='Open Sans',
@@ -1138,7 +1148,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     bed_a_text_2 = visual.TextStim(win=win, name='bed_a_text_2',
-        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nVon 6',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1153,7 +1163,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-3.0);
     
-    # --- Initialize components for Routine "sleep_random_isi" ---
+    # --- Initialize components for Routine "bed_random_isi" ---
     bed_random_isi_fix = visual.ImageStim(
         win=win,
         name='bed_random_isi_fix', 
@@ -1184,7 +1194,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-4.0);
     
-    # --- Initialize components for Routine "sleep_picture" ---
+    # --- Initialize components for Routine "bed_picture" ---
     bed_picture_fix = visual.ImageStim(
         win=win,
         name='bed_picture_fix', 
@@ -1226,7 +1236,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "bed_a_memotest_instr" ---
     bed_a_memo_instr_text = visual.TextStim(win=win, name='bed_a_memo_instr_text',
-        text='Memotest fängt an, Start mit LEERTASTE',
+        text='Jetzt startet der Gedächtnistest zur Kategorie Schlafzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1261,7 +1271,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
     
-    # --- Initialize components for Routine "sleep_b" ---
+    # --- Initialize components for Routine "bed_b" ---
     bed_b_text = visual.TextStim(win=win, name='bed_b_text',
         text='Schlafzimmer',
         font='Open Sans',
@@ -1270,7 +1280,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     bed_b_text_2 = visual.TextStim(win=win, name='bed_b_text_2',
-        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nVon 6',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1285,7 +1295,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-3.0);
     
-    # --- Initialize components for Routine "sleep_random_isi" ---
+    # --- Initialize components for Routine "bed_random_isi" ---
     bed_random_isi_fix = visual.ImageStim(
         win=win,
         name='bed_random_isi_fix', 
@@ -1316,7 +1326,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-4.0);
     
-    # --- Initialize components for Routine "sleep_picture" ---
+    # --- Initialize components for Routine "bed_picture" ---
     bed_picture_fix = visual.ImageStim(
         win=win,
         name='bed_picture_fix', 
@@ -1358,7 +1368,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "bed_b_memotest_instr" ---
     bed_b_memo_instr_text = visual.TextStim(win=win, name='bed_b_memo_instr_text',
-        text='Memotest fängt an, Start mit LEERTASTE',
+        text='Jetzt startet der Gedächtnistest zur Kategorie Schlafzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -2055,6 +2065,110 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # the Routine "instructions_cat" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # --- Prepare to start Routine "instructions_cat_2" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('instructions_cat_2.started', globalClock.getTime())
+    instructions_cat_2_resp.keys = []
+    instructions_cat_2_resp.rt = []
+    _instructions_cat_2_resp_allKeys = []
+    # keep track of which components have finished
+    instructions_cat_2Components = [instructions_cat_2_text, instructions_cat_2_resp]
+    for thisComponent in instructions_cat_2Components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "instructions_cat_2" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *instructions_cat_2_text* updates
+        
+        # if instructions_cat_2_text is starting this frame...
+        if instructions_cat_2_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            instructions_cat_2_text.frameNStart = frameN  # exact frame index
+            instructions_cat_2_text.tStart = t  # local t and not account for scr refresh
+            instructions_cat_2_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(instructions_cat_2_text, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            instructions_cat_2_text.status = STARTED
+            instructions_cat_2_text.setAutoDraw(True)
+        
+        # if instructions_cat_2_text is active this frame...
+        if instructions_cat_2_text.status == STARTED:
+            # update params
+            pass
+        
+        # *instructions_cat_2_resp* updates
+        waitOnFlip = False
+        
+        # if instructions_cat_2_resp is starting this frame...
+        if instructions_cat_2_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            instructions_cat_2_resp.frameNStart = frameN  # exact frame index
+            instructions_cat_2_resp.tStart = t  # local t and not account for scr refresh
+            instructions_cat_2_resp.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(instructions_cat_2_resp, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            instructions_cat_2_resp.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(instructions_cat_2_resp.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(instructions_cat_2_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if instructions_cat_2_resp.status == STARTED and not waitOnFlip:
+            theseKeys = instructions_cat_2_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            _instructions_cat_2_resp_allKeys.extend(theseKeys)
+            if len(_instructions_cat_2_resp_allKeys):
+                instructions_cat_2_resp.keys = _instructions_cat_2_resp_allKeys[-1].name  # just the last key pressed
+                instructions_cat_2_resp.rt = _instructions_cat_2_resp_allKeys[-1].rt
+                instructions_cat_2_resp.duration = _instructions_cat_2_resp_allKeys[-1].duration
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, inputs=inputs, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in instructions_cat_2Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "instructions_cat_2" ---
+    for thisComponent in instructions_cat_2Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('instructions_cat_2.stopped', globalClock.getTime())
+    # the Routine "instructions_cat_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # --- Prepare to start Routine "category_test_text" ---
@@ -6908,7 +7022,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisBed_a_categorization_trial:
                     globals()[paramName] = thisBed_a_categorization_trial[paramName]
             
-            # --- Prepare to start Routine "sleep_a" ---
+            # --- Prepare to start Routine "bed_a" ---
             continueRoutine = True
             # update component parameters for each repeat
             # skip this Routine if its 'Skip if' condition is True
@@ -6918,8 +7032,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _bed_a_resp_allKeys = []
             bed_a_block_no.setText(block_total_cat)
             # keep track of which components have finished
-            sleep_aComponents = [bed_a_text, bed_a_text_2, bed_a_resp, bed_a_block_no]
-            for thisComponent in sleep_aComponents:
+            bed_aComponents = [bed_a_text, bed_a_text_2, bed_a_resp, bed_a_block_no]
+            for thisComponent in bed_aComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -6931,7 +7045,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "sleep_a" ---
+            # --- Run Routine "bed_a" ---
             routineForceEnded = not continueRoutine
             while continueRoutine:
                 # get current time
@@ -7037,7 +7151,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in sleep_aComponents:
+                for thisComponent in bed_aComponents:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -7046,14 +7160,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "sleep_a" ---
-            for thisComponent in sleep_aComponents:
+            # --- Ending Routine "bed_a" ---
+            for thisComponent in bed_aComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # the Routine "sleep_a" was not non-slip safe, so reset the non-slip timer
+            # the Routine "bed_a" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
-            # --- Prepare to start Routine "sleep_random_isi" ---
+            # --- Prepare to start Routine "bed_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from bed_random_isi_code
@@ -7061,8 +7175,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            sleep_random_isiComponents = [bed_random_isi_fix, bed_random_isi_yes, bed_random_isi_no, bed_random_isi_question]
-            for thisComponent in sleep_random_isiComponents:
+            bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_yes, bed_random_isi_no, bed_random_isi_question]
+            for thisComponent in bed_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -7074,7 +7188,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "sleep_random_isi" ---
+            # --- Run Routine "bed_random_isi" ---
             routineForceEnded = not continueRoutine
             while continueRoutine:
                 # get current time
@@ -7212,7 +7326,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in sleep_random_isiComponents:
+                for thisComponent in bed_random_isiComponents:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -7221,14 +7335,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "sleep_random_isi" ---
-            for thisComponent in sleep_random_isiComponents:
+            # --- Ending Routine "bed_random_isi" ---
+            for thisComponent in bed_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
+            # the Routine "bed_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
-            # --- Prepare to start Routine "sleep_picture" ---
+            # --- Prepare to start Routine "bed_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
             bed_picture_image.setImage(stimulus)
@@ -7236,8 +7350,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             bed_picture_resp.rt = []
             _bed_picture_resp_allKeys = []
             # keep track of which components have finished
-            sleep_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_yes, bed_picture_no, bed_picture_resp, bed_picture_question]
-            for thisComponent in sleep_pictureComponents:
+            bed_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_yes, bed_picture_no, bed_picture_resp, bed_picture_question]
+            for thisComponent in bed_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -7249,7 +7363,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "sleep_picture" ---
+            # --- Run Routine "bed_picture" ---
             routineForceEnded = not continueRoutine
             while continueRoutine:
                 # get current time
@@ -7407,7 +7521,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in sleep_pictureComponents:
+                for thisComponent in bed_pictureComponents:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -7416,8 +7530,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "sleep_picture" ---
-            for thisComponent in sleep_pictureComponents:
+            # --- Ending Routine "bed_picture" ---
+            for thisComponent in bed_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
             # check responses
@@ -7434,7 +7548,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if bed_picture_resp.keys != None:  # we had a response
                 bed_a_categorization_trials.addData('bed_picture_resp.rt', bed_picture_resp.rt)
                 bed_a_categorization_trials.addData('bed_picture_resp.duration', bed_picture_resp.duration)
-            # the Routine "sleep_picture" was not non-slip safe, so reset the non-slip timer
+            # the Routine "bed_picture" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
             
@@ -7800,7 +7914,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 for paramName in thisBed_b_categorization_trial:
                     globals()[paramName] = thisBed_b_categorization_trial[paramName]
             
-            # --- Prepare to start Routine "sleep_b" ---
+            # --- Prepare to start Routine "bed_b" ---
             continueRoutine = True
             # update component parameters for each repeat
             # skip this Routine if its 'Skip if' condition is True
@@ -7810,8 +7924,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _bed_b_resp_allKeys = []
             bed_b_block_no.setText(block_total_cat)
             # keep track of which components have finished
-            sleep_bComponents = [bed_b_text, bed_b_text_2, bed_b_resp, bed_b_block_no]
-            for thisComponent in sleep_bComponents:
+            bed_bComponents = [bed_b_text, bed_b_text_2, bed_b_resp, bed_b_block_no]
+            for thisComponent in bed_bComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -7823,7 +7937,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "sleep_b" ---
+            # --- Run Routine "bed_b" ---
             routineForceEnded = not continueRoutine
             while continueRoutine:
                 # get current time
@@ -7929,7 +8043,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in sleep_bComponents:
+                for thisComponent in bed_bComponents:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -7938,14 +8052,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "sleep_b" ---
-            for thisComponent in sleep_bComponents:
+            # --- Ending Routine "bed_b" ---
+            for thisComponent in bed_bComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # the Routine "sleep_b" was not non-slip safe, so reset the non-slip timer
+            # the Routine "bed_b" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
-            # --- Prepare to start Routine "sleep_random_isi" ---
+            # --- Prepare to start Routine "bed_random_isi" ---
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from bed_random_isi_code
@@ -7953,8 +8067,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            sleep_random_isiComponents = [bed_random_isi_fix, bed_random_isi_yes, bed_random_isi_no, bed_random_isi_question]
-            for thisComponent in sleep_random_isiComponents:
+            bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_yes, bed_random_isi_no, bed_random_isi_question]
+            for thisComponent in bed_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -7966,7 +8080,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "sleep_random_isi" ---
+            # --- Run Routine "bed_random_isi" ---
             routineForceEnded = not continueRoutine
             while continueRoutine:
                 # get current time
@@ -8104,7 +8218,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in sleep_random_isiComponents:
+                for thisComponent in bed_random_isiComponents:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -8113,14 +8227,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "sleep_random_isi" ---
-            for thisComponent in sleep_random_isiComponents:
+            # --- Ending Routine "bed_random_isi" ---
+            for thisComponent in bed_random_isiComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
+            # the Routine "bed_random_isi" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
-            # --- Prepare to start Routine "sleep_picture" ---
+            # --- Prepare to start Routine "bed_picture" ---
             continueRoutine = True
             # update component parameters for each repeat
             bed_picture_image.setImage(stimulus)
@@ -8128,8 +8242,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             bed_picture_resp.rt = []
             _bed_picture_resp_allKeys = []
             # keep track of which components have finished
-            sleep_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_yes, bed_picture_no, bed_picture_resp, bed_picture_question]
-            for thisComponent in sleep_pictureComponents:
+            bed_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_yes, bed_picture_no, bed_picture_resp, bed_picture_question]
+            for thisComponent in bed_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -8141,7 +8255,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "sleep_picture" ---
+            # --- Run Routine "bed_picture" ---
             routineForceEnded = not continueRoutine
             while continueRoutine:
                 # get current time
@@ -8299,7 +8413,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in sleep_pictureComponents:
+                for thisComponent in bed_pictureComponents:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -8308,8 +8422,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "sleep_picture" ---
-            for thisComponent in sleep_pictureComponents:
+            # --- Ending Routine "bed_picture" ---
+            for thisComponent in bed_pictureComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
             # check responses
@@ -8326,7 +8440,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if bed_picture_resp.keys != None:  # we had a response
                 bed_b_categorization_trials.addData('bed_picture_resp.rt', bed_picture_resp.rt)
                 bed_b_categorization_trials.addData('bed_picture_resp.duration', bed_picture_resp.duration)
-            # the Routine "sleep_picture" was not non-slip safe, so reset the non-slip timer
+            # the Routine "bed_picture" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
             
