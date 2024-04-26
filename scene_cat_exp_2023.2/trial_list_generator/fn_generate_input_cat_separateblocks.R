@@ -1,4 +1,4 @@
-generate_input_cat_separateblocks <- function(vars, dirs, isubject){
+fn_generate_input_cat_separateblocks <- function(vars, dirs, isubject){
  
  # -------------------------------------------------------------------------
  # Initialize variables and load image information.
@@ -11,16 +11,11 @@ generate_input_cat_separateblocks <- function(vars, dirs, isubject){
  
  
  # Get a list of all available images.
- available_images <- read_xlsx(sprintf("%s/images_typicality_ranks.xlsx", dirs$images))
-# available_images <- available_images %>%
- # mutate(stimulus = paste("stimuli", stimulus, sep = "/")) # Put the directory name in front of image file name.
- 
- available_images <- available_images %>%
-  mutate(stimulus = paste0("stimuli/", gsub("png", vars$img_extension, stimulus, fixed = TRUE)))
+ available_images <- read.xlsx(sprintf("%s/stimuli_info_140.xlsx", dirs$images))
+ available_images$stimulus <- as.character(available_images$stimulus)
+ available_images$stimulus <- gsub("^.*/", "", available_images$stimulus)
  
  setDT(available_images)
- 
- 
  
  # Specify the desired order of columns for the output files.
  desired_order <- c("subject_id",
@@ -36,10 +31,10 @@ generate_input_cat_separateblocks <- function(vars, dirs, isubject){
                     "stimulus",
                     "conceptual",
                     "perceptual",
-                    "n",
                     "typicality", 
-                    "ranked",
-                    "typi_bin")
+                    "n",
+                    "p_typicality", "p_conceptual", "p_perceptual"
+ )
  
  
  # We need to keep track of how many category blocks we are generating.
@@ -85,10 +80,23 @@ generate_input_cat_separateblocks <- function(vars, dirs, isubject){
   
   # Select a random set of lines (i.e. images) for the current scene category
   # (TARGET) from the available images.
-  target_low  <- available_images[category == current_category & typi_bin == 'low',  ][sample(.N, vars$n_low_typicality_targets), ]
-  target_high <- available_images[category == current_category & typi_bin == 'high', ][sample(.N, vars$n_high_typicality_targets), ]
+  #target_low  <- available_images[category == current_category & typi_bin == 'low',  ][sample(.N, vars$n_low_typicality_targets), ]
+  #target_high <- available_images[category == current_category & typi_bin == 'high', ][sample(.N, vars$n_high_typicality_targets), ]
+  #target_all <- rbindlist(list(target_low, target_high))
   
-  target_all <- rbindlist(list(target_low, target_high))
+  
+  target_all <- available_images %>%
+    # Split the data into groups
+    group_by(p_typicality) %>%
+    # Apply conditional ordering and slicing
+    arrange(if_else(p_typicality <= 5, typicality, desc(typicality))) %>%
+    # Select the top 2 rows for each group
+    slice_head(n = 2) %>%
+    # Ungroup to avoid grouping affecting other operations later
+    ungroup()
+  
+  
+  
   target_all$cond_cat <- "target"
   
   # Select a random set of images for other categories (DISTRACTOR).
@@ -135,7 +143,7 @@ generate_input_cat_separateblocks <- function(vars, dirs, isubject){
   ### Save the input file for this block.
   ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   filename = sprintf("%s/%d_scenecat_categorize_%s_%d.xlsx", dirs$input_files, isubject, current_category, category_occurrences[iblock])
-  write_xlsx(input_list_cat_task, filename, colNames=TRUE, rowNames = FALSE)
+  write.xlsx(input_list_cat_task, filename, colNames=TRUE, rowNames = FALSE)
   #print(filename)
   
  }

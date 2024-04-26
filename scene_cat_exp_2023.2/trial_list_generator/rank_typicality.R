@@ -8,14 +8,14 @@
 
 
 # Settings.
-setwd("D:/Sciebo/Research Projects/2023_SceneCat/Experiment/")
+setwd("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/trial_list_generator/")
 
 library(dplyr)
 library(openxlsx)
 library(ggplot2)
 
 # Read the data from Excel.
-data <- read.xlsx("ratings_per_image_231218.xlsx")
+data <- read.xlsx("../140_stimuli/stimuli_info_140.xlsx")
 
 # Create a new column "typicality".
 data <- data %>%  mutate(typicality = (conceptual + perceptual) / 2)

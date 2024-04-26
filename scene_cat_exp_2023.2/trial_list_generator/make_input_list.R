@@ -2,6 +2,11 @@
 # to be presented on each trial. The list includes a lot of meta data that we
 # may need to use in our data analysis later.
 
+# New in scenecat2.0: we have a new procedure for selecting target images.
+# Rather than drawing a new random sample of images for each subject, we want to
+# use the same images for everyone. We have computed percentiles across the
+# typicality ratings.
+
 
 
 # -----------------------------------------------------------------------------
@@ -10,17 +15,16 @@
 dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#dirs$main <- ("D:/Sciebo/Research Projects/2023_SceneCat/Experiment")
-dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/Experiment")
+dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
 
 # Directory where to find the image files and the table with image info.
-dirs$images <- paste(dirs$main, "/final_stimuli_real", sep="")
+dirs$images <- paste(dirs$main, "/140_stimuli", sep="")
 
 # Output directory for storing the Excel files.
 dirs$input_files <-paste(dirs$main, "/input_files", sep="")
 
 # Directory where the R code is located.
-dirs$rcode <-paste(dirs$main, "/scene_cat_code/R", sep="")
+dirs$rcode <-paste(dirs$main, "/trial_list_generator/", sep="")
 setwd(dirs$rcode)
 
 
@@ -29,7 +33,6 @@ setwd(dirs$rcode)
 # Load packages and subfunctions.
 # -----------------------------------------------------------------------------
 library(dplyr)
-#library(openxlsx)
 library(writexl)
 library(data.table)
 
@@ -41,27 +44,31 @@ library(data.table)
 vars <- list()
 
 # Get input files for so many subjects.
-vars$n_subjects <- 2
+vars$n_subjects <- 1
 
 # Use these scene categories.
 vars$categories <- c('bedroom', 'kitchen', 'living_room')
 
 # Do we use images with .png or .jpg extension? The jpg files are much smaller.
-vars$img_extension <- 'jpg' #'jpg' or 'png', no dot required.
+vars$img_extension <- 'png' #'jpg' or 'png', no dot required.
 
 # Use multiple blocks for each category.
 vars$n_blocks_per_category <- 2
 
 # How many low/high typicality scenes of the target category in each block? I
 # suggest we use roughly 1/3 of low typicality images. 
-vars$n_low_typicality_targets <- 7
-vars$n_high_typicality_targets <- 14
-vars$n_targets_per_block <- vars$n_low_typicality_targets + vars$n_high_typicality_targets
+vars$typi_percentiles <- 1:10 # We have grouped our images into 10 bins of typicality.
+vars$n_targets_percentile <- 2 # We want to show so many target images for each typicality bin.
+
+#vars$n_low_typicality_targets <- 7
+#vars$n_high_typicality_targets <- 14
+vars$n_targets_per_block <- vars$n_targets_percentile * length(vars$typi_percentiles)
 
 # Proportion of distractors from non-target scenes. Distractors can be from
 # either non-target category and we do not care about their typicality.
 vars$p_distractors_per_block <- 0.3
-vars$n_distractors_per_block <- ceiling(vars$p_distractors_per_block * vars$n_targets_per_block)
+#vars$n_distractors_per_block <- ceiling(vars$p_distractors_per_block * vars$n_targets_per_block)
+vars$n_distractors_per_block <- 2 * ceiling((vars$p_distractors_per_block * vars$n_targets_per_block)/2)
 
 # Proportion of new images in the memory block.
 vars$p_new <- 0.33
@@ -87,12 +94,12 @@ for (isubject in 1:vars$n_subjects) {
  print(sprintf("Generating files for subject %d.", isubject))
  
  # Generate the input lists for the categorization task.
- source("generate_input_cat_separateblocks.R")
- generate_input_cat_separateblocks(vars, dirs, isubject)
+ source("fn_generate_input_cat_separateblocks.R")
+ fn_generate_input_cat_separateblocks(vars, dirs, isubject)
  
  # Generate the input lists for the memory task.
- source("generate_input_mem_separateblocks.R")
- generate_input_mem_separateblocks(vars, dirs, isubject)
+ source("fn_generate_input_mem_separateblocks.R")
+ fn_generate_input_mem_separateblocks(vars, dirs, isubject)
  
 }
 
