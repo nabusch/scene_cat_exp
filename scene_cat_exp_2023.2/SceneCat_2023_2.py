@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on Mon Apr 29 13:56:56 2024
+    on Thu Apr 25 17:43:08 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -38,7 +38,7 @@ from psychopy.hardware import keyboard
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # Store info about the experiment session
 psychopyVersion = '2023.2.3'
-expName = 'SceneCat_2023_2_key_resp'  # from the Builder filename that created this script
+expName = 'SceneCat_2023_2'  # from the Builder filename that created this script
 expInfo = {
     'participant': '',
     'Alter': '',
@@ -109,7 +109,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/teresaberther/Psychologie/AE_Busch/Niko/scene_cat_exp_2023_2_2/SceneCat_2023_2_key_resp_lastrun.py',
+        originPath='/Users/teresaberther/Psychologie/AE_Busch/Niko/scene_cat_exp_2023_2/SceneCat_2023_2.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -160,7 +160,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=[1920, 1080], fullscr=True, screen=0,
+            size=[1440, 900], fullscr=True, screen=0,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -412,16 +412,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions_cat" ---
     instructions_cat_text = visual.TextStim(win=win, name='instructions_cat_text',
-        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter…',
+        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option.\n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter…',
         font='Open Sans',
-        pos=(0, 0), height=0.026, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     instructions_cat_text_2 = visual.TextStim(win=win, name='instructions_cat_text_2',
-        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
+        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option.\n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
         font='Open Sans',
-        pos=(0, 0), height=0.026, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
@@ -549,7 +549,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instruction_memo" ---
     instructions_memo_text = visual.TextStim(win=win, name='instructions_memo_text',
-        text='Jetzt beginnt der Übungsteil für den Gedächtnistest. \n\nGeben Sie an, ob das gezeigte Bild in der vorherigen Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit der Antwort sind. Hierbei bedeutet "alt", dass das Bild im ersten Teil gezeigt wurde und "neu", dass das Bild NICHT im ersten Teil gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nDrücken Sie die LEERTASTE, um einen Testdurchlauf zu starten.',
+        text='Jetzt beginnt der Übungsteil für den Gedächtnistest. \n\nGeben Sie an, ob das gezeigte Bild in der vorherigen Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit der Antwort sind. Hierbei bedeutet "alt", dass das Bild im ersten Teil gezeigt wurde und "neu", dass das Bild NICHT im ersten Teil gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option. \n\nDrücken Sie die LEERTASTE, um einen Testdurchlauf zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.035, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -585,13 +585,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     memo_training_slider = visual.Slider(win=win, name='memo_training_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.35), units=win.units,
+        labels=['sicher alt', 'eher alt', 'eher neu', 'sicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-2, readOnly=False)
-    memo_training_slider_key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "memo_training_feedback" ---
     memo_train_feedb_text = visual.TextStim(win=win, name='memo_train_feedb_text',
@@ -631,7 +630,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     kitchen_a_block_no = visual.TextStim(win=win, name='kitchen_a_block_no',
         text='',
         font='Open Sans',
-        pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -737,13 +736,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.35), units=win.units,
+        labels=['sicher alt', 'eher alt', 'eher neu', 'sicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
-    memotest_task_slider_key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "kitchen_b" ---
     kitchen_b_text = visual.TextStim(win=win, name='kitchen_b_text',
@@ -754,7 +752,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     kitchen_b_text_2 = visual.TextStim(win=win, name='kitchen_b_text_2',
-        text='Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -764,7 +762,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     kitchen_b_block_no = visual.TextStim(win=win, name='kitchen_b_block_no',
         text='',
         font='Open Sans',
-        pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -870,13 +868,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.35), units=win.units,
+        labels=['sicher alt', 'eher alt', 'eher neu', 'sicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
-    memotest_task_slider_key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "living_a" ---
     living_a_text = visual.TextStim(win=win, name='living_a_text',
@@ -887,7 +884,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     living_a_text_2 = visual.TextStim(win=win, name='living_a_text_2',
-        text='Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -897,7 +894,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     living_a_block_no = visual.TextStim(win=win, name='living_a_block_no',
         text='',
         font='Open Sans',
-        pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1003,13 +1000,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.35), units=win.units,
+        labels=['sicher alt', 'eher alt', 'eher neu', 'sicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
-    memotest_task_slider_key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "living_b" ---
     living_b_text = visual.TextStim(win=win, name='living_b_text',
@@ -1020,7 +1016,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     living_b_text_2 = visual.TextStim(win=win, name='living_b_text_2',
-        text='Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1030,7 +1026,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     living_b_block_no = visual.TextStim(win=win, name='living_b_block_no',
         text='',
         font='Open Sans',
-        pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1136,13 +1132,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.35), units=win.units,
+        labels=['sicher alt', 'eher alt', 'eher neu', 'sicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
-    memotest_task_slider_key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "bed_a" ---
     bed_a_text = visual.TextStim(win=win, name='bed_a_text',
@@ -1153,7 +1148,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     bed_a_text_2 = visual.TextStim(win=win, name='bed_a_text_2',
-        text='Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1163,7 +1158,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     bed_a_block_no = visual.TextStim(win=win, name='bed_a_block_no',
         text='',
         font='Open Sans',
-        pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1269,13 +1264,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.35), units=win.units,
+        labels=['sicher alt', 'eher alt', 'eher neu', 'sicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
-    memotest_task_slider_key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "bed_b" ---
     bed_b_text = visual.TextStim(win=win, name='bed_b_text',
@@ -1286,7 +1280,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     bed_b_text_2 = visual.TextStim(win=win, name='bed_b_text_2',
-        text='Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
+        text='Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
         font='Open Sans',
         pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1296,7 +1290,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     bed_b_block_no = visual.TextStim(win=win, name='bed_b_block_no',
         text='',
         font='Open Sans',
-        pos=(0, -0.2), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1402,13 +1396,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.35), units=win.units,
+        labels=['sicher alt', 'eher alt', 'eher neu', 'sicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
         flip=False, ori=0.0, depth=-1, readOnly=False)
-    memotest_task_slider_key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "middle_break" ---
     break_text = visual.TextStim(win=win, name='break_text',
@@ -3085,11 +3078,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         memo_training_stim.setImage(stimulus)
         memo_training_slider.reset()
-        memo_training_slider_key_resp.keys = []
-        memo_training_slider_key_resp.rt = []
-        _memo_training_slider_key_resp_allKeys = []
         # keep track of which components have finished
-        memo_trainingComponents = [memo_training_fix, memo_training_stim, memo_training_slider, memo_training_slider_key_resp]
+        memo_trainingComponents = [memo_training_fix, memo_training_stim, memo_training_slider]
         for thisComponent in memo_trainingComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3177,31 +3167,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update params
                 pass
             
-            # *memo_training_slider_key_resp* updates
-            waitOnFlip = False
-            
-            # if memo_training_slider_key_resp is starting this frame...
-            if memo_training_slider_key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                memo_training_slider_key_resp.frameNStart = frameN  # exact frame index
-                memo_training_slider_key_resp.tStart = t  # local t and not account for scr refresh
-                memo_training_slider_key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(memo_training_slider_key_resp, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                memo_training_slider_key_resp.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(memo_training_slider_key_resp.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(memo_training_slider_key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if memo_training_slider_key_resp.status == STARTED and not waitOnFlip:
-                theseKeys = memo_training_slider_key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], ignoreKeys=["escape"], waitRelease=False)
-                _memo_training_slider_key_resp_allKeys.extend(theseKeys)
-                if len(_memo_training_slider_key_resp_allKeys):
-                    memo_training_slider_key_resp.keys = _memo_training_slider_key_resp_allKeys[0].name  # just the first key pressed
-                    memo_training_slider_key_resp.rt = _memo_training_slider_key_resp_allKeys[0].rt
-                    memo_training_slider_key_resp.duration = _memo_training_slider_key_resp_allKeys[0].duration
-                    # a response ends the routine
-                    continueRoutine = False
+            # Check memo_training_slider for response to end Routine
+            if memo_training_slider.getRating() is not None and memo_training_slider.status == STARTED:
+                continueRoutine = False
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3228,13 +3196,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in memo_trainingComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        # check responses
-        if memo_training_slider_key_resp.keys in ['', [], None]:  # No response was made
-            memo_training_slider_key_resp.keys = None
-        memo_training_trials.addData('memo_training_slider_key_resp.keys',memo_training_slider_key_resp.keys)
-        if memo_training_slider_key_resp.keys != None:  # we had a response
-            memo_training_trials.addData('memo_training_slider_key_resp.rt', memo_training_slider_key_resp.rt)
-            memo_training_trials.addData('memo_training_slider_key_resp.duration', memo_training_slider_key_resp.duration)
+        memo_training_trials.addData('memo_training_slider.response', memo_training_slider.getRating())
+        memo_training_trials.addData('memo_training_slider.rt', memo_training_slider.getRT())
         # the Routine "memo_training" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -3242,7 +3205,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from memo_train_feedb_code
-        if ('d' or 'f') in memo_training_slider_key_resp.getKeys(): 
+        if 'alt' in memo_training_slider.getRating(): 
             rating = 1
         else:
             rating = 3
@@ -4259,11 +4222,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
-            memotest_task_slider_key_resp.keys = []
-            memotest_task_slider_key_resp.rt = []
-            _memotest_task_slider_key_resp_allKeys = []
             # keep track of which components have finished
-            memotest_taskComponents = [memotest_task_stim, memotest_task_slider, memotest_task_slider_key_resp]
+            memotest_taskComponents = [memotest_task_stim, memotest_task_slider]
             for thisComponent in memotest_taskComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -4322,31 +4282,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update params
                     pass
                 
-                # *memotest_task_slider_key_resp* updates
-                waitOnFlip = False
-                
-                # if memotest_task_slider_key_resp is starting this frame...
-                if memotest_task_slider_key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    memotest_task_slider_key_resp.frameNStart = frameN  # exact frame index
-                    memotest_task_slider_key_resp.tStart = t  # local t and not account for scr refresh
-                    memotest_task_slider_key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(memotest_task_slider_key_resp, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    memotest_task_slider_key_resp.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(memotest_task_slider_key_resp.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(memotest_task_slider_key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                if memotest_task_slider_key_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = memotest_task_slider_key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], ignoreKeys=["escape"], waitRelease=False)
-                    _memotest_task_slider_key_resp_allKeys.extend(theseKeys)
-                    if len(_memotest_task_slider_key_resp_allKeys):
-                        memotest_task_slider_key_resp.keys = _memotest_task_slider_key_resp_allKeys[0].name  # just the first key pressed
-                        memotest_task_slider_key_resp.rt = _memotest_task_slider_key_resp_allKeys[0].rt
-                        memotest_task_slider_key_resp.duration = _memotest_task_slider_key_resp_allKeys[0].duration
-                        # a response ends the routine
-                        continueRoutine = False
+                # Check memotest_task_slider for response to end Routine
+                if memotest_task_slider.getRating() is not None and memotest_task_slider.status == STARTED:
+                    continueRoutine = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4373,13 +4311,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # check responses
-            if memotest_task_slider_key_resp.keys in ['', [], None]:  # No response was made
-                memotest_task_slider_key_resp.keys = None
-            kitchen_a_memotest.addData('memotest_task_slider_key_resp.keys',memotest_task_slider_key_resp.keys)
-            if memotest_task_slider_key_resp.keys != None:  # we had a response
-                kitchen_a_memotest.addData('memotest_task_slider_key_resp.rt', memotest_task_slider_key_resp.rt)
-                kitchen_a_memotest.addData('memotest_task_slider_key_resp.duration', memotest_task_slider_key_resp.duration)
+            kitchen_a_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
+            kitchen_a_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -5175,11 +5108,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
-            memotest_task_slider_key_resp.keys = []
-            memotest_task_slider_key_resp.rt = []
-            _memotest_task_slider_key_resp_allKeys = []
             # keep track of which components have finished
-            memotest_taskComponents = [memotest_task_stim, memotest_task_slider, memotest_task_slider_key_resp]
+            memotest_taskComponents = [memotest_task_stim, memotest_task_slider]
             for thisComponent in memotest_taskComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -5238,31 +5168,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update params
                     pass
                 
-                # *memotest_task_slider_key_resp* updates
-                waitOnFlip = False
-                
-                # if memotest_task_slider_key_resp is starting this frame...
-                if memotest_task_slider_key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    memotest_task_slider_key_resp.frameNStart = frameN  # exact frame index
-                    memotest_task_slider_key_resp.tStart = t  # local t and not account for scr refresh
-                    memotest_task_slider_key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(memotest_task_slider_key_resp, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    memotest_task_slider_key_resp.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(memotest_task_slider_key_resp.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(memotest_task_slider_key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                if memotest_task_slider_key_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = memotest_task_slider_key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], ignoreKeys=["escape"], waitRelease=False)
-                    _memotest_task_slider_key_resp_allKeys.extend(theseKeys)
-                    if len(_memotest_task_slider_key_resp_allKeys):
-                        memotest_task_slider_key_resp.keys = _memotest_task_slider_key_resp_allKeys[0].name  # just the first key pressed
-                        memotest_task_slider_key_resp.rt = _memotest_task_slider_key_resp_allKeys[0].rt
-                        memotest_task_slider_key_resp.duration = _memotest_task_slider_key_resp_allKeys[0].duration
-                        # a response ends the routine
-                        continueRoutine = False
+                # Check memotest_task_slider for response to end Routine
+                if memotest_task_slider.getRating() is not None and memotest_task_slider.status == STARTED:
+                    continueRoutine = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -5289,13 +5197,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # check responses
-            if memotest_task_slider_key_resp.keys in ['', [], None]:  # No response was made
-                memotest_task_slider_key_resp.keys = None
-            kitchen_b_memotest.addData('memotest_task_slider_key_resp.keys',memotest_task_slider_key_resp.keys)
-            if memotest_task_slider_key_resp.keys != None:  # we had a response
-                kitchen_b_memotest.addData('memotest_task_slider_key_resp.rt', memotest_task_slider_key_resp.rt)
-                kitchen_b_memotest.addData('memotest_task_slider_key_resp.duration', memotest_task_slider_key_resp.duration)
+            kitchen_b_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
+            kitchen_b_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -6097,11 +6000,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
-            memotest_task_slider_key_resp.keys = []
-            memotest_task_slider_key_resp.rt = []
-            _memotest_task_slider_key_resp_allKeys = []
             # keep track of which components have finished
-            memotest_taskComponents = [memotest_task_stim, memotest_task_slider, memotest_task_slider_key_resp]
+            memotest_taskComponents = [memotest_task_stim, memotest_task_slider]
             for thisComponent in memotest_taskComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -6160,31 +6060,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update params
                     pass
                 
-                # *memotest_task_slider_key_resp* updates
-                waitOnFlip = False
-                
-                # if memotest_task_slider_key_resp is starting this frame...
-                if memotest_task_slider_key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    memotest_task_slider_key_resp.frameNStart = frameN  # exact frame index
-                    memotest_task_slider_key_resp.tStart = t  # local t and not account for scr refresh
-                    memotest_task_slider_key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(memotest_task_slider_key_resp, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    memotest_task_slider_key_resp.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(memotest_task_slider_key_resp.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(memotest_task_slider_key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                if memotest_task_slider_key_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = memotest_task_slider_key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], ignoreKeys=["escape"], waitRelease=False)
-                    _memotest_task_slider_key_resp_allKeys.extend(theseKeys)
-                    if len(_memotest_task_slider_key_resp_allKeys):
-                        memotest_task_slider_key_resp.keys = _memotest_task_slider_key_resp_allKeys[0].name  # just the first key pressed
-                        memotest_task_slider_key_resp.rt = _memotest_task_slider_key_resp_allKeys[0].rt
-                        memotest_task_slider_key_resp.duration = _memotest_task_slider_key_resp_allKeys[0].duration
-                        # a response ends the routine
-                        continueRoutine = False
+                # Check memotest_task_slider for response to end Routine
+                if memotest_task_slider.getRating() is not None and memotest_task_slider.status == STARTED:
+                    continueRoutine = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -6211,13 +6089,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # check responses
-            if memotest_task_slider_key_resp.keys in ['', [], None]:  # No response was made
-                memotest_task_slider_key_resp.keys = None
-            living_a_memotest.addData('memotest_task_slider_key_resp.keys',memotest_task_slider_key_resp.keys)
-            if memotest_task_slider_key_resp.keys != None:  # we had a response
-                living_a_memotest.addData('memotest_task_slider_key_resp.rt', memotest_task_slider_key_resp.rt)
-                living_a_memotest.addData('memotest_task_slider_key_resp.duration', memotest_task_slider_key_resp.duration)
+            living_a_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
+            living_a_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -7019,11 +6892,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
-            memotest_task_slider_key_resp.keys = []
-            memotest_task_slider_key_resp.rt = []
-            _memotest_task_slider_key_resp_allKeys = []
             # keep track of which components have finished
-            memotest_taskComponents = [memotest_task_stim, memotest_task_slider, memotest_task_slider_key_resp]
+            memotest_taskComponents = [memotest_task_stim, memotest_task_slider]
             for thisComponent in memotest_taskComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -7082,31 +6952,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update params
                     pass
                 
-                # *memotest_task_slider_key_resp* updates
-                waitOnFlip = False
-                
-                # if memotest_task_slider_key_resp is starting this frame...
-                if memotest_task_slider_key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    memotest_task_slider_key_resp.frameNStart = frameN  # exact frame index
-                    memotest_task_slider_key_resp.tStart = t  # local t and not account for scr refresh
-                    memotest_task_slider_key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(memotest_task_slider_key_resp, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    memotest_task_slider_key_resp.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(memotest_task_slider_key_resp.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(memotest_task_slider_key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                if memotest_task_slider_key_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = memotest_task_slider_key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], ignoreKeys=["escape"], waitRelease=False)
-                    _memotest_task_slider_key_resp_allKeys.extend(theseKeys)
-                    if len(_memotest_task_slider_key_resp_allKeys):
-                        memotest_task_slider_key_resp.keys = _memotest_task_slider_key_resp_allKeys[0].name  # just the first key pressed
-                        memotest_task_slider_key_resp.rt = _memotest_task_slider_key_resp_allKeys[0].rt
-                        memotest_task_slider_key_resp.duration = _memotest_task_slider_key_resp_allKeys[0].duration
-                        # a response ends the routine
-                        continueRoutine = False
+                # Check memotest_task_slider for response to end Routine
+                if memotest_task_slider.getRating() is not None and memotest_task_slider.status == STARTED:
+                    continueRoutine = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -7133,13 +6981,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # check responses
-            if memotest_task_slider_key_resp.keys in ['', [], None]:  # No response was made
-                memotest_task_slider_key_resp.keys = None
-            living_b_memotest.addData('memotest_task_slider_key_resp.keys',memotest_task_slider_key_resp.keys)
-            if memotest_task_slider_key_resp.keys != None:  # we had a response
-                living_b_memotest.addData('memotest_task_slider_key_resp.rt', memotest_task_slider_key_resp.rt)
-                living_b_memotest.addData('memotest_task_slider_key_resp.duration', memotest_task_slider_key_resp.duration)
+            living_b_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
+            living_b_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -7941,11 +7784,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
-            memotest_task_slider_key_resp.keys = []
-            memotest_task_slider_key_resp.rt = []
-            _memotest_task_slider_key_resp_allKeys = []
             # keep track of which components have finished
-            memotest_taskComponents = [memotest_task_stim, memotest_task_slider, memotest_task_slider_key_resp]
+            memotest_taskComponents = [memotest_task_stim, memotest_task_slider]
             for thisComponent in memotest_taskComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -8004,31 +7844,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update params
                     pass
                 
-                # *memotest_task_slider_key_resp* updates
-                waitOnFlip = False
-                
-                # if memotest_task_slider_key_resp is starting this frame...
-                if memotest_task_slider_key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    memotest_task_slider_key_resp.frameNStart = frameN  # exact frame index
-                    memotest_task_slider_key_resp.tStart = t  # local t and not account for scr refresh
-                    memotest_task_slider_key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(memotest_task_slider_key_resp, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    memotest_task_slider_key_resp.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(memotest_task_slider_key_resp.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(memotest_task_slider_key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                if memotest_task_slider_key_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = memotest_task_slider_key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], ignoreKeys=["escape"], waitRelease=False)
-                    _memotest_task_slider_key_resp_allKeys.extend(theseKeys)
-                    if len(_memotest_task_slider_key_resp_allKeys):
-                        memotest_task_slider_key_resp.keys = _memotest_task_slider_key_resp_allKeys[0].name  # just the first key pressed
-                        memotest_task_slider_key_resp.rt = _memotest_task_slider_key_resp_allKeys[0].rt
-                        memotest_task_slider_key_resp.duration = _memotest_task_slider_key_resp_allKeys[0].duration
-                        # a response ends the routine
-                        continueRoutine = False
+                # Check memotest_task_slider for response to end Routine
+                if memotest_task_slider.getRating() is not None and memotest_task_slider.status == STARTED:
+                    continueRoutine = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -8055,13 +7873,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # check responses
-            if memotest_task_slider_key_resp.keys in ['', [], None]:  # No response was made
-                memotest_task_slider_key_resp.keys = None
-            bed_a_memotest.addData('memotest_task_slider_key_resp.keys',memotest_task_slider_key_resp.keys)
-            if memotest_task_slider_key_resp.keys != None:  # we had a response
-                bed_a_memotest.addData('memotest_task_slider_key_resp.rt', memotest_task_slider_key_resp.rt)
-                bed_a_memotest.addData('memotest_task_slider_key_resp.duration', memotest_task_slider_key_resp.duration)
+            bed_a_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
+            bed_a_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -8863,11 +8676,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             memotest_task_stim.setImage(stimulus)
             memotest_task_slider.reset()
-            memotest_task_slider_key_resp.keys = []
-            memotest_task_slider_key_resp.rt = []
-            _memotest_task_slider_key_resp_allKeys = []
             # keep track of which components have finished
-            memotest_taskComponents = [memotest_task_stim, memotest_task_slider, memotest_task_slider_key_resp]
+            memotest_taskComponents = [memotest_task_stim, memotest_task_slider]
             for thisComponent in memotest_taskComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -8926,31 +8736,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update params
                     pass
                 
-                # *memotest_task_slider_key_resp* updates
-                waitOnFlip = False
-                
-                # if memotest_task_slider_key_resp is starting this frame...
-                if memotest_task_slider_key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    memotest_task_slider_key_resp.frameNStart = frameN  # exact frame index
-                    memotest_task_slider_key_resp.tStart = t  # local t and not account for scr refresh
-                    memotest_task_slider_key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(memotest_task_slider_key_resp, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    memotest_task_slider_key_resp.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(memotest_task_slider_key_resp.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(memotest_task_slider_key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                if memotest_task_slider_key_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = memotest_task_slider_key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], ignoreKeys=["escape"], waitRelease=False)
-                    _memotest_task_slider_key_resp_allKeys.extend(theseKeys)
-                    if len(_memotest_task_slider_key_resp_allKeys):
-                        memotest_task_slider_key_resp.keys = _memotest_task_slider_key_resp_allKeys[0].name  # just the first key pressed
-                        memotest_task_slider_key_resp.rt = _memotest_task_slider_key_resp_allKeys[0].rt
-                        memotest_task_slider_key_resp.duration = _memotest_task_slider_key_resp_allKeys[0].duration
-                        # a response ends the routine
-                        continueRoutine = False
+                # Check memotest_task_slider for response to end Routine
+                if memotest_task_slider.getRating() is not None and memotest_task_slider.status == STARTED:
+                    continueRoutine = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -8977,13 +8765,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             for thisComponent in memotest_taskComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # check responses
-            if memotest_task_slider_key_resp.keys in ['', [], None]:  # No response was made
-                memotest_task_slider_key_resp.keys = None
-            bed_b_memotest.addData('memotest_task_slider_key_resp.keys',memotest_task_slider_key_resp.keys)
-            if memotest_task_slider_key_resp.keys != None:  # we had a response
-                bed_b_memotest.addData('memotest_task_slider_key_resp.rt', memotest_task_slider_key_resp.rt)
-                bed_b_memotest.addData('memotest_task_slider_key_resp.duration', memotest_task_slider_key_resp.duration)
+            bed_b_memotest.addData('memotest_task_slider.response', memotest_task_slider.getRating())
+            bed_b_memotest.addData('memotest_task_slider.rt', memotest_task_slider.getRT())
             # the Routine "memotest_task" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()

@@ -67,6 +67,9 @@ flowScheduler.add(data_safety_2RoutineEnd());
 flowScheduler.add(instructions_catRoutineBegin());
 flowScheduler.add(instructions_catRoutineEachFrame());
 flowScheduler.add(instructions_catRoutineEnd());
+flowScheduler.add(instructions_cat_2RoutineBegin());
+flowScheduler.add(instructions_cat_2RoutineEachFrame());
+flowScheduler.add(instructions_cat_2RoutineEnd());
 flowScheduler.add(category_test_textRoutineBegin());
 flowScheduler.add(category_test_textRoutineEachFrame());
 flowScheduler.add(category_test_textRoutineEnd());
@@ -174,6 +177,9 @@ psychoJS.start({
     {'name': 'conditions_cat_training.xlsx', 'path': 'conditions_cat_training.xlsx'},
     {'name': 'conditions_memo_training.xlsx', 'path': 'conditions_memo_training.xlsx'},
     {'name': 'default.png', 'path': 'https://pavlovia.org/assets/default/default.png'},
+    {'name': 'fixationskreuz.png', 'path': 'fixationskreuz.png'},
+    {'name': 'conditions_cat_training.xlsx', 'path': 'conditions_cat_training.xlsx'},
+    {'name': 'conditions_memo_training.xlsx', 'path': 'conditions_memo_training.xlsx'},
   ]
 });
 
@@ -247,6 +253,9 @@ var instructions_cat_text;
 var resources_instructions_cat;
 var instructions_cat_text_2;
 var instructions_cat_resp;
+var instructions_cat_2Clock;
+var instructions_cat_2_text;
+var instructions_cat_2_resp;
 var category_test_textClock;
 var category_test_word;
 var fix_categorization_trainingClock;
@@ -339,17 +348,17 @@ var living_b_block_no;
 var living_b_memotest_instrClock;
 var living_b_memo_instr_text;
 var living_b_memo_instr_resp;
-var sleep_aClock;
+var bed_aClock;
 var bed_a_text;
 var bed_a_text_2;
 var bed_a_resp;
 var bed_a_block_no;
-var sleep_random_isiClock;
+var bed_random_isiClock;
 var bed_random_isi_fix;
 var bed_random_isi_yes;
 var bed_random_isi_no;
 var bed_random_isi_question;
-var sleep_pictureClock;
+var bed_pictureClock;
 var bed_picture_fix;
 var bed_picture_image;
 var bed_picture_yes;
@@ -359,7 +368,7 @@ var bed_picture_question;
 var bed_a_memotest_instrClock;
 var bed_a_memo_instr_text;
 var bed_a_memo_instr_resp;
-var sleep_bClock;
+var bed_bClock;
 var bed_b_text;
 var bed_b_text_2;
 var bed_b_resp;
@@ -382,7 +391,7 @@ async function experimentInit() {
   intro_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'intro_text',
-    text: 'Herzlich Willkommen zum Experiment\n\nDas Experiment besteht aus zwei Teilen und wird ca. 30 min in Anspruch nehmen.\nBitte begeben Sie sich für die Zeit des Experiments in eine Aufrechte Position.\n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
+    text: 'Herzlich Willkommen zum Experiment\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.\nBitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.\n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -524,10 +533,10 @@ async function experimentInit() {
   instructions_cat_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions_cat_text',
-    text: 'Instruktion\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden.\nDas Experiment besteht aus zwei Teilen. Im ersten Teil ist die Aufgabe, die Bilder zu kategorisieren. Zu Beginn eines Blocks von Versuchsdurchgängen wird eine bestimmte Raum-Kategorie genannt (z.B. Wohnzimmer). In jedem der folgenden Versuchsdurchgänge soll dann so schnell es geht entschieden werden, ob das gezeigte Bild zu dieser Kategorie gehört.\nBitte halten sie während eines Blocks den Blick immer auf die Mitte des Bildschirms gerichtet, dort wo das kleine Fixationskreuz erscheint.\nDrücken Sie so schnell wie möglich „f“, falls das Bild zu dieser Kategorie gehört.\nDrücken Sie so schnell wie möglich „j“, falls das Bild NICHT zu dieser Kategorie gehört.\n\nBevor die Aufgabe beginnt, wird es einen Testlauf geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient zum besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter...',
+    text: 'Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option.\n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter…',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0], height: 0.026,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: 0.0 
@@ -539,16 +548,32 @@ async function experimentInit() {
   instructions_cat_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions_cat_text_2',
-    text: 'Instruktion\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden.\nDas Experiment besteht aus zwei Teilen. Im ersten Teil ist die Aufgabe, die Bilder zu kategorisieren. Zu Beginn eines Blocks von Versuchsdurchgängen wird eine bestimmte Raum-Kategorie genannt (z.B. Wohnzimmer). In jedem der folgenden Versuchsdurchgänge soll dann so schnell es geht entschieden werden, ob das gezeigte Bild zu dieser Kategorie gehört.\nBitte halten sie während eines Blocks den Blick immer auf die Mitte des Bildschirms gerichtet, dort wo das kleine Fixationskreuz erscheint.\nDrücken Sie so schnell wie möglich „f“, falls das Bild zu dieser Kategorie gehört.\nDrücken Sie so schnell wie möglich „j“, falls das Bild NICHT zu dieser Kategorie gehört.\n\nBevor die Aufgabe beginnt, wird es einen Testlauf geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient zum besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
+    text: 'Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option.\n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0], height: 0.026,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
   });
   
   instructions_cat_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "instructions_cat_2"
+  instructions_cat_2Clock = new util.Clock();
+  instructions_cat_2_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'instructions_cat_2_text',
+    text: 'Jetzt beginnt der Übungsteil für die Kategorisierungsaufgabe.\n\nIhnen wird gleich eine Kategorie genannt. Danach werden mehrere Bilder präsentiert. Geben Sie mit den Tasten "f" und "j" für jedes Bild so schnell wie möglich an, ob das Bild zur genannten Kategorie gehört.\n\nStarten Sie mit der LEERTASTE. ',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0.0,
+    languageStyle: 'LTR',
+    color: new util.Color('white'),  opacity: undefined,
+    depth: 0.0 
+  });
+  
+  instructions_cat_2_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "category_test_text"
   category_test_textClock = new util.Clock();
@@ -727,7 +752,7 @@ async function experimentInit() {
   instructions_memo_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions_memo_text',
-    text: 'Instruktion - Memo Test\nZweiter Teil\n\nEs werden nun wieder Bilder der drei bekannten Kategorien gezeigt. Dabei sollen Sie auf einer Skala einschätzen, ob es sich um ein altes Bild handelt, das Ihnen vorhin schon mal gezeigt wurde, oder ein komplett neues. Es geht in dieser Aufgabe NICHT mehr, darum schnellstmöglich zu antworten. Sie werden das Bild bis so lange sehen können, bis Sie antworten.\n\nDie Skala ist folgende:\nsicher alt\neher alt\neher neu\nsicher neu\n\nDie Skala wird Ihnen unter den Bildern angezeigt. Dabei sollen Sie die Kategorie auswählen, indem Sie mit der Maus darauf klicken.\n\nBevor die Aufgabe beginnt, wird es wieder einen Testlauf geben. Nach jeder Antwort wird Ihnen eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient zum besseren Verständnis der Aufgabe.\n\nDrücken Sie die LEERTASTE, um einen Testdurchlauf zu starten.',
+    text: 'Jetzt beginnt der Übungsteil für den Gedächtnistest. \n\nGeben Sie an, ob das gezeigte Bild in der vorherigen Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit der Antwort sind. Hierbei bedeutet "alt", dass das Bild im ersten Teil gezeigt wurde und "neu", dass das Bild NICHT im ersten Teil gezeigt wurde. Klicken Sie mit der Maus auf die entsprechende Option. \n\nDrücken Sie die LEERTASTE, um einen Testdurchlauf zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.035,  wrapWidth: undefined, ori: 0.0,
@@ -802,7 +827,7 @@ async function experimentInit() {
   start_cat_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'start_cat_text',
-    text: 'Der Testdurchlauf ist beendet.\n\nFür die folgende Aufgabe wird Ihnen keine Rückmeldung mehr eingeblendet, ob Sie korrekt oder falsch geantwortet haben.\n\nDrücken Sie die LEERTASTE, um das Experiment zu starten.',
+    text: 'Der Testdurchlauf ist beendet.\n\nWährend der folgenden Aufgabe wird Ihnen keine Rückmeldung mehr eingeblendet, ob Sie korrekt oder falsch geantwortet haben.\n\nDrücken Sie die LEERTASTE, um das Experiment zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -830,7 +855,7 @@ async function experimentInit() {
   kitchen_a_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'kitchen_a_text_2',
-    text: 'Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
+    text: 'Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -847,7 +872,7 @@ async function experimentInit() {
     text: '',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -966,7 +991,7 @@ async function experimentInit() {
   kitchen_a_memo_instr_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'kitchen_a_memo_instr_text',
-    text: 'Memotest fängt an, Start mit LEERTASTE',
+    text: 'Jetzt startet der Gedächtnistest zur Kategorie Küche.\n\nDrücken Sie die LEERTASTE, um zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1017,7 +1042,7 @@ async function experimentInit() {
   kitchen_b_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'kitchen_b_text_2',
-    text: 'Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
+    text: 'Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1034,7 +1059,7 @@ async function experimentInit() {
     text: '',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1045,7 +1070,7 @@ async function experimentInit() {
   kitchen_b_memo_instr_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'kitchen_b_memo_instr_text',
-    text: 'Memotest fängt an, Start mit LEERTASTE',
+    text: 'Jetzt startet der Gedächtnistest zur Kategorie Küche.\n\nDrücken Sie die LEERTASTE, um zu starten.\n',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1073,7 +1098,7 @@ async function experimentInit() {
   living_a_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'living_a_text_2',
-    text: 'Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
+    text: 'Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1090,7 +1115,7 @@ async function experimentInit() {
     text: '',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1209,7 +1234,7 @@ async function experimentInit() {
   living_a_memo_instr_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'living_a_memo_instr_text',
-    text: 'Memotest fängt an, Start mit LEERTASTE',
+    text: 'Jetzt startet der Gedächtnistest zur Kategorie Wohnzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1237,7 +1262,7 @@ async function experimentInit() {
   living_b_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'living_b_text_2',
-    text: 'Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
+    text: 'Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1254,7 +1279,7 @@ async function experimentInit() {
     text: '',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1265,7 +1290,7 @@ async function experimentInit() {
   living_b_memo_instr_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'living_b_memo_instr_text',
-    text: 'Memotest fängt an, Start mit LEERTASTE',
+    text: 'Jetzt startet der Gedächtnistest zur Kategorie Wohnzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1276,8 +1301,8 @@ async function experimentInit() {
   
   living_b_memo_instr_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "sleep_a"
-  sleep_aClock = new util.Clock();
+  // Initialize components for Routine "bed_a"
+  bed_aClock = new util.Clock();
   bed_a_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'bed_a_text',
@@ -1293,7 +1318,7 @@ async function experimentInit() {
   bed_a_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'bed_a_text_2',
-    text: 'Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
+    text: 'Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1310,14 +1335,14 @@ async function experimentInit() {
     text: '',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
   });
   
-  // Initialize components for Routine "sleep_random_isi"
-  sleep_random_isiClock = new util.Clock();
+  // Initialize components for Routine "bed_random_isi"
+  bed_random_isiClock = new util.Clock();
   bed_random_isi_fix = new visual.ImageStim({
     win : psychoJS.window,
     name : 'bed_random_isi_fix', units : undefined, 
@@ -1364,8 +1389,8 @@ async function experimentInit() {
     depth: -4.0 
   });
   
-  // Initialize components for Routine "sleep_picture"
-  sleep_pictureClock = new util.Clock();
+  // Initialize components for Routine "bed_picture"
+  bed_pictureClock = new util.Clock();
   bed_picture_fix = new visual.ImageStim({
     win : psychoJS.window,
     name : 'bed_picture_fix', units : undefined, 
@@ -1429,7 +1454,7 @@ async function experimentInit() {
   bed_a_memo_instr_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'bed_a_memo_instr_text',
-    text: 'Memotest fängt an, Start mit LEERTASTE',
+    text: 'Jetzt startet der Gedächtnistest zur Kategorie Schlafzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1440,8 +1465,8 @@ async function experimentInit() {
   
   bed_a_memo_instr_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "sleep_b"
-  sleep_bClock = new util.Clock();
+  // Initialize components for Routine "bed_b"
+  bed_bClock = new util.Clock();
   bed_b_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'bed_b_text',
@@ -1457,7 +1482,7 @@ async function experimentInit() {
   bed_b_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'bed_b_text_2',
-    text: 'Drücken Sie die LEERTASTE, um den nächsten Block zu starten. \nEs beginnt Block\n\nvon 6',
+    text: 'Drücken Sie die LEERTASTE, um Block\n\n\n\nvon 6 zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1474,7 +1499,7 @@ async function experimentInit() {
     text: '',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.2)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1485,7 +1510,7 @@ async function experimentInit() {
   bed_b_memo_instr_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'bed_b_memo_instr_text',
-    text: 'Memotest fängt an, Start mit LEERTASTE',
+    text: 'Jetzt startet der Gedächtnistest zur Kategorie Schlafzimmer.\n\nDrücken Sie die LEERTASTE, um zu starten.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -1724,7 +1749,7 @@ function consentRoutineEachFrame() {
     // start downloading resources specified by component resources_consent
     if (t >= 0 && resources_consent.status === PsychoJS.Status.NOT_STARTED) {
       console.log('register and start downloading resources specified by component resources_consent');
-      psychoJS._serverManager.prepareResources([conditions_sleep_b, conditions_sleep_a, conditions_living_b, conditions_living_a, conditions_kitchen_b, conditions_kitchen_a, conditions_memo_test, conditions_block_order, "stimuli/asdfgh.jpg", "stimuli/asdfghertghvgh.jpg", "stimuli/asdfghjkjhg.jpg", "stimuli/asdfghjkloelkjhg.jpg", "stimuli/dfghjhgf.jpg", "stimuli/erhvgh.jpg", "stimuli/erthjnbvcfg.jpg", "stimuli/fvbjgv.jpg", "stimuli/gfdfghjgf.jpg", "stimuli/gfvbnbg.jpg", "stimuli/hhhh.jpg", "stimuli/ihnbvcfgd.jpg", "stimuli/ijnbgzuik.jpg", "stimuli/img_0adz5.jpg", "stimuli/img_0bah1.jpg", "stimuli/img_0dege.jpg", "stimuli/img_0eflx.jpg", "stimuli/img_0ej0y.jpg", "stimuli/img_0ekxv.jpg", "stimuli/img_0ez70.jpg", "stimuli/img_0j24m.jpg", "stimuli/img_0jzz7.jpg", "stimuli/img_0kmfo.jpg", "stimuli/img_0kqc0.jpg", "stimuli/img_0mhms.jpg", "stimuli/img_0nckg.jpg", "stimuli/img_0noah.jpg", "stimuli/img_00ojb.jpg", "stimuli/img_0pt3z.jpg", "stimuli/img_0qndh.jpg", "stimuli/img_0rbu4.jpg", "stimuli/img_0si9u.jpg", "stimuli/img_0t206.jpg", "stimuli/img_0ugsg.jpg", "stimuli/img_0uiwg.jpg", "stimuli/img_0urnu.jpg", "stimuli/img_0wv81.jpg", "stimuli/img_0wzeq.jpg", "stimuli/img_0x4kb.jpg", "stimuli/img_0xwtf.jpg", "stimuli/img_0zzo4.jpg", "stimuli/img_1ao2d.jpg", "stimuli/img_1b74f.jpg", "stimuli/img_1ccse.jpg", "stimuli/img_1cdqc.jpg", "stimuli/img_1cm9s.jpg", "stimuli/img_1d1l9.jpg", "stimuli/img_1etij.jpg", "stimuli/img_1fjfz.jpg", "stimuli/img_1gr78.jpg", "stimuli/img_1i6q5.jpg", "stimuli/img_1iam9.jpg", "stimuli/img_1ibl4.jpg", "stimuli/img_1m0fn.jpg", "stimuli/img_1n8b9.jpg", "stimuli/img_1ojyk.jpg", "stimuli/img_1plu7.jpg", "stimuli/img_1q8pa.jpg", "stimuli/img_1qa4t.jpg", "stimuli/img_1ql54.jpg", "stimuli/img_1qye0.jpg", "stimuli/img_1r2ri.jpg", "stimuli/img_1r08n.jpg", "stimuli/img_1s8dl.jpg", "stimuli/img_1scr4.jpg", "stimuli/img_1twlp.jpg", "stimuli/img_1uwbl.jpg", "stimuli/img_1vq1v.jpg", "stimuli/img_1vukv.jpg", "stimuli/img_01w8b.jpg", "stimuli/img_1wxyo.jpg", "stimuli/img_1xdqe.jpg", "stimuli/img_1yffi.jpg", "stimuli/img_1zhz6.jpg", "stimuli/img_02alv.jpg", "stimuli/img_2b8fp.jpg", "stimuli/img_2c9w1.jpg", "stimuli/img_2cebl.jpg", "stimuli/img_002cv.jpg", "stimuli/img_2d000.jpg", "stimuli/img_2d3c2.jpg", "stimuli/img_2d82m.jpg", "stimuli/img_2dnfy.jpg", "stimuli/img_2ehfe.jpg", "stimuli/img_2fe41.jpg", "stimuli/img_2g129.jpg", "stimuli/img_2i925.jpg", "stimuli/img_2imrl.jpg", "stimuli/img_2jgpo.jpg", "stimuli/img_2js6m.jpg", "stimuli/img_2lcxi.jpg", "stimuli/img_2lqsf.jpg", "stimuli/img_2na1o.jpg", "stimuli/img_2pk6v.jpg", "stimuli/img_2pnl2.jpg", "stimuli/img_2qdvq.jpg", "stimuli/img_2qhro.jpg", "stimuli/img_2qkvm.jpg", "stimuli/img_2rtxu.jpg", "stimuli/img_2rwes.jpg", "stimuli/img_2rylq.jpg", "stimuli/img_2s780.jpg", "stimuli/img_2vqdc.jpg", "stimuli/img_2wkab.jpg", "stimuli/img_2ygqr.jpg", "stimuli/img_3a2r2.jpg", "stimuli/img_3a6lc.jpg", "stimuli/img_3ar9q.jpg", "stimuli/img_3arcv.jpg", "stimuli/img_3aueq.jpg", "stimuli/img_3bp7b.jpg", "stimuli/img_3bxjb.jpg", "stimuli/img_3cp3s.jpg", "stimuli/img_3eusg.jpg", "stimuli/img_3fldm.jpg", "stimuli/img_3gm8h.jpg", "stimuli/img_3h4c9.jpg", "stimuli/img_3hmlp.jpg", "stimuli/img_3i80k.jpg", "stimuli/img_3ialr.jpg", "stimuli/img_3jnt7.jpg", "stimuli/img_3kho5.jpg", "stimuli/img_3lli8.jpg", "stimuli/img_3lvof.jpg", "stimuli/img_3m2h0.jpg", "stimuli/img_3m61b.jpg", "stimuli/img_3miwe.jpg", "stimuli/img_3mp24.jpg", "stimuli/img_3nswx.jpg", "stimuli/img_3oyah.jpg", "stimuli/img_3p0zv.jpg", "stimuli/img_3ph9o.jpg", "stimuli/img_3q6t4.jpg", "stimuli/img_3ro4n.jpg", "stimuli/img_3s357.jpg", "stimuli/img_3shmp.jpg", "stimuli/img_3sw8t.jpg", "stimuli/img_3tnh4.jpg", "stimuli/img_3v5w3.jpg", "stimuli/img_3w4dt.jpg", "stimuli/img_3wj63.jpg", "stimuli/img_3y35o.jpg", "stimuli/img_3ze38.jpg", "stimuli/img_4bef4.jpg", "stimuli/img_4bxxj.jpg", "stimuli/img_4c48i.jpg", "stimuli/img_4d0aw.jpg", "stimuli/img_4dxo4.jpg", "stimuli/img_4g6yq.jpg", "stimuli/img_4glfv.jpg", "stimuli/img_4jra4.jpg", "stimuli/img_4k1j9.jpg", "stimuli/img_4kzor.jpg", "stimuli/img_4lyad.jpg", "stimuli/img_4m9ud.jpg", "stimuli/img_4o8l0.jpg", "stimuli/img_4p9dc.jpg", "stimuli/img_4q2n8.jpg", "stimuli/img_4s67y.jpg", "stimuli/img_4spc8.jpg", "stimuli/img_4td0x.jpg", "stimuli/img_4ufga.jpg", "stimuli/img_4utvc.jpg", "stimuli/img_4wq98.jpg", "stimuli/img_4xr0x.jpg", "stimuli/img_4xxuf.jpg", "stimuli/img_4y7mh.jpg", "stimuli/img_4yy1j.jpg", "stimuli/img_5a1ke.jpg", "stimuli/img_5alzj.jpg", "stimuli/img_05c3h.jpg", "stimuli/img_5e7iu.jpg", "stimuli/img_5ecez.jpg", "stimuli/img_5ewoj.jpg", "stimuli/img_5f8ha.jpg", "stimuli/img_5fkbp.jpg", "stimuli/img_05flq.jpg", "stimuli/img_5fr9m.jpg", "stimuli/img_5il0t.jpg", "stimuli/img_5jp4f.jpg", "stimuli/img_5jy9c.jpg", "stimuli/img_5k4cy.jpg", "stimuli/img_5m6x4.jpg", "stimuli/img_5m75u.jpg", "stimuli/img_5mw7y.jpg", "stimuli/img_5nfmx.jpg", "stimuli/img_5nlnv.jpg", "stimuli/img_5nlyi.jpg", "stimuli/img_5o1x3.jpg", "stimuli/img_5oubg.jpg", "stimuli/img_5ovr5.jpg", "stimuli/img_5p2ql.jpg", "stimuli/img_5pmhd.jpg", "stimuli/img_5qdyh.jpg", "stimuli/img_5t91y.jpg", "stimuli/img_5tr4v.jpg", "stimuli/img_5udo9.jpg", "stimuli/img_5vc3c.jpg", "stimuli/img_5w83x.jpg", "stimuli/img_5x1u3.jpg", "stimuli/img_5yhe7.jpg", "stimuli/img_5yhyk.jpg", "stimuli/img_6a0hu.jpg", "stimuli/img_6cg5g.jpg", "stimuli/img_6ddrx.jpg", "stimuli/img_6dl6t.jpg", "stimuli/img_6dvd0.jpg", "stimuli/img_6dves.jpg", "stimuli/img_6fo9f.jpg", "stimuli/img_6funa.jpg", "stimuli/img_6hyyt.jpg", "stimuli/img_6iqem.jpg", "stimuli/img_6j727.jpg", "stimuli/img_6jjvh.jpg", "stimuli/img_6jsgr.jpg", "stimuli/img_6lpz9.jpg", "stimuli/img_6mdbc.jpg", "stimuli/img_6nbgt.jpg", "stimuli/img_6p0lz.jpg", "stimuli/img_6qetq.jpg", "stimuli/img_6syr3.jpg", "stimuli/img_6tou7.jpg", "stimuli/img_6umgp.jpg", "stimuli/img_6v5oo.jpg", "stimuli/img_6vila.jpg", "stimuli/img_6vta6.jpg", "stimuli/img_6w2lk.jpg", "stimuli/img_6wne4.jpg", "stimuli/img_6wr5y.jpg", "stimuli/img_6wshc.jpg", "stimuli/img_6xg4l.jpg", "stimuli/img_6zla6.jpg", "stimuli/img_6zz63.jpg", "stimuli/img_7a0c1.jpg", "stimuli/img_7a2m9.jpg", "stimuli/img_07c1w.jpg", "stimuli/img_7caxh.jpg", "stimuli/img_7e06w.jpg", "stimuli/img_7ed9m.jpg", "stimuli/img_7f11q.jpg", "stimuli/img_7fwp2.jpg", "stimuli/img_7hti2.jpg", "stimuli/img_7i6d8.jpg", "stimuli/img_7likj.jpg", "stimuli/img_7lron.jpg", "stimuli/img_7lz7m.jpg", "stimuli/img_7m3wh.jpg", "stimuli/img_7m07e.jpg", "stimuli/img_7mqbh.jpg", "stimuli/img_7os7q.jpg", "stimuli/img_7pgd2.jpg", "stimuli/img_7q6ry.jpg", "stimuli/img_7rss9.jpg", "stimuli/img_07tdb.jpg", "stimuli/img_7ucnr.jpg", "stimuli/img_7w5tw.jpg", "stimuli/img_7wquy.jpg", "stimuli/img_7wul8.jpg", "stimuli/img_7wxuy.jpg", "stimuli/img_7xzhf.jpg", "stimuli/img_7y67w.jpg", "stimuli/img_7z2tj.jpg", "stimuli/img_8cnbp.jpg", "stimuli/img_8dacu.jpg", "stimuli/img_8df2e.jpg", "stimuli/img_08dll.jpg", "stimuli/img_8dmpq.jpg", "stimuli/img_8fpog.jpg", "stimuli/img_8i1jb.jpg", "stimuli/img_8i3q8.jpg", "stimuli/img_8jy3h.jpg", "stimuli/img_8l8qo.jpg", "stimuli/img_8mkbv.jpg", "stimuli/img_8qkmd.jpg", "stimuli/img_8qt7d.jpg", "stimuli/img_8tc8e.jpg", "stimuli/img_08tlm.jpg", "stimuli/img_8vcm6.jpg", "stimuli/img_8vygl.jpg", "stimuli/img_8wa09.jpg", "stimuli/img_8ybbp.jpg", "stimuli/img_8zf2f.jpg", "stimuli/img_09a3o.jpg", "stimuli/img_9ann0.jpg", "stimuli/img_9b6yl.jpg", "stimuli/img_9bkl9.jpg", "stimuli/img_9ck2q.jpg", "stimuli/img_9d84u.jpg", "stimuli/img_9dg1v.jpg", "stimuli/img_9g4tp.jpg", "stimuli/img_9g12g.jpg", "stimuli/img_9jgbc.jpg", "stimuli/img_09jt1.jpg", "stimuli/img_09lgm.jpg", "stimuli/img_9mcah.jpg", "stimuli/img_9mky8.jpg", "stimuli/img_9mlzp.jpg", "stimuli/img_9n6al.jpg", "stimuli/img_9nnrj.jpg", "stimuli/img_9o0wl.jpg", "stimuli/img_9oofc.jpg", "stimuli/img_9os15.jpg", "stimuli/img_9pfbj.jpg", "stimuli/img_9qg3g.jpg", "stimuli/img_9qmek.jpg", "stimuli/img_09ram.jpg", "stimuli/img_9ro1y.jpg", "stimuli/img_9stvt.jpg", "stimuli/img_9tgq9.jpg", "stimuli/img_9ugw8.jpg", "stimuli/img_9wc9w.jpg", "stimuli/img_9wgjs.jpg", "stimuli/img_9wmp8.jpg", "stimuli/img_9x6du.jpg", "stimuli/img_9z99v.jpg", "stimuli/img_10t4k.jpg", "stimuli/img_11anu.jpg", "stimuli/img_12lvj.jpg", "stimuli/img_13ozs.jpg", "stimuli/img_13ymo.jpg", "stimuli/img_14hyn.jpg", "stimuli/img_15bss.jpg", "stimuli/img_16kib.jpg", "stimuli/img_17p17.jpg", "stimuli/img_18r80.jpg", "stimuli/img_23ged.jpg", "stimuli/img_24rt2.jpg", "stimuli/img_25zj9.jpg", "stimuli/img_26n4i.jpg", "stimuli/img_28eqs.jpg", "stimuli/img_29cw5.jpg", "stimuli/img_29gyt.jpg", "stimuli/img_29td3.jpg", "stimuli/img_30vz5.jpg", "stimuli/img_33ka1.jpg", "stimuli/img_34vo5.jpg", "stimuli/img_35zbz.jpg", "stimuli/img_37hgm.jpg", "stimuli/img_37uwk.jpg", "stimuli/img_38iec.jpg", "stimuli/img_39hz5.jpg", "stimuli/img_43unx.jpg", "stimuli/img_43xbt.jpg", "stimuli/img_43xdp.jpg", "stimuli/img_46tsn.jpg", "stimuli/img_47k1j.jpg", "stimuli/img_47zvc.jpg", "stimuli/img_048l0.jpg", "stimuli/img_48r6i.jpg", "stimuli/img_49h18.jpg", "stimuli/img_52i74.jpg", "stimuli/img_53nbn.jpg", "stimuli/img_56f8c.jpg", "stimuli/img_57os5.jpg", "stimuli/img_58n4j.jpg", "stimuli/img_58ujj.jpg", "stimuli/img_60x5k.jpg", "stimuli/img_62xpv.jpg", "stimuli/img_63slq.jpg", "stimuli/img_64ite.jpg", "stimuli/img_65cdi.jpg", "stimuli/img_65zmd.jpg", "stimuli/img_66fuf.jpg", "stimuli/img_66ncr.jpg", "stimuli/img_66sfd.jpg", "stimuli/img_66zut.jpg", "stimuli/img_68aqt.jpg", "stimuli/img_68bu5.jpg", "stimuli/img_68d11.jpg", "stimuli/img_68f2l.jpg", "stimuli/img_68wfw.jpg", "stimuli/img_70ji9.jpg", "stimuli/img_70x14.jpg", "stimuli/img_71mhq.jpg", "stimuli/img_72fmj.jpg", "stimuli/img_72hmj.jpg", "stimuli/img_72hyg.jpg", "stimuli/img_72wnn.jpg", "stimuli/img_73pyk.jpg", "stimuli/img_76tei.jpg", "stimuli/img_77pme.jpg", "stimuli/img_78fxr.jpg", "stimuli/img_78p4f.jpg", "stimuli/img_78zcn.jpg", "stimuli/img_79b5l.jpg", "stimuli/img_80mdz.jpg", "stimuli/img_81nb0.jpg", "stimuli/img_82bie.jpg", "stimuli/img_84s7n.jpg", "stimuli/img_85xkk.jpg", "stimuli/img_86s60.jpg", "stimuli/img_88h71.jpg", "stimuli/img_88mrj.jpg", "stimuli/img_088sa.jpg", "stimuli/img_89dvt.jpg", "stimuli/img_89rmb.jpg", "stimuli/img_91csq.jpg", "stimuli/img_91ht8.jpg", "stimuli/img_91lbx.jpg", "stimuli/img_92eyc.jpg", "stimuli/img_92f93.jpg", "stimuli/img_93vg8.jpg", "stimuli/img_93vmh.jpg", "stimuli/img_95hiv.jpg", "stimuli/img_97f62.jpg", "stimuli/img_99exx.jpg", "stimuli/img_99qvn.jpg", "stimuli/img_165pk.jpg", "stimuli/img_190ub.jpg", "stimuli/img_196rk.jpg", "stimuli/img_287jq.jpg", "stimuli/img_301af.jpg", "stimuli/img_314bq.jpg", "stimuli/img_319z4.jpg", "stimuli/img_328s0.jpg", "stimuli/img_411xa.jpg", "stimuli/img_463mq.jpg", "stimuli/img_520au.jpg", "stimuli/img_0548r.jpg", "stimuli/img_552an.jpg", "stimuli/img_667w7.jpg", "stimuli/img_753pq.jpg", "stimuli/img_782qs.jpg", "stimuli/img_791d1.jpg", "stimuli/img_818nk.jpg", "stimuli/img_936g7.jpg", "stimuli/img_948n5.jpg", "stimuli/img_4800h.jpg", "stimuli/img_4974k.jpg", "stimuli/img_5949k.jpg", "stimuli/img_7147j.jpg", "stimuli/img_8297a.jpg", "stimuli/img_9684y.jpg", "stimuli/img_60242.jpg", "stimuli/img_93366.jpg", "stimuli/img_a1erh.jpg", "stimuli/img_a2mx2.jpg", "stimuli/img_a2pkp.jpg", "stimuli/img_a3jds.jpg", "stimuli/img_a6u3n.jpg", "stimuli/img_a7bdg.jpg", "stimuli/img_a8irr.jpg", "stimuli/img_a8wvq.jpg", "stimuli/img_a8y4y.jpg", "stimuli/img_a9acb.jpg", "stimuli/img_a9he3.jpg", "stimuli/img_a09k2.jpg", "stimuli/img_a220l.jpg", "stimuli/img_abobq.jpg", "stimuli/img_ac0ey.jpg", "stimuli/img_aellb.jpg", "stimuli/img_af3l2.jpg", "stimuli/img_afcbj.jpg", "stimuli/img_afmdp.jpg", "stimuli/img_agwon.jpg", "stimuli/img_ah5vo.jpg", "stimuli/img_aki78.jpg", "stimuli/img_allt1.jpg", "stimuli/img_amsgw.jpg", "stimuli/img_amsko.jpg", "stimuli/img_anakd.jpg", "stimuli/img_and1v.jpg", "stimuli/img_anfk9.jpg", "stimuli/img_anhzn.jpg", "stimuli/img_anjr0.jpg", "stimuli/img_anzgh.jpg", "stimuli/img_aplao.jpg", "stimuli/img_aqu2d.jpg", "stimuli/img_arx94.jpg", "stimuli/img_as3da.jpg", "stimuli/img_astid.jpg", "stimuli/img_aswbu.jpg", "stimuli/img_atzjw.jpg", "stimuli/img_aweye.jpg", "stimuli/img_awuev.jpg", "stimuli/img_ay56d.jpg", "stimuli/img_b0yct.jpg", "stimuli/img_b2jli.jpg", "stimuli/img_b2xn0.jpg", "stimuli/img_b3fi1.jpg", "stimuli/img_b7gom.jpg", "stimuli/img_b7ycd.jpg", "stimuli/img_b17ma.jpg", "stimuli/img_b21d7.jpg", "stimuli/img_b34c4.jpg", "stimuli/img_b36ne.jpg", "stimuli/img_b55q0.jpg", "stimuli/img_b89t4.jpg", "stimuli/img_b971s.jpg", "stimuli/img_ba2q4.jpg", "stimuli/img_badai.jpg", "stimuli/img_bbs77.jpg", "stimuli/img_bbt0k.jpg", "stimuli/img_bdqmg.jpg", "stimuli/img_bdz92.jpg", "stimuli/img_be0j0.jpg", "stimuli/img_bendp.jpg", "stimuli/img_bf4eh.jpg", "stimuli/img_bf8nx.jpg", "stimuli/img_bflfy.jpg", "stimuli/img_bg264.jpg", "stimuli/img_bj2gr.jpg", "stimuli/img_bj99b.jpg", "stimuli/img_bklr1.jpg", "stimuli/img_bl2f1.jpg", "stimuli/img_bnetw.jpg", "stimuli/img_bntrh.jpg", "stimuli/img_bp226.jpg", "stimuli/img_bpgb3.jpg", "stimuli/img_bpyv5.jpg", "stimuli/img_bs3m7.jpg", "stimuli/img_bsr0p.jpg", "stimuli/img_bwo9g.jpg", "stimuli/img_bwx3i.jpg", "stimuli/img_bysq2.jpg", "stimuli/img_bzuyx.jpg", "stimuli/img_c0ecw.jpg", "stimuli/img_c0kt4.jpg", "stimuli/img_c0me7.jpg", "stimuli/img_c0vzo.jpg", "stimuli/img_c2pbs.jpg", "stimuli/img_c3ipx.jpg", "stimuli/img_c3r29.jpg", "stimuli/img_c4ljf.jpg", "stimuli/img_c4uwt.jpg", "stimuli/img_c4vkt.jpg", "stimuli/img_c6tg4.jpg", "stimuli/img_c7bpx.jpg", "stimuli/img_c30d1.jpg", "stimuli/img_c79r7.jpg", "stimuli/img_c89x3.jpg", "stimuli/img_ca8kd.jpg", "stimuli/img_caqzp.jpg", "stimuli/img_ccn2w.jpg", "stimuli/img_ce9vx.jpg", "stimuli/img_ce55l.jpg", "stimuli/img_cehin.jpg", "stimuli/img_cel9k.jpg", "stimuli/img_ceqfs.jpg", "stimuli/img_cf2bd.jpg", "stimuli/img_cf9gk.jpg", "stimuli/img_cfarv.jpg", "stimuli/img_cgdyc.jpg", "stimuli/img_cht1k.jpg", "stimuli/img_ciboa.jpg", "stimuli/img_cic06.jpg", "stimuli/img_cjvod.jpg", "stimuli/img_ck3m4.jpg", "stimuli/img_clbu4.jpg", "stimuli/img_cmjji.jpg", "stimuli/img_cmyvx.jpg", "stimuli/img_cn574.jpg", "stimuli/img_cnxex.jpg", "stimuli/img_cnyac.jpg", "stimuli/img_cogrz.jpg", "stimuli/img_cpsdh.jpg", "stimuli/img_cqot9.jpg", "stimuli/img_ct6bx.jpg", "stimuli/img_ct240.jpg", "stimuli/img_cust8.jpg", "stimuli/img_cv6mf.jpg", "stimuli/img_cv9qj.jpg", "stimuli/img_cvyc3.jpg", "stimuli/img_cwokj.jpg", "stimuli/img_cxpff.jpg", "stimuli/img_cxqey.jpg", "stimuli/img_cy08j.jpg", "stimuli/img_czjk5.jpg", "stimuli/img_d0k76.jpg", "stimuli/img_d0sj6.jpg", "stimuli/img_d1e9h.jpg", "stimuli/img_d3t0o.jpg", "stimuli/img_d3wwy.jpg", "stimuli/img_d4rmg.jpg", "stimuli/img_d6jnd.jpg", "stimuli/img_d7iri.jpg", "stimuli/img_d7nng.jpg", "stimuli/img_d8xbu.jpg", "stimuli/img_d9ogj.jpg", "stimuli/img_d26ik.jpg", "stimuli/img_d55q7.jpg", "stimuli/img_d90m7.jpg", "stimuli/img_d480g.jpg", "stimuli/img_d5947.jpg", "stimuli/img_daqxs.jpg", "stimuli/img_db1ke.jpg", "stimuli/img_dbf9a.jpg", "stimuli/img_dg5h7.jpg", "stimuli/img_dh5no.jpg", "stimuli/img_dhjnr.jpg", "stimuli/img_di6f0.jpg", "stimuli/img_di9lr.jpg"]);
+      psychoJS._serverManager.prepareResources([conditions_memo_sleep_b, conditions_memo_sleep_a, conditions_memo_living_b, conditions_memo_living_a, conditions_memo_kitchen_b, conditions_memo_kitchen_a, conditions_cat_sleep_b, conditions_cat_sleep_a, conditions_cat_living_b, conditions_cat_living_a, conditions_cat_kitchen_b, conditions_cat_kitchen_a, conditions_block_order, "stimuli/asdfgh.jpg", "stimuli/asdfghertghvgh.jpg", "stimuli/asdfghjkjhg.jpg", "stimuli/asdfghjkloelkjhg.jpg", "stimuli/dfghjhgf.jpg", "stimuli/erhvgh.jpg", "stimuli/erthjnbvcfg.jpg", "stimuli/fvbjgv.jpg", "stimuli/gfdfghjgf.jpg", "stimuli/gfvbnbg.jpg", "stimuli/hhhh.jpg", "stimuli/ihnbvcfgd.jpg", "stimuli/ijnbgzuik.jpg", "stimuli/img_0adz5.jpg", "stimuli/img_0bah1.jpg", "stimuli/img_0dege.jpg", "stimuli/img_0eflx.jpg", "stimuli/img_0ej0y.jpg", "stimuli/img_0ekxv.jpg", "stimuli/img_0ez70.jpg", "stimuli/img_0j24m.jpg", "stimuli/img_0jzz7.jpg", "stimuli/img_0kmfo.jpg", "stimuli/img_0kqc0.jpg", "stimuli/img_0mhms.jpg", "stimuli/img_0nckg.jpg", "stimuli/img_0noah.jpg", "stimuli/img_00ojb.jpg", "stimuli/img_0pt3z.jpg", "stimuli/img_0qndh.jpg", "stimuli/img_0rbu4.jpg", "stimuli/img_0si9u.jpg", "stimuli/img_0t206.jpg", "stimuli/img_0ugsg.jpg", "stimuli/img_0uiwg.jpg", "stimuli/img_0urnu.jpg", "stimuli/img_0wv81.jpg", "stimuli/img_0wzeq.jpg", "stimuli/img_0x4kb.jpg", "stimuli/img_0xwtf.jpg", "stimuli/img_0zzo4.jpg", "stimuli/img_1ao2d.jpg", "stimuli/img_1b74f.jpg", "stimuli/img_1ccse.jpg", "stimuli/img_1cdqc.jpg", "stimuli/img_1cm9s.jpg", "stimuli/img_1d1l9.jpg", "stimuli/img_1etij.jpg", "stimuli/img_1fjfz.jpg", "stimuli/img_1gr78.jpg", "stimuli/img_1i6q5.jpg", "stimuli/img_1iam9.jpg", "stimuli/img_1ibl4.jpg", "stimuli/img_1m0fn.jpg", "stimuli/img_1n8b9.jpg", "stimuli/img_1ojyk.jpg", "stimuli/img_1plu7.jpg", "stimuli/img_1q8pa.jpg", "stimuli/img_1qa4t.jpg", "stimuli/img_1ql54.jpg", "stimuli/img_1qye0.jpg", "stimuli/img_1r2ri.jpg", "stimuli/img_1r08n.jpg", "stimuli/img_1s8dl.jpg", "stimuli/img_1scr4.jpg", "stimuli/img_1twlp.jpg", "stimuli/img_1uwbl.jpg", "stimuli/img_1vq1v.jpg", "stimuli/img_1vukv.jpg", "stimuli/img_01w8b.jpg", "stimuli/img_1wxyo.jpg", "stimuli/img_1xdqe.jpg", "stimuli/img_1yffi.jpg", "stimuli/img_1zhz6.jpg", "stimuli/img_02alv.jpg", "stimuli/img_2b8fp.jpg", "stimuli/img_2c9w1.jpg", "stimuli/img_2cebl.jpg", "stimuli/img_002cv.jpg", "stimuli/img_2d000.jpg", "stimuli/img_2d3c2.jpg", "stimuli/img_2d82m.jpg", "stimuli/img_2dnfy.jpg", "stimuli/img_2ehfe.jpg", "stimuli/img_2fe41.jpg", "stimuli/img_2g129.jpg", "stimuli/img_2i925.jpg", "stimuli/img_2imrl.jpg", "stimuli/img_2jgpo.jpg", "stimuli/img_2js6m.jpg", "stimuli/img_2lcxi.jpg", "stimuli/img_2lqsf.jpg", "stimuli/img_2na1o.jpg", "stimuli/img_2pk6v.jpg", "stimuli/img_2pnl2.jpg", "stimuli/img_2qdvq.jpg", "stimuli/img_2qhro.jpg", "stimuli/img_2qkvm.jpg", "stimuli/img_2rtxu.jpg", "stimuli/img_2rwes.jpg", "stimuli/img_2rylq.jpg", "stimuli/img_2s780.jpg", "stimuli/img_2vqdc.jpg", "stimuli/img_2wkab.jpg", "stimuli/img_2ygqr.jpg", "stimuli/img_3a2r2.jpg", "stimuli/img_3a6lc.jpg", "stimuli/img_3ar9q.jpg", "stimuli/img_3arcv.jpg", "stimuli/img_3aueq.jpg", "stimuli/img_3bp7b.jpg", "stimuli/img_3bxjb.jpg", "stimuli/img_3cp3s.jpg", "stimuli/img_3eusg.jpg", "stimuli/img_3fldm.jpg", "stimuli/img_3gm8h.jpg", "stimuli/img_3h4c9.jpg", "stimuli/img_3hmlp.jpg", "stimuli/img_3i80k.jpg", "stimuli/img_3ialr.jpg", "stimuli/img_3jnt7.jpg", "stimuli/img_3kho5.jpg", "stimuli/img_3lli8.jpg", "stimuli/img_3lvof.jpg", "stimuli/img_3m2h0.jpg", "stimuli/img_3m61b.jpg", "stimuli/img_3miwe.jpg", "stimuli/img_3mp24.jpg", "stimuli/img_3nswx.jpg", "stimuli/img_3oyah.jpg", "stimuli/img_3p0zv.jpg", "stimuli/img_3ph9o.jpg", "stimuli/img_3q6t4.jpg", "stimuli/img_3ro4n.jpg", "stimuli/img_3s357.jpg", "stimuli/img_3shmp.jpg", "stimuli/img_3sw8t.jpg", "stimuli/img_3tnh4.jpg", "stimuli/img_3v5w3.jpg", "stimuli/img_3w4dt.jpg", "stimuli/img_3wj63.jpg", "stimuli/img_3y35o.jpg", "stimuli/img_3ze38.jpg", "stimuli/img_4bef4.jpg", "stimuli/img_4bxxj.jpg", "stimuli/img_4c48i.jpg", "stimuli/img_4d0aw.jpg", "stimuli/img_4dxo4.jpg", "stimuli/img_4g6yq.jpg", "stimuli/img_4glfv.jpg", "stimuli/img_4jra4.jpg", "stimuli/img_4k1j9.jpg", "stimuli/img_4kzor.jpg", "stimuli/img_4lyad.jpg", "stimuli/img_4m9ud.jpg", "stimuli/img_4o8l0.jpg", "stimuli/img_4p9dc.jpg", "stimuli/img_4q2n8.jpg", "stimuli/img_4s67y.jpg", "stimuli/img_4spc8.jpg", "stimuli/img_4td0x.jpg", "stimuli/img_4ufga.jpg", "stimuli/img_4utvc.jpg", "stimuli/img_4wq98.jpg", "stimuli/img_4xr0x.jpg", "stimuli/img_4xxuf.jpg", "stimuli/img_4y7mh.jpg", "stimuli/img_4yy1j.jpg", "stimuli/img_5a1ke.jpg", "stimuli/img_5alzj.jpg", "stimuli/img_05c3h.jpg", "stimuli/img_5e7iu.jpg", "stimuli/img_5ecez.jpg", "stimuli/img_5ewoj.jpg", "stimuli/img_5f8ha.jpg", "stimuli/img_5fkbp.jpg", "stimuli/img_05flq.jpg", "stimuli/img_5fr9m.jpg", "stimuli/img_5il0t.jpg", "stimuli/img_5jp4f.jpg", "stimuli/img_5jy9c.jpg", "stimuli/img_5k4cy.jpg", "stimuli/img_5m6x4.jpg", "stimuli/img_5m75u.jpg", "stimuli/img_5mw7y.jpg", "stimuli/img_5nfmx.jpg", "stimuli/img_5nlnv.jpg", "stimuli/img_5nlyi.jpg", "stimuli/img_5o1x3.jpg", "stimuli/img_5oubg.jpg", "stimuli/img_5ovr5.jpg", "stimuli/img_5p2ql.jpg", "stimuli/img_5pmhd.jpg", "stimuli/img_5qdyh.jpg", "stimuli/img_5t91y.jpg", "stimuli/img_5tr4v.jpg", "stimuli/img_5udo9.jpg", "stimuli/img_5vc3c.jpg", "stimuli/img_5w83x.jpg", "stimuli/img_5x1u3.jpg", "stimuli/img_5yhe7.jpg", "stimuli/img_5yhyk.jpg", "stimuli/img_6a0hu.jpg", "stimuli/img_6cg5g.jpg", "stimuli/img_6ddrx.jpg", "stimuli/img_6dl6t.jpg", "stimuli/img_6dvd0.jpg", "stimuli/img_6dves.jpg", "stimuli/img_6fo9f.jpg", "stimuli/img_6funa.jpg", "stimuli/img_6hyyt.jpg", "stimuli/img_6iqem.jpg", "stimuli/img_6j727.jpg", "stimuli/img_6jjvh.jpg", "stimuli/img_6jsgr.jpg", "stimuli/img_6lpz9.jpg", "stimuli/img_6mdbc.jpg", "stimuli/img_6nbgt.jpg", "stimuli/img_6p0lz.jpg", "stimuli/img_6qetq.jpg", "stimuli/img_6syr3.jpg", "stimuli/img_6tou7.jpg", "stimuli/img_6umgp.jpg", "stimuli/img_6v5oo.jpg", "stimuli/img_6vila.jpg", "stimuli/img_6vta6.jpg", "stimuli/img_6w2lk.jpg", "stimuli/img_6wne4.jpg", "stimuli/img_6wr5y.jpg", "stimuli/img_6wshc.jpg", "stimuli/img_6xg4l.jpg", "stimuli/img_6zla6.jpg", "stimuli/img_6zz63.jpg", "stimuli/img_7a0c1.jpg", "stimuli/img_7a2m9.jpg", "stimuli/img_07c1w.jpg", "stimuli/img_7caxh.jpg", "stimuli/img_7e06w.jpg", "stimuli/img_7ed9m.jpg", "stimuli/img_7f11q.jpg", "stimuli/img_7fwp2.jpg", "stimuli/img_7hti2.jpg", "stimuli/img_7i6d8.jpg", "stimuli/img_7likj.jpg", "stimuli/img_7lron.jpg", "stimuli/img_7lz7m.jpg", "stimuli/img_7m3wh.jpg", "stimuli/img_7m07e.jpg", "stimuli/img_7mqbh.jpg", "stimuli/img_7os7q.jpg", "stimuli/img_7pgd2.jpg", "stimuli/img_7q6ry.jpg", "stimuli/img_7rss9.jpg", "stimuli/img_07tdb.jpg", "stimuli/img_7ucnr.jpg", "stimuli/img_7w5tw.jpg", "stimuli/img_7wquy.jpg", "stimuli/img_7wul8.jpg", "stimuli/img_7wxuy.jpg", "stimuli/img_7xzhf.jpg", "stimuli/img_7y67w.jpg", "stimuli/img_7z2tj.jpg", "stimuli/img_8cnbp.jpg", "stimuli/img_8dacu.jpg", "stimuli/img_8df2e.jpg", "stimuli/img_08dll.jpg", "stimuli/img_8dmpq.jpg", "stimuli/img_8fpog.jpg", "stimuli/img_8i1jb.jpg", "stimuli/img_8i3q8.jpg", "stimuli/img_8jy3h.jpg", "stimuli/img_8l8qo.jpg", "stimuli/img_8mkbv.jpg", "stimuli/img_8qkmd.jpg", "stimuli/img_8qt7d.jpg", "stimuli/img_8tc8e.jpg", "stimuli/img_08tlm.jpg", "stimuli/img_8vcm6.jpg", "stimuli/img_8vygl.jpg", "stimuli/img_8wa09.jpg", "stimuli/img_8ybbp.jpg", "stimuli/img_8zf2f.jpg", "stimuli/img_09a3o.jpg", "stimuli/img_9ann0.jpg", "stimuli/img_9b6yl.jpg", "stimuli/img_9bkl9.jpg", "stimuli/img_9ck2q.jpg", "stimuli/img_9d84u.jpg", "stimuli/img_9dg1v.jpg", "stimuli/img_9g4tp.jpg", "stimuli/img_9g12g.jpg", "stimuli/img_9jgbc.jpg", "stimuli/img_09jt1.jpg", "stimuli/img_09lgm.jpg", "stimuli/img_9mcah.jpg", "stimuli/img_9mky8.jpg", "stimuli/img_9mlzp.jpg", "stimuli/img_9n6al.jpg", "stimuli/img_9nnrj.jpg", "stimuli/img_9o0wl.jpg", "stimuli/img_9oofc.jpg", "stimuli/img_9os15.jpg", "stimuli/img_9pfbj.jpg", "stimuli/img_9qg3g.jpg", "stimuli/img_9qmek.jpg", "stimuli/img_09ram.jpg", "stimuli/img_9ro1y.jpg", "stimuli/img_9stvt.jpg", "stimuli/img_9tgq9.jpg", "stimuli/img_9ugw8.jpg", "stimuli/img_9wc9w.jpg", "stimuli/img_9wgjs.jpg", "stimuli/img_9wmp8.jpg", "stimuli/img_9x6du.jpg", "stimuli/img_9z99v.jpg", "stimuli/img_10t4k.jpg", "stimuli/img_11anu.jpg", "stimuli/img_12lvj.jpg", "stimuli/img_13ozs.jpg", "stimuli/img_13ymo.jpg", "stimuli/img_14hyn.jpg", "stimuli/img_15bss.jpg", "stimuli/img_16kib.jpg", "stimuli/img_17p17.jpg", "stimuli/img_18r80.jpg", "stimuli/img_23ged.jpg", "stimuli/img_24rt2.jpg", "stimuli/img_25zj9.jpg", "stimuli/img_26n4i.jpg", "stimuli/img_28eqs.jpg", "stimuli/img_29cw5.jpg", "stimuli/img_29gyt.jpg", "stimuli/img_29td3.jpg", "stimuli/img_30vz5.jpg", "stimuli/img_33ka1.jpg", "stimuli/img_34vo5.jpg", "stimuli/img_35zbz.jpg", "stimuli/img_37hgm.jpg", "stimuli/img_37uwk.jpg", "stimuli/img_38iec.jpg", "stimuli/img_39hz5.jpg", "stimuli/img_43unx.jpg", "stimuli/img_43xbt.jpg", "stimuli/img_43xdp.jpg", "stimuli/img_46tsn.jpg", "stimuli/img_47k1j.jpg", "stimuli/img_47zvc.jpg", "stimuli/img_048l0.jpg", "stimuli/img_48r6i.jpg", "stimuli/img_49h18.jpg", "stimuli/img_52i74.jpg", "stimuli/img_53nbn.jpg", "stimuli/img_56f8c.jpg", "stimuli/img_57os5.jpg", "stimuli/img_58n4j.jpg", "stimuli/img_58ujj.jpg", "stimuli/img_60x5k.jpg", "stimuli/img_62xpv.jpg", "stimuli/img_63slq.jpg", "stimuli/img_64ite.jpg", "stimuli/img_65cdi.jpg", "stimuli/img_65zmd.jpg", "stimuli/img_66fuf.jpg", "stimuli/img_66ncr.jpg", "stimuli/img_66sfd.jpg", "stimuli/img_66zut.jpg", "stimuli/img_68aqt.jpg", "stimuli/img_68bu5.jpg", "stimuli/img_68d11.jpg", "stimuli/img_68f2l.jpg", "stimuli/img_68wfw.jpg", "stimuli/img_70ji9.jpg", "stimuli/img_70x14.jpg", "stimuli/img_71mhq.jpg", "stimuli/img_72fmj.jpg", "stimuli/img_72hmj.jpg", "stimuli/img_72hyg.jpg", "stimuli/img_72wnn.jpg", "stimuli/img_73pyk.jpg", "stimuli/img_76tei.jpg", "stimuli/img_77pme.jpg", "stimuli/img_78fxr.jpg", "stimuli/img_78p4f.jpg", "stimuli/img_78zcn.jpg", "stimuli/img_79b5l.jpg", "stimuli/img_80mdz.jpg", "stimuli/img_81nb0.jpg", "stimuli/img_82bie.jpg", "stimuli/img_84s7n.jpg", "stimuli/img_85xkk.jpg", "stimuli/img_86s60.jpg", "stimuli/img_88h71.jpg", "stimuli/img_88mrj.jpg", "stimuli/img_088sa.jpg", "stimuli/img_89dvt.jpg", "stimuli/img_89rmb.jpg", "stimuli/img_91csq.jpg", "stimuli/img_91ht8.jpg", "stimuli/img_91lbx.jpg", "stimuli/img_92eyc.jpg", "stimuli/img_92f93.jpg", "stimuli/img_93vg8.jpg", "stimuli/img_93vmh.jpg", "stimuli/img_95hiv.jpg", "stimuli/img_97f62.jpg", "stimuli/img_99exx.jpg", "stimuli/img_99qvn.jpg", "stimuli/img_165pk.jpg", "stimuli/img_190ub.jpg", "stimuli/img_196rk.jpg", "stimuli/img_287jq.jpg", "stimuli/img_301af.jpg", "stimuli/img_314bq.jpg", "stimuli/img_319z4.jpg", "stimuli/img_328s0.jpg", "stimuli/img_411xa.jpg", "stimuli/img_463mq.jpg", "stimuli/img_520au.jpg", "stimuli/img_0548r.jpg", "stimuli/img_552an.jpg", "stimuli/img_667w7.jpg", "stimuli/img_753pq.jpg", "stimuli/img_782qs.jpg", "stimuli/img_791d1.jpg", "stimuli/img_818nk.jpg", "stimuli/img_936g7.jpg", "stimuli/img_948n5.jpg", "stimuli/img_4800h.jpg", "stimuli/img_4974k.jpg", "stimuli/img_5949k.jpg", "stimuli/img_7147j.jpg", "stimuli/img_8297a.jpg", "stimuli/img_9684y.jpg", "stimuli/img_60242.jpg", "stimuli/img_93366.jpg", "stimuli/img_a1erh.jpg", "stimuli/img_a2mx2.jpg", "stimuli/img_a2pkp.jpg", "stimuli/img_a3jds.jpg", "stimuli/img_a6u3n.jpg", "stimuli/img_a7bdg.jpg", "stimuli/img_a8irr.jpg", "stimuli/img_a8wvq.jpg", "stimuli/img_a8y4y.jpg", "stimuli/img_a9acb.jpg", "stimuli/img_a9he3.jpg", "stimuli/img_a09k2.jpg", "stimuli/img_a220l.jpg", "stimuli/img_abobq.jpg", "stimuli/img_ac0ey.jpg", "stimuli/img_aellb.jpg", "stimuli/img_af3l2.jpg", "stimuli/img_afcbj.jpg", "stimuli/img_afmdp.jpg", "stimuli/img_agwon.jpg", "stimuli/img_ah5vo.jpg", "stimuli/img_aki78.jpg", "stimuli/img_allt1.jpg", "stimuli/img_amsgw.jpg", "stimuli/img_amsko.jpg", "stimuli/img_anakd.jpg", "stimuli/img_and1v.jpg", "stimuli/img_anfk9.jpg", "stimuli/img_anhzn.jpg", "stimuli/img_anjr0.jpg", "stimuli/img_anzgh.jpg", "stimuli/img_aplao.jpg", "stimuli/img_aqu2d.jpg", "stimuli/img_arx94.jpg", "stimuli/img_as3da.jpg", "stimuli/img_astid.jpg", "stimuli/img_aswbu.jpg", "stimuli/img_atzjw.jpg", "stimuli/img_aweye.jpg", "stimuli/img_awuev.jpg", "stimuli/img_ay56d.jpg", "stimuli/img_b0yct.jpg", "stimuli/img_b2jli.jpg", "stimuli/img_b2xn0.jpg", "stimuli/img_b3fi1.jpg", "stimuli/img_b7gom.jpg", "stimuli/img_b7ycd.jpg", "stimuli/img_b17ma.jpg", "stimuli/img_b21d7.jpg", "stimuli/img_b34c4.jpg", "stimuli/img_b36ne.jpg", "stimuli/img_b55q0.jpg", "stimuli/img_b89t4.jpg", "stimuli/img_b971s.jpg", "stimuli/img_ba2q4.jpg", "stimuli/img_badai.jpg", "stimuli/img_bbs77.jpg", "stimuli/img_bbt0k.jpg", "stimuli/img_bdqmg.jpg", "stimuli/img_bdz92.jpg", "stimuli/img_be0j0.jpg", "stimuli/img_bendp.jpg", "stimuli/img_bf4eh.jpg", "stimuli/img_bf8nx.jpg", "stimuli/img_bflfy.jpg", "stimuli/img_bg264.jpg", "stimuli/img_bj2gr.jpg", "stimuli/img_bj99b.jpg", "stimuli/img_bklr1.jpg", "stimuli/img_bl2f1.jpg", "stimuli/img_bnetw.jpg", "stimuli/img_bntrh.jpg", "stimuli/img_bp226.jpg", "stimuli/img_bpgb3.jpg", "stimuli/img_bpyv5.jpg", "stimuli/img_bs3m7.jpg", "stimuli/img_bsr0p.jpg", "stimuli/img_bwo9g.jpg", "stimuli/img_bwx3i.jpg", "stimuli/img_bysq2.jpg", "stimuli/img_bzuyx.jpg", "stimuli/img_c0ecw.jpg", "stimuli/img_c0kt4.jpg", "stimuli/img_c0me7.jpg", "stimuli/img_c0vzo.jpg", "stimuli/img_c2pbs.jpg", "stimuli/img_c3ipx.jpg", "stimuli/img_c3r29.jpg", "stimuli/img_c4ljf.jpg", "stimuli/img_c4uwt.jpg", "stimuli/img_c4vkt.jpg", "stimuli/img_c6tg4.jpg", "stimuli/img_c7bpx.jpg", "stimuli/img_c30d1.jpg", "stimuli/img_c79r7.jpg", "stimuli/img_c89x3.jpg", "stimuli/img_ca8kd.jpg", "stimuli/img_caqzp.jpg", "stimuli/img_ccn2w.jpg", "stimuli/img_ce9vx.jpg", "stimuli/img_ce55l.jpg", "stimuli/img_cehin.jpg", "stimuli/img_cel9k.jpg", "stimuli/img_ceqfs.jpg", "stimuli/img_cf2bd.jpg", "stimuli/img_cf9gk.jpg", "stimuli/img_cfarv.jpg", "stimuli/img_cgdyc.jpg", "stimuli/img_cht1k.jpg", "stimuli/img_ciboa.jpg", "stimuli/img_cic06.jpg", "stimuli/img_cjvod.jpg", "stimuli/img_ck3m4.jpg", "stimuli/img_clbu4.jpg", "stimuli/img_cmjji.jpg", "stimuli/img_cmyvx.jpg", "stimuli/img_cn574.jpg", "stimuli/img_cnxex.jpg", "stimuli/img_cnyac.jpg", "stimuli/img_cogrz.jpg", "stimuli/img_cpsdh.jpg", "stimuli/img_cqot9.jpg", "stimuli/img_ct6bx.jpg", "stimuli/img_ct240.jpg", "stimuli/img_cust8.jpg", "stimuli/img_cv6mf.jpg", "stimuli/img_cv9qj.jpg", "stimuli/img_cvyc3.jpg", "stimuli/img_cwokj.jpg", "stimuli/img_cxpff.jpg", "stimuli/img_cxqey.jpg", "stimuli/img_cy08j.jpg", "stimuli/img_czjk5.jpg", "stimuli/img_d0k76.jpg", "stimuli/img_d0sj6.jpg", "stimuli/img_d1e9h.jpg", "stimuli/img_d3t0o.jpg", "stimuli/img_d3wwy.jpg", "stimuli/img_d4rmg.jpg", "stimuli/img_d6jnd.jpg", "stimuli/img_d7iri.jpg", "stimuli/img_d7nng.jpg", "stimuli/img_d8xbu.jpg", "stimuli/img_d9ogj.jpg", "stimuli/img_d26ik.jpg", "stimuli/img_d55q7.jpg", "stimuli/img_d90m7.jpg", "stimuli/img_d480g.jpg", "stimuli/img_d5947.jpg", "stimuli/img_daqxs.jpg", "stimuli/img_db1ke.jpg", "stimuli/img_dbf9a.jpg", "stimuli/img_dg5h7.jpg", "stimuli/img_dh5no.jpg", "stimuli/img_dhjnr.jpg", "stimuli/img_di6f0.jpg", "stimuli/img_di9lr.jpg"]);
       resources_consent.status = PsychoJS.Status.STARTED;
     }
     
@@ -2219,6 +2244,126 @@ function instructions_catRoutineEnd(snapshot) {
     }
     instructions_cat_resp.stop();
     // the Routine "instructions_cat" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    // Routines running outside a loop should always advance the datafile row
+    if (currentLoop === psychoJS.experiment) {
+      psychoJS.experiment.nextEntry(snapshot);
+    }
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+var _instructions_cat_2_resp_allKeys;
+var instructions_cat_2Components;
+function instructions_cat_2RoutineBegin(snapshot) {
+  return async function () {
+    TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
+    
+    //--- Prepare to start Routine 'instructions_cat_2' ---
+    t = 0;
+    instructions_cat_2Clock.reset(); // clock
+    frameN = -1;
+    continueRoutine = true; // until we're told otherwise
+    // update component parameters for each repeat
+    psychoJS.experiment.addData('instructions_cat_2.started', globalClock.getTime());
+    instructions_cat_2_resp.keys = undefined;
+    instructions_cat_2_resp.rt = undefined;
+    _instructions_cat_2_resp_allKeys = [];
+    // keep track of which components have finished
+    instructions_cat_2Components = [];
+    instructions_cat_2Components.push(instructions_cat_2_text);
+    instructions_cat_2Components.push(instructions_cat_2_resp);
+    
+    for (const thisComponent of instructions_cat_2Components)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function instructions_cat_2RoutineEachFrame() {
+  return async function () {
+    //--- Loop for each frame of Routine 'instructions_cat_2' ---
+    // get current time
+    t = instructions_cat_2Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *instructions_cat_2_text* updates
+    if (t >= 0.0 && instructions_cat_2_text.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      instructions_cat_2_text.tStart = t;  // (not accounting for frame time here)
+      instructions_cat_2_text.frameNStart = frameN;  // exact frame index
+      
+      instructions_cat_2_text.setAutoDraw(true);
+    }
+    
+    
+    // *instructions_cat_2_resp* updates
+    if (t >= 0.0 && instructions_cat_2_resp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      instructions_cat_2_resp.tStart = t;  // (not accounting for frame time here)
+      instructions_cat_2_resp.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { instructions_cat_2_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { instructions_cat_2_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { instructions_cat_2_resp.clearEvents(); });
+    }
+    
+    if (instructions_cat_2_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = instructions_cat_2_resp.getKeys({keyList: ['space'], waitRelease: false});
+      _instructions_cat_2_resp_allKeys = _instructions_cat_2_resp_allKeys.concat(theseKeys);
+      if (_instructions_cat_2_resp_allKeys.length > 0) {
+        instructions_cat_2_resp.keys = _instructions_cat_2_resp_allKeys[_instructions_cat_2_resp_allKeys.length - 1].name;  // just the last key pressed
+        instructions_cat_2_resp.rt = _instructions_cat_2_resp_allKeys[_instructions_cat_2_resp_allKeys.length - 1].rt;
+        instructions_cat_2_resp.duration = _instructions_cat_2_resp_allKeys[_instructions_cat_2_resp_allKeys.length - 1].duration;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of instructions_cat_2Components)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function instructions_cat_2RoutineEnd(snapshot) {
+  return async function () {
+    //--- Ending Routine 'instructions_cat_2' ---
+    for (const thisComponent of instructions_cat_2Components) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    psychoJS.experiment.addData('instructions_cat_2.stopped', globalClock.getTime());
+    instructions_cat_2_resp.stop();
+    // the Routine "instructions_cat_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     // Routines running outside a loop should always advance the datafile row
@@ -3108,15 +3253,15 @@ function bed_a_categorization_trialsLoopBegin(bed_a_categorization_trialsLoopSch
     for (const thisBed_a_categorization_trial of bed_a_categorization_trials) {
       snapshot = bed_a_categorization_trials.getSnapshot();
       bed_a_categorization_trialsLoopScheduler.add(importConditions(snapshot));
-      bed_a_categorization_trialsLoopScheduler.add(sleep_aRoutineBegin(snapshot));
-      bed_a_categorization_trialsLoopScheduler.add(sleep_aRoutineEachFrame());
-      bed_a_categorization_trialsLoopScheduler.add(sleep_aRoutineEnd(snapshot));
-      bed_a_categorization_trialsLoopScheduler.add(sleep_random_isiRoutineBegin(snapshot));
-      bed_a_categorization_trialsLoopScheduler.add(sleep_random_isiRoutineEachFrame());
-      bed_a_categorization_trialsLoopScheduler.add(sleep_random_isiRoutineEnd(snapshot));
-      bed_a_categorization_trialsLoopScheduler.add(sleep_pictureRoutineBegin(snapshot));
-      bed_a_categorization_trialsLoopScheduler.add(sleep_pictureRoutineEachFrame());
-      bed_a_categorization_trialsLoopScheduler.add(sleep_pictureRoutineEnd(snapshot));
+      bed_a_categorization_trialsLoopScheduler.add(bed_aRoutineBegin(snapshot));
+      bed_a_categorization_trialsLoopScheduler.add(bed_aRoutineEachFrame());
+      bed_a_categorization_trialsLoopScheduler.add(bed_aRoutineEnd(snapshot));
+      bed_a_categorization_trialsLoopScheduler.add(bed_random_isiRoutineBegin(snapshot));
+      bed_a_categorization_trialsLoopScheduler.add(bed_random_isiRoutineEachFrame());
+      bed_a_categorization_trialsLoopScheduler.add(bed_random_isiRoutineEnd(snapshot));
+      bed_a_categorization_trialsLoopScheduler.add(bed_pictureRoutineBegin(snapshot));
+      bed_a_categorization_trialsLoopScheduler.add(bed_pictureRoutineEachFrame());
+      bed_a_categorization_trialsLoopScheduler.add(bed_pictureRoutineEnd(snapshot));
       bed_a_categorization_trialsLoopScheduler.add(bed_a_categorization_trialsLoopEndIteration(bed_a_categorization_trialsLoopScheduler, snapshot));
     }
     
@@ -3246,15 +3391,15 @@ function bed_b_categorization_trialsLoopBegin(bed_b_categorization_trialsLoopSch
     for (const thisBed_b_categorization_trial of bed_b_categorization_trials) {
       snapshot = bed_b_categorization_trials.getSnapshot();
       bed_b_categorization_trialsLoopScheduler.add(importConditions(snapshot));
-      bed_b_categorization_trialsLoopScheduler.add(sleep_bRoutineBegin(snapshot));
-      bed_b_categorization_trialsLoopScheduler.add(sleep_bRoutineEachFrame());
-      bed_b_categorization_trialsLoopScheduler.add(sleep_bRoutineEnd(snapshot));
-      bed_b_categorization_trialsLoopScheduler.add(sleep_random_isiRoutineBegin(snapshot));
-      bed_b_categorization_trialsLoopScheduler.add(sleep_random_isiRoutineEachFrame());
-      bed_b_categorization_trialsLoopScheduler.add(sleep_random_isiRoutineEnd(snapshot));
-      bed_b_categorization_trialsLoopScheduler.add(sleep_pictureRoutineBegin(snapshot));
-      bed_b_categorization_trialsLoopScheduler.add(sleep_pictureRoutineEachFrame());
-      bed_b_categorization_trialsLoopScheduler.add(sleep_pictureRoutineEnd(snapshot));
+      bed_b_categorization_trialsLoopScheduler.add(bed_bRoutineBegin(snapshot));
+      bed_b_categorization_trialsLoopScheduler.add(bed_bRoutineEachFrame());
+      bed_b_categorization_trialsLoopScheduler.add(bed_bRoutineEnd(snapshot));
+      bed_b_categorization_trialsLoopScheduler.add(bed_random_isiRoutineBegin(snapshot));
+      bed_b_categorization_trialsLoopScheduler.add(bed_random_isiRoutineEachFrame());
+      bed_b_categorization_trialsLoopScheduler.add(bed_random_isiRoutineEnd(snapshot));
+      bed_b_categorization_trialsLoopScheduler.add(bed_pictureRoutineBegin(snapshot));
+      bed_b_categorization_trialsLoopScheduler.add(bed_pictureRoutineEachFrame());
+      bed_b_categorization_trialsLoopScheduler.add(bed_pictureRoutineEnd(snapshot));
       bed_b_categorization_trialsLoopScheduler.add(bed_b_categorization_trialsLoopEndIteration(bed_b_categorization_trialsLoopScheduler, snapshot));
     }
     
@@ -4218,7 +4363,7 @@ function memo_training_feedbackRoutineBegin(snapshot) {
     routineTimer.add(1.500000);
     // update component parameters for each repeat
     // Run 'Begin Routine' code from memo_train_feedb_code
-    if ((memo_training_slider.getRating() === correct_1 || Test_memo_slider.getRating() === correct_2)) {
+    if ((memo_training_slider.getRating() === correct_1 || memo_training_slider.getRating() === correct_2)) {
         memo_train_feedb_eval = 'korrekt';
     } else {
         memo_train_feedb_eval = 'falsch';
@@ -6243,14 +6388,14 @@ function living_b_memotest_instrRoutineEnd(snapshot) {
 
 
 var _bed_a_resp_allKeys;
-var sleep_aComponents;
-function sleep_aRoutineBegin(snapshot) {
+var bed_aComponents;
+function bed_aRoutineBegin(snapshot) {
   return async function () {
     TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
     
-    //--- Prepare to start Routine 'sleep_a' ---
+    //--- Prepare to start Routine 'bed_a' ---
     t = 0;
-    sleep_aClock.reset(); // clock
+    bed_aClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
@@ -6261,13 +6406,13 @@ function sleep_aRoutineBegin(snapshot) {
     _bed_a_resp_allKeys = [];
     bed_a_block_no.setText(block_total_cat);
     // keep track of which components have finished
-    sleep_aComponents = [];
-    sleep_aComponents.push(bed_a_text);
-    sleep_aComponents.push(bed_a_text_2);
-    sleep_aComponents.push(bed_a_resp);
-    sleep_aComponents.push(bed_a_block_no);
+    bed_aComponents = [];
+    bed_aComponents.push(bed_a_text);
+    bed_aComponents.push(bed_a_text_2);
+    bed_aComponents.push(bed_a_resp);
+    bed_aComponents.push(bed_a_block_no);
     
-    for (const thisComponent of sleep_aComponents)
+    for (const thisComponent of bed_aComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
     return Scheduler.Event.NEXT;
@@ -6275,11 +6420,11 @@ function sleep_aRoutineBegin(snapshot) {
 }
 
 
-function sleep_aRoutineEachFrame() {
+function bed_aRoutineEachFrame() {
   return async function () {
-    //--- Loop for each frame of Routine 'sleep_a' ---
+    //--- Loop for each frame of Routine 'bed_a' ---
     // get current time
-    t = sleep_aClock.getTime();
+    t = bed_aClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
@@ -6348,7 +6493,7 @@ function sleep_aRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of sleep_aComponents)
+    for (const thisComponent of bed_aComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
         break;
@@ -6364,16 +6509,16 @@ function sleep_aRoutineEachFrame() {
 }
 
 
-function sleep_aRoutineEnd(snapshot) {
+function bed_aRoutineEnd(snapshot) {
   return async function () {
-    //--- Ending Routine 'sleep_a' ---
-    for (const thisComponent of sleep_aComponents) {
+    //--- Ending Routine 'bed_a' ---
+    for (const thisComponent of bed_aComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
     }
     bed_a_resp.stop();
-    // the Routine "sleep_a" was not non-slip safe, so reset the non-slip timer
+    // the Routine "bed_a" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     // Routines running outside a loop should always advance the datafile row
@@ -6385,27 +6530,27 @@ function sleep_aRoutineEnd(snapshot) {
 }
 
 
-var sleep_random_isiComponents;
-function sleep_random_isiRoutineBegin(snapshot) {
+var bed_random_isiComponents;
+function bed_random_isiRoutineBegin(snapshot) {
   return async function () {
     TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
     
-    //--- Prepare to start Routine 'sleep_random_isi' ---
+    //--- Prepare to start Routine 'bed_random_isi' ---
     t = 0;
-    sleep_random_isiClock.reset(); // clock
+    bed_random_isiClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
     // Run 'Begin Routine' code from bed_random_isi_code
     time = 1 + Math.random();
     // keep track of which components have finished
-    sleep_random_isiComponents = [];
-    sleep_random_isiComponents.push(bed_random_isi_fix);
-    sleep_random_isiComponents.push(bed_random_isi_yes);
-    sleep_random_isiComponents.push(bed_random_isi_no);
-    sleep_random_isiComponents.push(bed_random_isi_question);
+    bed_random_isiComponents = [];
+    bed_random_isiComponents.push(bed_random_isi_fix);
+    bed_random_isiComponents.push(bed_random_isi_yes);
+    bed_random_isiComponents.push(bed_random_isi_no);
+    bed_random_isiComponents.push(bed_random_isi_question);
     
-    for (const thisComponent of sleep_random_isiComponents)
+    for (const thisComponent of bed_random_isiComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
     return Scheduler.Event.NEXT;
@@ -6413,11 +6558,11 @@ function sleep_random_isiRoutineBegin(snapshot) {
 }
 
 
-function sleep_random_isiRoutineEachFrame() {
+function bed_random_isiRoutineEachFrame() {
   return async function () {
-    //--- Loop for each frame of Routine 'sleep_random_isi' ---
+    //--- Loop for each frame of Routine 'bed_random_isi' ---
     // get current time
-    t = sleep_random_isiClock.getTime();
+    t = bed_random_isiClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
@@ -6487,7 +6632,7 @@ function sleep_random_isiRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of sleep_random_isiComponents)
+    for (const thisComponent of bed_random_isiComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
         break;
@@ -6503,15 +6648,15 @@ function sleep_random_isiRoutineEachFrame() {
 }
 
 
-function sleep_random_isiRoutineEnd(snapshot) {
+function bed_random_isiRoutineEnd(snapshot) {
   return async function () {
-    //--- Ending Routine 'sleep_random_isi' ---
-    for (const thisComponent of sleep_random_isiComponents) {
+    //--- Ending Routine 'bed_random_isi' ---
+    for (const thisComponent of bed_random_isiComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
     }
-    // the Routine "sleep_random_isi" was not non-slip safe, so reset the non-slip timer
+    // the Routine "bed_random_isi" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     // Routines running outside a loop should always advance the datafile row
@@ -6524,14 +6669,14 @@ function sleep_random_isiRoutineEnd(snapshot) {
 
 
 var _bed_picture_resp_allKeys;
-var sleep_pictureComponents;
-function sleep_pictureRoutineBegin(snapshot) {
+var bed_pictureComponents;
+function bed_pictureRoutineBegin(snapshot) {
   return async function () {
     TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
     
-    //--- Prepare to start Routine 'sleep_picture' ---
+    //--- Prepare to start Routine 'bed_picture' ---
     t = 0;
-    sleep_pictureClock.reset(); // clock
+    bed_pictureClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
@@ -6540,15 +6685,15 @@ function sleep_pictureRoutineBegin(snapshot) {
     bed_picture_resp.rt = undefined;
     _bed_picture_resp_allKeys = [];
     // keep track of which components have finished
-    sleep_pictureComponents = [];
-    sleep_pictureComponents.push(bed_picture_fix);
-    sleep_pictureComponents.push(bed_picture_image);
-    sleep_pictureComponents.push(bed_picture_yes);
-    sleep_pictureComponents.push(bed_picture_no);
-    sleep_pictureComponents.push(bed_picture_resp);
-    sleep_pictureComponents.push(bed_picture_question);
+    bed_pictureComponents = [];
+    bed_pictureComponents.push(bed_picture_fix);
+    bed_pictureComponents.push(bed_picture_image);
+    bed_pictureComponents.push(bed_picture_yes);
+    bed_pictureComponents.push(bed_picture_no);
+    bed_pictureComponents.push(bed_picture_resp);
+    bed_pictureComponents.push(bed_picture_question);
     
-    for (const thisComponent of sleep_pictureComponents)
+    for (const thisComponent of bed_pictureComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
     return Scheduler.Event.NEXT;
@@ -6556,11 +6701,11 @@ function sleep_pictureRoutineBegin(snapshot) {
 }
 
 
-function sleep_pictureRoutineEachFrame() {
+function bed_pictureRoutineEachFrame() {
   return async function () {
-    //--- Loop for each frame of Routine 'sleep_picture' ---
+    //--- Loop for each frame of Routine 'bed_picture' ---
     // get current time
-    t = sleep_pictureClock.getTime();
+    t = bed_pictureClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
@@ -6659,7 +6804,7 @@ function sleep_pictureRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of sleep_pictureComponents)
+    for (const thisComponent of bed_pictureComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
         break;
@@ -6675,10 +6820,10 @@ function sleep_pictureRoutineEachFrame() {
 }
 
 
-function sleep_pictureRoutineEnd(snapshot) {
+function bed_pictureRoutineEnd(snapshot) {
   return async function () {
-    //--- Ending Routine 'sleep_picture' ---
-    for (const thisComponent of sleep_pictureComponents) {
+    //--- Ending Routine 'bed_picture' ---
+    for (const thisComponent of bed_pictureComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
@@ -6705,7 +6850,7 @@ function sleep_pictureRoutineEnd(snapshot) {
         }
     
     bed_picture_resp.stop();
-    // the Routine "sleep_picture" was not non-slip safe, so reset the non-slip timer
+    // the Routine "bed_picture" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     // Routines running outside a loop should always advance the datafile row
@@ -6838,14 +6983,14 @@ function bed_a_memotest_instrRoutineEnd(snapshot) {
 
 
 var _bed_b_resp_allKeys;
-var sleep_bComponents;
-function sleep_bRoutineBegin(snapshot) {
+var bed_bComponents;
+function bed_bRoutineBegin(snapshot) {
   return async function () {
     TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
     
-    //--- Prepare to start Routine 'sleep_b' ---
+    //--- Prepare to start Routine 'bed_b' ---
     t = 0;
-    sleep_bClock.reset(); // clock
+    bed_bClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
@@ -6856,13 +7001,13 @@ function sleep_bRoutineBegin(snapshot) {
     _bed_b_resp_allKeys = [];
     bed_b_block_no.setText(block_total_cat);
     // keep track of which components have finished
-    sleep_bComponents = [];
-    sleep_bComponents.push(bed_b_text);
-    sleep_bComponents.push(bed_b_text_2);
-    sleep_bComponents.push(bed_b_resp);
-    sleep_bComponents.push(bed_b_block_no);
+    bed_bComponents = [];
+    bed_bComponents.push(bed_b_text);
+    bed_bComponents.push(bed_b_text_2);
+    bed_bComponents.push(bed_b_resp);
+    bed_bComponents.push(bed_b_block_no);
     
-    for (const thisComponent of sleep_bComponents)
+    for (const thisComponent of bed_bComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
     return Scheduler.Event.NEXT;
@@ -6870,11 +7015,11 @@ function sleep_bRoutineBegin(snapshot) {
 }
 
 
-function sleep_bRoutineEachFrame() {
+function bed_bRoutineEachFrame() {
   return async function () {
-    //--- Loop for each frame of Routine 'sleep_b' ---
+    //--- Loop for each frame of Routine 'bed_b' ---
     // get current time
-    t = sleep_bClock.getTime();
+    t = bed_bClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
@@ -6943,7 +7088,7 @@ function sleep_bRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of sleep_bComponents)
+    for (const thisComponent of bed_bComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
         break;
@@ -6959,16 +7104,16 @@ function sleep_bRoutineEachFrame() {
 }
 
 
-function sleep_bRoutineEnd(snapshot) {
+function bed_bRoutineEnd(snapshot) {
   return async function () {
-    //--- Ending Routine 'sleep_b' ---
-    for (const thisComponent of sleep_bComponents) {
+    //--- Ending Routine 'bed_b' ---
+    for (const thisComponent of bed_bComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
     }
     bed_b_resp.stop();
-    // the Routine "sleep_b" was not non-slip safe, so reset the non-slip timer
+    // the Routine "bed_b" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     // Routines running outside a loop should always advance the datafile row
