@@ -6,4 +6,7 @@ Code for scene categorization experiments
 
 ## scene_cat_exp_2023.2
 - second SceneCat version, memory test after each categorization block
-- currently missing correct instructions & JS version
+
+
+## scene_cat_exp_2023.2.2
+- second SceneCat version with key response to memory test scale 
