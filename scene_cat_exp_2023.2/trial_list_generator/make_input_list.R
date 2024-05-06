@@ -33,7 +33,8 @@ setwd(dirs$rcode)
 # Load packages and subfunctions.
 # -----------------------------------------------------------------------------
 library(dplyr)
-library(writexl)
+library(readxl)
+library(writexl) # We use this package for writing for compatibility w. PsychoPy
 library(data.table)
 
 
@@ -43,38 +44,17 @@ library(data.table)
 # -----------------------------------------------------------------------------
 vars <- list()
 
-# Get input files for so many subjects.
-vars$n_subjects <- 1
-
-# Use these scene categories.
-vars$categories <- c('bedroom', 'kitchen', 'living_room')
-
-# Do we use images with .png or .jpg extension? The jpg files are much smaller.
-vars$img_extension <- 'png' #'jpg' or 'png', no dot required.
-
-# Use multiple blocks for each category.
-vars$n_blocks_per_category <- 2
-
-# How many low/high typicality scenes of the target category in each block? I
-# suggest we use roughly 1/3 of low typicality images. 
-vars$typi_percentiles <- 1:10 # We have grouped our images into 10 bins of typicality.
-vars$n_targets_percentile <- 2 # We want to show so many target images for each typicality bin.
-
-#vars$n_low_typicality_targets <- 7
-#vars$n_high_typicality_targets <- 14
-vars$n_targets_per_block <- vars$n_targets_percentile * length(vars$typi_percentiles)
-
-# Proportion of distractors from non-target scenes. Distractors can be from
-# either non-target category and we do not care about their typicality.
-vars$p_distractors_per_block <- 0.3
-#vars$n_distractors_per_block <- ceiling(vars$p_distractors_per_block * vars$n_targets_per_block)
+vars$n_subjects              <- 1 # Get input files for so many subjects.
+vars$categories              <- c('bedrooms', 'kitchens', 'living_rooms') # Use these scene categories.
+vars$img_extension           <- 'png' #'jpg' or 'png', no dot required. The jpg files are much smaller.
+vars$n_blocks_per_category   <- 2 # Use multiple blocks for each category.
+vars$typi_percentiles        <- 1:10 # We have grouped our images into 10 bins of typicality.
+vars$n_targets_percentile    <- 2 # We want to show so many target images for each typicality bin per block. This should be an EVEN number!
+vars$n_targets_per_block     <- vars$n_targets_percentile * length(vars$typi_percentiles)
+vars$p_distractors_per_block <- 0.3 # Proportion of distractors from non-target scenes. Distractors can be from either non-target category and we do not care about their typicality.
 vars$n_distractors_per_block <- 2 * ceiling((vars$p_distractors_per_block * vars$n_targets_per_block)/2)
-
-# Proportion of new images in the memory block.
-vars$p_new <- 0.33
-
-# Number of catch trials in memory block
-vars$n_catch_trials <- 5
+vars$p_new                   <- 0.33 # Proportion of new images in the memory block.
+vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 
 # Set a seed for reproducibility. 
 # IMPORTANT: 
@@ -89,17 +69,19 @@ set.seed(48149) # ZIP code of our institute ;-)
 # -----------------------------------------------------------------------------
 # Generate input files for each subject.
 # -----------------------------------------------------------------------------
+
+source("fn_generate_input_cat_and_mem.R")
+
 for (isubject in 1:vars$n_subjects) {
  
  print(sprintf("Generating files for subject %d.", isubject))
  
  # Generate the input lists for the categorization task.
- source("fn_generate_input_cat_separateblocks.R")
- fn_generate_input_cat_separateblocks(vars, dirs, isubject)
+ fn_generate_input_cat_and_mem(vars, dirs, isubject)
  
  # Generate the input lists for the memory task.
- source("fn_generate_input_mem_separateblocks.R")
- fn_generate_input_mem_separateblocks(vars, dirs, isubject)
+ #source("fn_generate_input_mem_separateblocks.R")
+ #fn_generate_input_mem_separateblocks(vars, dirs, isubject)
  
 }
 

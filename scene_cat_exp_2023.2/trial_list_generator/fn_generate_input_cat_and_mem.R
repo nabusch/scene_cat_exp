@@ -1,4 +1,9 @@
-fn_generate_input_cat_separateblocks <- function(vars, dirs, isubject){
+fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
+  
+  
+  source("ffn_generate_cat_list.R")
+  source("ffn_add_metadata_to_list.R")
+  source("ffn_generate_mem_list.R")
   
   # -------------------------------------------------------------------------
   # Initialize variables and load image information.
@@ -15,17 +20,24 @@ fn_generate_input_cat_separateblocks <- function(vars, dirs, isubject){
   available_images$stimulus <- as.character(available_images$stimulus)
   available_images$stimulus <- gsub("^.*/", "", available_images$stimulus)
   setDT(available_images)
+  available_images <- available_images %>% mutate(stimulus = paste("stimuli", stimulus, sep = "/"))
+  
+  
+  available_catch_files <- list.files(path = sprintf("%s/", dirs$images), pattern = "catch*", full.names = FALSE)
+  #available_catch_files$stimulus <- as.character(available_images$stimulus)
+  available_catch_files <- data.table(filename = available_catch_files)
   
   # Specify the desired order of columns for the output files.
   desired_order <- c("subject_id",
                      "task",
-                     "block_total_cat",
-                     "block_scene_cat",
-                     "trial_block_cat",
-                     "trial_total_cat", 
+                     "block_total",
+                     "block_scene",
+                     "trial_block",
+                     "trial_total", 
                      "target_cat",
                      "category", 
                      "cond_cat",
+                     "cond_mem",
                      "correct_answer",
                      "stimulus",
                      "conceptual",
@@ -60,6 +72,8 @@ fn_generate_input_cat_separateblocks <- function(vars, dirs, isubject){
   for (current_category in all_category_blocks) {
     iblock <- iblock + 1
     
+    print(sprintf("Processing block %d.", iblock))
+    
     
     ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
     ### Update the block order table for this iteration.  
@@ -71,80 +85,48 @@ fn_generate_input_cat_separateblocks <- function(vars, dirs, isubject){
     block_order_table[[column_name]] <- ifelse(1:nblocks == iblock, 1, 0)
     
     
-    
     ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    ### Generate a new list of images for this block.
+    ### Process CATEGORIZATION task, 
     ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
     
-    # Select a random set of lines (i.e. images) for the current scene category
-    # (TARGET) from the available images.
-    #target_low  <- available_images[category == current_category & typi_bin == 'low',  ][sample(.N, vars$n_low_typicality_targets), ]
-    #target_high <- available_images[category == current_category & typi_bin == 'high', ][sample(.N, vars$n_high_typicality_targets), ]
-    #target_all <- rbindlist(list(target_low, target_high))
-    
-    # For the high typicality bins (>5) use the most typical images, but for the
-    # lower bins, use the least typical images.
-    target_all <- available_images %>%
-      # Filter rows where category matches current_category
-      filter(category == current_category) %>%
-      # Split the data into groups
-      group_by(p_typicality) %>%
-      # Select a random sample of 2 rows from each group
-      sample_n(size = vars$n_targets_percentile) %>%
-      # Ungroup to avoid grouping affecting other operations later
-      ungroup()
-    
-    target_all$cond_cat <- "target"
-    
-    # Select a random set of images for other categories (DISTRACTOR).
-    distractors_all <- available_images[!category %in% c(current_category), ][sample(.N, vars$n_distractors_per_block), ]
-    distractors_all$cond_cat <- "distractor"
-    
-    # Combine target and distractor available_images.
-    input_list_cat_task <- rbindlist(list(target_all, distractors_all))
+    # Generate a new list of images for this block from the current scene
+    # category from the available images.
+    input_list_cat_task <- ffn_generate_cat_list(available_images, current_category, vars)
     
     # Remove the selected images from 'available_images'.
     available_images <- available_images[!stimulus %in% unique(input_list_cat_task$stimulus)]
-    
-    # Randomize the order of lines in selected_images
-    input_list_cat_task <- input_list_cat_task[sample(.N), ]
-    
-    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    ### Add meta-data.
-    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    input_list_cat_task$subject_id      <- isubject
-    input_list_cat_task$task            <- "categorization"
-    input_list_cat_task$target_cat      <- current_category
-    input_list_cat_task$block_total_cat <- iblock
-    input_list_cat_task$block_scene_cat <- category_occurrences[iblock]
-    input_list_cat_task                 <- input_list_cat_task %>% 
-      mutate(trial_block_cat = row_number())
-    
-    # Create a new column 'correct_answer' based on the conditions.
-    input_list_cat_task <- input_list_cat_task %>%
-      mutate(correct_answer = ifelse(cond_cat == "target", "f", 
-                                     ifelse(cond_cat == "distractor", "j", NA)))
-    
-    # Make a new column showing the trial number.
-    input_list_cat_task <- input_list_cat_task %>%
-      mutate(trial_total_cat = row_number()+ntrials_total) 
-    
     ntrials_total <- ntrials_total + nrow(input_list_cat_task)
     
-    # Bring the columns into the desired order.
-    input_list_cat_task <- input_list_cat_task %>%
-      select(all_of(desired_order))
+    # Add meta-data for CATEGORIZATION task.
+    input_list_cat_task <- ffn_add_metadata_to_list(input_list_cat_task, "categorization", current_category, category_occurrences, iblock, desired_order, ntrials_total)
     
-    
-    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    ### Save the input file for this block.
-    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    filename = sprintf("%s/%d_scenecat_categorize_%s_%d.xlsx", dirs$input_files, isubject, current_category, category_occurrences[iblock])
+    # Save the input file for this block.
+    filename = sprintf("%s/%d_scenecat_categorization_%s_%d.xlsx", dirs$input_files, isubject, current_category, category_occurrences[iblock])
     write_xlsx(input_list_cat_task, filename, col_names =TRUE)
-    #print(filename)
+    print(filename)
+
     
+    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    ### Process MEMORY task.
+    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    input_list_mem_task <- ffn_generate_mem_list(available_images, current_category, vars, input_list_cat_task, available_catch_files)
+    
+    # Remove the selected images from 'available_images'.
+    available_images      <- available_images[!stimulus %in% unique(input_list_mem_task$stimulus)]
+    available_catch_files <- available_catch_files[!filename %in% unique(input_list_mem_task$stimulus)]
+    ntrials_total <- ntrials_total + nrow(input_list_mem_task)
+    
+    # Add meta-data for MEMORY task.
+    input_list_mem_task <- ffn_add_metadata_to_list(input_list_mem_task, "memory", current_category, category_occurrences, iblock, desired_order, ntrials_total)
+      
+    # Prepend the subject ID to the input table.
+    #mem_trials <- mem_trials %>% mutate(subject_id = isubject)
+    
+    # Save the input file.
+    filename = sprintf("%s/%d_scenecat_memory_%s_%d.xlsx", dirs$input_files, isubject, current_category, category_occurrences[iblock])
+    write_xlsx(input_list_mem_task, filename, col_names =TRUE)
+    print(filename)
   }
-  
   
   
   # -------------------------------------------------------------------------
@@ -153,11 +135,5 @@ fn_generate_input_cat_separateblocks <- function(vars, dirs, isubject){
   block_order_table$row_index <- NULL
   filename = sprintf("%s/%d_scenecat_block_order.xlsx", dirs$input_files, isubject)
   write_xlsx(block_order_table, filename, col_names =TRUE)
-  
-  
-  
-  # -------------------------------------------------------------------------
-  # Quit.
-  # -------------------------------------------------------------------------
 }
 
