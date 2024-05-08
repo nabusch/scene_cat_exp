@@ -4406,13 +4406,13 @@ function memo_training_feedbackRoutineBegin(snapshot) {
     routineTimer.add(1.500000);
     // update component parameters for each repeat
     // Run 'Begin Routine' code from memo_train_feedb_code
-    if ((memo_training_slider_key_resp.getKeys() === 'd' || memo_training_slider_key_resp.getKeys() === 'f')) {
+    if ((memo_training_slider_key_resp.keys == 'd' || memo_training_slider_key_resp.keys == 'f')) {
         rating = 1;
     }   else {
         rating = 3;
     }
     
-    if (rating === correct_1) {
+    if (rating == correct_1) {
         memo_train_feedb_eval = 'korrekt';
     } else {
         memo_train_feedb_eval = 'falsch';
