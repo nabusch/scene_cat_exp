@@ -10,14 +10,14 @@ ffn_add_metadata_to_list <- function(the_list, the_task, current_category, categ
   # Create a new column 'correct_answer' based on the task
   if (the_task == "categorization") {
     the_list <- the_list %>%
-      mutate(correct_answer = ifelse(cond_cat == "target", "f", 
-                                     ifelse(cond_cat == "distractor", "j", NA)))
+      mutate(correct_answer = ifelse(cond_cat == "target", "j", 
+                                     ifelse(cond_cat == "distractor", "f", NA)))
     print("Adding meta-data to categorization list.")
     
   } else if (the_task == "memory") {
     the_list <- the_list %>%
-      mutate(correct_answer = ifelse(cond_mem == "old", "f",
-                                     ifelse(cond_mem == "new" | cond_mem == "catch", "j", NA)))
+      mutate(correct_answer = ifelse(cond_mem == "old", "j",
+                                     ifelse(cond_mem == "new" | cond_mem == "catch", "f", NA)))
     print("Adding meta-data to memory list.")
   } 
   

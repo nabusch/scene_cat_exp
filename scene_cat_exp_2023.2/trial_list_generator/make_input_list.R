@@ -15,7 +15,7 @@
 dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
+dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
 
 # Directory where to find the image files and the table with image info.
 dirs$images <- paste(dirs$main, "/140_stimuli", sep="")
@@ -35,6 +35,7 @@ setwd(dirs$rcode)
 library(dplyr)
 library(readxl)
 library(writexl) # We use this package for writing for compatibility w. PsychoPy
+# The correct write functions should use an underscore in write_xlsx.
 library(data.table)
 
 
@@ -44,7 +45,7 @@ library(data.table)
 # -----------------------------------------------------------------------------
 vars <- list()
 
-vars$n_subjects              <- 1 # Get input files for so many subjects.
+vars$n_subjects              <- 20 # Get input files for so many subjects.
 vars$categories              <- c('bedrooms', 'kitchens', 'living_rooms') # Use these scene categories.
 vars$img_extension           <- 'png' #'jpg' or 'png', no dot required. The jpg files are much smaller.
 vars$n_blocks_per_category   <- 2 # Use multiple blocks for each category.
@@ -56,6 +57,12 @@ vars$n_distractors_per_block <- 2 * ceiling((vars$p_distractors_per_block * vars
 vars$p_new                   <- 0.33 # Proportion of new images in the memory block.
 vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 
+
+
+# -----------------------------------------------------------------------------
+# Generate input files for each subject.
+# -----------------------------------------------------------------------------
+
 # Set a seed for reproducibility. 
 # IMPORTANT: 
 # If you run this script multiple times, make sure to always execute this line
@@ -63,12 +70,6 @@ vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 # executes this script will always get the same random selection of images and
 # the same order of trials.
 set.seed(48149) # ZIP code of our institute ;-) 
-
-
-
-# -----------------------------------------------------------------------------
-# Generate input files for each subject.
-# -----------------------------------------------------------------------------
 
 source("fn_generate_input_cat_and_mem.R")
 

@@ -6,9 +6,29 @@ ffn_generate_mem_list <- function(available_images, current_category, vars, inpu
   
   # Select a random set of new images.
   n_new <- ceiling(vars$p_new * nrow(cat_targets) )
+  
+ # new_images <- available_images %>%
+#    filter(category == cat_targets$category[1]) %>%
+#    sample_n(size = n_new, replace = FALSE) %>% mutate(cond_mem = "new")
+  
+  
+  
   new_images <- available_images %>%
+  # Filter rows where category matches current_category
     filter(category == cat_targets$category[1]) %>%
-    sample_n(size = n_new, replace = FALSE) %>% mutate(cond_mem = "new")
+    # Split the data into groups
+    group_by(p_typicality) %>%
+    # Calculate the absolute difference from the median typicality within each group
+    mutate(diff = abs(typicality - median(typicality))) %>%
+    # Sort by the absolute difference
+    arrange(diff) %>%
+    # Ungroup because we want N new altogether, not N per group
+    ungroup() %>%
+    # Select the first N rows with the smallest difference (closest to the median)
+    slice_head(n = n_new)
+  new_images <- new_images %>% mutate(cond_mem = "new")
+  
+  
   
   # Add the new images to the old images of this block.
   input_list_mem_task <- data.frame()
