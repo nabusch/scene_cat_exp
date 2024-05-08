@@ -1,9 +1,11 @@
 fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
   
-  
   source("ffn_generate_cat_list.R")
   source("ffn_add_metadata_to_list.R")
   source("ffn_generate_mem_list.R")
+  source("ffn_write_list_as_excel.R")
+  
+  
   
   # -------------------------------------------------------------------------
   # Initialize variables and load image information.
@@ -26,15 +28,11 @@ fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
                      "perceptual",
                      "typicality", 
                      "n",
-                     "p_typicality", "p_conceptual", "p_perceptual"
-  )
+                     "p_typicality", "p_conceptual", "p_perceptual")
  
-  
-  
   # Get a list of all available images from the target scene categories.
   available_images          <- read_xlsx(sprintf("%s/stimuli_info_140.xlsx", dirs$images))
-  available_images$stimulus <- as.character(available_images$stimulus)
-  available_images$stimulus <- gsub("^.*/", "", available_images$stimulus)
+  available_images$stimulus <- gsub("^.*/", "", as.character(available_images$stimulus))
   setDT(available_images)
   available_images <- available_images %>% mutate(stimulus = paste("stimuli", stimulus, sep = "/"))
   
@@ -47,9 +45,45 @@ fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
   nblocks             <- length(all_category_blocks)
   
   
-  #all_category_blocks <- sample(all_category_blocks, nblocks)
-  random_block_order <- sample(all_category_blocks, nblocks)
   
+  # -------------------------------------------------------------------------
+  # Generate the input list for both task by iterating through all category
+  # blocks.
+  # -------------------------------------------------------------------------
+  input_list_cat_task <- list()
+  input_list_mem_task <- list()
+  
+  for (iblock in seq_along(all_category_blocks)) {
+    print(sprintf("Selecting stimuli for block %d.", iblock))
+    
+    current_category <- all_category_blocks[iblock]
+    
+    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    ### Process CATEGORIZATION task, 
+    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    
+    # Generate a new list of images for this block from the current scene
+    # category from the available images. Then remove the selected images from
+    # 'available_images'.
+    input_list_cat_task[[iblock]] <- ffn_generate_cat_list(available_images, current_category, vars)
+    available_images <- available_images[!stimulus %in% unique(input_list_cat_task[[iblock]]$stimulus)]
+
+    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    ### Process MEMORY task.
+    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    input_list_mem_task[[iblock]] <- ffn_generate_mem_list(available_images, current_category, vars, input_list_cat_task[[iblock]], available_catch_files)
+    available_images      <- available_images[!stimulus %in% unique(input_list_mem_task[[iblock]]$stimulus)]
+    available_catch_files <- available_catch_files[!filename %in% unique(input_list_mem_task[[iblock]]$stimulus)]
+  }
+  
+
+  
+  # -------------------------------------------------------------------------
+  # So far, the order of blocks is identical for all subjects. Now that we have
+  # selected the images to show, we randomize the block order, which also allows
+  # us to assign a trial number for each trial.
+  # -------------------------------------------------------------------------
+  random_block_order <- sample(all_category_blocks, nblocks)
   
   # We need to keep track of how many category blocks we are generating.
   # Initialize a named list to store counts for each category. We will use this
@@ -63,21 +97,11 @@ fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
   }
   category_occurrences <- numeric(nblocks)
   
-  
-  
-  # -------------------------------------------------------------------------
-  # Generate the input list for both task by iterating through all category
-  # blocks.
-  # -------------------------------------------------------------------------
   ntrials_total  <- 0
-  input_list_cat_task <- list()
-  input_list_mem_task <- list()
   
-  for (iblock in seq_along(all_category_blocks)) {
-    current_category <- all_category_blocks[iblock]
-  
-    print(sprintf("Processing block %d.", iblock))
-    
+  for (iblock in seq_along(random_block_order)) {
+        
+    current_category <- random_block_order[iblock]
     
     ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
     ### Update the block order table for this iteration.  
@@ -88,46 +112,20 @@ fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
     column_name <- paste(current_category, category_occurrences[iblock], sep = "_")
     block_order_table[[column_name]] <- ifelse(1:nblocks == iblock, 1, 0)
     
+
+    # Add meta-data for CATEGORIZATION task, update trial count, and save.
+    input_list_cat_task[[iblock]] <- ffn_add_metadata_to_list(input_list_cat_task[[iblock]], "categorization", current_category, category_occurrences, iblock, desired_order, ntrials_total)
+    ntrials_total <- ntrials_total + nrow(input_list_cat_task[[iblock]])
+
+    ffn_write_list_as_excel(input_list_cat_task[[iblock]], dirs, isubject, "categorization", current_category, category_occurrences[iblock])
     
-    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    ### Process CATEGORIZATION task, 
-    ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
     
-    # Generate a new list of images for this block from the current scene
-    # category from the available images. Then remove the selected images from
-    # 'available_images'.
-    input_list_cat_task[[iblock]] <- ffn_generate_cat_list(available_images, current_category, vars)
-    available_images <- available_images[!stimulus %in% unique(input_list_cat_task$stimulus)]
+    # Add meta-data for MEMORY task, update trial count, and save.
+    input_list_mem_task[[iblock]] <- ffn_add_metadata_to_list(input_list_mem_task[[iblock]], "memory", current_category, category_occurrences, iblock, desired_order, ntrials_total)
+    ntrials_total <- ntrials_total + nrow(input_list_mem_task[[iblock]])
     
-    #ntrials_total <- ntrials_total + nrow(input_list_cat_task)
-    # 
-    # # Add meta-data for CATEGORIZATION task.
-    # input_list_cat_task <- ffn_add_metadata_to_list(input_list_cat_task, "categorization", current_category, category_occurrences, iblock, desired_order, ntrials_total)
-    # 
-    # # Save the input file for this block.
-    # filename = sprintf("%s/%d_scenecat_categorization_%s_%d.xlsx", dirs$input_files, isubject, current_category, category_occurrences[iblock])
-    # write_xlsx(input_list_cat_task, filename, col_names =TRUE)
-    # print(filename)
-    # 
-    # 
-    # ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    # ### Process MEMORY task.
-    # ### –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-    input_list_mem_task[[iblock]] <- ffn_generate_mem_list(available_images, current_category, vars, input_list_cat_task[[iblock]], available_catch_files)
-    available_images      <- available_images[!stimulus %in% unique(input_list_mem_task$stimulus)]
-    available_catch_files <- available_catch_files[!filename %in% unique(input_list_mem_task$stimulus)]
-    # ntrials_total <- ntrials_total + nrow(input_list_mem_task)
-    # 
-    # # Add meta-data for MEMORY task.
-    # input_list_mem_task <- ffn_add_metadata_to_list(input_list_mem_task, "memory", current_category, category_occurrences, iblock, desired_order, ntrials_total)
-    #   
-    # # Prepend the subject ID to the input table.
-    # #mem_trials <- mem_trials %>% mutate(subject_id = isubject)
-    # 
-    # # Save the input file.
-    # filename = sprintf("%s/%d_scenecat_memory_%s_%d.xlsx", dirs$input_files, isubject, current_category, category_occurrences[iblock])
-    # write_xlsx(input_list_mem_task, filename, col_names =TRUE)
-    # print(filename)
+    ffn_write_list_as_excel(input_list_mem_task[[iblock]], dirs, isubject, "memory", current_category, category_occurrences[iblock])
+
   }
   
   

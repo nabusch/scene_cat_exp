@@ -5,7 +5,8 @@ ffn_generate_mem_list <- function(available_images, current_category, vars, inpu
   cat_targets <- cat_targets %>% mutate(cond_mem = "old")
   
   # Select a random set of new images.
-  n_new <- ceiling(vars$p_new * nrow(cat_targets) )
+  n_new <- vars$n_novel 
+    
   
  # new_images <- available_images %>%
 #    filter(category == cat_targets$category[1]) %>%
@@ -60,6 +61,6 @@ ffn_generate_mem_list <- function(available_images, current_category, vars, inpu
     bind_rows(slice(input_list_mem_task, random_index:N))  # Bind the part after the random index
   
    
-  print("Memory list generated")
+  #print("Memory list generated")
   return(input_list_mem_task)
 }

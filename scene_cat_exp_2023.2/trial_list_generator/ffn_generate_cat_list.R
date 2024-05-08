@@ -1,5 +1,6 @@
 ffn_generate_cat_list <- function(available_images, current_category, vars){
   
+
   target_all <- available_images %>%
     # Filter rows where category matches current_category
     filter(category == current_category) %>%
@@ -8,14 +9,13 @@ ffn_generate_cat_list <- function(available_images, current_category, vars){
     # Select a random sample of 2 rows from each group
     #sample_n(size = vars$n_targets_percentile) %>%
     # Select N rows with the highest values of typicality
-    slice_max(typicality, n = vars$n_targets_percentile/2) %>%
+    slice_max(typicality, n = vars$n_targets_percentile/2, with_ties = FALSE) %>%
     # Bind with N rows with the lowest values of typicality
     bind_rows(slice_min(available_images %>% filter(category == current_category) %>% 
-                          group_by(p_typicality), typicality, n = vars$n_targets_percentile/2)) %>%    # Ungroup to avoid grouping affecting other operations later
+                          group_by(p_typicality), typicality, n = vars$n_targets_percentile/2, with_ties = FALSE)) %>%    # Ungroup to avoid grouping affecting other operations later
     ungroup()
   
   target_all$cond_cat <- "target"
-  
   
   
   # Select a random set of images for other categories (DISTRACTOR).
@@ -46,6 +46,6 @@ ffn_generate_cat_list <- function(available_images, current_category, vars){
   # Randomize the order of lines in selected_images
   input_list_cat_task <- input_list_cat_task[sample(.N), ]
   
-  print("Categorization list generated")
+  #print("Categorization list generated")
   return(input_list_cat_task)
 }

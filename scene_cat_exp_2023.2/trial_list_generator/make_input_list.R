@@ -15,7 +15,8 @@
 dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
+#dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
+dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
 
 # Directory where to find the image files and the table with image info.
 dirs$images <- paste(dirs$main, "/140_stimuli", sep="")
@@ -54,7 +55,8 @@ vars$n_targets_percentile    <- 2 # We want to show so many target images for ea
 vars$n_targets_per_block     <- vars$n_targets_percentile * length(vars$typi_percentiles)
 vars$p_distractors_per_block <- 0.3 # Proportion of distractors from non-target scenes. Distractors can be from either non-target category and we do not care about their typicality.
 vars$n_distractors_per_block <- 2 * ceiling((vars$p_distractors_per_block * vars$n_targets_per_block)/2)
-vars$p_new                   <- 0.33 # Proportion of new images in the memory block.
+vars$p_novel                 <- 0.33 # Proportion of new images in the memory block.
+vars$n_novel                 <- ceiling(vars$p_novel * vars$n_targets_per_block)
 vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 
 
@@ -74,16 +76,9 @@ set.seed(48149) # ZIP code of our institute ;-)
 source("fn_generate_input_cat_and_mem.R")
 
 for (isubject in 1:vars$n_subjects) {
- 
  print(sprintf("Generating files for subject %d.", isubject))
  
- # Generate the input lists for the categorization task.
  fn_generate_input_cat_and_mem(vars, dirs, isubject)
- 
- # Generate the input lists for the memory task.
- #source("fn_generate_input_mem_separateblocks.R")
- #fn_generate_input_mem_separateblocks(vars, dirs, isubject)
- 
 }
 
 print("Done!")
