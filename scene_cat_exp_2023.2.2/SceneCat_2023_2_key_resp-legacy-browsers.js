@@ -2547,7 +2547,7 @@ function memo_training_trialsLoopBegin(memo_training_trialsLoopScheduler, snapsh
     // set up handler to look after randomisation of conditions etc
     memo_training_trials = new TrialHandler({
       psychoJS: psychoJS,
-      nReps: 1, method: TrialHandler.Method.RANDOM,
+      nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
       extraInfo: expInfo, originPath: undefined,
       trialList: 'conditions_memo_training.xlsx',
       seed: undefined, name: 'memo_training_trials'
@@ -4426,13 +4426,13 @@ function memo_training_feedbackRoutineBegin(snapshot) {
     routineTimer.add(1.500000);
     // update component parameters for each repeat
     // Run 'Begin Routine' code from memo_train_feedb_code
-    if ((memo_training_slider_key_resp.getKeys() === 'd' || memo_training_slider_key_resp.getKeys() === 'f')) {
+    if ((memo_training_slider_key_resp.keys == 'd' || memo_training_slider_key_resp.keys == 'f')) {
         rating = 1;
     }   else {
         rating = 3;
     }
     
-    if (rating === correct_1) {
+    if (rating == correct_1) {
         memo_train_feedb_eval = 'korrekt';
     } else {
         memo_train_feedb_eval = 'falsch';

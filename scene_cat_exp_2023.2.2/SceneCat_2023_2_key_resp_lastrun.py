@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on Mon Apr 29 13:56:56 2024
+    on Wed May  8 16:41:46 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -109,7 +109,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/teresaberther/Psychologie/AE_Busch/Niko/scene_cat_exp_2023_2_2/SceneCat_2023_2_key_resp_lastrun.py',
+        originPath='/Users/teresaberther/Psychologie/AE_Busch/scene_cat_exp/scene_cat_exp_2023.2.2/SceneCat_2023_2_key_resp_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -738,7 +738,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
         startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
@@ -871,7 +871,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
         startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
@@ -1004,7 +1004,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
         startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
@@ -1137,7 +1137,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
         startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
@@ -1270,7 +1270,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
         startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
@@ -1403,7 +1403,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
         startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
-        labels=['      d       sicher alt', '       f       eher alt', '       j     eher neu', '      k       sicher neu'],ticks=None, granularity=1,
+        labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.04,
@@ -2964,7 +2964,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    memo_training_trials = data.TrialHandler(nReps=1.0, method='random', 
+    memo_training_trials = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('conditions_memo_training.xlsx'),
         seed=None, name='memo_training_trials')
@@ -3242,7 +3242,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from memo_train_feedb_code
-        if ('d' or 'f') in memo_training_slider_key_resp.getKeys(): 
+        if (memo_training_slider_key_resp.keys == 'd' or memo_training_slider_key_resp.keys == 'f'): 
             rating = 1
         else:
             rating = 3
