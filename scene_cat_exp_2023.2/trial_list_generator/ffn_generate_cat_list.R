@@ -19,15 +19,13 @@ ffn_generate_cat_list <- function(available_images, current_category, vars){
   
   
   # Select a random set of images for other categories (DISTRACTOR).
-  #distractors_all <- available_images[!category %in% c(current_category), ][sample(.N, vars$n_distractors_per_block), ]
-  
   distractors_all <- available_images %>%
     # Filter rows where category matches current_category
     filter(category != current_category) %>%
     # Split the data into groups
     group_by(p_typicality) %>%
-    # Calculate the absolute difference from the median typicality within each group
-    mutate(diff = abs(typicality - median(typicality))) %>%
+    # Calculate the absolute difference from the mean typicality within each group
+    mutate(diff = abs(typicality - mean(typicality))) %>%
     # Sort by the absolute difference
     arrange(diff) %>%
     # Ungroup because we want N distractors altogethre, not N per group

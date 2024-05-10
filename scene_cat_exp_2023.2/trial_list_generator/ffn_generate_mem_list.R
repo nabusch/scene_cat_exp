@@ -19,14 +19,13 @@ ffn_generate_mem_list <- function(available_images, current_category, vars, inpu
     filter(category == cat_targets$category[1]) %>%
     # Split the data into groups
     group_by(p_typicality) %>%
-    # Calculate the absolute difference from the median typicality within each group
-    mutate(diff = abs(typicality - median(typicality))) %>%
+    # Calculate the absolute difference from the mean typicality within each group
+    mutate(diff = abs(typicality - mean(typicality))) %>%
     # Sort by the absolute difference
     arrange(diff) %>%
-    # Ungroup because we want N new altogether, not N per group
-    ungroup() %>%
-    # Select the first N rows with the smallest difference (closest to the median)
-    slice_head(n = n_new)
+    # Select the first N rows with the smallest difference (closest to the mean)
+    slice_head(n = n_new/length(vars$typi_percentiles)) %>%
+    ungroup() 
   new_images <- new_images %>% mutate(cond_mem = "new")
   
   

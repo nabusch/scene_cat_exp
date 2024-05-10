@@ -8,15 +8,15 @@
 # typicality ratings.
 
 
-
+rm(list = ls(all.names = TRUE))
 # -----------------------------------------------------------------------------
 # Set the directories.
 # -----------------------------------------------------------------------------
 dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
-dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
+dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
+# dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
 
 # Directory where to find the image files and the table with image info.
 dirs$images <- paste(dirs$main, "/140_stimuli", sep="")
@@ -55,7 +55,8 @@ vars$n_targets_percentile    <- 2 # We want to show so many target images for ea
 vars$n_targets_per_block     <- vars$n_targets_percentile * length(vars$typi_percentiles)
 vars$p_distractors_per_block <- 0.3 # Proportion of distractors from non-target scenes. Distractors can be from either non-target category and we do not care about their typicality.
 vars$n_distractors_per_block <- 2 * ceiling((vars$p_distractors_per_block * vars$n_targets_per_block)/2)
-vars$p_novel                 <- 0.33 # Proportion of new images in the memory block.
+#vars$p_novel                 <- 0.33 # Proportion of new images in the memory block.
+vars$p_novel                 <- 1 # Proportion of new images in the memory block.
 vars$n_novel                 <- ceiling(vars$p_novel * vars$n_targets_per_block)
 vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 
@@ -71,7 +72,8 @@ vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 # so that the seed in re-initialized. This makes sure that everyone who every
 # executes this script will always get the same random selection of images and
 # the same order of trials.
-set.seed(48149) # ZIP code of our institute ;-) 
+
+#set.seed(48149) # ZIP code of our institute ;-) 
 
 source("fn_generate_input_cat_and_mem.R")
 
