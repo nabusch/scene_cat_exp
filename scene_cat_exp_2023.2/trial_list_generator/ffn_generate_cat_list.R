@@ -30,7 +30,7 @@ ffn_generate_cat_list <- function(available_images, current_category, vars){
     arrange(diff) %>%
     # Ungroup because we want N distractors altogethre, not N per group
     ungroup() %>%
-    # Select the first N rows with the smallest difference (closest to the median)
+    # Select the first N rows with the smallest difference (closest to the mean/median)
     slice_head(n = vars$n_distractors_per_block)
   
   distractors_all$diff     <- NULL
