@@ -18,13 +18,12 @@ ffn_generate_mem_list <- function(available_images, current_category, vars, inpu
   # Filter rows where category matches current_category
     filter(category == cat_targets$category[1]) %>%
     # Split the data into groups
-    group_by(p_typicality) %>%
+    group_by(!!sym(vars$binning_variable)) %>%
     # Calculate the absolute difference from the mean typicality within each group
     mutate(diff = abs(typicality - mean(typicality))) %>%
     # Sort by the absolute difference
-    arrange(diff) %>%
     # Select the first N rows with the smallest difference (closest to the mean)
-    slice_head(n = n_new/length(vars$typi_percentiles)) %>%
+    slice_min(diff, n = n_new/vars$n_typi_bins, with_ties = FALSE) %>%
     ungroup() 
   new_images <- new_images %>% mutate(cond_mem = "new")
   

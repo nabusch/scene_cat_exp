@@ -4,26 +4,31 @@ library(readxl)
 library(writexl)
 library(dplyr)
 library(ggplot2)
+library(forcats)
 
 dirs <- list()
-dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
-# dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
+# dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
+dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
 dirs$input_files <-paste(dirs$main, "/input_files", sep="")
+
+vars <- list()
+vars$binning_variable        <- "r_typicality"    
 
 # –––––-------------------------------------------------------------------------
 # List all Excel files in the folder that start with a number and follow the
 # specified pattern, then read each file and concatenate into a single data
 # frame.
 # –––––-------------------------------------------------------------------------
-file_list <- list.files(path = dirs$input_files, pattern = "^\\d+_(scenecat_memory|scenecat_categorization).*\\.xlsx$", full.names = TRUE)
-raw_data <- lapply(file_list, read_excel) %>% bind_rows()
+file_list <- list.files(path = dirs$input_files, pattern = "^\\d+.*_(scenecat_memory|scenecat_categorization).*\\.xlsx$", full.names = TRUE)
+raw_data <- lapply(file_list, read_excel) %>% bind_rows() %>% 
+  filter(cond_mem != "catch" | is.na(cond_mem)) 
+#raw_data[, vars$binning_variable] <- as.factor(raw_data[, vars$binning_variable])
 
 # –––––-------------------------------------------------------------------------
 # Create a summary with one row for each unique stimulus.
 # –––––-------------------------------------------------------------------------
 summary_data <- raw_data %>%
-  filter(cond_mem != "catch" | is.na(cond_mem)) %>%
-  distinct(stimulus, category, typicality, p_typicality) %>%
+  distinct(stimulus, category, typicality, !!sym(vars$binning_variable)) %>%
   rowwise() %>%
   mutate(
     ntarget     = sum(raw_data$stimulus == stimulus & raw_data$task == "categorization" & raw_data$cond_cat == "target"),
@@ -35,9 +40,9 @@ summary_data <- raw_data %>%
 summary_data <- summary_data %>%
   mutate(
     condition = case_when(
-      ntarget != 0 ~ "target",         # Assign "target" if ntarget is nonzero
+      ntarget     != 0 ~ "target",     # Assign "target" if ntarget is nonzero
       ndistractor != 0 ~ "distractor", # Assign "distractor" if ndistractor is nonzero
-      nnew != 0 ~ "new",               # Assign "new" if nnew is nonzero
+      nnew        != 0 ~ "new",        # Assign "new" if nnew is nonzero
       TRUE ~ NA_character_             # Assign NA for rows where all values are zero
     )
   )
@@ -59,16 +64,24 @@ density_plot <- ggplot(summary_data, aes(x = typicality)) +
 print(density_plot)
 
 
-histogram_plot <- ggplot(summary_data, aes(x = p_typicality, fill = condition)) +
-  geom_histogram(bins = 10, position = "dodge", alpha = 0.6) +
-  labs(title = "Histogram of Typicality",
-       x = "Typicality",
-       y = "Frequency",
-       fill = "Condition") +
-  theme_minimal()
+bar_plot <- ggplot(summary_data, aes(x = !!sym(vars$binning_variable), fill = condition)) +
+  geom_bar(position = "dodge") +  # position "dodge" to separate bars side by side within groups
+  labs(x = "R Typicality", y = "Count", title = "Occurrences by R Typicality and Condition") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set1")  # Optional: use a color palette that is distinct
+  # scale_y_continuous(breaks = seq(1, 15, by = 2), limits = c(1, 15)) +  # Set breaks from 0 to 90, at intervals of 10
+  # scale_x_continuous(breaks = seq(1, 10, by = 1), limits = c(1, 10))  # Set breaks from 0 to 90, at intervals of 10
+print(bar_plot)
 
-print(histogram_plot)
+bar_plot <- ggplot(summary_data, aes(x = !!rlang::sym(vars$binning_variable), fill = condition)) +
+  geom_bar(position = "dodge", stat = "count") +  # Ensure that geom_bar counts occurrences
+  labs(x = "R Typicality", y = "Count", title = "Occurrences by R Typicality and Condition") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set1") +  # Use a distinct color palette
+  facet_wrap(~ category, scales = "free_x")  # Create panels separated by category, allow different x scales
 
+# Print the plot
+print(bar_plot)
 
 # –––––-------------------------------------------------------------------------
 # Alternative visualization with line plots of images sorted by typicality.
@@ -86,3 +99,13 @@ typicality_plot <- ggplot(sorted_data, aes(x = Index, y = typicality, group = co
   theme_minimal()+
   scale_color_manual(values = c("target" = "#E41A1C", "distractor" = "#377EB8", "new" = "#4DAF4A"))  # Custom colors
 print(typicality_plot)
+
+# ––––
+count_data <- raw_data %>%
+  filter(cond_mem == "new") %>%
+  group_by(category,  !!sym(vars$binning_variable)) %>%
+  summarise(count = n(), .groups = 'drop')  # n() counts the number of rows in each group
+
+# View the resulting data frame
+print(count_data)
+

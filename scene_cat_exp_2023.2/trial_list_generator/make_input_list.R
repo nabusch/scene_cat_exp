@@ -9,14 +9,26 @@
 
 
 rm(list = ls(all.names = TRUE))
+
+# -----------------------------------------------------------------------------
+# Load packages and subfunctions.
+# -----------------------------------------------------------------------------
+library(dplyr)
+library(readxl)
+library(writexl) # We use this package for writing for compatibility w. PsychoPy
+# The correct write functions should use an underscore in write_xlsx.
+library(data.table)
+
+
+
 # -----------------------------------------------------------------------------
 # Set the directories.
 # -----------------------------------------------------------------------------
 dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
-# dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
+# dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
+dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
 
 # Directory where to find the image files and the table with image info.
 dirs$images <- paste(dirs$main, "/140_stimuli", sep="")
@@ -31,34 +43,29 @@ setwd(dirs$rcode)
 
 
 # -----------------------------------------------------------------------------
-# Load packages and subfunctions.
-# -----------------------------------------------------------------------------
-library(dplyr)
-library(readxl)
-library(writexl) # We use this package for writing for compatibility w. PsychoPy
-# The correct write functions should use an underscore in write_xlsx.
-library(data.table)
-
-
-
-# -----------------------------------------------------------------------------
 # Define variables
 # -----------------------------------------------------------------------------
 vars <- list()
-
-vars$n_subjects              <- 20 # Get input files for so many subjects.
+vars$n_subjects              <- 1 # Get input files for so many subjects.
 vars$categories              <- c('bedrooms', 'kitchens', 'living_rooms') # Use these scene categories.
 vars$img_extension           <- 'png' #'jpg' or 'png', no dot required. The jpg files are much smaller.
-vars$n_blocks_per_category   <- 2 # Use multiple blocks for each category.
-vars$typi_percentiles        <- 1:10 # We have grouped our images into 10 bins of typicality.
+
+vars$n_typi_bins             <- 10
+vars$typi_percentiles        <- 1:vars$n_typi_bins # We have grouped our images into 10 bins of typicality.
 vars$n_targets_percentile    <- 2 # We want to show so many target images for each typicality bin per block. This should be an EVEN number!
 vars$n_targets_per_block     <- vars$n_targets_percentile * length(vars$typi_percentiles)
+vars$min_obs_per_bin         <- vars$n_targets_percentile * vars$n_blocks_per_category * 2 # We need to adjust the binning so that we get at least so many images per bin.
+
+vars$n_blocks_per_category   <- 2 # Use multiple blocks for each category.
+vars$binning_variable        <- "r_typicality"    
 vars$p_distractors_per_block <- 0.3 # Proportion of distractors from non-target scenes. Distractors can be from either non-target category and we do not care about their typicality.
 vars$n_distractors_per_block <- 2 * ceiling((vars$p_distractors_per_block * vars$n_targets_per_block)/2)
 #vars$p_novel                 <- 0.33 # Proportion of new images in the memory block.
 vars$p_novel                 <- 1 # Proportion of new images in the memory block.
 vars$n_novel                 <- ceiling(vars$p_novel * vars$n_targets_per_block)
 vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
+
+
 
 
 
@@ -74,6 +81,9 @@ vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 # the same order of trials.
 
 #set.seed(48149) # ZIP code of our institute ;-) 
+
+source("fn_range_bins_typicality.R")
+fn_range_bins_typicality(vars, dirs)
 
 source("fn_generate_input_cat_and_mem.R")
 
