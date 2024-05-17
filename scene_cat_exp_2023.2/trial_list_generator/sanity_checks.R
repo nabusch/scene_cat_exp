@@ -19,10 +19,11 @@ vars$binning_variable        <- "r_typicality"
 # specified pattern, then read each file and concatenate into a single data
 # frame.
 # –––––-------------------------------------------------------------------------
-file_list <- list.files(path = dirs$input_files, pattern = "^\\d+.*_(scenecat_memory|scenecat_categorization).*\\.xlsx$", full.names = TRUE)
+file_list <- list.files(path = dirs$input_files, pattern = "^\\d+.*(scenecat_memory|scenecat_categorization).*\\.xlsx$", full.names = TRUE)
+#file_list <- list.files(path = dirs$input_files, pattern = "^\\d+_groupA_(scenecat_memory|scenecat_categorization).*\\.xlsx$", full.names = TRUE)
 raw_data <- lapply(file_list, read_excel) %>% bind_rows() %>% 
   filter(cond_mem != "catch" | is.na(cond_mem)) 
-#raw_data[, vars$binning_variable] <- as.factor(raw_data[, vars$binning_variable])
+
 
 # –––––-------------------------------------------------------------------------
 # Create a summary with one row for each unique stimulus.
@@ -37,6 +38,8 @@ summary_data <- raw_data %>%
     nnew        = sum(raw_data$stimulus == stimulus & raw_data$task == "memory"         & raw_data$cond_mem == "new")
   )
 
+summary_data$r_typicality <- factor(summary_data$r_typicality)
+
 summary_data <- summary_data %>%
   mutate(
     condition = case_when(
@@ -46,7 +49,6 @@ summary_data <- summary_data %>%
       TRUE ~ NA_character_             # Assign NA for rows where all values are zero
     )
   )
-
 
 # Write the summary to an Excel file.
 write_xlsx(summary_data, "scenecat_stimulus_selection_summary.xlsx", col_names =TRUE)
@@ -90,15 +92,21 @@ sorted_data <- summary_data %>% arrange(typicality) # Sort data by typicality
 sorted_data$Index <- seq_len(nrow(sorted_data)) # Manually add a sequence as a new column
 
 # Create the line plot using the sorted Index
-typicality_plot <- ggplot(sorted_data, aes(x = Index, y = typicality, group = condition, color = condition)) +
-  geom_line(size = 0.75) +  # Increase line thickness
+typicality_plot <- ggplot(sorted_data, aes(x = Index, y = typicality, group = r_typicality, color = r_typicality)) +
+  #geom_line(size = 0.75) +  # Increase line thickness
+  geom_point(size = 1) +  # Plot only the data points and increase point size for better visibility
+  ylim(0, 100) +
   labs(title = "Line Plot of Typicality Sorted by Value",
        x = "Sorted Index",
        y = "Typicality",
-       color = "condition") +
-  theme_minimal()+
-  scale_color_manual(values = c("target" = "#E41A1C", "distractor" = "#377EB8", "new" = "#4DAF4A"))  # Custom colors
-print(typicality_plot)
+       color = "r_typicality") +
+  #theme_minimal() +
+  scale_color_manual(values = c("1" = "#1f77b4", "2" = "#ff7f0e", "3" = "#2ca02c", 
+                                "4" = "#d62728", "5" = "#9467bd", "6" = "#8c564b", 
+                                "7" = "#e377c2", "8" = "#7f7f7f", "9" = "#bcbd22", 
+                                "10" = "#17becf")) +  # Custom colors for each bin
+  guides(color = guide_legend(override.aes = list(size = 4))) +  # Increase point size in the legend
+  facet_grid(category ~ condition)  # Separate panels for each category and condition
 
 # ––––
 count_data <- raw_data %>%
