@@ -28,8 +28,12 @@ raw_data <- lapply(file_list, read_excel) %>% bind_rows() %>%
 # –––––-------------------------------------------------------------------------
 # Create a summary with one row for each unique stimulus.
 # –––––-------------------------------------------------------------------------
+distinct_columns <- c("category", "conceptual", "perceptual", "typicality", "n", 
+                      "p_typicality", "p_conceptual", "p_perceptual", 
+                      "r_typicality", "r_conceptual", "r_perceptual")
+
 summary_data <- raw_data %>%
-  distinct(stimulus, category, typicality, !!sym(vars$binning_variable)) %>%
+  distinct(stimulus, !!!syms(distinct_columns)) %>%
   rowwise() %>%
   mutate(
     ntarget     = sum(raw_data$stimulus == stimulus & raw_data$task == "categorization" & raw_data$cond_cat == "target"),
@@ -71,8 +75,8 @@ bar_plot <- ggplot(summary_data, aes(x = !!sym(vars$binning_variable), fill = co
   labs(x = "R Typicality", y = "Count", title = "Occurrences by R Typicality and Condition") +
   theme_minimal() +
   scale_fill_brewer(palette = "Set1")  # Optional: use a color palette that is distinct
-  # scale_y_continuous(breaks = seq(1, 15, by = 2), limits = c(1, 15)) +  # Set breaks from 0 to 90, at intervals of 10
-  # scale_x_continuous(breaks = seq(1, 10, by = 1), limits = c(1, 10))  # Set breaks from 0 to 90, at intervals of 10
+# scale_y_continuous(breaks = seq(1, 15, by = 2), limits = c(1, 15)) +  # Set breaks from 0 to 90, at intervals of 10
+# scale_x_continuous(breaks = seq(1, 10, by = 1), limits = c(1, 10))  # Set breaks from 0 to 90, at intervals of 10
 print(bar_plot)
 
 bar_plot <- ggplot(summary_data, aes(x = !!rlang::sym(vars$binning_variable), fill = condition)) +
@@ -107,7 +111,7 @@ typicality_plot <- ggplot(sorted_data, aes(x = Index, y = typicality, group = r_
                                 "10" = "#17becf")) +  # Custom colors for each bin
   guides(color = guide_legend(override.aes = list(size = 4))) +  # Increase point size in the legend
   facet_grid(category ~ condition)  # Separate panels for each category and condition
-
+print(typicality_plot)
 # ––––
 count_data <- raw_data %>%
   filter(cond_mem == "new") %>%
