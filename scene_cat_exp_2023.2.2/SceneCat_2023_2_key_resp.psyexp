@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2023.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2024.1.1">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -30,6 +30,7 @@
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="float" valType="str" updates="None" name="clockFormat"/>
     <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
     <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
@@ -46,10 +47,13 @@
     <Param val="SceneCat_2023_2_key_resp" valType="str" updates="None" name="expName"/>
     <Param val="manually" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
     <Param val="exp" valType="code" updates="None" name="logging level"/>
+    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
     <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
@@ -65,6 +69,8 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
     <Param val="" valType="str" updates="None" name="tbModel"/>
@@ -112,11 +118,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Herzlich Willkommen zum Experiment&amp;#10;&amp;#10;In diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.&amp;#10;Bitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.&amp;#10;&amp;#10;Zunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.&amp;#10;&amp;#10;Weiter mit der LEERTASTE." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="intro_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -190,6 +198,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Einverständniserklärung&amp;#10;Vielen Dank für Ihre Teilnahme an unserer Studie zum Bilderverständnis!&amp;#10;&amp;#10;Ihre Teilnahme an dieser Untersuchung ist freiwillig. Es steht Ihnen zu jedem Zeitpunkt dieser Studie frei, Ihre Teilnahme abzubrechen, ohne dass Ihnen daraus Nachteile entstehen. &amp;#10;&amp;#10;Datenschutz: Ihre Angaben sind selbstverständlich vertraulich und werden nur in vollständig anonymisierter Form, d.h. ohne Bezug auf Ihren Namen oder andere persönliche Daten gespeichert und ausgewertet. Weitere Informationen finden Sie in der Datenschutzerklärung.&amp;#10;&amp;#10;Fragen: Falls Sie noch Fragen zu dieser Studie haben sollten, können Sie sich jederzeit an die Studienleiterin  oder an Prof. Niko Busch (niko.busch@uni-muenster) wenden.&amp;#10;&amp;#10;&amp;#10;Ich bestätige, dass ich mindestens 18 Jahre alt bin, diese Einverständniserklärung gelesen und verstanden habe und an der Studie teilnehmen möchte. Die Datenschutzerklärung habe ich zur Kenntnis genommen und willige freiwillig in die dort dargestellte Erhebung und weitere Verarbeitung meiner personenbezogenen Daten ein. Ich bin über mein Recht informiert worden, meine Einwilligung jederzeit ohne Angabe von Gründen widerrufen zu können.&amp;#10;&amp;#10;&amp;#10;Gleich geht's weiter..." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ResourceManagerComponent name="resources_consent" plugin="None">
@@ -229,11 +238,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Einverständniserklärung&amp;#10;Vielen Dank für Ihre Teilnahme an unserer Studie zum Bilderverständnis!&amp;#10;&amp;#10;Ihre Teilnahme an dieser Untersuchung ist freiwillig. Es steht Ihnen zu jedem Zeitpunkt dieser Studie frei, Ihre Teilnahme abzubrechen, ohne dass Ihnen daraus Nachteile entstehen. &amp;#10;&amp;#10;Datenschutz: Ihre Angaben sind selbstverständlich vertraulich und werden nur in vollständig anonymisierter Form, d.h. ohne Bezug auf Ihren Namen oder andere persönliche Daten gespeichert und ausgewertet. Weitere Informationen finden Sie in der Datenschutzerklärung.&amp;#10;&amp;#10;Fragen: Falls Sie noch Fragen zu dieser Studie haben sollten, können Sie sich jederzeit an die Studienleiterin  oder an Prof. Niko Busch (niko.busch@uni-muenster) wenden.&amp;#10;&amp;#10;&amp;#10;Ich bestätige, dass ich mindestens 18 Jahre alt bin, diese Einverständniserklärung gelesen und verstanden habe und an der Studie teilnehmen möchte. Die Datenschutzerklärung habe ich zur Kenntnis genommen und willige freiwillig in die dort dargestellte Erhebung und weitere Verarbeitung meiner personenbezogenen Daten ein. Ich bin über mein Recht informiert worden, meine Einwilligung jederzeit ohne Angabe von Gründen widerrufen zu können.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um die Teilnahme zu bestätigen.&amp;#10;Drücken Sie ESC, um das Experiment abzubrechen." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="consent_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -307,6 +318,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Datenschutzerklärung&amp;#10;1. Umfang der Datenerhebung und -verarbeitung: Im Zuge der Studie werden Ihre demographischen Daten (Alter, Geschlecht, Händigkeit) sowie Reaktionszeiten und Korrektheit Ihrer Antworten während des Experiments erhoben. Die im Rahmen dieser Studie erhobenen Daten und persönlichen Mitteilungen werden vertraulich behandelt. Diejenigen Mitarbeiter, die durch direkten Kontakt mit Ihnen über personenbezogene Daten verfügen, unterliegen der Schweigepflicht.  Die Erhebung der Daten erfolgt vollständig anonymisiert, d. h.  an keiner Stelle wird Ihr Name erfragt. Die anonymisierten Daten werden mindestens 10 Jahre gespeichert. Dazu werden Ihre Daten am Ende der Sitzung ohne Angabe Ihres Namens abgespeichert, d.h. in anonymisierter Form. Ab diesem Zeitpunkt können ihre Daten nicht mehr mit ihrer Person in Verbindung gebracht werden, d.h. eine Identifizierung Ihrer Daten ist dann nicht mehr möglich. Deshalb können wir Ihrem Verlangen nach Löschung Ihrer Daten nur so lange nachkommen, bis diese in anonymisierter Form abgespeichert worden sind. Die Ergebnisse und Daten dieser Studie werden als wissenschaftliche Publikation veröffentlicht. Dies geschieht in anonymisierter Form, d.h. ohne dass die Daten einer spezifischen Person zugeordnet werden. Die vollständig anonymisierten Daten dieser Studie werden als offene Daten in einem sicheren, internetbasierten Datenarchiv (z.B. OSF, ZPID, GESIS etc.) zugänglich gemacht. Damit folgt diese Studie den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) und der Deutschen Gesellschaft für Psychologie (DGPs) zur Qualitätssicherung in der Forschung.&amp;#10;2. Rechtsgrundlage: Die Rechtsgrundlage zur Verarbeitung der genannten personenbezogenen Daten bildet die Einwilligung gemäß Art. 6 (1) Buchstabe a EU-DSGVO.&amp;#10;&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ResourceManagerComponent name="resources_data_safety" plugin="None">
@@ -346,11 +358,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Datenschutzerklärung&amp;#10;1. Umfang der Datenerhebung und -verarbeitung: Im Zuge der Studie werden Ihre demographischen Daten (Alter, Geschlecht, Händigkeit) sowie Reaktionszeiten und Korrektheit Ihrer Antworten während des Experiments erhoben. Die im Rahmen dieser Studie erhobenen Daten und persönlichen Mitteilungen werden vertraulich behandelt. Diejenigen Mitarbeiter, die durch direkten Kontakt mit Ihnen über personenbezogene Daten verfügen, unterliegen der Schweigepflicht.  Die Erhebung der Daten erfolgt vollständig anonymisiert, d. h.  an keiner Stelle wird Ihr Name erfragt. Die anonymisierten Daten werden mindestens 10 Jahre gespeichert. Dazu werden Ihre Daten am Ende der Sitzung ohne Angabe Ihres Namens abgespeichert, d.h. in anonymisierter Form. Ab diesem Zeitpunkt können ihre Daten nicht mehr mit ihrer Person in Verbindung gebracht werden, d.h. eine Identifizierung Ihrer Daten ist dann nicht mehr möglich. Deshalb können wir Ihrem Verlangen nach Löschung Ihrer Daten nur so lange nachkommen, bis diese in anonymisierter Form abgespeichert worden sind. Die Ergebnisse und Daten dieser Studie werden als wissenschaftliche Publikation veröffentlicht. Dies geschieht in anonymisierter Form, d.h. ohne dass die Daten einer spezifischen Person zugeordnet werden. Die vollständig anonymisierten Daten dieser Studie werden als offene Daten in einem sicheren, internetbasierten Datenarchiv (z.B. OSF, ZPID, GESIS etc.) zugänglich gemacht. Damit folgt diese Studie den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) und der Deutschen Gesellschaft für Psychologie (DGPs) zur Qualitätssicherung in der Forschung.&amp;#10;2. Rechtsgrundlage: Die Rechtsgrundlage zur Verarbeitung der genannten personenbezogenen Daten bildet die Einwilligung gemäß Art. 6 (1) Buchstabe a EU-DSGVO.&amp;#10;&amp;#10;Weiter mit der LEERTASTE." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="data_safety_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -407,6 +421,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.&amp;#10;4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: niko.busch@uni-muenster.de&amp;#10;5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de&amp;#10;6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de&amp;#10;&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ResourceManagerComponent name="resources_data_safety_2" plugin="None">
@@ -446,11 +461,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.&amp;#10;4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: niko.busch@uni-muenster.de&amp;#10;5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de&amp;#10;6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu bestätigen und fortzufahren." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="data_safety_2_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -505,8 +522,9 @@
         <Param val="time (s)" valType="str" updates="None" name="stopType"/>
         <Param val="25" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Instruktion&amp;#10;&amp;#10;Das Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.&amp;#10;&amp;#10;Zu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. &amp;#10;Hierfür drücken Sie bitte so SCHNELL wie möglich die Taste &quot;j&quot;, wenn das Bild NICHT zur genannten Kategorie gehört und die Taste &quot;f&quot;, wenn das Bild zur genannten Kategorie gehört.&amp;#10;&amp;#10;Im zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. &amp;#10;Als Antwortmöglichkeiten stehen zur Auswahl: &quot;sicher alt&quot;, &quot;eher alt&quot;, &quot;eher neu&quot;, &quot;sicher neu&quot;. Hierbei bedeutet &quot;alt&quot;, dass das Bild in der vorherigen Aufgabe gezeigt wurde und &quot;neu&quot;, dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. &amp;#10;&amp;#10;In beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.&amp;#10;&amp;#10;Bevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.&amp;#10;Platzieren Sie Ihre Finger am besten schon jetzt auf den Tasten &quot;f&quot; und &quot;j&quot;.&amp;#10;&amp;#10;Gleich geht's weiter…" valType="str" updates="constant" name="text"/>
+        <Param val="Instruktion&amp;#10;&amp;#10;Das Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.&amp;#10;&amp;#10;Zu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. &amp;#10;Hierfür drücken Sie bitte so SCHNELL wie möglich die Taste &quot;f&quot;, wenn das Bild NICHT zur genannten Kategorie gehört und die Taste &quot;j&quot;, wenn das Bild zur genannten Kategorie gehört.&amp;#10;&amp;#10;Im zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. &amp;#10;Als Antwortmöglichkeiten stehen zur Auswahl: &quot;sicher alt&quot;, &quot;eher alt&quot;, &quot;eher neu&quot;, &quot;sicher neu&quot;. Hierbei bedeutet &quot;alt&quot;, dass das Bild in der vorherigen Aufgabe gezeigt wurde und &quot;neu&quot;, dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. &amp;#10;&amp;#10;In beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.&amp;#10;&amp;#10;Bevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.&amp;#10;Platzieren Sie Ihre Finger am besten schon jetzt auf den Tasten &quot;f&quot; und &quot;j&quot;.&amp;#10;&amp;#10;Gleich geht's weiter…" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ResourceManagerComponent name="resources_instructions_cat" plugin="None">
@@ -544,13 +562,15 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Instruktion&amp;#10;&amp;#10;Das Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.&amp;#10;&amp;#10;Zu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. &amp;#10;Hierfür drücken Sie bitte so SCHNELL wie möglich die Taste &quot;j&quot;, wenn das Bild NICHT zur genannten Kategorie gehört und die Taste &quot;f&quot;, wenn das Bild zur genannten Kategorie gehört.&amp;#10;&amp;#10;Im zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. &amp;#10;Als Antwortmöglichkeiten stehen zur Auswahl: &quot;sicher alt&quot;, &quot;eher alt&quot;, &quot;eher neu&quot;, &quot;sicher neu&quot;. Hierbei bedeutet &quot;alt&quot;, dass das Bild in der vorherigen Aufgabe gezeigt wurde und &quot;neu&quot;, dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. &amp;#10;&amp;#10;In beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.&amp;#10;&amp;#10;Bevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.&amp;#10;Platzieren Sie Ihre Finger am besten schon jetzt auf den Tasten &quot;f&quot; und &quot;j&quot;.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um einen Testlauf zu starten." valType="str" updates="constant" name="text"/>
+        <Param val="Instruktion&amp;#10;&amp;#10;Das Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.&amp;#10;&amp;#10;Zu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. &amp;#10;Hierfür drücken Sie bitte so SCHNELL wie möglich die Taste &quot;f&quot;, wenn das Bild NICHT zur genannten Kategorie gehört und die Taste &quot;j&quot;, wenn das Bild zur genannten Kategorie gehört.&amp;#10;&amp;#10;Im zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. &amp;#10;Als Antwortmöglichkeiten stehen zur Auswahl: &quot;sicher alt&quot;, &quot;eher alt&quot;, &quot;eher neu&quot;, &quot;sicher neu&quot;. Hierbei bedeutet &quot;alt&quot;, dass das Bild in der vorherigen Aufgabe gezeigt wurde und &quot;neu&quot;, dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. &amp;#10;&amp;#10;In beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.&amp;#10;&amp;#10;Bevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.&amp;#10;Platzieren Sie Ihre Finger am besten schon jetzt auf den Tasten &quot;f&quot; und &quot;j&quot;.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um einen Testlauf zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="instructions_cat_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -607,6 +627,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Bahnhof" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -666,31 +687,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies ein Bahnhof?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <TextComponent name="fix_cat_training_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="fix_cat_training_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="time" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="fix_cat_training_no" plugin="None">
@@ -706,6 +703,32 @@
         <Param val="fix_cat_training_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="fix_cat_training_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="fix_cat_training_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -714,8 +737,9 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="time" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ImageComponent name="fix_cat_training_pic" plugin="None">
@@ -744,6 +768,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
     </Routine>
     <Routine name="categorization_training">
@@ -788,6 +813,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <ImageComponent name="cat_training_stim" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
@@ -815,10 +841,12 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <KeyboardComponent name="cat_training_key" plugin="None">
         <Param val="'f','j'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="$correct_answer" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -858,31 +886,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies ein Bahnhof?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <TextComponent name="cat_training_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="cat_training_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="cat_training_no" plugin="None">
@@ -898,6 +902,32 @@
         <Param val="cat_training_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="cat_training_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="cat_training_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -906,8 +936,9 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -967,31 +998,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$cat_training_feedb_eval" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <TextComponent name="cat_train_feedb_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="cat_train_feedb_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="cat_train_feedb_no" plugin="None">
@@ -1007,6 +1014,32 @@
         <Param val="cat_train_feedb_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="cat_train_feedb_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="cat_train_feedb_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -1015,8 +1048,9 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="cat_train_feedb_question" plugin="None">
@@ -1042,6 +1076,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies ein Bahnhof?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -1084,11 +1119,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Der Testdurchlauf ist beendet.&amp;#10;&amp;#10;Während der folgenden Aufgabe wird Ihnen keine Rückmeldung mehr eingeblendet, ob Sie korrekt oder falsch geantwortet haben.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um das Experiment zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="start_cat_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1145,11 +1182,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Dieser Block des Experimentes ist beendet.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um den nächsten Block zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="break_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1206,11 +1245,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt beginnt der Übungsteil für den Gedächtnistest. &amp;#10;&amp;#10;Geben Sie an, ob das gezeigte Bild in der vorherigen Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit der Antwort sind. Hierbei bedeutet &quot;alt&quot;, dass das Bild im ersten Teil gezeigt wurde und &quot;neu&quot;, dass das Bild NICHT im ersten Teil gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. &amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um einen Testdurchlauf zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="instructions_memo_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1287,6 +1328,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
     </Routine>
     <Routine name="memo_training">
@@ -1331,6 +1373,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <ImageComponent name="memo_training_stim" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
@@ -1354,10 +1397,11 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <SliderComponent name="memo_training_slider" plugin="None">
         <Param val="White" valType="color" updates="constant" name="borderColor"/>
@@ -1394,10 +1438,12 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="(1, 2, 3, 4)" valType="list" updates="constant" name="ticks"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </SliderComponent>
       <KeyboardComponent name="memo_training_slider_key_resp" plugin="None">
         <Param val="'d', 'f', 'j', 'k'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1471,6 +1517,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$memo_train_feedb_eval" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -1513,11 +1560,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Der Testdurchlauf ist beendet.&amp;#10;&amp;#10;Für die folgende Aufgabe wird Ihnen keine Rückmeldung mehr eingeblendet, ob Sie korrekt oder falsch geantwortet haben.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="start_memotest_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1577,6 +1626,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <SliderComponent name="memotest_task_slider" plugin="None">
         <Param val="White" valType="color" updates="constant" name="borderColor"/>
@@ -1613,10 +1663,12 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="(1, 2, 3, 4)" valType="list" updates="constant" name="ticks"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </SliderComponent>
       <KeyboardComponent name="memotest_task_slider_key_resp" plugin="None">
         <Param val="'d', 'f', 'j', 'k'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1690,11 +1742,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Vielen Dank für Ihre Teilnahme!&amp;#10;Bitte schicken Sie den unten stehenden Code, an folgende Emailadresse, um die Versuchspersonenstunde zu erhalten:&amp;#10;p_torw01@uni-muenster.de&amp;#10;&amp;#10;Wo und wie Sie die Unterschrift für Ihre VP-Stunde erhalten, wird Ihnen per Email mitgeteilt.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um das Experiment zu beenden." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="end_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1734,6 +1788,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$vpcode" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -1776,6 +1831,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Küche" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="kitchen_b_text_2" plugin="None">
@@ -1801,11 +1857,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Drücken Sie die LEERTASTE, um Block&amp;#10;&amp;#10;&amp;#10;&amp;#10;von 6 zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="kitchen_b_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1845,6 +1903,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$block_total_cat" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -1890,6 +1949,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <CodeComponent name="random_isi_kitchen_b_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
@@ -1931,6 +1991,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="random_isi_kitchen_b_no" plugin="None">
@@ -1956,6 +2017,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="random_isi_kitchen_b_question" plugin="None">
@@ -1981,6 +2043,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies eine Küche?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2026,6 +2089,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <ImageComponent name="kitchen_b_image" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
@@ -2053,6 +2117,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <TextComponent name="kitchen_b_picture_yes" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -2077,6 +2142,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="kitchen_b_picture_no" plugin="None">
@@ -2102,6 +2168,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="kitchen_b_picture_question" plugin="None">
@@ -2127,11 +2194,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies eine Küche?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="kitchen_b_picture_resp" plugin="None">
         <Param val="'j', 'f'" valType="list" updates="set every repeat" name="allowedKeys"/>
         <Param val="$correct_answer" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2208,6 +2277,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <CodeComponent name="random_isi_kitchen_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
@@ -2226,31 +2296,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="random_isi_kitchen_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="random_isi_kitchen_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="random_isi_kitchen_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="time" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
       <TextComponent name="random_isi_kitchen_no" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2264,6 +2309,32 @@
         <Param val="random_isi_kitchen_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="random_isi_kitchen_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="random_isi_kitchen_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -2272,8 +2343,9 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="time" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="random_isi_kitchen_question" plugin="None">
@@ -2299,6 +2371,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies eine Küche?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2344,32 +2417,8 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <TextComponent name="living_random_isi_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="living_random_isi_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="time" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
       <TextComponent name="living_random_isi_no" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2383,6 +2432,32 @@
         <Param val="living_random_isi_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="living_random_isi_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="living_random_isi_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -2391,8 +2466,9 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="time" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="living_random_isi_code" plugin="None">
@@ -2435,6 +2511,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies ein Wohnzimmer?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2480,6 +2557,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <ImageComponent name="living_picture_image" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
@@ -2507,32 +2585,8 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <TextComponent name="living_picture_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="living_picture_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
       <TextComponent name="living_picture_no" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2546,6 +2600,32 @@
         <Param val="living_picture_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="living_picture_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="living_picture_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -2554,13 +2634,15 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="living_picture_resp" plugin="None">
         <Param val="'f', 'j'" valType="list" updates="set every repeat" name="allowedKeys"/>
         <Param val="$correct_answer" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2600,6 +2682,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies ein Wohnzimmer?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2645,6 +2728,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <ImageComponent name="kitchen_image" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
@@ -2672,32 +2756,8 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <TextComponent name="kitchen_picture_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="kitchen_picture_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
       <TextComponent name="kitchen_picture_no" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2711,6 +2771,32 @@
         <Param val="kitchen_picture_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="kitchen_picture_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="kitchen_picture_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -2719,8 +2805,9 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="kitchen_picture_question" plugin="None">
@@ -2746,11 +2833,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies eine Küche?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="kitchen_picture_resp" plugin="None">
         <Param val="'j', 'f'" valType="list" updates="set every repeat" name="allowedKeys"/>
         <Param val="$correct_answer" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2807,6 +2896,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Wohnzimmer" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="living_b_text_2" plugin="None">
@@ -2832,11 +2922,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Drücken Sie die LEERTASTE, um Block&amp;#10;&amp;#10;&amp;#10;&amp;#10;von 6 zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="living_b_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2876,6 +2968,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$block_total_cat" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2918,6 +3011,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Küche" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="kitchen_a_text_2" plugin="None">
@@ -2943,11 +3037,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Drücken Sie die LEERTASTE, um Block&amp;#10;&amp;#10;&amp;#10;&amp;#10;von 6 zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="kitchen_a_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2987,6 +3083,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$block_total_cat" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -3029,6 +3126,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Küche" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="kitchen_b_text_4" plugin="None">
@@ -3054,11 +3152,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Drücken Sie die LEERTASTE, um den nächsten Block zu starten. &amp;#10;Es beginnt Block&amp;#10;&amp;#10;Von 6" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="kitchen_b_resp_2" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3098,6 +3198,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$block_total_cat" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -3140,6 +3241,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Wohnzimmer" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="living_a_text_2" plugin="None">
@@ -3165,11 +3267,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Drücken Sie die LEERTASTE, um Block&amp;#10;&amp;#10;&amp;#10;&amp;#10;von 6 zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="living_a_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3209,6 +3313,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$block_total_cat" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -3251,11 +3356,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt startet der Gedächtnistest zur Kategorie Küche.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="kitchen_a_memo_instr_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3312,11 +3419,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt startet der Gedächtnistest zur Kategorie Küche.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu starten.&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="kitchen_b_memo_instr_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3373,11 +3482,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt startet der Gedächtnistest zur Kategorie Wohnzimmer.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="living_a_memo_instr_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3434,11 +3545,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt startet der Gedächtnistest zur Kategorie Wohnzimmer.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="living_b_memo_instr_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3495,11 +3608,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt startet der Gedächtnistest zur Kategorie Schlafzimmer.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="bed_a_memo_instr_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3556,11 +3671,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt startet der Gedächtnistest zur Kategorie Schlafzimmer.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="bed_b_memo_instr_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3617,6 +3734,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Schlafzimmer" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="bed_a_text_2" plugin="None">
@@ -3642,11 +3760,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Drücken Sie die LEERTASTE, um Block&amp;#10;&amp;#10;&amp;#10;&amp;#10;von 6 zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="bed_a_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3686,6 +3806,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$block_total_cat" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -3731,32 +3852,8 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <TextComponent name="bed_random_isi_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="bed_random_isi_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="time" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
       <TextComponent name="bed_random_isi_no" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -3770,6 +3867,32 @@
         <Param val="bed_random_isi_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="bed_random_isi_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="bed_random_isi_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -3778,8 +3901,9 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="time" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="bed_random_isi_code" plugin="None">
@@ -3822,6 +3946,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies ein Schlafzimmer?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -3867,6 +3992,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <ImageComponent name="bed_picture_image" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
@@ -3894,32 +4020,8 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <TextComponent name="bed_picture_yes" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="bed_picture_yes" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="f&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
       <TextComponent name="bed_picture_no" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -3933,6 +4035,32 @@
         <Param val="bed_picture_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="f&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="bed_picture_yes" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="bed_picture_yes" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -3941,13 +4069,15 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val=" j&amp;#10;&amp;#10;nein" valType="str" updates="constant" name="text"/>
+        <Param val=" j&amp;#10;&amp;#10;ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="bed_picture_resp" plugin="None">
         <Param val="'f', 'j'" valType="list" updates="set every repeat" name="allowedKeys"/>
         <Param val="$correct_answer" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3987,6 +4117,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ist dies ein Schlafzimmer?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -4029,6 +4160,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Schlafzimmer" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="bed_b_text_2" plugin="None">
@@ -4054,11 +4186,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Drücken Sie die LEERTASTE, um Block&amp;#10;&amp;#10;&amp;#10;&amp;#10;von 6 zu starten." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="bed_b_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -4098,6 +4232,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$block_total_cat" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -4140,11 +4275,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Jetzt beginnt der Übungsteil für die Kategorisierungsaufgabe.&amp;#10;&amp;#10;Ihnen wird gleich eine Kategorie genannt. Danach werden mehrere Bilder präsentiert. Geben Sie mit den Tasten &quot;f&quot; und &quot;j&quot; für jedes Bild so schnell wie möglich an, ob das Bild zur genannten Kategorie gehört.&amp;#10;&amp;#10;Starten Sie mit der LEERTASTE. " valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="instructions_cat_2_resp" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
