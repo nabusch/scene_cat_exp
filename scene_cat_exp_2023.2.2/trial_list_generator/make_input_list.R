@@ -28,10 +28,10 @@ dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
-dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/")
+dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2.2/")
 
 # Directory where to find the image files and the table with image info.
-dirs$images <- paste(dirs$main, "/140_stimuli", sep="")
+dirs$images <- paste(dirs$main, "/selected_stimuli_2023.2.2", sep="")
 
 # Output directory for storing the Excel files.
 dirs$input_files <-paste(dirs$main, "/input_files", sep="")
