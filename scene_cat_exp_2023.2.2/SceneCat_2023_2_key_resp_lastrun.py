@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on Wed May 15 17:21:54 2024
+    on Mon May 27 16:03:59 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -615,14 +615,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions_cat" ---
     instructions_cat_text = visual.TextStim(win=win, name='instructions_cat_text',
-        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter…',
+        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "f", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "j", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter…',
         font='Open Sans',
         pos=(0, 0), height=0.026, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     instructions_cat_text_2 = visual.TextStim(win=win, name='instructions_cat_text_2',
-        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "j", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "f", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
+        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "f", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "j", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.026, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -660,14 +660,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     fix_cat_training_no = visual.TextStim(win=win, name='fix_cat_training_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     fix_cat_training_yes = visual.TextStim(win=win, name='fix_cat_training_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -708,14 +708,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     cat_training_no = visual.TextStim(win=win, name='cat_training_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
     cat_training_yes = visual.TextStim(win=win, name='cat_training_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
@@ -731,14 +731,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     cat_train_feedb_no = visual.TextStim(win=win, name='cat_train_feedb_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     cat_train_feedb_yes = visual.TextStim(win=win, name='cat_train_feedb_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -848,15 +848,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
-    random_isi_kitchen_yes = visual.TextStim(win=win, name='random_isi_kitchen_yes',
-        text='f\n\nja',
+    random_isi_kitchen_no = visual.TextStim(win=win, name='random_isi_kitchen_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    random_isi_kitchen_no = visual.TextStim(win=win, name='random_isi_kitchen_no',
-        text=' j\n\nnein',
+    random_isi_kitchen_yes = visual.TextStim(win=win, name='random_isi_kitchen_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -887,15 +887,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    kitchen_picture_yes = visual.TextStim(win=win, name='kitchen_picture_yes',
-        text='f\n\nja',
+    kitchen_picture_no = visual.TextStim(win=win, name='kitchen_picture_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    kitchen_picture_no = visual.TextStim(win=win, name='kitchen_picture_no',
-        text=' j\n\nnein',
+    kitchen_picture_yes = visual.TextStim(win=win, name='kitchen_picture_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -981,15 +981,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
-    random_isi_kitchen_yes = visual.TextStim(win=win, name='random_isi_kitchen_yes',
-        text='f\n\nja',
+    random_isi_kitchen_no = visual.TextStim(win=win, name='random_isi_kitchen_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    random_isi_kitchen_no = visual.TextStim(win=win, name='random_isi_kitchen_no',
-        text=' j\n\nnein',
+    random_isi_kitchen_yes = visual.TextStim(win=win, name='random_isi_kitchen_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1020,15 +1020,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    kitchen_picture_yes = visual.TextStim(win=win, name='kitchen_picture_yes',
-        text='f\n\nja',
+    kitchen_picture_no = visual.TextStim(win=win, name='kitchen_picture_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    kitchen_picture_no = visual.TextStim(win=win, name='kitchen_picture_no',
-        text=' j\n\nnein',
+    kitchen_picture_yes = visual.TextStim(win=win, name='kitchen_picture_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1114,15 +1114,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
-    living_random_isi_yes = visual.TextStim(win=win, name='living_random_isi_yes',
-        text='f\n\nja',
+    living_random_isi_no = visual.TextStim(win=win, name='living_random_isi_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    living_random_isi_no = visual.TextStim(win=win, name='living_random_isi_no',
-        text=' j\n\nnein',
+    living_random_isi_yes = visual.TextStim(win=win, name='living_random_isi_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1153,15 +1153,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    living_picture_yes = visual.TextStim(win=win, name='living_picture_yes',
-        text='f\n\nja',
+    living_picture_no = visual.TextStim(win=win, name='living_picture_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    living_picture_no = visual.TextStim(win=win, name='living_picture_no',
-        text=' j\n\nnein',
+    living_picture_yes = visual.TextStim(win=win, name='living_picture_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1247,15 +1247,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
-    living_random_isi_yes = visual.TextStim(win=win, name='living_random_isi_yes',
-        text='f\n\nja',
+    living_random_isi_no = visual.TextStim(win=win, name='living_random_isi_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    living_random_isi_no = visual.TextStim(win=win, name='living_random_isi_no',
-        text=' j\n\nnein',
+    living_random_isi_yes = visual.TextStim(win=win, name='living_random_isi_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1286,15 +1286,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    living_picture_yes = visual.TextStim(win=win, name='living_picture_yes',
-        text='f\n\nja',
+    living_picture_no = visual.TextStim(win=win, name='living_picture_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    living_picture_no = visual.TextStim(win=win, name='living_picture_no',
-        text=' j\n\nnein',
+    living_picture_yes = visual.TextStim(win=win, name='living_picture_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1380,15 +1380,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
-    bed_random_isi_yes = visual.TextStim(win=win, name='bed_random_isi_yes',
-        text='f\n\nja',
+    bed_random_isi_no = visual.TextStim(win=win, name='bed_random_isi_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    bed_random_isi_no = visual.TextStim(win=win, name='bed_random_isi_no',
-        text=' j\n\nnein',
+    bed_random_isi_yes = visual.TextStim(win=win, name='bed_random_isi_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1419,15 +1419,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    bed_picture_yes = visual.TextStim(win=win, name='bed_picture_yes',
-        text='f\n\nja',
+    bed_picture_no = visual.TextStim(win=win, name='bed_picture_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    bed_picture_no = visual.TextStim(win=win, name='bed_picture_no',
-        text=' j\n\nnein',
+    bed_picture_yes = visual.TextStim(win=win, name='bed_picture_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1513,15 +1513,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
-    bed_random_isi_yes = visual.TextStim(win=win, name='bed_random_isi_yes',
-        text='f\n\nja',
+    bed_random_isi_no = visual.TextStim(win=win, name='bed_random_isi_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    bed_random_isi_no = visual.TextStim(win=win, name='bed_random_isi_no',
-        text=' j\n\nnein',
+    bed_random_isi_yes = visual.TextStim(win=win, name='bed_random_isi_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1552,15 +1552,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
-    bed_picture_yes = visual.TextStim(win=win, name='bed_picture_yes',
-        text='f\n\nja',
+    bed_picture_no = visual.TextStim(win=win, name='bed_picture_no',
+        text='f\n\nnein',
         font='Open Sans',
         pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    bed_picture_no = visual.TextStim(win=win, name='bed_picture_no',
-        text=' j\n\nnein',
+    bed_picture_yes = visual.TextStim(win=win, name='bed_picture_yes',
+        text=' j\n\nja',
         font='Open Sans',
         pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -3882,7 +3882,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            kitchen_random_isiComponents = [random_isi_kitchen_fix, random_isi_kitchen_yes, random_isi_kitchen_no, random_isi_kitchen_question]
+            kitchen_random_isiComponents = [random_isi_kitchen_fix, random_isi_kitchen_no, random_isi_kitchen_yes, random_isi_kitchen_question]
             for thisComponent in kitchen_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -3935,36 +3935,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         random_isi_kitchen_fix.status = FINISHED
                         random_isi_kitchen_fix.setAutoDraw(False)
                 
-                # *random_isi_kitchen_yes* updates
-                
-                # if random_isi_kitchen_yes is starting this frame...
-                if random_isi_kitchen_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    random_isi_kitchen_yes.frameNStart = frameN  # exact frame index
-                    random_isi_kitchen_yes.tStart = t  # local t and not account for scr refresh
-                    random_isi_kitchen_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(random_isi_kitchen_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    random_isi_kitchen_yes.status = STARTED
-                    random_isi_kitchen_yes.setAutoDraw(True)
-                
-                # if random_isi_kitchen_yes is active this frame...
-                if random_isi_kitchen_yes.status == STARTED:
-                    # update params
-                    pass
-                
-                # if random_isi_kitchen_yes is stopping this frame...
-                if random_isi_kitchen_yes.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > random_isi_kitchen_yes.tStartRefresh + time-frameTolerance:
-                        # keep track of stop time/frame for later
-                        random_isi_kitchen_yes.tStop = t  # not accounting for scr refresh
-                        random_isi_kitchen_yes.tStopRefresh = tThisFlipGlobal  # on global time
-                        random_isi_kitchen_yes.frameNStop = frameN  # exact frame index
-                        # update status
-                        random_isi_kitchen_yes.status = FINISHED
-                        random_isi_kitchen_yes.setAutoDraw(False)
-                
                 # *random_isi_kitchen_no* updates
                 
                 # if random_isi_kitchen_no is starting this frame...
@@ -3994,6 +3964,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         random_isi_kitchen_no.status = FINISHED
                         random_isi_kitchen_no.setAutoDraw(False)
+                
+                # *random_isi_kitchen_yes* updates
+                
+                # if random_isi_kitchen_yes is starting this frame...
+                if random_isi_kitchen_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    random_isi_kitchen_yes.frameNStart = frameN  # exact frame index
+                    random_isi_kitchen_yes.tStart = t  # local t and not account for scr refresh
+                    random_isi_kitchen_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(random_isi_kitchen_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    random_isi_kitchen_yes.status = STARTED
+                    random_isi_kitchen_yes.setAutoDraw(True)
+                
+                # if random_isi_kitchen_yes is active this frame...
+                if random_isi_kitchen_yes.status == STARTED:
+                    # update params
+                    pass
+                
+                # if random_isi_kitchen_yes is stopping this frame...
+                if random_isi_kitchen_yes.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > random_isi_kitchen_yes.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        random_isi_kitchen_yes.tStop = t  # not accounting for scr refresh
+                        random_isi_kitchen_yes.tStopRefresh = tThisFlipGlobal  # on global time
+                        random_isi_kitchen_yes.frameNStop = frameN  # exact frame index
+                        # update status
+                        random_isi_kitchen_yes.status = FINISHED
+                        random_isi_kitchen_yes.setAutoDraw(False)
                 
                 # *random_isi_kitchen_question* updates
                 
@@ -4061,7 +4061,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             kitchen_picture_resp.rt = []
             _kitchen_picture_resp_allKeys = []
             # keep track of which components have finished
-            kitchen_pictureComponents = [kitchen_fix, kitchen_image, kitchen_picture_yes, kitchen_picture_no, kitchen_picture_question, kitchen_picture_resp]
+            kitchen_pictureComponents = [kitchen_fix, kitchen_image, kitchen_picture_no, kitchen_picture_yes, kitchen_picture_question, kitchen_picture_resp]
             for thisComponent in kitchen_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -4134,24 +4134,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         kitchen_image.status = FINISHED
                         kitchen_image.setAutoDraw(False)
                 
-                # *kitchen_picture_yes* updates
-                
-                # if kitchen_picture_yes is starting this frame...
-                if kitchen_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    kitchen_picture_yes.frameNStart = frameN  # exact frame index
-                    kitchen_picture_yes.tStart = t  # local t and not account for scr refresh
-                    kitchen_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(kitchen_picture_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    kitchen_picture_yes.status = STARTED
-                    kitchen_picture_yes.setAutoDraw(True)
-                
-                # if kitchen_picture_yes is active this frame...
-                if kitchen_picture_yes.status == STARTED:
-                    # update params
-                    pass
-                
                 # *kitchen_picture_no* updates
                 
                 # if kitchen_picture_no is starting this frame...
@@ -4167,6 +4149,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if kitchen_picture_no is active this frame...
                 if kitchen_picture_no.status == STARTED:
+                    # update params
+                    pass
+                
+                # *kitchen_picture_yes* updates
+                
+                # if kitchen_picture_yes is starting this frame...
+                if kitchen_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    kitchen_picture_yes.frameNStart = frameN  # exact frame index
+                    kitchen_picture_yes.tStart = t  # local t and not account for scr refresh
+                    kitchen_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(kitchen_picture_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    kitchen_picture_yes.status = STARTED
+                    kitchen_picture_yes.setAutoDraw(True)
+                
+                # if kitchen_picture_yes is active this frame...
+                if kitchen_picture_yes.status == STARTED:
                     # update params
                     pass
                 
@@ -4802,7 +4802,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            kitchen_random_isiComponents = [random_isi_kitchen_fix, random_isi_kitchen_yes, random_isi_kitchen_no, random_isi_kitchen_question]
+            kitchen_random_isiComponents = [random_isi_kitchen_fix, random_isi_kitchen_no, random_isi_kitchen_yes, random_isi_kitchen_question]
             for thisComponent in kitchen_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -4855,36 +4855,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         random_isi_kitchen_fix.status = FINISHED
                         random_isi_kitchen_fix.setAutoDraw(False)
                 
-                # *random_isi_kitchen_yes* updates
-                
-                # if random_isi_kitchen_yes is starting this frame...
-                if random_isi_kitchen_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    random_isi_kitchen_yes.frameNStart = frameN  # exact frame index
-                    random_isi_kitchen_yes.tStart = t  # local t and not account for scr refresh
-                    random_isi_kitchen_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(random_isi_kitchen_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    random_isi_kitchen_yes.status = STARTED
-                    random_isi_kitchen_yes.setAutoDraw(True)
-                
-                # if random_isi_kitchen_yes is active this frame...
-                if random_isi_kitchen_yes.status == STARTED:
-                    # update params
-                    pass
-                
-                # if random_isi_kitchen_yes is stopping this frame...
-                if random_isi_kitchen_yes.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > random_isi_kitchen_yes.tStartRefresh + time-frameTolerance:
-                        # keep track of stop time/frame for later
-                        random_isi_kitchen_yes.tStop = t  # not accounting for scr refresh
-                        random_isi_kitchen_yes.tStopRefresh = tThisFlipGlobal  # on global time
-                        random_isi_kitchen_yes.frameNStop = frameN  # exact frame index
-                        # update status
-                        random_isi_kitchen_yes.status = FINISHED
-                        random_isi_kitchen_yes.setAutoDraw(False)
-                
                 # *random_isi_kitchen_no* updates
                 
                 # if random_isi_kitchen_no is starting this frame...
@@ -4914,6 +4884,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         random_isi_kitchen_no.status = FINISHED
                         random_isi_kitchen_no.setAutoDraw(False)
+                
+                # *random_isi_kitchen_yes* updates
+                
+                # if random_isi_kitchen_yes is starting this frame...
+                if random_isi_kitchen_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    random_isi_kitchen_yes.frameNStart = frameN  # exact frame index
+                    random_isi_kitchen_yes.tStart = t  # local t and not account for scr refresh
+                    random_isi_kitchen_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(random_isi_kitchen_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    random_isi_kitchen_yes.status = STARTED
+                    random_isi_kitchen_yes.setAutoDraw(True)
+                
+                # if random_isi_kitchen_yes is active this frame...
+                if random_isi_kitchen_yes.status == STARTED:
+                    # update params
+                    pass
+                
+                # if random_isi_kitchen_yes is stopping this frame...
+                if random_isi_kitchen_yes.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > random_isi_kitchen_yes.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        random_isi_kitchen_yes.tStop = t  # not accounting for scr refresh
+                        random_isi_kitchen_yes.tStopRefresh = tThisFlipGlobal  # on global time
+                        random_isi_kitchen_yes.frameNStop = frameN  # exact frame index
+                        # update status
+                        random_isi_kitchen_yes.status = FINISHED
+                        random_isi_kitchen_yes.setAutoDraw(False)
                 
                 # *random_isi_kitchen_question* updates
                 
@@ -4981,7 +4981,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             kitchen_picture_resp.rt = []
             _kitchen_picture_resp_allKeys = []
             # keep track of which components have finished
-            kitchen_pictureComponents = [kitchen_fix, kitchen_image, kitchen_picture_yes, kitchen_picture_no, kitchen_picture_question, kitchen_picture_resp]
+            kitchen_pictureComponents = [kitchen_fix, kitchen_image, kitchen_picture_no, kitchen_picture_yes, kitchen_picture_question, kitchen_picture_resp]
             for thisComponent in kitchen_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -5054,24 +5054,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         kitchen_image.status = FINISHED
                         kitchen_image.setAutoDraw(False)
                 
-                # *kitchen_picture_yes* updates
-                
-                # if kitchen_picture_yes is starting this frame...
-                if kitchen_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    kitchen_picture_yes.frameNStart = frameN  # exact frame index
-                    kitchen_picture_yes.tStart = t  # local t and not account for scr refresh
-                    kitchen_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(kitchen_picture_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    kitchen_picture_yes.status = STARTED
-                    kitchen_picture_yes.setAutoDraw(True)
-                
-                # if kitchen_picture_yes is active this frame...
-                if kitchen_picture_yes.status == STARTED:
-                    # update params
-                    pass
-                
                 # *kitchen_picture_no* updates
                 
                 # if kitchen_picture_no is starting this frame...
@@ -5087,6 +5069,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if kitchen_picture_no is active this frame...
                 if kitchen_picture_no.status == STARTED:
+                    # update params
+                    pass
+                
+                # *kitchen_picture_yes* updates
+                
+                # if kitchen_picture_yes is starting this frame...
+                if kitchen_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    kitchen_picture_yes.frameNStart = frameN  # exact frame index
+                    kitchen_picture_yes.tStart = t  # local t and not account for scr refresh
+                    kitchen_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(kitchen_picture_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    kitchen_picture_yes.status = STARTED
+                    kitchen_picture_yes.setAutoDraw(True)
+                
+                # if kitchen_picture_yes is active this frame...
+                if kitchen_picture_yes.status == STARTED:
                     # update params
                     pass
                 
@@ -5726,7 +5726,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            living_random_isiComponents = [living_random_isi_fix, living_random_isi_yes, living_random_isi_no, living_random_isi_question]
+            living_random_isiComponents = [living_random_isi_fix, living_random_isi_no, living_random_isi_yes, living_random_isi_question]
             for thisComponent in living_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -5779,36 +5779,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         living_random_isi_fix.status = FINISHED
                         living_random_isi_fix.setAutoDraw(False)
                 
-                # *living_random_isi_yes* updates
-                
-                # if living_random_isi_yes is starting this frame...
-                if living_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    living_random_isi_yes.frameNStart = frameN  # exact frame index
-                    living_random_isi_yes.tStart = t  # local t and not account for scr refresh
-                    living_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(living_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    living_random_isi_yes.status = STARTED
-                    living_random_isi_yes.setAutoDraw(True)
-                
-                # if living_random_isi_yes is active this frame...
-                if living_random_isi_yes.status == STARTED:
-                    # update params
-                    pass
-                
-                # if living_random_isi_yes is stopping this frame...
-                if living_random_isi_yes.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > living_random_isi_yes.tStartRefresh + time-frameTolerance:
-                        # keep track of stop time/frame for later
-                        living_random_isi_yes.tStop = t  # not accounting for scr refresh
-                        living_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
-                        living_random_isi_yes.frameNStop = frameN  # exact frame index
-                        # update status
-                        living_random_isi_yes.status = FINISHED
-                        living_random_isi_yes.setAutoDraw(False)
-                
                 # *living_random_isi_no* updates
                 
                 # if living_random_isi_no is starting this frame...
@@ -5838,6 +5808,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         living_random_isi_no.status = FINISHED
                         living_random_isi_no.setAutoDraw(False)
+                
+                # *living_random_isi_yes* updates
+                
+                # if living_random_isi_yes is starting this frame...
+                if living_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_random_isi_yes.frameNStart = frameN  # exact frame index
+                    living_random_isi_yes.tStart = t  # local t and not account for scr refresh
+                    living_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_random_isi_yes.status = STARTED
+                    living_random_isi_yes.setAutoDraw(True)
+                
+                # if living_random_isi_yes is active this frame...
+                if living_random_isi_yes.status == STARTED:
+                    # update params
+                    pass
+                
+                # if living_random_isi_yes is stopping this frame...
+                if living_random_isi_yes.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > living_random_isi_yes.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        living_random_isi_yes.tStop = t  # not accounting for scr refresh
+                        living_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
+                        living_random_isi_yes.frameNStop = frameN  # exact frame index
+                        # update status
+                        living_random_isi_yes.status = FINISHED
+                        living_random_isi_yes.setAutoDraw(False)
                 
                 # *living_random_isi_question* updates
                 
@@ -5905,7 +5905,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             living_picture_resp.rt = []
             _living_picture_resp_allKeys = []
             # keep track of which components have finished
-            living_pictureComponents = [living_picture_fix, living_picture_image, living_picture_yes, living_picture_no, living_picture_resp, living_picture_question]
+            living_pictureComponents = [living_picture_fix, living_picture_image, living_picture_no, living_picture_yes, living_picture_resp, living_picture_question]
             for thisComponent in living_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -5980,24 +5980,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         living_picture_image.status = FINISHED
                         living_picture_image.setAutoDraw(False)
                 
-                # *living_picture_yes* updates
-                
-                # if living_picture_yes is starting this frame...
-                if living_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    living_picture_yes.frameNStart = frameN  # exact frame index
-                    living_picture_yes.tStart = t  # local t and not account for scr refresh
-                    living_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(living_picture_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    living_picture_yes.status = STARTED
-                    living_picture_yes.setAutoDraw(True)
-                
-                # if living_picture_yes is active this frame...
-                if living_picture_yes.status == STARTED:
-                    # update params
-                    pass
-                
                 # *living_picture_no* updates
                 
                 # if living_picture_no is starting this frame...
@@ -6013,6 +5995,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if living_picture_no is active this frame...
                 if living_picture_no.status == STARTED:
+                    # update params
+                    pass
+                
+                # *living_picture_yes* updates
+                
+                # if living_picture_yes is starting this frame...
+                if living_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_picture_yes.frameNStart = frameN  # exact frame index
+                    living_picture_yes.tStart = t  # local t and not account for scr refresh
+                    living_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_picture_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_picture_yes.status = STARTED
+                    living_picture_yes.setAutoDraw(True)
+                
+                # if living_picture_yes is active this frame...
+                if living_picture_yes.status == STARTED:
                     # update params
                     pass
                 
@@ -6652,7 +6652,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            living_random_isiComponents = [living_random_isi_fix, living_random_isi_yes, living_random_isi_no, living_random_isi_question]
+            living_random_isiComponents = [living_random_isi_fix, living_random_isi_no, living_random_isi_yes, living_random_isi_question]
             for thisComponent in living_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -6705,36 +6705,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         living_random_isi_fix.status = FINISHED
                         living_random_isi_fix.setAutoDraw(False)
                 
-                # *living_random_isi_yes* updates
-                
-                # if living_random_isi_yes is starting this frame...
-                if living_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    living_random_isi_yes.frameNStart = frameN  # exact frame index
-                    living_random_isi_yes.tStart = t  # local t and not account for scr refresh
-                    living_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(living_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    living_random_isi_yes.status = STARTED
-                    living_random_isi_yes.setAutoDraw(True)
-                
-                # if living_random_isi_yes is active this frame...
-                if living_random_isi_yes.status == STARTED:
-                    # update params
-                    pass
-                
-                # if living_random_isi_yes is stopping this frame...
-                if living_random_isi_yes.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > living_random_isi_yes.tStartRefresh + time-frameTolerance:
-                        # keep track of stop time/frame for later
-                        living_random_isi_yes.tStop = t  # not accounting for scr refresh
-                        living_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
-                        living_random_isi_yes.frameNStop = frameN  # exact frame index
-                        # update status
-                        living_random_isi_yes.status = FINISHED
-                        living_random_isi_yes.setAutoDraw(False)
-                
                 # *living_random_isi_no* updates
                 
                 # if living_random_isi_no is starting this frame...
@@ -6764,6 +6734,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         living_random_isi_no.status = FINISHED
                         living_random_isi_no.setAutoDraw(False)
+                
+                # *living_random_isi_yes* updates
+                
+                # if living_random_isi_yes is starting this frame...
+                if living_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_random_isi_yes.frameNStart = frameN  # exact frame index
+                    living_random_isi_yes.tStart = t  # local t and not account for scr refresh
+                    living_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_random_isi_yes.status = STARTED
+                    living_random_isi_yes.setAutoDraw(True)
+                
+                # if living_random_isi_yes is active this frame...
+                if living_random_isi_yes.status == STARTED:
+                    # update params
+                    pass
+                
+                # if living_random_isi_yes is stopping this frame...
+                if living_random_isi_yes.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > living_random_isi_yes.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        living_random_isi_yes.tStop = t  # not accounting for scr refresh
+                        living_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
+                        living_random_isi_yes.frameNStop = frameN  # exact frame index
+                        # update status
+                        living_random_isi_yes.status = FINISHED
+                        living_random_isi_yes.setAutoDraw(False)
                 
                 # *living_random_isi_question* updates
                 
@@ -6831,7 +6831,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             living_picture_resp.rt = []
             _living_picture_resp_allKeys = []
             # keep track of which components have finished
-            living_pictureComponents = [living_picture_fix, living_picture_image, living_picture_yes, living_picture_no, living_picture_resp, living_picture_question]
+            living_pictureComponents = [living_picture_fix, living_picture_image, living_picture_no, living_picture_yes, living_picture_resp, living_picture_question]
             for thisComponent in living_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -6906,24 +6906,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         living_picture_image.status = FINISHED
                         living_picture_image.setAutoDraw(False)
                 
-                # *living_picture_yes* updates
-                
-                # if living_picture_yes is starting this frame...
-                if living_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    living_picture_yes.frameNStart = frameN  # exact frame index
-                    living_picture_yes.tStart = t  # local t and not account for scr refresh
-                    living_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(living_picture_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    living_picture_yes.status = STARTED
-                    living_picture_yes.setAutoDraw(True)
-                
-                # if living_picture_yes is active this frame...
-                if living_picture_yes.status == STARTED:
-                    # update params
-                    pass
-                
                 # *living_picture_no* updates
                 
                 # if living_picture_no is starting this frame...
@@ -6939,6 +6921,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if living_picture_no is active this frame...
                 if living_picture_no.status == STARTED:
+                    # update params
+                    pass
+                
+                # *living_picture_yes* updates
+                
+                # if living_picture_yes is starting this frame...
+                if living_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    living_picture_yes.frameNStart = frameN  # exact frame index
+                    living_picture_yes.tStart = t  # local t and not account for scr refresh
+                    living_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(living_picture_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    living_picture_yes.status = STARTED
+                    living_picture_yes.setAutoDraw(True)
+                
+                # if living_picture_yes is active this frame...
+                if living_picture_yes.status == STARTED:
                     # update params
                     pass
                 
@@ -7578,7 +7578,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_yes, bed_random_isi_no, bed_random_isi_question]
+            bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_no, bed_random_isi_yes, bed_random_isi_question]
             for thisComponent in bed_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -7631,36 +7631,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         bed_random_isi_fix.status = FINISHED
                         bed_random_isi_fix.setAutoDraw(False)
                 
-                # *bed_random_isi_yes* updates
-                
-                # if bed_random_isi_yes is starting this frame...
-                if bed_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    bed_random_isi_yes.frameNStart = frameN  # exact frame index
-                    bed_random_isi_yes.tStart = t  # local t and not account for scr refresh
-                    bed_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(bed_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    bed_random_isi_yes.status = STARTED
-                    bed_random_isi_yes.setAutoDraw(True)
-                
-                # if bed_random_isi_yes is active this frame...
-                if bed_random_isi_yes.status == STARTED:
-                    # update params
-                    pass
-                
-                # if bed_random_isi_yes is stopping this frame...
-                if bed_random_isi_yes.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > bed_random_isi_yes.tStartRefresh + time-frameTolerance:
-                        # keep track of stop time/frame for later
-                        bed_random_isi_yes.tStop = t  # not accounting for scr refresh
-                        bed_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
-                        bed_random_isi_yes.frameNStop = frameN  # exact frame index
-                        # update status
-                        bed_random_isi_yes.status = FINISHED
-                        bed_random_isi_yes.setAutoDraw(False)
-                
                 # *bed_random_isi_no* updates
                 
                 # if bed_random_isi_no is starting this frame...
@@ -7690,6 +7660,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         bed_random_isi_no.status = FINISHED
                         bed_random_isi_no.setAutoDraw(False)
+                
+                # *bed_random_isi_yes* updates
+                
+                # if bed_random_isi_yes is starting this frame...
+                if bed_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_random_isi_yes.frameNStart = frameN  # exact frame index
+                    bed_random_isi_yes.tStart = t  # local t and not account for scr refresh
+                    bed_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_random_isi_yes.status = STARTED
+                    bed_random_isi_yes.setAutoDraw(True)
+                
+                # if bed_random_isi_yes is active this frame...
+                if bed_random_isi_yes.status == STARTED:
+                    # update params
+                    pass
+                
+                # if bed_random_isi_yes is stopping this frame...
+                if bed_random_isi_yes.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > bed_random_isi_yes.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        bed_random_isi_yes.tStop = t  # not accounting for scr refresh
+                        bed_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
+                        bed_random_isi_yes.frameNStop = frameN  # exact frame index
+                        # update status
+                        bed_random_isi_yes.status = FINISHED
+                        bed_random_isi_yes.setAutoDraw(False)
                 
                 # *bed_random_isi_question* updates
                 
@@ -7757,7 +7757,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             bed_picture_resp.rt = []
             _bed_picture_resp_allKeys = []
             # keep track of which components have finished
-            bed_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_yes, bed_picture_no, bed_picture_resp, bed_picture_question]
+            bed_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_no, bed_picture_yes, bed_picture_resp, bed_picture_question]
             for thisComponent in bed_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -7832,24 +7832,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         bed_picture_image.status = FINISHED
                         bed_picture_image.setAutoDraw(False)
                 
-                # *bed_picture_yes* updates
-                
-                # if bed_picture_yes is starting this frame...
-                if bed_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    bed_picture_yes.frameNStart = frameN  # exact frame index
-                    bed_picture_yes.tStart = t  # local t and not account for scr refresh
-                    bed_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(bed_picture_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    bed_picture_yes.status = STARTED
-                    bed_picture_yes.setAutoDraw(True)
-                
-                # if bed_picture_yes is active this frame...
-                if bed_picture_yes.status == STARTED:
-                    # update params
-                    pass
-                
                 # *bed_picture_no* updates
                 
                 # if bed_picture_no is starting this frame...
@@ -7865,6 +7847,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if bed_picture_no is active this frame...
                 if bed_picture_no.status == STARTED:
+                    # update params
+                    pass
+                
+                # *bed_picture_yes* updates
+                
+                # if bed_picture_yes is starting this frame...
+                if bed_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_picture_yes.frameNStart = frameN  # exact frame index
+                    bed_picture_yes.tStart = t  # local t and not account for scr refresh
+                    bed_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_picture_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_picture_yes.status = STARTED
+                    bed_picture_yes.setAutoDraw(True)
+                
+                # if bed_picture_yes is active this frame...
+                if bed_picture_yes.status == STARTED:
                     # update params
                     pass
                 
@@ -8504,7 +8504,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             import random
             time=random.uniform(1,2)
             # keep track of which components have finished
-            bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_yes, bed_random_isi_no, bed_random_isi_question]
+            bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_no, bed_random_isi_yes, bed_random_isi_question]
             for thisComponent in bed_random_isiComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -8557,36 +8557,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         bed_random_isi_fix.status = FINISHED
                         bed_random_isi_fix.setAutoDraw(False)
                 
-                # *bed_random_isi_yes* updates
-                
-                # if bed_random_isi_yes is starting this frame...
-                if bed_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    bed_random_isi_yes.frameNStart = frameN  # exact frame index
-                    bed_random_isi_yes.tStart = t  # local t and not account for scr refresh
-                    bed_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(bed_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    bed_random_isi_yes.status = STARTED
-                    bed_random_isi_yes.setAutoDraw(True)
-                
-                # if bed_random_isi_yes is active this frame...
-                if bed_random_isi_yes.status == STARTED:
-                    # update params
-                    pass
-                
-                # if bed_random_isi_yes is stopping this frame...
-                if bed_random_isi_yes.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > bed_random_isi_yes.tStartRefresh + time-frameTolerance:
-                        # keep track of stop time/frame for later
-                        bed_random_isi_yes.tStop = t  # not accounting for scr refresh
-                        bed_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
-                        bed_random_isi_yes.frameNStop = frameN  # exact frame index
-                        # update status
-                        bed_random_isi_yes.status = FINISHED
-                        bed_random_isi_yes.setAutoDraw(False)
-                
                 # *bed_random_isi_no* updates
                 
                 # if bed_random_isi_no is starting this frame...
@@ -8616,6 +8586,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         bed_random_isi_no.status = FINISHED
                         bed_random_isi_no.setAutoDraw(False)
+                
+                # *bed_random_isi_yes* updates
+                
+                # if bed_random_isi_yes is starting this frame...
+                if bed_random_isi_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_random_isi_yes.frameNStart = frameN  # exact frame index
+                    bed_random_isi_yes.tStart = t  # local t and not account for scr refresh
+                    bed_random_isi_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_random_isi_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_random_isi_yes.status = STARTED
+                    bed_random_isi_yes.setAutoDraw(True)
+                
+                # if bed_random_isi_yes is active this frame...
+                if bed_random_isi_yes.status == STARTED:
+                    # update params
+                    pass
+                
+                # if bed_random_isi_yes is stopping this frame...
+                if bed_random_isi_yes.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > bed_random_isi_yes.tStartRefresh + time-frameTolerance:
+                        # keep track of stop time/frame for later
+                        bed_random_isi_yes.tStop = t  # not accounting for scr refresh
+                        bed_random_isi_yes.tStopRefresh = tThisFlipGlobal  # on global time
+                        bed_random_isi_yes.frameNStop = frameN  # exact frame index
+                        # update status
+                        bed_random_isi_yes.status = FINISHED
+                        bed_random_isi_yes.setAutoDraw(False)
                 
                 # *bed_random_isi_question* updates
                 
@@ -8683,7 +8683,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             bed_picture_resp.rt = []
             _bed_picture_resp_allKeys = []
             # keep track of which components have finished
-            bed_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_yes, bed_picture_no, bed_picture_resp, bed_picture_question]
+            bed_pictureComponents = [bed_picture_fix, bed_picture_image, bed_picture_no, bed_picture_yes, bed_picture_resp, bed_picture_question]
             for thisComponent in bed_pictureComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -8758,24 +8758,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         bed_picture_image.status = FINISHED
                         bed_picture_image.setAutoDraw(False)
                 
-                # *bed_picture_yes* updates
-                
-                # if bed_picture_yes is starting this frame...
-                if bed_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    bed_picture_yes.frameNStart = frameN  # exact frame index
-                    bed_picture_yes.tStart = t  # local t and not account for scr refresh
-                    bed_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(bed_picture_yes, 'tStartRefresh')  # time at next scr refresh
-                    # update status
-                    bed_picture_yes.status = STARTED
-                    bed_picture_yes.setAutoDraw(True)
-                
-                # if bed_picture_yes is active this frame...
-                if bed_picture_yes.status == STARTED:
-                    # update params
-                    pass
-                
                 # *bed_picture_no* updates
                 
                 # if bed_picture_no is starting this frame...
@@ -8791,6 +8773,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if bed_picture_no is active this frame...
                 if bed_picture_no.status == STARTED:
+                    # update params
+                    pass
+                
+                # *bed_picture_yes* updates
+                
+                # if bed_picture_yes is starting this frame...
+                if bed_picture_yes.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    bed_picture_yes.frameNStart = frameN  # exact frame index
+                    bed_picture_yes.tStart = t  # local t and not account for scr refresh
+                    bed_picture_yes.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(bed_picture_yes, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    bed_picture_yes.status = STARTED
+                    bed_picture_yes.setAutoDraw(True)
+                
+                # if bed_picture_yes is active this frame...
+                if bed_picture_yes.status == STARTED:
                     # update params
                     pass
                 
