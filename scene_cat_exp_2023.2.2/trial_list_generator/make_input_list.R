@@ -31,7 +31,7 @@ dirs <- list()
 dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2.2/")
 
 # Directory where to find the image files and the table with image info.
-dirs$images <- paste(dirs$main, "/selected_stimuli_2023.2.2", sep="")
+dirs$images <- paste(dirs$main, "/stimuli/", sep="")
 
 # Output directory for storing the Excel files.
 dirs$input_files <-paste(dirs$main, "/input_files", sep="")
@@ -46,7 +46,7 @@ setwd(dirs$rcode)
 # Define variables
 # -----------------------------------------------------------------------------
 vars <- list()
-vars$n_subjects              <- 1 # Get input files for so many subjects.
+vars$n_subjects              <- 10 # Get input files for so many subjects.
 vars$categories              <- c('bedrooms', 'kitchens', 'living_rooms') # Use these scene categories.
 vars$img_extension           <- 'png' #'jpg' or 'png', no dot required. The jpg files are much smaller.
 
