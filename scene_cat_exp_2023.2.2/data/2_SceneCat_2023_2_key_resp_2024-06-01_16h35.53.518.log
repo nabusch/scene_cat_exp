@@ -1,0 +1,1104 @@
+3.5484 	ERROR 	Plugin `psychopy-cedrus` entry point requires module `psychopy_cedrus`, but it cannot be imported.
+6.3782 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [1440, 900]. Using actual size
+6.5528 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f7b6d16cbe0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f7b6d16cb80>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f7b6d16c670>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7f7ba98a7520>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.5529 	EXP 	window1: mouseVisible = True
+6.5529 	EXP 	window1: backgroundImage = ''
+6.5529 	EXP 	window1: backgroundFit = 'none'
+6.5530 	EXP 	window1: mouseVisible = True
+6.5532 	EXP 	window1: mouseVisible = True
+6.5583 	EXP 	window1: mouseVisible = True
+6.5589 	EXP 	window1: mouseVisible = True
+6.5907 	EXP 	window1: mouseVisible = True
+6.5908 	EXP 	window1: mouseVisible = True
+6.5913 	EXP 	window1: mouseVisible = True
+6.5918 	EXP 	window1: mouseVisible = True
+6.6042 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.6042 	EXP 	window1: recordFrameIntervals = False
+6.7396 	EXP 	window1: recordFrameIntervals = True
+7.5146 	EXP 	Screen (0) actual frame rate measured at 118.86Hz
+7.5147 	EXP 	window1: recordFrameIntervals = False
+7.5157 	EXP 	window1: mouseVisible = False
+9.1630 	EXP 	SceneCat_2023_2_key_resp: status = STARTED
+9.1643 	EXP 	window1: mouseVisible = True
+9.2270 	EXP 	Created intro_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='intro_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.2272 	EXP 	window1: mouseVisible = True
+9.2681 	EXP 	Created consent_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.028, italic=False, languageStyle='LTR', name='consent_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.2683 	EXP 	window1: mouseVisible = True
+9.2959 	EXP 	Created consent_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.028, italic=False, languageStyle='LTR', name='consent_text_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.2960 	EXP 	window1: mouseVisible = True
+9.3345 	EXP 	Created data_safety_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.028, italic=False, languageStyle='LTR', name='data_safety_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.3346 	EXP 	window1: mouseVisible = True
+9.3708 	EXP 	Created data_safety_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.028, italic=False, languageStyle='LTR', name='data_safety_text_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.3708 	EXP 	window1: mouseVisible = True
+9.4124 	EXP 	Created data_safety_2_text_ = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.028, italic=False, languageStyle='LTR', name='data_safety_2_text_', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.4125 	EXP 	window1: mouseVisible = True
+9.4516 	EXP 	Created data_safety_2_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.028, italic=False, languageStyle='LTR', name='data_safety_2_text_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.4517 	EXP 	window1: mouseVisible = True
+9.5016 	EXP 	Created instructions_cat_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.026, italic=False, languageStyle='LTR', name='instructions_cat_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.5018 	EXP 	window1: mouseVisible = True
+9.5346 	EXP 	Created instructions_cat_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.026, italic=False, languageStyle='LTR', name='instructions_cat_text_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.5347 	EXP 	window1: mouseVisible = True
+9.5494 	EXP 	Created instructions_cat_2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='instructions_cat_2_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.5495 	EXP 	window1: mouseVisible = True
+9.5526 	EXP 	Created category_test_word = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='category_test_word', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Bahnhof', units='height', win=Window(...), wrapWidth=1)
+9.5527 	EXP 	window1: mouseVisible = True
+9.5584 	EXP 	Created fix_cat_training_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='fix_cat_training_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Bahnhof?', units='height', win=Window(...), wrapWidth=1)
+9.5585 	EXP 	window1: mouseVisible = True
+9.5611 	EXP 	Created fix_cat_training_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='fix_cat_training_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+9.5612 	EXP 	window1: mouseVisible = True
+9.5635 	EXP 	Created fix_cat_training_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='fix_cat_training_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+9.5636 	EXP 	window1: mouseVisible = True
+9.5727 	EXP 	Created fix_cat_training_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='fix_cat_training_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.5728 	EXP 	window1: mouseVisible = True
+9.5781 	EXP 	Created cat_training_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='cat_training_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.5782 	EXP 	window1: mouseVisible = True
+9.5814 	EXP 	Created cat_training_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='cat_training_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+9.5815 	EXP 	window1: mouseVisible = True
+9.5840 	EXP 	Created cat_training_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cat_training_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Bahnhof?', units='height', win=Window(...), wrapWidth=1)
+9.5840 	EXP 	window1: mouseVisible = True
+9.5861 	EXP 	Created cat_training_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cat_training_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+9.5861 	EXP 	window1: mouseVisible = True
+9.5879 	EXP 	Created cat_training_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cat_training_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+9.5880 	EXP 	window1: mouseVisible = True
+9.5889 	EXP 	Created cat_train_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cat_train_feedback_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.5889 	EXP 	window1: mouseVisible = True
+9.5908 	EXP 	Created cat_train_feedb_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cat_train_feedb_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+9.5909 	EXP 	window1: mouseVisible = True
+9.5927 	EXP 	Created cat_train_feedb_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cat_train_feedb_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+9.5928 	EXP 	window1: mouseVisible = True
+9.5951 	EXP 	Created cat_train_feedb_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cat_train_feedb_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Bahnhof?', units='height', win=Window(...), wrapWidth=1)
+9.5952 	EXP 	window1: mouseVisible = True
+9.6180 	EXP 	Created instructions_memo_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.035, italic=False, languageStyle='LTR', name='instructions_memo_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.6181 	EXP 	window1: mouseVisible = True
+9.6244 	EXP 	Created memo_fix_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='memo_fix_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.6244 	EXP 	window1: mouseVisible = True
+9.6255 	EXP 	Created memo_training_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image=None, interpolate=True, mask=None, maskParams=None, name='memo_training_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.6255 	EXP 	window1: mouseVisible = True
+9.6287 	EXP 	Created memo_training_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='memo_training_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+9.6413 	EXP 	window1: mouseVisible = True
+9.6417 	EXP 	window1: mouseVisible = True
+9.6456 	EXP 	window1: mouseVisible = True
+9.6457 	EXP 	window1: mouseVisible = True
+9.6462 	EXP 	window1: mouseVisible = True
+9.6466 	EXP 	window1: mouseVisible = True
+9.6646 	EXP 	window1: mouseVisible = True
+9.6647 	EXP 	window1: mouseVisible = True
+9.6652 	EXP 	window1: mouseVisible = True
+9.6656 	EXP 	window1: mouseVisible = True
+9.6770 	EXP 	window1: mouseVisible = True
+9.6771 	EXP 	window1: mouseVisible = True
+9.6775 	EXP 	window1: mouseVisible = True
+9.6780 	EXP 	window1: mouseVisible = True
+9.6864 	EXP 	window1: mouseVisible = True
+9.6865 	EXP 	window1: mouseVisible = True
+9.6870 	EXP 	window1: mouseVisible = True
+9.6874 	EXP 	window1: mouseVisible = True
+9.6923 	EXP 	window1: mouseVisible = True
+9.6924 	EXP 	window1: mouseVisible = True
+9.6929 	EXP 	window1: mouseVisible = True
+9.6933 	EXP 	window1: mouseVisible = True
+9.7028 	EXP 	window1: mouseVisible = True
+9.7029 	EXP 	window1: mouseVisible = True
+9.7034 	EXP 	window1: mouseVisible = True
+9.7038 	EXP 	window1: mouseVisible = True
+9.7088 	EXP 	window1: mouseVisible = True
+9.7089 	EXP 	window1: mouseVisible = True
+9.7093 	EXP 	window1: mouseVisible = True
+9.7097 	EXP 	window1: mouseVisible = True
+9.7178 	EXP 	window1: mouseVisible = True
+9.7179 	EXP 	window1: mouseVisible = True
+9.7183 	EXP 	window1: mouseVisible = True
+9.7188 	EXP 	window1: mouseVisible = True
+9.7237 	EXP 	window1: mouseVisible = True
+9.7256 	EXP 	window1: mouseVisible = True
+9.7693 	EXP 	Created memo_training_slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-2, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='memo_training_slider', opacity=None, ori=0.0, pos=array([ 0. , -0.3]), readOnly=False, self=UNKNOWN, size=array([0.8 , 0.05]), startValue=None, style='radio', styleTweaks=[], ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+9.7694 	EXP 	window1: mouseVisible = True
+9.7703 	EXP 	Created memo_train_feedb_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='memo_train_feedb_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7704 	EXP 	window1: mouseVisible = True
+9.7818 	EXP 	Created start_cat_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='start_cat_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7819 	EXP 	window1: mouseVisible = True
+9.7841 	EXP 	Created kitchen_a_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_a_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Küche', units='height', win=Window(...), wrapWidth=1)
+9.7842 	EXP 	window1: mouseVisible = True
+9.7877 	EXP 	Created kitchen_a_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_a_text_2', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7878 	EXP 	window1: mouseVisible = True
+9.7887 	EXP 	Created kitchen_a_block_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_a_block_no', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7888 	EXP 	window1: mouseVisible = True
+9.7951 	EXP 	Created random_isi_kitchen_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='random_isi_kitchen_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.7952 	EXP 	window1: mouseVisible = True
+9.7972 	EXP 	Created random_isi_kitchen_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='random_isi_kitchen_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+9.7973 	EXP 	window1: mouseVisible = True
+9.7992 	EXP 	Created random_isi_kitchen_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='random_isi_kitchen_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+9.7993 	EXP 	window1: mouseVisible = True
+9.8016 	EXP 	Created random_isi_kitchen_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='random_isi_kitchen_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies eine Küche?', units='height', win=Window(...), wrapWidth=1)
+9.8016 	EXP 	window1: mouseVisible = True
+9.8068 	EXP 	Created kitchen_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='kitchen_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.8069 	EXP 	window1: mouseVisible = True
+9.8101 	EXP 	Created kitchen_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='kitchen_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+9.8102 	EXP 	window1: mouseVisible = True
+9.8123 	EXP 	Created kitchen_picture_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_picture_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+9.8123 	EXP 	window1: mouseVisible = True
+9.8142 	EXP 	Created kitchen_picture_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_picture_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+9.8143 	EXP 	window1: mouseVisible = True
+9.8166 	EXP 	Created kitchen_picture_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_picture_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies eine Küche?', units='height', win=Window(...), wrapWidth=1)
+9.8166 	EXP 	window1: mouseVisible = True
+9.8214 	EXP 	Created kitchen_a_memo_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_a_memo_instr_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.8215 	EXP 	window1: mouseVisible = True
+9.8271 	EXP 	Created memo_fix_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='memo_fix_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.8272 	EXP 	window1: mouseVisible = True
+9.8304 	EXP 	Created memotest_task_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='memotest_task_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+9.8331 	EXP 	window1: mouseVisible = True
+9.8334 	EXP 	window1: mouseVisible = True
+9.8369 	EXP 	window1: mouseVisible = True
+9.8370 	EXP 	window1: mouseVisible = True
+9.8375 	EXP 	window1: mouseVisible = True
+9.8379 	EXP 	window1: mouseVisible = True
+9.8428 	EXP 	window1: mouseVisible = True
+9.8429 	EXP 	window1: mouseVisible = True
+9.8434 	EXP 	window1: mouseVisible = True
+9.8438 	EXP 	window1: mouseVisible = True
+9.8486 	EXP 	window1: mouseVisible = True
+9.8487 	EXP 	window1: mouseVisible = True
+9.8491 	EXP 	window1: mouseVisible = True
+9.8495 	EXP 	window1: mouseVisible = True
+9.8541 	EXP 	window1: mouseVisible = True
+9.8542 	EXP 	window1: mouseVisible = True
+9.8546 	EXP 	window1: mouseVisible = True
+9.8551 	EXP 	window1: mouseVisible = True
+9.8597 	EXP 	window1: mouseVisible = True
+9.8599 	EXP 	window1: mouseVisible = True
+9.8603 	EXP 	window1: mouseVisible = True
+9.8607 	EXP 	window1: mouseVisible = True
+9.8653 	EXP 	window1: mouseVisible = True
+9.8654 	EXP 	window1: mouseVisible = True
+9.8658 	EXP 	window1: mouseVisible = True
+9.8662 	EXP 	window1: mouseVisible = True
+9.8709 	EXP 	window1: mouseVisible = True
+9.8710 	EXP 	window1: mouseVisible = True
+9.8714 	EXP 	window1: mouseVisible = True
+9.8718 	EXP 	window1: mouseVisible = True
+9.8764 	EXP 	window1: mouseVisible = True
+9.8765 	EXP 	window1: mouseVisible = True
+9.8770 	EXP 	window1: mouseVisible = True
+9.8774 	EXP 	window1: mouseVisible = True
+9.8821 	EXP 	window1: mouseVisible = True
+9.8834 	EXP 	window1: mouseVisible = True
+9.9251 	EXP 	Created memotest_task_slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='memotest_task_slider', opacity=None, ori=0.0, pos=array([ 0. , -0.3]), readOnly=False, self=UNKNOWN, size=array([0.8 , 0.05]), startValue=None, style='radio', styleTweaks=[], ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+9.9252 	EXP 	window1: mouseVisible = True
+9.9271 	EXP 	Created kitchen_b_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_b_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Küche', units='height', win=Window(...), wrapWidth=1)
+9.9272 	EXP 	window1: mouseVisible = True
+9.9304 	EXP 	Created kitchen_b_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_b_text_2', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.9305 	EXP 	window1: mouseVisible = True
+9.9314 	EXP 	Created kitchen_b_block_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_b_block_no', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.9315 	EXP 	window1: mouseVisible = True
+9.9371 	EXP 	Created random_isi_kitchen_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='random_isi_kitchen_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.9372 	EXP 	window1: mouseVisible = True
+9.9395 	EXP 	Created random_isi_kitchen_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='random_isi_kitchen_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+9.9396 	EXP 	window1: mouseVisible = True
+9.9416 	EXP 	Created random_isi_kitchen_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='random_isi_kitchen_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+9.9417 	EXP 	window1: mouseVisible = True
+9.9441 	EXP 	Created random_isi_kitchen_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='random_isi_kitchen_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies eine Küche?', units='height', win=Window(...), wrapWidth=1)
+9.9442 	EXP 	window1: mouseVisible = True
+9.9498 	EXP 	Created kitchen_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='kitchen_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.9499 	EXP 	window1: mouseVisible = True
+9.9538 	EXP 	Created kitchen_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='kitchen_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+9.9539 	EXP 	window1: mouseVisible = True
+9.9563 	EXP 	Created kitchen_picture_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_picture_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+9.9564 	EXP 	window1: mouseVisible = True
+9.9584 	EXP 	Created kitchen_picture_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_picture_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+9.9585 	EXP 	window1: mouseVisible = True
+9.9609 	EXP 	Created kitchen_picture_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_picture_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies eine Küche?', units='height', win=Window(...), wrapWidth=1)
+9.9611 	EXP 	window1: mouseVisible = True
+9.9649 	EXP 	Created kitchen_b_memo_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='kitchen_b_memo_instr_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.9650 	EXP 	window1: mouseVisible = True
+9.9704 	EXP 	Created memo_fix_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='memo_fix_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+9.9705 	EXP 	window1: mouseVisible = True
+9.9747 	EXP 	Created memotest_task_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='memotest_task_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+9.9774 	EXP 	window1: mouseVisible = True
+9.9778 	EXP 	window1: mouseVisible = True
+9.9813 	EXP 	window1: mouseVisible = True
+9.9814 	EXP 	window1: mouseVisible = True
+9.9818 	EXP 	window1: mouseVisible = True
+9.9823 	EXP 	window1: mouseVisible = True
+9.9872 	EXP 	window1: mouseVisible = True
+9.9873 	EXP 	window1: mouseVisible = True
+9.9878 	EXP 	window1: mouseVisible = True
+9.9882 	EXP 	window1: mouseVisible = True
+9.9930 	EXP 	window1: mouseVisible = True
+9.9931 	EXP 	window1: mouseVisible = True
+9.9935 	EXP 	window1: mouseVisible = True
+9.9940 	EXP 	window1: mouseVisible = True
+9.9987 	EXP 	window1: mouseVisible = True
+9.9988 	EXP 	window1: mouseVisible = True
+9.9992 	EXP 	window1: mouseVisible = True
+9.9996 	EXP 	window1: mouseVisible = True
+10.0044 	EXP 	window1: mouseVisible = True
+10.0045 	EXP 	window1: mouseVisible = True
+10.0049 	EXP 	window1: mouseVisible = True
+10.0053 	EXP 	window1: mouseVisible = True
+10.0100 	EXP 	window1: mouseVisible = True
+10.0101 	EXP 	window1: mouseVisible = True
+10.0105 	EXP 	window1: mouseVisible = True
+10.0109 	EXP 	window1: mouseVisible = True
+10.0157 	EXP 	window1: mouseVisible = True
+10.0158 	EXP 	window1: mouseVisible = True
+10.0163 	EXP 	window1: mouseVisible = True
+10.0167 	EXP 	window1: mouseVisible = True
+10.0213 	EXP 	window1: mouseVisible = True
+10.0214 	EXP 	window1: mouseVisible = True
+10.0218 	EXP 	window1: mouseVisible = True
+10.0223 	EXP 	window1: mouseVisible = True
+10.0271 	EXP 	window1: mouseVisible = True
+10.0284 	EXP 	window1: mouseVisible = True
+10.0704 	EXP 	Created memotest_task_slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='memotest_task_slider', opacity=None, ori=0.0, pos=array([ 0. , -0.3]), readOnly=False, self=UNKNOWN, size=array([0.8 , 0.05]), startValue=None, style='radio', styleTweaks=[], ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+10.0705 	EXP 	window1: mouseVisible = True
+10.0729 	EXP 	Created living_a_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_a_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Wohnzimmer', units='height', win=Window(...), wrapWidth=1)
+10.0730 	EXP 	window1: mouseVisible = True
+10.0760 	EXP 	Created living_a_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_a_text_2', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.0761 	EXP 	window1: mouseVisible = True
+10.0769 	EXP 	Created living_a_block_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_a_block_no', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+10.0770 	EXP 	window1: mouseVisible = True
+10.0822 	EXP 	Created living_random_isi_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='living_random_isi_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.0823 	EXP 	window1: mouseVisible = True
+10.0843 	EXP 	Created living_random_isi_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_random_isi_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.0843 	EXP 	window1: mouseVisible = True
+10.0862 	EXP 	Created living_random_isi_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_random_isi_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.0862 	EXP 	window1: mouseVisible = True
+10.0886 	EXP 	Created living_random_isi_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_random_isi_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Wohnzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.0886 	EXP 	window1: mouseVisible = True
+10.0936 	EXP 	Created living_picture_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='living_picture_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.0937 	EXP 	window1: mouseVisible = True
+10.0969 	EXP 	Created living_picture_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='living_picture_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.0970 	EXP 	window1: mouseVisible = True
+10.0991 	EXP 	Created living_picture_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_picture_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.0992 	EXP 	window1: mouseVisible = True
+10.1010 	EXP 	Created living_picture_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_picture_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.1010 	EXP 	window1: mouseVisible = True
+10.1034 	EXP 	Created living_picture_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_picture_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Wohnzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.1034 	EXP 	window1: mouseVisible = True
+10.1072 	EXP 	Created living_a_memo_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_a_memo_instr_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.1073 	EXP 	window1: mouseVisible = True
+10.1124 	EXP 	Created memo_fix_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='memo_fix_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.1125 	EXP 	window1: mouseVisible = True
+10.1156 	EXP 	Created memotest_task_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='memotest_task_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.1182 	EXP 	window1: mouseVisible = True
+10.1185 	EXP 	window1: mouseVisible = True
+10.1220 	EXP 	window1: mouseVisible = True
+10.1221 	EXP 	window1: mouseVisible = True
+10.1225 	EXP 	window1: mouseVisible = True
+10.1229 	EXP 	window1: mouseVisible = True
+10.1279 	EXP 	window1: mouseVisible = True
+10.1280 	EXP 	window1: mouseVisible = True
+10.1284 	EXP 	window1: mouseVisible = True
+10.1288 	EXP 	window1: mouseVisible = True
+10.1336 	EXP 	window1: mouseVisible = True
+10.1337 	EXP 	window1: mouseVisible = True
+10.1341 	EXP 	window1: mouseVisible = True
+10.1345 	EXP 	window1: mouseVisible = True
+10.1391 	EXP 	window1: mouseVisible = True
+10.1392 	EXP 	window1: mouseVisible = True
+10.1397 	EXP 	window1: mouseVisible = True
+10.1401 	EXP 	window1: mouseVisible = True
+10.1449 	EXP 	window1: mouseVisible = True
+10.1450 	EXP 	window1: mouseVisible = True
+10.1454 	EXP 	window1: mouseVisible = True
+10.1459 	EXP 	window1: mouseVisible = True
+10.1505 	EXP 	window1: mouseVisible = True
+10.1506 	EXP 	window1: mouseVisible = True
+10.1510 	EXP 	window1: mouseVisible = True
+10.1515 	EXP 	window1: mouseVisible = True
+10.1562 	EXP 	window1: mouseVisible = True
+10.1563 	EXP 	window1: mouseVisible = True
+10.1567 	EXP 	window1: mouseVisible = True
+10.1571 	EXP 	window1: mouseVisible = True
+10.1618 	EXP 	window1: mouseVisible = True
+10.1619 	EXP 	window1: mouseVisible = True
+10.1623 	EXP 	window1: mouseVisible = True
+10.1628 	EXP 	window1: mouseVisible = True
+10.1675 	EXP 	window1: mouseVisible = True
+10.1689 	EXP 	window1: mouseVisible = True
+10.2105 	EXP 	Created memotest_task_slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='memotest_task_slider', opacity=None, ori=0.0, pos=array([ 0. , -0.3]), readOnly=False, self=UNKNOWN, size=array([0.8 , 0.05]), startValue=None, style='radio', styleTweaks=[], ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+10.2107 	EXP 	window1: mouseVisible = True
+10.2127 	EXP 	Created living_b_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_b_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Wohnzimmer', units='height', win=Window(...), wrapWidth=1)
+10.2127 	EXP 	window1: mouseVisible = True
+10.2160 	EXP 	Created living_b_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_b_text_2', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.2161 	EXP 	window1: mouseVisible = True
+10.2169 	EXP 	Created living_b_block_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_b_block_no', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+10.2170 	EXP 	window1: mouseVisible = True
+10.2223 	EXP 	Created living_random_isi_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='living_random_isi_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.2224 	EXP 	window1: mouseVisible = True
+10.2244 	EXP 	Created living_random_isi_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_random_isi_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.2245 	EXP 	window1: mouseVisible = True
+10.2264 	EXP 	Created living_random_isi_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_random_isi_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.2265 	EXP 	window1: mouseVisible = True
+10.2289 	EXP 	Created living_random_isi_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_random_isi_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Wohnzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.2290 	EXP 	window1: mouseVisible = True
+10.2347 	EXP 	Created living_picture_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='living_picture_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.2348 	EXP 	window1: mouseVisible = True
+10.2380 	EXP 	Created living_picture_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='living_picture_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.2381 	EXP 	window1: mouseVisible = True
+10.2402 	EXP 	Created living_picture_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_picture_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.2403 	EXP 	window1: mouseVisible = True
+10.2421 	EXP 	Created living_picture_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_picture_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.2422 	EXP 	window1: mouseVisible = True
+10.2446 	EXP 	Created living_picture_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_picture_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Wohnzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.2447 	EXP 	window1: mouseVisible = True
+10.2485 	EXP 	Created living_b_memo_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='living_b_memo_instr_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.2486 	EXP 	window1: mouseVisible = True
+10.2537 	EXP 	Created memo_fix_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='memo_fix_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.2538 	EXP 	window1: mouseVisible = True
+10.2570 	EXP 	Created memotest_task_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='memotest_task_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.2597 	EXP 	window1: mouseVisible = True
+10.2602 	EXP 	window1: mouseVisible = True
+10.2637 	EXP 	window1: mouseVisible = True
+10.2638 	EXP 	window1: mouseVisible = True
+10.2642 	EXP 	window1: mouseVisible = True
+10.2647 	EXP 	window1: mouseVisible = True
+10.2696 	EXP 	window1: mouseVisible = True
+10.2697 	EXP 	window1: mouseVisible = True
+10.2702 	EXP 	window1: mouseVisible = True
+10.2706 	EXP 	window1: mouseVisible = True
+10.2753 	EXP 	window1: mouseVisible = True
+10.2754 	EXP 	window1: mouseVisible = True
+10.2759 	EXP 	window1: mouseVisible = True
+10.2763 	EXP 	window1: mouseVisible = True
+10.2810 	EXP 	window1: mouseVisible = True
+10.2811 	EXP 	window1: mouseVisible = True
+10.2815 	EXP 	window1: mouseVisible = True
+10.2819 	EXP 	window1: mouseVisible = True
+10.2867 	EXP 	window1: mouseVisible = True
+10.2868 	EXP 	window1: mouseVisible = True
+10.2872 	EXP 	window1: mouseVisible = True
+10.2876 	EXP 	window1: mouseVisible = True
+10.2922 	EXP 	window1: mouseVisible = True
+10.2923 	EXP 	window1: mouseVisible = True
+10.2928 	EXP 	window1: mouseVisible = True
+10.2932 	EXP 	window1: mouseVisible = True
+10.2988 	EXP 	window1: mouseVisible = True
+10.2989 	EXP 	window1: mouseVisible = True
+10.2994 	EXP 	window1: mouseVisible = True
+10.2998 	EXP 	window1: mouseVisible = True
+10.3045 	EXP 	window1: mouseVisible = True
+10.3046 	EXP 	window1: mouseVisible = True
+10.3050 	EXP 	window1: mouseVisible = True
+10.3055 	EXP 	window1: mouseVisible = True
+10.3102 	EXP 	window1: mouseVisible = True
+10.3115 	EXP 	window1: mouseVisible = True
+10.3532 	EXP 	Created memotest_task_slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='memotest_task_slider', opacity=None, ori=0.0, pos=array([ 0. , -0.3]), readOnly=False, self=UNKNOWN, size=array([0.8 , 0.05]), startValue=None, style='radio', styleTweaks=[], ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+10.3534 	EXP 	window1: mouseVisible = True
+10.3554 	EXP 	Created bed_a_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_a_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Schlafzimmer', units='height', win=Window(...), wrapWidth=1)
+10.3555 	EXP 	window1: mouseVisible = True
+10.4286 	EXP 	Created bed_a_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_a_text_2', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.4287 	EXP 	window1: mouseVisible = True
+10.4295 	EXP 	Created bed_a_block_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_a_block_no', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+10.4296 	EXP 	window1: mouseVisible = True
+10.4348 	EXP 	Created bed_random_isi_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='bed_random_isi_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.4349 	EXP 	window1: mouseVisible = True
+10.4370 	EXP 	Created bed_random_isi_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_random_isi_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.4371 	EXP 	window1: mouseVisible = True
+10.4389 	EXP 	Created bed_random_isi_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_random_isi_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.4390 	EXP 	window1: mouseVisible = True
+10.4413 	EXP 	Created bed_random_isi_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_random_isi_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Schlafzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.4414 	EXP 	window1: mouseVisible = True
+10.4464 	EXP 	Created bed_picture_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='bed_picture_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.4465 	EXP 	window1: mouseVisible = True
+10.4497 	EXP 	Created bed_picture_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='bed_picture_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.4498 	EXP 	window1: mouseVisible = True
+10.4518 	EXP 	Created bed_picture_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_picture_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.4519 	EXP 	window1: mouseVisible = True
+10.4537 	EXP 	Created bed_picture_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_picture_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.4538 	EXP 	window1: mouseVisible = True
+10.4561 	EXP 	Created bed_picture_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_picture_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Schlafzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.4562 	EXP 	window1: mouseVisible = True
+10.4600 	EXP 	Created bed_a_memo_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_a_memo_instr_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.4600 	EXP 	window1: mouseVisible = True
+10.4652 	EXP 	Created memo_fix_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='memo_fix_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.4653 	EXP 	window1: mouseVisible = True
+10.4685 	EXP 	Created memotest_task_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='memotest_task_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.4711 	EXP 	window1: mouseVisible = True
+10.4714 	EXP 	window1: mouseVisible = True
+10.4749 	EXP 	window1: mouseVisible = True
+10.4750 	EXP 	window1: mouseVisible = True
+10.4754 	EXP 	window1: mouseVisible = True
+10.4759 	EXP 	window1: mouseVisible = True
+10.4807 	EXP 	window1: mouseVisible = True
+10.4808 	EXP 	window1: mouseVisible = True
+10.4813 	EXP 	window1: mouseVisible = True
+10.4817 	EXP 	window1: mouseVisible = True
+10.4864 	EXP 	window1: mouseVisible = True
+10.4865 	EXP 	window1: mouseVisible = True
+10.4870 	EXP 	window1: mouseVisible = True
+10.4874 	EXP 	window1: mouseVisible = True
+10.4919 	EXP 	window1: mouseVisible = True
+10.4920 	EXP 	window1: mouseVisible = True
+10.4924 	EXP 	window1: mouseVisible = True
+10.4929 	EXP 	window1: mouseVisible = True
+10.4975 	EXP 	window1: mouseVisible = True
+10.4976 	EXP 	window1: mouseVisible = True
+10.4981 	EXP 	window1: mouseVisible = True
+10.4985 	EXP 	window1: mouseVisible = True
+10.5031 	EXP 	window1: mouseVisible = True
+10.5032 	EXP 	window1: mouseVisible = True
+10.5036 	EXP 	window1: mouseVisible = True
+10.5040 	EXP 	window1: mouseVisible = True
+10.5087 	EXP 	window1: mouseVisible = True
+10.5088 	EXP 	window1: mouseVisible = True
+10.5092 	EXP 	window1: mouseVisible = True
+10.5096 	EXP 	window1: mouseVisible = True
+10.5142 	EXP 	window1: mouseVisible = True
+10.5143 	EXP 	window1: mouseVisible = True
+10.5147 	EXP 	window1: mouseVisible = True
+10.5151 	EXP 	window1: mouseVisible = True
+10.5199 	EXP 	window1: mouseVisible = True
+10.5212 	EXP 	window1: mouseVisible = True
+10.5625 	EXP 	Created memotest_task_slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='memotest_task_slider', opacity=None, ori=0.0, pos=array([ 0. , -0.3]), readOnly=False, self=UNKNOWN, size=array([0.8 , 0.05]), startValue=None, style='radio', styleTweaks=[], ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+10.5627 	EXP 	window1: mouseVisible = True
+10.5647 	EXP 	Created bed_b_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_b_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Schlafzimmer', units='height', win=Window(...), wrapWidth=1)
+10.5648 	EXP 	window1: mouseVisible = True
+10.5677 	EXP 	Created bed_b_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_b_text_2', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.5678 	EXP 	window1: mouseVisible = True
+10.5686 	EXP 	Created bed_b_block_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_b_block_no', opacity=1.0, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+10.5687 	EXP 	window1: mouseVisible = True
+10.5738 	EXP 	Created bed_random_isi_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='bed_random_isi_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.5739 	EXP 	window1: mouseVisible = True
+10.5763 	EXP 	Created bed_random_isi_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_random_isi_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.5764 	EXP 	window1: mouseVisible = True
+10.5782 	EXP 	Created bed_random_isi_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_random_isi_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.5783 	EXP 	window1: mouseVisible = True
+10.5806 	EXP 	Created bed_random_isi_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_random_isi_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Schlafzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.5807 	EXP 	window1: mouseVisible = True
+10.5858 	EXP 	Created bed_picture_fix = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='bed_picture_fix', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.5859 	EXP 	window1: mouseVisible = True
+10.5890 	EXP 	Created bed_picture_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='bed_picture_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.5891 	EXP 	window1: mouseVisible = True
+10.5911 	EXP 	Created bed_picture_no = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_picture_no', opacity=1.0, ori=0.0, pos=array([-0.6, -0.4]), rgb=UNKNOWN, text='f\n\nnein', units='height', win=Window(...), wrapWidth=1)
+10.5912 	EXP 	window1: mouseVisible = True
+10.5930 	EXP 	Created bed_picture_yes = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_picture_yes', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.4]), rgb=UNKNOWN, text=' j\n\nja', units='height', win=Window(...), wrapWidth=1)
+10.5931 	EXP 	window1: mouseVisible = True
+10.5954 	EXP 	Created bed_picture_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_picture_question', opacity=1.0, ori=0.0, pos=array([0. , 0.4]), rgb=UNKNOWN, text='Ist dies ein Schlafzimmer?', units='height', win=Window(...), wrapWidth=1)
+10.5955 	EXP 	window1: mouseVisible = True
+10.5993 	EXP 	Created bed_b_memo_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='bed_b_memo_instr_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.5994 	EXP 	window1: mouseVisible = True
+10.6045 	EXP 	Created memo_fix_pic = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='fixationskreuz.png', interpolate=True, mask=None, maskParams=None, name='memo_fix_pic', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+10.6045 	EXP 	window1: mouseVisible = True
+10.6077 	EXP 	Created memotest_task_stim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='memotest_task_stim', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4, 0.4]), texRes=128.0, units='height', win=Window(...))
+10.6103 	EXP 	window1: mouseVisible = True
+10.6106 	EXP 	window1: mouseVisible = True
+10.6140 	EXP 	window1: mouseVisible = True
+10.6141 	EXP 	window1: mouseVisible = True
+10.6145 	EXP 	window1: mouseVisible = True
+10.6150 	EXP 	window1: mouseVisible = True
+10.6200 	EXP 	window1: mouseVisible = True
+10.6201 	EXP 	window1: mouseVisible = True
+10.6205 	EXP 	window1: mouseVisible = True
+10.6209 	EXP 	window1: mouseVisible = True
+10.6256 	EXP 	window1: mouseVisible = True
+10.6257 	EXP 	window1: mouseVisible = True
+10.6262 	EXP 	window1: mouseVisible = True
+10.6266 	EXP 	window1: mouseVisible = True
+10.6311 	EXP 	window1: mouseVisible = True
+10.6312 	EXP 	window1: mouseVisible = True
+10.6317 	EXP 	window1: mouseVisible = True
+10.6321 	EXP 	window1: mouseVisible = True
+10.6368 	EXP 	window1: mouseVisible = True
+10.6369 	EXP 	window1: mouseVisible = True
+10.6373 	EXP 	window1: mouseVisible = True
+10.6377 	EXP 	window1: mouseVisible = True
+10.6423 	EXP 	window1: mouseVisible = True
+10.6424 	EXP 	window1: mouseVisible = True
+10.6428 	EXP 	window1: mouseVisible = True
+10.6432 	EXP 	window1: mouseVisible = True
+10.6479 	EXP 	window1: mouseVisible = True
+10.6480 	EXP 	window1: mouseVisible = True
+10.6484 	EXP 	window1: mouseVisible = True
+10.6488 	EXP 	window1: mouseVisible = True
+10.6534 	EXP 	window1: mouseVisible = True
+10.6535 	EXP 	window1: mouseVisible = True
+10.6539 	EXP 	window1: mouseVisible = True
+10.6543 	EXP 	window1: mouseVisible = True
+10.6590 	EXP 	window1: mouseVisible = True
+10.6603 	EXP 	window1: mouseVisible = True
+10.7023 	EXP 	Created memotest_task_slider = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-1, fillColor=None, flip=False, font='Open Sans', granularity=1.0, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='memotest_task_slider', opacity=None, ori=0.0, pos=array([ 0. , -0.3]), readOnly=False, self=UNKNOWN, size=array([0.8 , 0.05]), startValue=None, style='radio', styleTweaks=[], ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+10.7025 	EXP 	window1: mouseVisible = True
+10.7066 	EXP 	Created break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='break_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.7067 	EXP 	window1: mouseVisible = True
+10.7270 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='end_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.7272 	EXP 	window1: mouseVisible = True
+10.7280 	EXP 	Created vp_code_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='vp_code_text', opacity=1.0, ori=0.0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+0.0087 	EXP 	memo_training_slider: autoLog = True
+0.0087 	EXP 	memo_training_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memo_training_slider: styleTweaks = []
+0.0087 	EXP 	memo_training_slider: styleTweaks = []
+0.0087 	EXP 	memo_training_slider: styleTweaks = []
+0.0087 	EXP 	memo_training_slider: styleTweaks = []
+0.0087 	EXP 	memo_training_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memo_training_slider: contrast = 1.0
+0.0087 	EXP 	memo_training_slider: markerPos = None
+0.0087 	EXP 	memo_training_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: contrast = 1.0
+0.0087 	EXP 	memotest_task_slider: markerPos = None
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: contrast = 1.0
+0.0087 	EXP 	memotest_task_slider: markerPos = None
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: contrast = 1.0
+0.0087 	EXP 	memotest_task_slider: markerPos = None
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: contrast = 1.0
+0.0087 	EXP 	memotest_task_slider: markerPos = None
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: contrast = 1.0
+0.0087 	EXP 	memotest_task_slider: markerPos = None
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: styleTweaks = []
+0.0087 	EXP 	memotest_task_slider: ticks = <class 'numpy.ndarray'>
+0.0087 	EXP 	memotest_task_slider: contrast = 1.0
+0.0087 	EXP 	memotest_task_slider: markerPos = None
+0.0087 	EXP 	memotest_task_slider: autoLog = True
+0.0169 	EXP 	intro_text: autoDraw = True
+1.7686 	DATA 	Keypress: space
+1.7743 	EXP 	intro_text: autoDraw = False
+2.2612 	EXP 	consent_text: autoDraw = True
+26.7536 	EXP 	consent_text: autoDraw = False
+26.7536 	EXP 	consent_text_2: autoDraw = True
+29.6647 	DATA 	Keypress: space
+29.6696 	EXP 	consent_text: autoDraw = False
+29.6696 	EXP 	consent_text_2: autoDraw = False
+30.1553 	EXP 	data_safety_text: autoDraw = True
+39.6540 	EXP 	data_safety_text: autoDraw = False
+39.6540 	EXP 	data_safety_text_2: autoDraw = True
+40.2407 	DATA 	Keypress: space
+40.2459 	EXP 	data_safety_text: autoDraw = False
+40.2459 	EXP 	data_safety_text_2: autoDraw = False
+40.7395 	EXP 	data_safety_2_text_: autoDraw = True
+50.2385 	EXP 	data_safety_2_text_: autoDraw = False
+50.2385 	EXP 	data_safety_2_text_2: autoDraw = True
+51.1909 	DATA 	Keypress: space
+51.1963 	EXP 	data_safety_2_text_: autoDraw = False
+51.1963 	EXP 	data_safety_2_text_2: autoDraw = False
+51.6901 	EXP 	instructions_cat_text: autoDraw = True
+76.1807 	EXP 	instructions_cat_text: autoDraw = False
+76.1807 	EXP 	instructions_cat_text_2: autoDraw = True
+77.4441 	DATA 	Keypress: space
+77.4508 	EXP 	instructions_cat_text: autoDraw = False
+77.4508 	EXP 	instructions_cat_text_2: autoDraw = False
+77.4508 	EXP 	instructions_cat_2_text: autoDraw = True
+78.5026 	DATA 	Keypress: space
+78.5078 	EXP 	instructions_cat_2_text: autoDraw = False
+78.9979 	EXP 	category_test_word: autoDraw = True
+80.9962 	EXP 	Imported conditions_cat_training.xlsx as conditions, 16 conditions, 2 params
+80.9975 	EXP 	Created sequence: random, trialTypes=16, nReps=1, seed=None
+80.9978 	EXP 	New trial (rep=0, index=0): {'stimulus': 'stimuli/lituryeyxcfvghjk.jpg', 'correct_answer': 'f'}
+81.0035 	EXP 	category_test_word: autoDraw = False
+81.0035 	EXP 	category_test_word: autoDraw = False
+81.0148 	EXP 	fix_cat_training_question: autoDraw = True
+81.0148 	EXP 	fix_cat_training_no: autoDraw = True
+81.0148 	EXP 	fix_cat_training_yes: autoDraw = True
+81.0148 	EXP 	fix_cat_training_pic: autoDraw = True
+81.5683 	DATA 	Keypress: j
+82.2141 	EXP 	fix_cat_training_question: autoDraw = False
+82.2141 	EXP 	fix_cat_training_no: autoDraw = False
+82.2141 	EXP 	fix_cat_training_yes: autoDraw = False
+82.2141 	EXP 	fix_cat_training_pic: autoDraw = False
+82.2141 	EXP 	fix_cat_training_question: autoDraw = False
+82.2141 	EXP 	fix_cat_training_no: autoDraw = False
+82.2141 	EXP 	fix_cat_training_yes: autoDraw = False
+82.2141 	EXP 	fix_cat_training_pic: autoDraw = False
+82.2141 	EXP 	cat_training_stim: image = 'stimuli/lituryeyxcfvghjk.jpg'
+82.2141 	EXP 	cat_training_stim: autoDraw = True
+82.2141 	EXP 	cat_training_question: autoDraw = True
+82.2141 	EXP 	cat_training_no: autoDraw = True
+82.2141 	EXP 	cat_training_yes: autoDraw = True
+82.8528 	DATA 	Keypress: j
+82.8713 	EXP 	cat_training_fix: autoDraw = False
+82.8713 	EXP 	cat_training_stim: autoDraw = False
+82.8713 	EXP 	cat_training_question: autoDraw = False
+82.8713 	EXP 	cat_training_no: autoDraw = False
+82.8713 	EXP 	cat_training_yes: autoDraw = False
+82.8713 	EXP 	cat_train_feedback_text: height = 0.05
+82.8713 	EXP 	cat_train_feedback_text: height = 0.05
+82.8713 	EXP 	cat_train_feedback_text: height = 0.05
+82.8713 	EXP 	cat_train_feedback_text: text = 'falsch'
+82.8713 	EXP 	cat_train_feedb_no: autoDraw = True
+82.8713 	EXP 	cat_train_feedb_yes: autoDraw = True
+82.8713 	EXP 	cat_train_feedb_question: autoDraw = True
+83.3545 	EXP 	cat_train_feedback_text: autoDraw = True
+83.8481 	EXP 	cat_train_feedback_text: autoDraw = False
+83.8547 	EXP 	New trial (rep=0, index=1): {'stimulus': 'stimuli/hhhh.jpg', 'correct_answer': 'f'}
+83.8646 	EXP 	cat_train_feedb_no: autoDraw = False
+83.8646 	EXP 	cat_train_feedb_yes: autoDraw = False
+83.8646 	EXP 	cat_train_feedb_question: autoDraw = False
+83.8646 	EXP 	cat_train_feedback_text: autoDraw = False
+83.8646 	EXP 	cat_train_feedb_no: autoDraw = False
+83.8646 	EXP 	cat_train_feedb_yes: autoDraw = False
+83.8646 	EXP 	cat_train_feedb_question: autoDraw = False
+83.8646 	EXP 	fix_cat_training_question: autoDraw = True
+83.8646 	EXP 	fix_cat_training_no: autoDraw = True
+83.8646 	EXP 	fix_cat_training_yes: autoDraw = True
+83.8646 	EXP 	fix_cat_training_pic: autoDraw = True
+85.4457 	EXP 	fix_cat_training_question: autoDraw = False
+85.4457 	EXP 	fix_cat_training_no: autoDraw = False
+85.4457 	EXP 	fix_cat_training_yes: autoDraw = False
+85.4457 	EXP 	fix_cat_training_pic: autoDraw = False
+85.4457 	EXP 	fix_cat_training_question: autoDraw = False
+85.4457 	EXP 	fix_cat_training_no: autoDraw = False
+85.4457 	EXP 	fix_cat_training_yes: autoDraw = False
+85.4457 	EXP 	fix_cat_training_pic: autoDraw = False
+85.4457 	EXP 	cat_training_stim: image = 'stimuli/hhhh.jpg'
+85.4457 	EXP 	cat_training_stim: autoDraw = True
+85.4457 	EXP 	cat_training_question: autoDraw = True
+85.4457 	EXP 	cat_training_no: autoDraw = True
+85.4457 	EXP 	cat_training_yes: autoDraw = True
+86.1820 	EXP 	cat_training_fix: autoDraw = True
+86.1885 	EXP 	cat_training_stim: autoDraw = False
+86.9422 	DATA 	Keypress: j
+86.9550 	EXP 	cat_training_fix: autoDraw = False
+86.9550 	EXP 	cat_training_stim: autoDraw = False
+86.9550 	EXP 	cat_training_question: autoDraw = False
+86.9550 	EXP 	cat_training_no: autoDraw = False
+86.9550 	EXP 	cat_training_yes: autoDraw = False
+86.9550 	EXP 	cat_train_feedback_text: text = 'falsch'
+86.9550 	EXP 	cat_train_feedb_no: autoDraw = True
+86.9550 	EXP 	cat_train_feedb_yes: autoDraw = True
+86.9550 	EXP 	cat_train_feedb_question: autoDraw = True
+87.4395 	EXP 	cat_train_feedback_text: autoDraw = True
+87.9377 	EXP 	cat_train_feedback_text: autoDraw = False
+87.9383 	EXP 	New trial (rep=0, index=2): {'stimulus': 'stimuli/fvbjgv.jpg', 'correct_answer': 'f'}
+87.9486 	EXP 	cat_train_feedb_no: autoDraw = False
+87.9486 	EXP 	cat_train_feedb_yes: autoDraw = False
+87.9486 	EXP 	cat_train_feedb_question: autoDraw = False
+87.9486 	EXP 	cat_train_feedback_text: autoDraw = False
+87.9486 	EXP 	cat_train_feedb_no: autoDraw = False
+87.9486 	EXP 	cat_train_feedb_yes: autoDraw = False
+87.9486 	EXP 	cat_train_feedb_question: autoDraw = False
+87.9486 	EXP 	fix_cat_training_question: autoDraw = True
+87.9486 	EXP 	fix_cat_training_no: autoDraw = True
+87.9486 	EXP 	fix_cat_training_yes: autoDraw = True
+87.9486 	EXP 	fix_cat_training_pic: autoDraw = True
+89.0785 	EXP 	fix_cat_training_question: autoDraw = False
+89.0785 	EXP 	fix_cat_training_no: autoDraw = False
+89.0785 	EXP 	fix_cat_training_yes: autoDraw = False
+89.0785 	EXP 	fix_cat_training_pic: autoDraw = False
+89.0785 	EXP 	fix_cat_training_question: autoDraw = False
+89.0785 	EXP 	fix_cat_training_no: autoDraw = False
+89.0785 	EXP 	fix_cat_training_yes: autoDraw = False
+89.0785 	EXP 	fix_cat_training_pic: autoDraw = False
+89.0785 	EXP 	cat_training_stim: image = 'stimuli/fvbjgv.jpg'
+89.0785 	EXP 	cat_training_stim: autoDraw = True
+89.0785 	EXP 	cat_training_question: autoDraw = True
+89.0785 	EXP 	cat_training_no: autoDraw = True
+89.0785 	EXP 	cat_training_yes: autoDraw = True
+89.8055 	EXP 	cat_training_fix: autoDraw = True
+89.8209 	EXP 	cat_training_stim: autoDraw = False
+90.3773 	DATA 	Keypress: j
+90.3818 	EXP 	cat_training_fix: autoDraw = False
+90.3818 	EXP 	cat_training_stim: autoDraw = False
+90.3818 	EXP 	cat_training_question: autoDraw = False
+90.3818 	EXP 	cat_training_no: autoDraw = False
+90.3818 	EXP 	cat_training_yes: autoDraw = False
+90.3818 	EXP 	cat_train_feedback_text: text = 'falsch'
+90.3818 	EXP 	cat_train_feedb_no: autoDraw = True
+90.3818 	EXP 	cat_train_feedb_yes: autoDraw = True
+90.3818 	EXP 	cat_train_feedb_question: autoDraw = True
+90.8730 	EXP 	cat_train_feedback_text: autoDraw = True
+91.3649 	EXP 	New trial (rep=0, index=3): {'stimulus': 'stimuli/oelkjhgfcfghjk.jpg', 'correct_answer': 'f'}
+91.3710 	EXP 	cat_train_feedback_text: autoDraw = False
+91.3710 	EXP 	cat_train_feedb_no: autoDraw = False
+91.3710 	EXP 	cat_train_feedb_yes: autoDraw = False
+91.3710 	EXP 	cat_train_feedb_question: autoDraw = False
+91.3710 	EXP 	cat_train_feedback_text: autoDraw = False
+91.3710 	EXP 	cat_train_feedb_no: autoDraw = False
+91.3710 	EXP 	cat_train_feedb_yes: autoDraw = False
+91.3710 	EXP 	cat_train_feedb_question: autoDraw = False
+91.3710 	EXP 	fix_cat_training_question: autoDraw = True
+91.3710 	EXP 	fix_cat_training_no: autoDraw = True
+91.3710 	EXP 	fix_cat_training_yes: autoDraw = True
+91.3710 	EXP 	fix_cat_training_pic: autoDraw = True
+92.7025 	EXP 	fix_cat_training_question: autoDraw = False
+92.7025 	EXP 	fix_cat_training_no: autoDraw = False
+92.7025 	EXP 	fix_cat_training_yes: autoDraw = False
+92.7025 	EXP 	fix_cat_training_pic: autoDraw = False
+92.7025 	EXP 	fix_cat_training_question: autoDraw = False
+92.7025 	EXP 	fix_cat_training_no: autoDraw = False
+92.7025 	EXP 	fix_cat_training_yes: autoDraw = False
+92.7025 	EXP 	fix_cat_training_pic: autoDraw = False
+92.7025 	EXP 	cat_training_stim: image = 'stimuli/oelkjhgfcfghjk.jpg'
+92.7025 	EXP 	cat_training_stim: autoDraw = True
+92.7025 	EXP 	cat_training_question: autoDraw = True
+92.7025 	EXP 	cat_training_no: autoDraw = True
+92.7025 	EXP 	cat_training_yes: autoDraw = True
+93.4316 	EXP 	cat_training_fix: autoDraw = True
+93.4477 	EXP 	cat_training_stim: autoDraw = False
+95.7375 	DATA 	Keypress: j
+95.7421 	EXP 	cat_training_fix: autoDraw = False
+95.7421 	EXP 	cat_training_stim: autoDraw = False
+95.7421 	EXP 	cat_training_question: autoDraw = False
+95.7421 	EXP 	cat_training_no: autoDraw = False
+95.7421 	EXP 	cat_training_yes: autoDraw = False
+95.7421 	EXP 	cat_train_feedback_text: text = 'falsch'
+95.7421 	EXP 	cat_train_feedb_no: autoDraw = True
+95.7421 	EXP 	cat_train_feedb_yes: autoDraw = True
+95.7421 	EXP 	cat_train_feedb_question: autoDraw = True
+96.2318 	EXP 	cat_train_feedback_text: autoDraw = True
+96.7206 	EXP 	cat_train_feedback_text: autoDraw = False
+96.7324 	EXP 	New trial (rep=0, index=4): {'stimulus': 'stimuli/zgfdetz.jpg', 'correct_answer': 'j'}
+96.7388 	EXP 	cat_train_feedb_no: autoDraw = False
+96.7388 	EXP 	cat_train_feedb_yes: autoDraw = False
+96.7388 	EXP 	cat_train_feedb_question: autoDraw = False
+96.7388 	EXP 	cat_train_feedback_text: autoDraw = False
+96.7388 	EXP 	cat_train_feedb_no: autoDraw = False
+96.7388 	EXP 	cat_train_feedb_yes: autoDraw = False
+96.7388 	EXP 	cat_train_feedb_question: autoDraw = False
+96.7388 	EXP 	fix_cat_training_question: autoDraw = True
+96.7388 	EXP 	fix_cat_training_no: autoDraw = True
+96.7388 	EXP 	fix_cat_training_yes: autoDraw = True
+96.7388 	EXP 	fix_cat_training_pic: autoDraw = True
+98.6516 	EXP 	fix_cat_training_question: autoDraw = False
+98.6516 	EXP 	fix_cat_training_no: autoDraw = False
+98.6516 	EXP 	fix_cat_training_yes: autoDraw = False
+98.6516 	EXP 	fix_cat_training_pic: autoDraw = False
+98.6516 	EXP 	fix_cat_training_question: autoDraw = False
+98.6516 	EXP 	fix_cat_training_no: autoDraw = False
+98.6516 	EXP 	fix_cat_training_yes: autoDraw = False
+98.6516 	EXP 	fix_cat_training_pic: autoDraw = False
+98.6516 	EXP 	cat_training_stim: image = 'stimuli/zgfdetz.jpg'
+98.6516 	EXP 	cat_training_stim: autoDraw = True
+98.6516 	EXP 	cat_training_question: autoDraw = True
+98.6516 	EXP 	cat_training_no: autoDraw = True
+98.6516 	EXP 	cat_training_yes: autoDraw = True
+98.9942 	DATA 	Keypress: j
+99.0114 	EXP 	cat_training_fix: autoDraw = False
+99.0114 	EXP 	cat_training_stim: autoDraw = False
+99.0114 	EXP 	cat_training_question: autoDraw = False
+99.0114 	EXP 	cat_training_no: autoDraw = False
+99.0114 	EXP 	cat_training_yes: autoDraw = False
+99.0114 	EXP 	cat_train_feedback_text: height = 0.05
+99.0114 	EXP 	cat_train_feedback_text: height = 0.05
+99.0114 	EXP 	cat_train_feedback_text: height = 0.05
+99.0114 	EXP 	cat_train_feedback_text: text = 'korrekt'
+99.0114 	EXP 	cat_train_feedb_no: autoDraw = True
+99.0114 	EXP 	cat_train_feedb_yes: autoDraw = True
+99.0114 	EXP 	cat_train_feedb_question: autoDraw = True
+99.4985 	EXP 	cat_train_feedback_text: autoDraw = True
+99.9878 	EXP 	cat_train_feedback_text: autoDraw = False
+99.9993 	EXP 	New trial (rep=0, index=5): {'stimulus': 'stimuli/khfp.jpg', 'correct_answer': 'f'}
+100.0054 	EXP 	cat_train_feedb_no: autoDraw = False
+100.0054 	EXP 	cat_train_feedb_yes: autoDraw = False
+100.0054 	EXP 	cat_train_feedb_question: autoDraw = False
+100.0054 	EXP 	cat_train_feedback_text: autoDraw = False
+100.0054 	EXP 	cat_train_feedb_no: autoDraw = False
+100.0054 	EXP 	cat_train_feedb_yes: autoDraw = False
+100.0054 	EXP 	cat_train_feedb_question: autoDraw = False
+100.0054 	EXP 	fix_cat_training_question: autoDraw = True
+100.0054 	EXP 	fix_cat_training_no: autoDraw = True
+100.0054 	EXP 	fix_cat_training_yes: autoDraw = True
+100.0054 	EXP 	fix_cat_training_pic: autoDraw = True
+101.3182 	EXP 	fix_cat_training_question: autoDraw = False
+101.3182 	EXP 	fix_cat_training_no: autoDraw = False
+101.3182 	EXP 	fix_cat_training_yes: autoDraw = False
+101.3182 	EXP 	fix_cat_training_pic: autoDraw = False
+101.3182 	EXP 	fix_cat_training_question: autoDraw = False
+101.3182 	EXP 	fix_cat_training_no: autoDraw = False
+101.3182 	EXP 	fix_cat_training_yes: autoDraw = False
+101.3182 	EXP 	fix_cat_training_pic: autoDraw = False
+101.3182 	EXP 	cat_training_stim: image = 'stimuli/khfp.jpg'
+101.3182 	EXP 	cat_training_stim: autoDraw = True
+101.3182 	EXP 	cat_training_question: autoDraw = True
+101.3182 	EXP 	cat_training_no: autoDraw = True
+101.3182 	EXP 	cat_training_yes: autoDraw = True
+101.8802 	DATA 	Keypress: j
+101.8853 	EXP 	cat_training_fix: autoDraw = False
+101.8853 	EXP 	cat_training_stim: autoDraw = False
+101.8853 	EXP 	cat_training_question: autoDraw = False
+101.8853 	EXP 	cat_training_no: autoDraw = False
+101.8853 	EXP 	cat_training_yes: autoDraw = False
+101.8853 	EXP 	cat_train_feedback_text: height = 0.05
+101.8853 	EXP 	cat_train_feedback_text: height = 0.05
+101.8853 	EXP 	cat_train_feedback_text: height = 0.05
+101.8853 	EXP 	cat_train_feedback_text: text = 'falsch'
+101.8853 	EXP 	cat_train_feedb_no: autoDraw = True
+101.8853 	EXP 	cat_train_feedb_yes: autoDraw = True
+101.8853 	EXP 	cat_train_feedb_question: autoDraw = True
+102.3728 	EXP 	cat_train_feedback_text: autoDraw = True
+102.8716 	EXP 	cat_train_feedback_text: autoDraw = False
+102.8722 	EXP 	New trial (rep=0, index=6): {'stimulus': 'stimuli/lkjhgfdxsdfghj.jpg', 'correct_answer': 'f'}
+102.8821 	EXP 	cat_train_feedb_no: autoDraw = False
+102.8821 	EXP 	cat_train_feedb_yes: autoDraw = False
+102.8821 	EXP 	cat_train_feedb_question: autoDraw = False
+102.8821 	EXP 	cat_train_feedback_text: autoDraw = False
+102.8821 	EXP 	cat_train_feedb_no: autoDraw = False
+102.8821 	EXP 	cat_train_feedb_yes: autoDraw = False
+102.8821 	EXP 	cat_train_feedb_question: autoDraw = False
+102.8821 	EXP 	fix_cat_training_question: autoDraw = True
+102.8821 	EXP 	fix_cat_training_no: autoDraw = True
+102.8821 	EXP 	fix_cat_training_yes: autoDraw = True
+102.8821 	EXP 	fix_cat_training_pic: autoDraw = True
+103.9134 	EXP 	fix_cat_training_question: autoDraw = False
+103.9134 	EXP 	fix_cat_training_no: autoDraw = False
+103.9134 	EXP 	fix_cat_training_yes: autoDraw = False
+103.9134 	EXP 	fix_cat_training_pic: autoDraw = False
+103.9134 	EXP 	fix_cat_training_question: autoDraw = False
+103.9134 	EXP 	fix_cat_training_no: autoDraw = False
+103.9134 	EXP 	fix_cat_training_yes: autoDraw = False
+103.9134 	EXP 	fix_cat_training_pic: autoDraw = False
+103.9134 	EXP 	cat_training_stim: image = 'stimuli/lkjhgfdxsdfghj.jpg'
+103.9134 	EXP 	cat_training_stim: autoDraw = True
+103.9134 	EXP 	cat_training_question: autoDraw = True
+103.9134 	EXP 	cat_training_no: autoDraw = True
+103.9134 	EXP 	cat_training_yes: autoDraw = True
+104.5875 	DATA 	Keypress: j
+104.5919 	EXP 	cat_training_fix: autoDraw = False
+104.5919 	EXP 	cat_training_stim: autoDraw = False
+104.5919 	EXP 	cat_training_question: autoDraw = False
+104.5919 	EXP 	cat_training_no: autoDraw = False
+104.5919 	EXP 	cat_training_yes: autoDraw = False
+104.5919 	EXP 	cat_train_feedback_text: text = 'falsch'
+104.5919 	EXP 	cat_train_feedb_no: autoDraw = True
+104.5919 	EXP 	cat_train_feedb_yes: autoDraw = True
+104.5919 	EXP 	cat_train_feedb_question: autoDraw = True
+105.0815 	EXP 	cat_train_feedback_text: autoDraw = True
+105.5712 	EXP 	cat_train_feedback_text: autoDraw = False
+105.5829 	EXP 	New trial (rep=0, index=7): {'stimulus': 'stimuli/erthjnbvcfg.jpg', 'correct_answer': 'f'}
+105.5894 	EXP 	cat_train_feedb_no: autoDraw = False
+105.5894 	EXP 	cat_train_feedb_yes: autoDraw = False
+105.5894 	EXP 	cat_train_feedb_question: autoDraw = False
+105.5894 	EXP 	cat_train_feedback_text: autoDraw = False
+105.5894 	EXP 	cat_train_feedb_no: autoDraw = False
+105.5894 	EXP 	cat_train_feedb_yes: autoDraw = False
+105.5894 	EXP 	cat_train_feedb_question: autoDraw = False
+105.5894 	EXP 	fix_cat_training_question: autoDraw = True
+105.5894 	EXP 	fix_cat_training_no: autoDraw = True
+105.5894 	EXP 	fix_cat_training_yes: autoDraw = True
+105.5894 	EXP 	fix_cat_training_pic: autoDraw = True
+107.4949 	EXP 	fix_cat_training_question: autoDraw = False
+107.4949 	EXP 	fix_cat_training_no: autoDraw = False
+107.4949 	EXP 	fix_cat_training_yes: autoDraw = False
+107.4949 	EXP 	fix_cat_training_pic: autoDraw = False
+107.4949 	EXP 	fix_cat_training_question: autoDraw = False
+107.4949 	EXP 	fix_cat_training_no: autoDraw = False
+107.4949 	EXP 	fix_cat_training_yes: autoDraw = False
+107.4949 	EXP 	fix_cat_training_pic: autoDraw = False
+107.4949 	EXP 	cat_training_stim: image = 'stimuli/erthjnbvcfg.jpg'
+107.4949 	EXP 	cat_training_stim: autoDraw = True
+107.4949 	EXP 	cat_training_question: autoDraw = True
+107.4949 	EXP 	cat_training_no: autoDraw = True
+107.4949 	EXP 	cat_training_yes: autoDraw = True
+107.7704 	DATA 	Keypress: j
+107.7748 	EXP 	cat_training_fix: autoDraw = False
+107.7748 	EXP 	cat_training_stim: autoDraw = False
+107.7748 	EXP 	cat_training_question: autoDraw = False
+107.7748 	EXP 	cat_training_no: autoDraw = False
+107.7748 	EXP 	cat_training_yes: autoDraw = False
+107.7748 	EXP 	cat_train_feedback_text: text = 'falsch'
+107.7748 	EXP 	cat_train_feedb_no: autoDraw = True
+107.7748 	EXP 	cat_train_feedb_yes: autoDraw = True
+107.7748 	EXP 	cat_train_feedb_question: autoDraw = True
+108.2568 	EXP 	cat_train_feedback_text: autoDraw = True
+108.7544 	EXP 	cat_train_feedback_text: autoDraw = False
+108.7663 	EXP 	New trial (rep=0, index=8): {'stimulus': 'stimuli/asdfghertghvgh.jpg', 'correct_answer': 'f'}
+108.7723 	EXP 	cat_train_feedb_no: autoDraw = False
+108.7723 	EXP 	cat_train_feedb_yes: autoDraw = False
+108.7723 	EXP 	cat_train_feedb_question: autoDraw = False
+108.7723 	EXP 	cat_train_feedback_text: autoDraw = False
+108.7723 	EXP 	cat_train_feedb_no: autoDraw = False
+108.7723 	EXP 	cat_train_feedb_yes: autoDraw = False
+108.7723 	EXP 	cat_train_feedb_question: autoDraw = False
+108.7723 	EXP 	fix_cat_training_question: autoDraw = True
+108.7723 	EXP 	fix_cat_training_no: autoDraw = True
+108.7723 	EXP 	fix_cat_training_yes: autoDraw = True
+108.7723 	EXP 	fix_cat_training_pic: autoDraw = True
+110.3358 	EXP 	fix_cat_training_question: autoDraw = False
+110.3358 	EXP 	fix_cat_training_no: autoDraw = False
+110.3358 	EXP 	fix_cat_training_yes: autoDraw = False
+110.3358 	EXP 	fix_cat_training_pic: autoDraw = False
+110.3358 	EXP 	fix_cat_training_question: autoDraw = False
+110.3358 	EXP 	fix_cat_training_no: autoDraw = False
+110.3358 	EXP 	fix_cat_training_yes: autoDraw = False
+110.3358 	EXP 	fix_cat_training_pic: autoDraw = False
+110.3358 	EXP 	cat_training_stim: image = 'stimuli/asdfghertghvgh.jpg'
+110.3358 	EXP 	cat_training_stim: autoDraw = True
+110.3358 	EXP 	cat_training_question: autoDraw = True
+110.3358 	EXP 	cat_training_no: autoDraw = True
+110.3358 	EXP 	cat_training_yes: autoDraw = True
+110.8211 	DATA 	Keypress: j
+110.8253 	EXP 	cat_training_fix: autoDraw = False
+110.8253 	EXP 	cat_training_stim: autoDraw = False
+110.8253 	EXP 	cat_training_question: autoDraw = False
+110.8253 	EXP 	cat_training_no: autoDraw = False
+110.8253 	EXP 	cat_training_yes: autoDraw = False
+110.8253 	EXP 	cat_train_feedback_text: text = 'falsch'
+110.8253 	EXP 	cat_train_feedb_no: autoDraw = True
+110.8253 	EXP 	cat_train_feedb_yes: autoDraw = True
+110.8253 	EXP 	cat_train_feedb_question: autoDraw = True
+111.3072 	EXP 	cat_train_feedback_text: autoDraw = True
+111.8051 	EXP 	cat_train_feedback_text: autoDraw = False
+111.8162 	EXP 	New trial (rep=0, index=9): {'stimulus': 'stimuli/uzgfvbnh.jpg', 'correct_answer': 'j'}
+111.8226 	EXP 	cat_train_feedb_no: autoDraw = False
+111.8226 	EXP 	cat_train_feedb_yes: autoDraw = False
+111.8226 	EXP 	cat_train_feedb_question: autoDraw = False
+111.8226 	EXP 	cat_train_feedback_text: autoDraw = False
+111.8226 	EXP 	cat_train_feedb_no: autoDraw = False
+111.8226 	EXP 	cat_train_feedb_yes: autoDraw = False
+111.8226 	EXP 	cat_train_feedb_question: autoDraw = False
+111.8226 	EXP 	fix_cat_training_question: autoDraw = True
+111.8226 	EXP 	fix_cat_training_no: autoDraw = True
+111.8226 	EXP 	fix_cat_training_yes: autoDraw = True
+111.8226 	EXP 	fix_cat_training_pic: autoDraw = True
+113.1355 	EXP 	fix_cat_training_question: autoDraw = False
+113.1355 	EXP 	fix_cat_training_no: autoDraw = False
+113.1355 	EXP 	fix_cat_training_yes: autoDraw = False
+113.1355 	EXP 	fix_cat_training_pic: autoDraw = False
+113.1355 	EXP 	fix_cat_training_question: autoDraw = False
+113.1355 	EXP 	fix_cat_training_no: autoDraw = False
+113.1355 	EXP 	fix_cat_training_yes: autoDraw = False
+113.1355 	EXP 	fix_cat_training_pic: autoDraw = False
+113.1355 	EXP 	cat_training_stim: image = 'stimuli/uzgfvbnh.jpg'
+113.1355 	EXP 	cat_training_stim: autoDraw = True
+113.1355 	EXP 	cat_training_question: autoDraw = True
+113.1355 	EXP 	cat_training_no: autoDraw = True
+113.1355 	EXP 	cat_training_yes: autoDraw = True
+113.5780 	DATA 	Keypress: j
+113.5823 	EXP 	cat_training_fix: autoDraw = False
+113.5823 	EXP 	cat_training_stim: autoDraw = False
+113.5823 	EXP 	cat_training_question: autoDraw = False
+113.5823 	EXP 	cat_training_no: autoDraw = False
+113.5823 	EXP 	cat_training_yes: autoDraw = False
+113.5823 	EXP 	cat_train_feedback_text: height = 0.05
+113.5823 	EXP 	cat_train_feedback_text: height = 0.05
+113.5823 	EXP 	cat_train_feedback_text: height = 0.05
+113.5823 	EXP 	cat_train_feedback_text: text = 'korrekt'
+113.5823 	EXP 	cat_train_feedb_no: autoDraw = True
+113.5823 	EXP 	cat_train_feedb_yes: autoDraw = True
+113.5823 	EXP 	cat_train_feedb_question: autoDraw = True
+114.0652 	EXP 	cat_train_feedback_text: autoDraw = True
+114.5545 	EXP 	cat_train_feedback_text: autoDraw = False
+114.5664 	EXP 	New trial (rep=0, index=10): {'stimulus': 'stimuli/asdfghjkloelkjhg.jpg', 'correct_answer': 'f'}
+114.5725 	EXP 	cat_train_feedb_no: autoDraw = False
+114.5725 	EXP 	cat_train_feedb_yes: autoDraw = False
+114.5725 	EXP 	cat_train_feedb_question: autoDraw = False
+114.5725 	EXP 	cat_train_feedback_text: autoDraw = False
+114.5725 	EXP 	cat_train_feedb_no: autoDraw = False
+114.5725 	EXP 	cat_train_feedb_yes: autoDraw = False
+114.5725 	EXP 	cat_train_feedb_question: autoDraw = False
+114.5725 	EXP 	fix_cat_training_question: autoDraw = True
+114.5725 	EXP 	fix_cat_training_no: autoDraw = True
+114.5725 	EXP 	fix_cat_training_yes: autoDraw = True
+114.5725 	EXP 	fix_cat_training_pic: autoDraw = True
+116.3123 	EXP 	fix_cat_training_question: autoDraw = False
+116.3123 	EXP 	fix_cat_training_no: autoDraw = False
+116.3123 	EXP 	fix_cat_training_yes: autoDraw = False
+116.3123 	EXP 	fix_cat_training_pic: autoDraw = False
+116.3123 	EXP 	fix_cat_training_question: autoDraw = False
+116.3123 	EXP 	fix_cat_training_no: autoDraw = False
+116.3123 	EXP 	fix_cat_training_yes: autoDraw = False
+116.3123 	EXP 	fix_cat_training_pic: autoDraw = False
+116.3123 	EXP 	cat_training_stim: image = 'stimuli/asdfghjkloelkjhg.jpg'
+116.3123 	EXP 	cat_training_stim: autoDraw = True
+116.3123 	EXP 	cat_training_question: autoDraw = True
+116.3123 	EXP 	cat_training_no: autoDraw = True
+116.3123 	EXP 	cat_training_yes: autoDraw = True
+116.8087 	DATA 	Keypress: j
+116.8140 	EXP 	cat_training_fix: autoDraw = False
+116.8140 	EXP 	cat_training_stim: autoDraw = False
+116.8140 	EXP 	cat_training_question: autoDraw = False
+116.8140 	EXP 	cat_training_no: autoDraw = False
+116.8140 	EXP 	cat_training_yes: autoDraw = False
+116.8140 	EXP 	cat_train_feedback_text: height = 0.05
+116.8140 	EXP 	cat_train_feedback_text: height = 0.05
+116.8140 	EXP 	cat_train_feedback_text: height = 0.05
+116.8140 	EXP 	cat_train_feedback_text: text = 'falsch'
+116.8140 	EXP 	cat_train_feedb_no: autoDraw = True
+116.8140 	EXP 	cat_train_feedb_yes: autoDraw = True
+116.8140 	EXP 	cat_train_feedb_question: autoDraw = True
+117.2992 	EXP 	cat_train_feedback_text: autoDraw = True
+117.7879 	EXP 	cat_train_feedback_text: autoDraw = False
+117.7998 	EXP 	New trial (rep=0, index=11): {'stimulus': 'stimuli/ztfcvbnhg.jpg', 'correct_answer': 'f'}
+117.8058 	EXP 	cat_train_feedb_no: autoDraw = False
+117.8058 	EXP 	cat_train_feedb_yes: autoDraw = False
+117.8058 	EXP 	cat_train_feedb_question: autoDraw = False
+117.8058 	EXP 	cat_train_feedback_text: autoDraw = False
+117.8058 	EXP 	cat_train_feedb_no: autoDraw = False
+117.8058 	EXP 	cat_train_feedb_yes: autoDraw = False
+117.8058 	EXP 	cat_train_feedb_question: autoDraw = False
+117.8058 	EXP 	fix_cat_training_question: autoDraw = True
+117.8058 	EXP 	fix_cat_training_no: autoDraw = True
+117.8058 	EXP 	fix_cat_training_yes: autoDraw = True
+117.8058 	EXP 	fix_cat_training_pic: autoDraw = True
+119.6470 	EXP 	fix_cat_training_question: autoDraw = False
+119.6470 	EXP 	fix_cat_training_no: autoDraw = False
+119.6470 	EXP 	fix_cat_training_yes: autoDraw = False
+119.6470 	EXP 	fix_cat_training_pic: autoDraw = False
+119.6470 	EXP 	fix_cat_training_question: autoDraw = False
+119.6470 	EXP 	fix_cat_training_no: autoDraw = False
+119.6470 	EXP 	fix_cat_training_yes: autoDraw = False
+119.6470 	EXP 	fix_cat_training_pic: autoDraw = False
+119.6470 	EXP 	cat_training_stim: image = 'stimuli/ztfcvbnhg.jpg'
+119.6470 	EXP 	cat_training_stim: autoDraw = True
+119.6470 	EXP 	cat_training_question: autoDraw = True
+119.6470 	EXP 	cat_training_no: autoDraw = True
+119.6470 	EXP 	cat_training_yes: autoDraw = True
+120.0118 	DATA 	Keypress: j
+120.0162 	EXP 	cat_training_fix: autoDraw = False
+120.0162 	EXP 	cat_training_stim: autoDraw = False
+120.0162 	EXP 	cat_training_question: autoDraw = False
+120.0162 	EXP 	cat_training_no: autoDraw = False
+120.0162 	EXP 	cat_training_yes: autoDraw = False
+120.0162 	EXP 	cat_train_feedback_text: text = 'falsch'
+120.0162 	EXP 	cat_train_feedb_no: autoDraw = True
+120.0162 	EXP 	cat_train_feedb_yes: autoDraw = True
+120.0162 	EXP 	cat_train_feedb_question: autoDraw = True
+120.5075 	EXP 	cat_train_feedback_text: autoDraw = True
+121.0001 	EXP 	New trial (rep=0, index=12): {'stimulus': 'stimuli/sdfghjklkjbv.jpg', 'correct_answer': 'f'}
+121.0064 	EXP 	cat_train_feedback_text: autoDraw = False
+121.0064 	EXP 	cat_train_feedb_no: autoDraw = False
+121.0064 	EXP 	cat_train_feedb_yes: autoDraw = False
+121.0064 	EXP 	cat_train_feedb_question: autoDraw = False
+121.0064 	EXP 	cat_train_feedback_text: autoDraw = False
+121.0064 	EXP 	cat_train_feedb_no: autoDraw = False
+121.0064 	EXP 	cat_train_feedb_yes: autoDraw = False
+121.0064 	EXP 	cat_train_feedb_question: autoDraw = False
+121.0064 	EXP 	fix_cat_training_question: autoDraw = True
+121.0064 	EXP 	fix_cat_training_no: autoDraw = True
+121.0064 	EXP 	fix_cat_training_yes: autoDraw = True
+121.0064 	EXP 	fix_cat_training_pic: autoDraw = True
+122.8674 	DEPRECATION 	Couldn't find image stimuli/sdfghjklkjbv.jpg; check path? (tried: /Users/mathilde/Buschlab/scene_cat_exp/scene_cat_exp_2023.2.2/stimuli/sdfghjklkjbv.jpg)
+122.9101 	EXP 	window1: mouseVisible = True
