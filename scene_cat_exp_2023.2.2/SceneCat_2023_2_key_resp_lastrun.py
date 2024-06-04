@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on Mon May 27 16:03:59 2024
+    on Sun Jun  2 13:49:13 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -531,35 +531,37 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from conditions_files_code
     # Conditions Files zuweisen 
     participant = expInfo['participant']
-    if int(participant) <= 30:
-        conditions_cat_kitchen_a = participant + "_scenecat_categorize_kitchen_1.xlsx"
-        conditions_cat_kitchen_b = participant + "_scenecat_categorize_kitchen_2.xlsx"
-        conditions_cat_living_a = participant + "_scenecat_categorize_living_room_1.xlsx"
-        conditions_cat_living_b = participant + "_scenecat_categorize_living_room_2.xlsx"
-        conditions_cat_sleep_a = participant + "_scenecat_categorize_bedroom_1.xlsx"
-        conditions_cat_sleep_b = participant + "_scenecat_categorize_bedroom_2.xlsx"
-        conditions_memo_kitchen_a = participant + "_scenecat_memo_kitchen_1.xlsx"
-        conditions_memo_kitchen_b = participant + "_scenecat_memo_kitchen_2.xlsx"
-        conditions_memo_living_a = participant + "_scenecat_memo_living_room_1.xlsx"
-        conditions_memo_living_b = participant + "_scenecat_memo_living_room_2.xlsx"
-        conditions_memo_sleep_a = participant + "_scenecat_memo_bedroom_1.xlsx"
-        conditions_memo_sleep_b = participant + "_scenecat_memo_bedroom_2.xlsx"
-        conditions_block_order = participant + "_scenecat_block_order.xlsx"
+    
+    if int(participant) % 2 == 0:
+        num_participant = int(participant)/2
+        conditions_cat_kitchen_a = "input_files/" + str(num_participant) + "_groupA_scenecat_categorization_kitchens_1.xlsx"
+        conditions_cat_kitchen_b = "input_files/" + str(num_participant) + "_groupA_scenecat_categorization_kitchens_2.xlsx"
+        conditions_cat_living_a = "input_files/" + str(num_participant) + "_groupA_scenecat_categorization_living_rooms_1.xlsx"
+        conditions_cat_living_b = "input_files/" + str(num_participant) + "_groupA_scenecat_categorization_living_rooms_2.xlsx"
+        conditions_cat_sleep_a = "input_files/" + str(num_participant) + "_groupA_scenecat_categorization_bedrooms_1.xlsx"
+        conditions_cat_sleep_b = "input_files/" + str(num_participant) + "_groupA_scenecat_categorization_bedrooms_2.xlsx"
+        conditions_memo_kitchen_a = "input_files/" + str(num_participant) + "_groupA_scenecat_memory_kitchens_1.xlsx"
+        conditions_memo_kitchen_b = "input_files/" + str(num_participant) + "_groupA_scenecat_memory_kitchens_2.xlsx"
+        conditions_memo_living_a = "input_files/" + str(num_participant) + "_groupA_scenecat_memory_living_rooms_1.xlsx"
+        conditions_memo_living_b = "input_files/" + str(num_participant) + "_groupA_scenecat_memory_living_rooms_2.xlsx"
+        conditions_memo_sleep_a = "input_files/" + str(num_participant) + "_groupA_scenecat_memory_bedrooms_1.xlsx"
+        conditions_memo_sleep_b = "input_files/" + str(num_participant) + "_groupA_scenecat_memory_bedrooms_2.xlsx"
+        conditions_block_order = "input_files/" + str(num_participant) + "_groupA_scenecat_block_order.xlsx"
     else:
-        participant = str(int(participant) - 30)
-        conditions_cat_kitchen_a = participant + "_scenecat_categorize_kitchen_1.xlsx"
-        conditions_cat_kitchen_b = participant + "_scenecat_categorize_kitchen_2.xlsx"
-        conditions_cat_living_a = participant + "_scenecat_categorize_living_room_1.xlsx"
-        conditions_cat_living_b = participant + "_scenecat_categorize_living_room_2.xlsx"
-        conditions_cat_sleep_a = participant + "_scenecat_categorize_bedroom_1.xlsx"
-        conditions_cat_sleep_b = participant + "_scenecat_categorize_bedroom_2.xlsx"
-        conditions_memo_kitchen_a = participant + "_scenecat_memo_kitchen_1.xlsx"
-        conditions_memo_kitchen_b = participant + "_scenecat_memo_kitchen_2.xlsx"
-        conditions_memo_living_a = participant + "_scenecat_memo_living_room_1.xlsx"
-        conditions_memo_living_b = participant + "_scenecat_memo_living_room_2.xlsx"
-        conditions_memo_sleep_a = participant + "_scenecat_memo_bedroom_1.xlsx"
-        conditions_memo_sleep_b = participant + "_scenecat_memo_bedroom_2.xlsx"
-        conditions_block_order = participant + "_scenecat_block_order.xlsx"
+        num_participant = (int(participant)  + 1)/2
+        conditions_cat_kitchen_a = "input_files/" + str(num_participant) + "_groupB_scenecat_categorization_kitchens_1.xlsx"
+        conditions_cat_kitchen_b = "input_files/" +  str(num_participant) + "_groupB_scenecat_categorization_kitchens_2.xlsx"
+        conditions_cat_living_a = "input_files/" +  str(num_participant) + "_groupB_scenecat_categorization_living_rooms_1.xlsx"
+        conditions_cat_living_b = "input_files/" +  str(num_participant) + "_groupB_scenecat_categorization_living_rooms_2.xlsx"
+        conditions_cat_sleep_a = "input_files/" +  str(num_participant) + "_groupB_scenecat_categorization_bedrooms_1.xlsx"
+        conditions_cat_sleep_b = "input_files/" +  str(num_participant) + "_groupB_scenecat_categorization_bedrooms_2.xlsx"
+        conditions_memo_kitchen_a = "input_files/" + str(num_participant) + "_groupB_scenecat_memory_kitchens_1.xlsx"
+        conditions_memo_kitchen_b = "input_files/" +  str(num_participant) + "_groupB_scenecat_memory_kitchens_2.xlsx"
+        conditions_memo_living_a = "input_files/" +  str(num_participant) + "_groupB_scenecat_memory_living_rooms_1.xlsx"
+        conditions_memo_living_b = "input_files/" +  str(num_participant) + "_groupB_scenecat_memory_living_rooms_2.xlsx"
+        conditions_memo_sleep_a = "input_files/" +  str(num_participant) + "_groupB_scenecat_memory_bedrooms_1.xlsx"
+        conditions_memo_sleep_b = "input_files/" +  str(num_participant) + "_groupB_scenecat_memory_bedrooms_2.xlsx"
+        conditions_block_order = "input_files/" +  str(num_participant) + "_groupB_scenecat_block_order.xlsx"
     
     
     # --- Initialize components for Routine "consent" ---
@@ -580,54 +582,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     consent_resp = keyboard.Keyboard(deviceName='consent_resp')
     
     # --- Initialize components for Routine "data_safety" ---
-    data_safety_text = visual.TextStim(win=win, name='data_safety_text',
-        text='Datenschutzerklärung\n1. Umfang der Datenerhebung und -verarbeitung: Im Zuge der Studie werden Ihre demographischen Daten (Alter, Geschlecht, Händigkeit) sowie Reaktionszeiten und Korrektheit Ihrer Antworten während des Experiments erhoben. Die im Rahmen dieser Studie erhobenen Daten und persönlichen Mitteilungen werden vertraulich behandelt. Diejenigen Mitarbeiter, die durch direkten Kontakt mit Ihnen über personenbezogene Daten verfügen, unterliegen der Schweigepflicht.  Die Erhebung der Daten erfolgt vollständig anonymisiert, d. h.  an keiner Stelle wird Ihr Name erfragt. Die anonymisierten Daten werden mindestens 10 Jahre gespeichert. Dazu werden Ihre Daten am Ende der Sitzung ohne Angabe Ihres Namens abgespeichert, d.h. in anonymisierter Form. Ab diesem Zeitpunkt können ihre Daten nicht mehr mit ihrer Person in Verbindung gebracht werden, d.h. eine Identifizierung Ihrer Daten ist dann nicht mehr möglich. Deshalb können wir Ihrem Verlangen nach Löschung Ihrer Daten nur so lange nachkommen, bis diese in anonymisierter Form abgespeichert worden sind. Die Ergebnisse und Daten dieser Studie werden als wissenschaftliche Publikation veröffentlicht. Dies geschieht in anonymisierter Form, d.h. ohne dass die Daten einer spezifischen Person zugeordnet werden. Die vollständig anonymisierten Daten dieser Studie werden als offene Daten in einem sicheren, internetbasierten Datenarchiv (z.B. OSF, ZPID, GESIS etc.) zugänglich gemacht. Damit folgt diese Studie den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) und der Deutschen Gesellschaft für Psychologie (DGPs) zur Qualitätssicherung in der Forschung.\n2. Rechtsgrundlage: Die Rechtsgrundlage zur Verarbeitung der genannten personenbezogenen Daten bildet die Einwilligung gemäß Art. 6 (1) Buchstabe a EU-DSGVO.\n\n',
-        font='Open Sans',
-        pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
     data_safety_text_2 = visual.TextStim(win=win, name='data_safety_text_2',
         text='Datenschutzerklärung\n1. Umfang der Datenerhebung und -verarbeitung: Im Zuge der Studie werden Ihre demographischen Daten (Alter, Geschlecht, Händigkeit) sowie Reaktionszeiten und Korrektheit Ihrer Antworten während des Experiments erhoben. Die im Rahmen dieser Studie erhobenen Daten und persönlichen Mitteilungen werden vertraulich behandelt. Diejenigen Mitarbeiter, die durch direkten Kontakt mit Ihnen über personenbezogene Daten verfügen, unterliegen der Schweigepflicht.  Die Erhebung der Daten erfolgt vollständig anonymisiert, d. h.  an keiner Stelle wird Ihr Name erfragt. Die anonymisierten Daten werden mindestens 10 Jahre gespeichert. Dazu werden Ihre Daten am Ende der Sitzung ohne Angabe Ihres Namens abgespeichert, d.h. in anonymisierter Form. Ab diesem Zeitpunkt können ihre Daten nicht mehr mit ihrer Person in Verbindung gebracht werden, d.h. eine Identifizierung Ihrer Daten ist dann nicht mehr möglich. Deshalb können wir Ihrem Verlangen nach Löschung Ihrer Daten nur so lange nachkommen, bis diese in anonymisierter Form abgespeichert worden sind. Die Ergebnisse und Daten dieser Studie werden als wissenschaftliche Publikation veröffentlicht. Dies geschieht in anonymisierter Form, d.h. ohne dass die Daten einer spezifischen Person zugeordnet werden. Die vollständig anonymisierten Daten dieser Studie werden als offene Daten in einem sicheren, internetbasierten Datenarchiv (z.B. OSF, ZPID, GESIS etc.) zugänglich gemacht. Damit folgt diese Studie den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) und der Deutschen Gesellschaft für Psychologie (DGPs) zur Qualitätssicherung in der Forschung.\n2. Rechtsgrundlage: Die Rechtsgrundlage zur Verarbeitung der genannten personenbezogenen Daten bildet die Einwilligung gemäß Art. 6 (1) Buchstabe a EU-DSGVO.\n\nWeiter mit der LEERTASTE.',
         font='Open Sans',
         pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=0.0);
     data_safety_resp = keyboard.Keyboard(deviceName='data_safety_resp')
     
     # --- Initialize components for Routine "data_safety_2" ---
-    data_safety_2_text_ = visual.TextStim(win=win, name='data_safety_2_text_',
-        text='3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: niko.busch@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\n',
-        font='Open Sans',
-        pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
     data_safety_2_text_2 = visual.TextStim(win=win, name='data_safety_2_text_2',
         text='3. Widerruf: Sie haben das Recht, jederzeit die datenschutzrechtliche Einwilligung zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. (Widerruf mit Wirkung für die Zukunft). Richten Sie den Widerruf an den Verantwortlichen. Ihnen entstehen durch den Widerruf keine Nachteile.\n4. Namen und Anschrift des Verantwortlichen: Der Verantwortliche im Sinne der EU-Datenschutzgrundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die Universität Münster, vertreten durch den Rektor, Prof. Dr. Johannes Wessels, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-0, E-Mail: verwaltung@uni-muenster.de. Bei inhaltlichen Rückfragen zum Projekt wenden Sie sich bitte direkt an den fachlichen Ansprechpartner: Prof. Niko Busch, Tel.: + 49 (0) 251 83 34159, E-Mail: niko.busch@uni-muenster.de\n5. Kontaktdaten der Datenschutzbeauftragten: Die Datenschutzbeauftragte der Universität Münster ist:, Nina Meyer-Pachur, Schlossplatz 2, 48149 Münster, Tel.: + 49 251 83-22446, E-Mail: datenschutz@uni-muenster.de\n6. Hinweis auf Rechte der Betroffenen: Gemäß der Datenschutzgrundverordnung haben Sie grundsätzlich das Recht auf: Auskunft (Art 15 DSGVO) , Widerspruch (Art. 21 DSGVO), Datenübertragbarkeit (Art 20 DSGVO), Löschung (Art 17 DSGVO), Einschränkung der Verarbeitung (Art 18 DSGVO), Berichtigung (Art 16 DSGVO). Möchten Sie eines dieser Rechte in Anspruch nehmen, wenden Sie sich bitte an eine der genannten Kontaktpersonen. Weiterhin haben Sie das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Helga Block, Kavalleriestraße 2-4, 40213 Düsseldorf, Telefon: 02 11/384 24-0, E-Mail: poststelle@ldi.nrw.de, Homepage: http://www.ldi.nrw.de\n\nDrücken Sie die LEERTASTE, um zu bestätigen und fortzufahren.',
         font='Open Sans',
         pos=(0, 0), height=0.028, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=0.0);
     data_safety_2_resp = keyboard.Keyboard(deviceName='data_safety_2_resp')
     
     # --- Initialize components for Routine "instructions_cat" ---
-    instructions_cat_text = visual.TextStim(win=win, name='instructions_cat_text',
-        text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "f", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "j", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nGleich geht\'s weiter…',
-        font='Open Sans',
-        pos=(0, 0), height=0.026, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
     instructions_cat_text_2 = visual.TextStim(win=win, name='instructions_cat_text_2',
         text='Instruktion\n\nDas Experiment besteht aus einem Übungsblock und sechs darauf folgenden Blöcken mit jeweils zwei Teilen.\n\nZu Beginn jedes Blocks wird Ihnen eine bestimmte Raumkategorie genannt, z.B. Wohnzimmer. Im ersten Teil des Blocks ist es dann Ihre Aufgabe, die gezeigten Bilder zu kategorisieren. \nHierfür drücken Sie bitte so SCHNELL wie möglich die Taste "f", wenn das Bild NICHT zur genannten Kategorie gehört und die Taste "j", wenn das Bild zur genannten Kategorie gehört.\n\nIm zweiten Teil des Blocks folgt ein Gedächtnistest, bei dem Ihnen wieder Bilder präsentiert werden. Sie müssen anschließend für jedes Bild angeben, ob es im ersten Teil des Blocks in der Kategorisierungsaufgabe gezeigt wurde und wie sicher Sie sich mit Ihrer Antwort sind. \nAls Antwortmöglichkeiten stehen zur Auswahl: "sicher alt", "eher alt", "eher neu", "sicher neu". Hierbei bedeutet "alt", dass das Bild in der vorherigen Aufgabe gezeigt wurde und "neu", dass das Bild noch nicht gezeigt wurde. Drücken Sie die Taste mit der entsprechenden Option. \n\nIn beiden Teilen wird Ihnen zwischen den Bildern ein Fixationskreuz in der Mitte des Bildschirms präsentiert. Bitte halten Sie während des gesamten Blocks den Blick immer auf diese Position gerichtet.\n\nBevor die Aufgabe beginnt, wird es einen Übungsblock durch beide Aufgabenteile geben. In diesem wird Ihnen nach jeder Antwort eingeblendet, ob Sie korrekt oder falsch geantwortet haben. Dies dient dem besseren Verständnis der Aufgabe.\nPlatzieren Sie Ihre Finger am besten schon jetzt auf den Tasten "f" und "j".\n\nDrücken Sie die LEERTASTE, um einen Testlauf zu starten.',
         font='Open Sans',
         pos=(0, 0), height=0.026, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=0.0);
     instructions_cat_resp = keyboard.Keyboard(deviceName='instructions_cat_resp')
     
     # --- Initialize components for Routine "instructions_cat_2" ---
@@ -1911,7 +1892,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     data_safety_resp.rt = []
     _data_safety_resp_allKeys = []
     # keep track of which components have finished
-    data_safetyComponents = [data_safety_text, data_safety_text_2, data_safety_resp]
+    data_safetyComponents = [data_safety_text_2, data_safety_resp]
     for thisComponent in data_safetyComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1934,40 +1915,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *data_safety_text* updates
-        
-        # if data_safety_text is starting this frame...
-        if data_safety_text.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
-            # keep track of start time/frame for later
-            data_safety_text.frameNStart = frameN  # exact frame index
-            data_safety_text.tStart = t  # local t and not account for scr refresh
-            data_safety_text.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(data_safety_text, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            data_safety_text.status = STARTED
-            data_safety_text.setAutoDraw(True)
-        
-        # if data_safety_text is active this frame...
-        if data_safety_text.status == STARTED:
-            # update params
-            pass
-        
-        # if data_safety_text is stopping this frame...
-        if data_safety_text.status == STARTED:
-            # is it time to stop? (based on local clock)
-            if tThisFlip > 10-frameTolerance:
-                # keep track of stop time/frame for later
-                data_safety_text.tStop = t  # not accounting for scr refresh
-                data_safety_text.tStopRefresh = tThisFlipGlobal  # on global time
-                data_safety_text.frameNStop = frameN  # exact frame index
-                # update status
-                data_safety_text.status = FINISHED
-                data_safety_text.setAutoDraw(False)
-        
         # *data_safety_text_2* updates
         
         # if data_safety_text_2 is starting this frame...
-        if data_safety_text_2.status == NOT_STARTED and tThisFlip >= 10-frameTolerance:
+        if data_safety_text_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             data_safety_text_2.frameNStart = frameN  # exact frame index
             data_safety_text_2.tStart = t  # local t and not account for scr refresh
@@ -1986,7 +1937,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         waitOnFlip = False
         
         # if data_safety_resp is starting this frame...
-        if data_safety_resp.status == NOT_STARTED and tThisFlip >= 10-frameTolerance:
+        if data_safety_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             data_safety_resp.frameNStart = frameN  # exact frame index
             data_safety_resp.tStart = t  # local t and not account for scr refresh
@@ -2044,7 +1995,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     data_safety_2_resp.rt = []
     _data_safety_2_resp_allKeys = []
     # keep track of which components have finished
-    data_safety_2Components = [data_safety_2_text_, data_safety_2_text_2, data_safety_2_resp]
+    data_safety_2Components = [data_safety_2_text_2, data_safety_2_resp]
     for thisComponent in data_safety_2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2067,40 +2018,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *data_safety_2_text_* updates
-        
-        # if data_safety_2_text_ is starting this frame...
-        if data_safety_2_text_.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
-            # keep track of start time/frame for later
-            data_safety_2_text_.frameNStart = frameN  # exact frame index
-            data_safety_2_text_.tStart = t  # local t and not account for scr refresh
-            data_safety_2_text_.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(data_safety_2_text_, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            data_safety_2_text_.status = STARTED
-            data_safety_2_text_.setAutoDraw(True)
-        
-        # if data_safety_2_text_ is active this frame...
-        if data_safety_2_text_.status == STARTED:
-            # update params
-            pass
-        
-        # if data_safety_2_text_ is stopping this frame...
-        if data_safety_2_text_.status == STARTED:
-            # is it time to stop? (based on local clock)
-            if tThisFlip > 10-frameTolerance:
-                # keep track of stop time/frame for later
-                data_safety_2_text_.tStop = t  # not accounting for scr refresh
-                data_safety_2_text_.tStopRefresh = tThisFlipGlobal  # on global time
-                data_safety_2_text_.frameNStop = frameN  # exact frame index
-                # update status
-                data_safety_2_text_.status = FINISHED
-                data_safety_2_text_.setAutoDraw(False)
-        
         # *data_safety_2_text_2* updates
         
         # if data_safety_2_text_2 is starting this frame...
-        if data_safety_2_text_2.status == NOT_STARTED and tThisFlip >= 10-frameTolerance:
+        if data_safety_2_text_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             data_safety_2_text_2.frameNStart = frameN  # exact frame index
             data_safety_2_text_2.tStart = t  # local t and not account for scr refresh
@@ -2177,7 +2098,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     instructions_cat_resp.rt = []
     _instructions_cat_resp_allKeys = []
     # keep track of which components have finished
-    instructions_catComponents = [instructions_cat_text, instructions_cat_text_2, instructions_cat_resp]
+    instructions_catComponents = [instructions_cat_text_2, instructions_cat_resp]
     for thisComponent in instructions_catComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2200,40 +2121,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *instructions_cat_text* updates
-        
-        # if instructions_cat_text is starting this frame...
-        if instructions_cat_text.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
-            # keep track of start time/frame for later
-            instructions_cat_text.frameNStart = frameN  # exact frame index
-            instructions_cat_text.tStart = t  # local t and not account for scr refresh
-            instructions_cat_text.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(instructions_cat_text, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            instructions_cat_text.status = STARTED
-            instructions_cat_text.setAutoDraw(True)
-        
-        # if instructions_cat_text is active this frame...
-        if instructions_cat_text.status == STARTED:
-            # update params
-            pass
-        
-        # if instructions_cat_text is stopping this frame...
-        if instructions_cat_text.status == STARTED:
-            # is it time to stop? (based on local clock)
-            if tThisFlip > 25-frameTolerance:
-                # keep track of stop time/frame for later
-                instructions_cat_text.tStop = t  # not accounting for scr refresh
-                instructions_cat_text.tStopRefresh = tThisFlipGlobal  # on global time
-                instructions_cat_text.frameNStop = frameN  # exact frame index
-                # update status
-                instructions_cat_text.status = FINISHED
-                instructions_cat_text.setAutoDraw(False)
-        
         # *instructions_cat_text_2* updates
         
         # if instructions_cat_text_2 is starting this frame...
-        if instructions_cat_text_2.status == NOT_STARTED and tThisFlip >= 25-frameTolerance:
+        if instructions_cat_text_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             instructions_cat_text_2.frameNStart = frameN  # exact frame index
             instructions_cat_text_2.tStart = t  # local t and not account for scr refresh
@@ -2252,7 +2143,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         waitOnFlip = False
         
         # if instructions_cat_resp is starting this frame...
-        if instructions_cat_resp.status == NOT_STARTED and tThisFlip >= 25-frameTolerance:
+        if instructions_cat_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             instructions_cat_resp.frameNStart = frameN  # exact frame index
             instructions_cat_resp.tStart = t  # local t and not account for scr refresh
@@ -3706,7 +3597,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 globals()[paramName] = thisCategorization_trial[paramName]
         
         # set up handler to look after randomisation of conditions etc
-        kitchen_a_categorization_trials = data.TrialHandler(nReps=kitchen_1, method='sequential', 
+        kitchen_a_categorization_trials = data.TrialHandler(nReps=kitchens_1, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_cat_kitchen_a),
             seed=None, name='kitchen_a_categorization_trials')
@@ -3741,7 +3632,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             kitchen_a_resp.keys = []
             kitchen_a_resp.rt = []
             _kitchen_a_resp_allKeys = []
-            kitchen_a_block_no.setText(block_total_cat)
+            kitchen_a_block_no.setText(block_total)
             # keep track of which components have finished
             kitchen_aComponents = [kitchen_a_text, kitchen_a_text_2, kitchen_a_resp, kitchen_a_block_no]
             for thisComponent in kitchen_aComponents:
@@ -4265,11 +4156,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed kitchen_1 repeats of 'kitchen_a_categorization_trials'
+        # completed kitchens_1 repeats of 'kitchen_a_categorization_trials'
         
         
         # set up handler to look after randomisation of conditions etc
-        kitchen_a_memotest = data.TrialHandler(nReps=kitchen_1, method='sequential', 
+        kitchen_a_memotest = data.TrialHandler(nReps=kitchens_1, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_kitchen_a),
             seed=None, name='kitchen_a_memotest')
@@ -4622,11 +4513,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed kitchen_1 repeats of 'kitchen_a_memotest'
+        # completed kitchens_1 repeats of 'kitchen_a_memotest'
         
         
         # set up handler to look after randomisation of conditions etc
-        kitchen_b_categorization_trials = data.TrialHandler(nReps=kitchen_2, method='sequential', 
+        kitchen_b_categorization_trials = data.TrialHandler(nReps=kitchens_2, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_cat_kitchen_b),
             seed=None, name='kitchen_b_categorization_trials')
@@ -5185,11 +5076,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed kitchen_2 repeats of 'kitchen_b_categorization_trials'
+        # completed kitchens_2 repeats of 'kitchen_b_categorization_trials'
         
         
         # set up handler to look after randomisation of conditions etc
-        kitchen_b_memotest = data.TrialHandler(nReps=kitchen_2, method='sequential', 
+        kitchen_b_memotest = data.TrialHandler(nReps=kitchens_2, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_kitchen_b),
             seed=None, name='kitchen_b_memotest')
@@ -5542,11 +5433,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed kitchen_2 repeats of 'kitchen_b_memotest'
+        # completed kitchens_2 repeats of 'kitchen_b_memotest'
         
         
         # set up handler to look after randomisation of conditions etc
-        living_a_categorization_trials = data.TrialHandler(nReps=living_room_1, method='sequential', 
+        living_a_categorization_trials = data.TrialHandler(nReps=living_rooms_1, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_cat_living_a),
             seed=None, name='living_a_categorization_trials')
@@ -6111,11 +6002,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed living_room_1 repeats of 'living_a_categorization_trials'
+        # completed living_rooms_1 repeats of 'living_a_categorization_trials'
         
         
         # set up handler to look after randomisation of conditions etc
-        living_a_memotest = data.TrialHandler(nReps=living_room_1, method='sequential', 
+        living_a_memotest = data.TrialHandler(nReps=living_rooms_1, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_living_a),
             seed=None, name='living_a_memotest')
@@ -6468,11 +6359,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed living_room_1 repeats of 'living_a_memotest'
+        # completed living_rooms_1 repeats of 'living_a_memotest'
         
         
         # set up handler to look after randomisation of conditions etc
-        living_b_categorization_trials = data.TrialHandler(nReps=living_room_2, method='sequential', 
+        living_b_categorization_trials = data.TrialHandler(nReps=living_rooms_2, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_cat_living_b),
             seed=None, name='living_b_categorization_trials')
@@ -7037,11 +6928,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed living_room_2 repeats of 'living_b_categorization_trials'
+        # completed living_rooms_2 repeats of 'living_b_categorization_trials'
         
         
         # set up handler to look after randomisation of conditions etc
-        living_b_memotest = data.TrialHandler(nReps=living_room_2, method='sequential', 
+        living_b_memotest = data.TrialHandler(nReps=living_rooms_2, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_living_b),
             seed=None, name='living_b_memotest')
@@ -7394,11 +7285,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed living_room_2 repeats of 'living_b_memotest'
+        # completed living_rooms_2 repeats of 'living_b_memotest'
         
         
         # set up handler to look after randomisation of conditions etc
-        bed_a_categorization_trials = data.TrialHandler(nReps=bedroom_1, method='sequential', 
+        bed_a_categorization_trials = data.TrialHandler(nReps=bedrooms_1, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_cat_sleep_a),
             seed=None, name='bed_a_categorization_trials')
@@ -7963,11 +7854,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed bedroom_1 repeats of 'bed_a_categorization_trials'
+        # completed bedrooms_1 repeats of 'bed_a_categorization_trials'
         
         
         # set up handler to look after randomisation of conditions etc
-        bed_a_memotest = data.TrialHandler(nReps=bedroom_1, method='random', 
+        bed_a_memotest = data.TrialHandler(nReps=bedrooms_1, method='random', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_sleep_a),
             seed=None, name='bed_a_memotest')
@@ -8320,11 +8211,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed bedroom_1 repeats of 'bed_a_memotest'
+        # completed bedrooms_1 repeats of 'bed_a_memotest'
         
         
         # set up handler to look after randomisation of conditions etc
-        bed_b_categorization_trials = data.TrialHandler(nReps=bedroom_2, method='random', 
+        bed_b_categorization_trials = data.TrialHandler(nReps=bedrooms_2, method='random', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_cat_sleep_b),
             seed=None, name='bed_b_categorization_trials')
@@ -8359,7 +8250,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             bed_b_resp.keys = []
             bed_b_resp.rt = []
             _bed_b_resp_allKeys = []
-            bed_b_block_no.setText(block_total_cat)
+            bed_b_block_no.setText(block_total)
             # keep track of which components have finished
             bed_bComponents = [bed_b_text, bed_b_text_2, bed_b_resp, bed_b_block_no]
             for thisComponent in bed_bComponents:
@@ -8889,11 +8780,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed bedroom_2 repeats of 'bed_b_categorization_trials'
+        # completed bedrooms_2 repeats of 'bed_b_categorization_trials'
         
         
         # set up handler to look after randomisation of conditions etc
-        bed_b_memotest = data.TrialHandler(nReps=bedroom_2, method='sequential', 
+        bed_b_memotest = data.TrialHandler(nReps=bedrooms_2, method='sequential', 
             extraInfo=expInfo, originPath=-1,
             trialList=data.importConditions(conditions_memo_sleep_b),
             seed=None, name='bed_b_memotest')
@@ -9246,7 +9137,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-        # completed bedroom_2 repeats of 'bed_b_memotest'
+        # completed bedrooms_2 repeats of 'bed_b_memotest'
         
         
         # --- Prepare to start Routine "middle_break" ---
