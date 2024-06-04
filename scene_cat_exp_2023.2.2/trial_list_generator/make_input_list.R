@@ -46,7 +46,7 @@ setwd(dirs$rcode)
 # Define variables
 # -----------------------------------------------------------------------------
 vars <- list()
-vars$n_subjects              <- 10 # Get input files for so many subjects.
+vars$n_subjects              <- 100 # Get input files for so many subjects.
 vars$categories              <- c('bedrooms', 'kitchens', 'living_rooms') # Use these scene categories.
 vars$img_extension           <- 'png' #'jpg' or 'png', no dot required. The jpg files are much smaller.
 
@@ -80,14 +80,14 @@ vars$n_catch_trials          <- 1 # Number of catch trials in each memory block
 # executes this script will always get the same random selection of images and
 # the same order of trials.
 
-#set.seed(48149) # ZIP code of our institute ;-) 
+set.seed(48149) # ZIP code of our institute ;-) 
 
 source("fn_range_bins_typicality.R")
 fn_range_bins_typicality(vars, dirs)
 
 source("fn_generate_input_cat_and_mem.R")
 
-for (isubject in 1:vars$n_subjects) {
+for (isubject in seq(1, vars$n_subjects, by=2)) {
  print(sprintf("Generating files for subject %d.", isubject))
  
  fn_generate_input_cat_and_mem(vars, dirs, isubject)

@@ -139,23 +139,23 @@ fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
     # Add meta-data for CATEGORIZATION task, update trial count, and save.
     input_list_cat_task[[iblock]] <- ffn_add_metadata_to_list(input_list_cat_task[[iblock]], "categorization", current_category, category_occurrences, iblock, desired_order, ntrials_total)
     ntrials_total <- ntrials_total + nrow(input_list_cat_task[[iblock]])
-    ffn_write_list_as_excel(input_list_cat_task[[iblock]], dirs, isubject, "groupA", "categorization", current_category, category_occurrences[iblock])
+    ffn_write_list_as_excel(input_list_cat_task[[iblock]], dirs, isubject, "categorization", current_category, category_occurrences[iblock])
     
     # Add meta-data for MEMORY task, update trial count, and save.
     input_list_mem_task[[iblock]] <- ffn_add_metadata_to_list(input_list_mem_task[[iblock]], "memory", current_category, category_occurrences, iblock, desired_order, ntrials_total)
     ntrials_total <- ntrials_total + nrow(input_list_mem_task[[iblock]])
-    ffn_write_list_as_excel(input_list_mem_task[[iblock]], dirs, isubject, "groupA", "memory", current_category, category_occurrences[iblock])
+    ffn_write_list_as_excel(input_list_mem_task[[iblock]], dirs, isubject, "memory", current_category, category_occurrences[iblock])
     
     # Now that we have all information for this subject finalized, we use this
     # info for generating another "anti-subject" for which target and lure images
-    # are switched.
+    # are switched. All anti-subjects have even numbers, i.e. subject id +1.
     anti_list <- list()
     anti_list <- ffn_generate_anti_subject(input_list_cat_task[[iblock]], input_list_mem_task[[iblock]])
     anti_list$catlist_new$subject_id <- 1000 + anti_list$catlist_new$subject_id
     anti_list$memlist_new$subject_id <- 1000 + anti_list$memlist_new$subject_id
     
-    ffn_write_list_as_excel(anti_list$catlist_anti, dirs, isubject, "groupB", "categorization", current_category, category_occurrences[iblock])
-    ffn_write_list_as_excel(anti_list$memlist_anti, dirs, isubject, "groupB", "memory", current_category, category_occurrences[iblock])
+    ffn_write_list_as_excel(anti_list$catlist_anti, dirs, isubject+1, "categorization", current_category, category_occurrences[iblock])
+    ffn_write_list_as_excel(anti_list$memlist_anti, dirs, isubject+1, "memory", current_category, category_occurrences[iblock])
     
   }
   
@@ -164,10 +164,10 @@ fn_generate_input_cat_and_mem <- function(vars, dirs, isubject){
   # Save the block order table.
   # -------------------------------------------------------------------------
   block_order_table$row_index <- NULL
-  filename = sprintf("%s/%d_%s_scenecat_block_order.xlsx", dirs$input_files, isubject, "groupA")
+  filename = sprintf("%s/%d_scenecat_block_order.xlsx", dirs$input_files, isubject)
   write_xlsx(block_order_table, filename, col_names =TRUE)
   
-  filename = sprintf("%s/%d_%s_scenecat_block_order.xlsx", dirs$input_files, isubject, "groupB")
+  filename = sprintf("%s/%d_scenecat_block_order.xlsx", dirs$input_files, isubject+1)
   write_xlsx(block_order_table, filename, col_names =TRUE)
   
   
