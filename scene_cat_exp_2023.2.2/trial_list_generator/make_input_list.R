@@ -46,7 +46,7 @@ setwd(dirs$rcode)
 # Define variables
 # -----------------------------------------------------------------------------
 vars <- list()
-vars$n_subjects              <- 100 # Get input files for so many subjects.
+vars$n_subjects              <- 10 # Get input files for so many subjects.
 vars$categories              <- c('bedrooms', 'kitchens', 'living_rooms') # Use these scene categories.
 vars$img_extension           <- 'png' #'jpg' or 'png', no dot required. The jpg files are much smaller.
 
@@ -58,7 +58,7 @@ vars$min_obs_per_bin         <- vars$n_targets_percentile * vars$n_blocks_per_ca
 
 vars$n_blocks_per_category   <- 2 # Use multiple blocks for each category.
 vars$binning_variable        <- "r_typicality"    
-vars$p_distractors_per_block <- 0.3 # Proportion of distractors from non-target scenes. Distractors can be from either non-target category and we do not care about their typicality.
+vars$p_distractors_per_block <- 1 # Proportion of distractors from non-target scenes. Distractors can be from either non-target category and we do not care about their typicality.
 vars$n_distractors_per_block <- 2 * ceiling((vars$p_distractors_per_block * vars$n_targets_per_block)/2)
 #vars$p_novel                 <- 0.33 # Proportion of new images in the memory block.
 vars$p_novel                 <- 1 # Proportion of new images in the memory block.
