@@ -28,16 +28,16 @@ dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
-dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2.2/")
+dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp")
 
 # Directory where to find the image files and the table with image info.
-dirs$images <- paste(dirs$main, "/stimuli/", sep="")
+dirs$images <- paste(dirs$main, "/scene_cat_exp_2023.2/140_stimuli/", sep="")
 
 # Output directory for storing the Excel files.
-dirs$input_files <-paste(dirs$main, "/input_files", sep="")
+dirs$input_files <-paste(dirs$main, "/scene_cat_exp_2023.2.2/input_files", sep="")
 
 # Directory where the R code is located.
-dirs$rcode <-paste(dirs$main, "/trial_list_generator/", sep="")
+dirs$rcode <-paste(dirs$main, "/scene_cat_exp_2023.2.2/trial_list_generator/", sep="")
 setwd(dirs$rcode)
 
 

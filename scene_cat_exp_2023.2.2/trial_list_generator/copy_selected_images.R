@@ -6,7 +6,7 @@ dirs <- list()
 # dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
 dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2.2/")
 dirs$img_in  <-paste("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp/scene_cat_exp_2023.2/140_stimuli", sep="")
-dirs$img_out <-paste(dirs$main, "/selected_stimuli", sep="")
+dirs$img_out <-paste(dirs$main, "/stimuli", sep="")
 
 summary_data <- read_xlsx("./scenecat_stimulus_selection_summary.xlsx")
 
