@@ -116,7 +116,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Herzlich Willkommen zum Experiment&amp;#10;&amp;#10;In diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.&amp;#10;Bitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.&amp;#10;&amp;#10;Zunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.&amp;#10;&amp;#10;Weiter mit der LEERTASTE." valType="str" updates="constant" name="text"/>
+        <Param val="Herzlich Willkommen zum Experiment&amp;#10;&amp;#10;In diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.&amp;#10;Bitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.&amp;#10;&amp;#10;Bitte verlassen Sie zu keinem Zeitpunkt des Experiments das Full-Screen-Fenster, da sonst der Zwischenstand verloren geht. &amp;#10;&amp;#10;Zunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.&amp;#10;&amp;#10;Weiter mit der LEERTASTE." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -506,8 +506,8 @@
         <Param val="&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 1 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(1,2)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.2 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -557,7 +557,7 @@
         <Param val="fix_cat_training_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -583,7 +583,7 @@
         <Param val="fix_cat_training_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -686,7 +686,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.4, 0.4)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.55, 0.55)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -710,7 +710,7 @@
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.25" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
@@ -756,7 +756,7 @@
         <Param val="cat_training_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -782,7 +782,7 @@
         <Param val="cat_training_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -846,7 +846,7 @@
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.5" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -868,7 +868,7 @@
         <Param val="cat_train_feedb_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -894,7 +894,7 @@
         <Param val="cat_train_feedb_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -1144,8 +1144,8 @@
         <Param val="&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 1 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(1,2)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.2 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -1246,7 +1246,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.4, 0.4)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.55, 0.55)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -1275,7 +1275,7 @@
         <Param val="memo_training_slider" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -0.3)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0, -0.325)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="constant" name="readOnly"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(0.8, 0.05)" valType="list" updates="constant" name="size"/>
@@ -1365,9 +1365,9 @@
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.5" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$memo_train_feedb_eval" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -1471,7 +1471,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.4, 0.4)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.55, 0.55)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -1500,7 +1500,7 @@
         <Param val="memotest_task_slider" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -0.3)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0, -0.325)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="constant" name="readOnly"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(0.8, 0.05)" valType="list" updates="constant" name="size"/>
@@ -1594,7 +1594,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Vielen Dank für Ihre Teilnahme!&amp;#10;Bitte schicken Sie den unten stehenden Code, an folgende Emailadresse, um die Versuchspersonenstunde zu erhalten:&amp;#10;p_torw01@uni-muenster.de&amp;#10;&amp;#10;Wo und wie Sie die Unterschrift für Ihre VP-Stunde erhalten, wird Ihnen per Email mitgeteilt.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um das Experiment zu beenden." valType="str" updates="constant" name="text"/>
+        <Param val="Vielen Dank für Ihre Teilnahme!&amp;#10;Bitte schicken Sie den unten stehenden Code, an folgende Emailadresse, um die Versuchspersonenstunde zu erhalten:&amp;#10;mkoch6@uni-muenster.de&amp;#10;&amp;#10;Wo und wie Sie die Unterschrift für Ihre VP-Stunde erhalten, wird Ihnen per Email mitgeteilt.&amp;#10;&amp;#10;Drücken Sie die LEERTASTE, um das Experiment zu beenden." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -2138,8 +2138,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 1 + Math.random();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(1,2)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.2 + Math.random();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -2163,7 +2163,7 @@
         <Param val="random_isi_kitchen_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2189,7 +2189,7 @@
         <Param val="random_isi_kitchen_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2286,7 +2286,7 @@
         <Param val="living_random_isi_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2312,7 +2312,7 @@
         <Param val="living_random_isi_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2330,8 +2330,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 1 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(1,2)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.2 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -2430,7 +2430,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.4, 0.4)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.55, 0.55)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -2454,7 +2454,7 @@
         <Param val="living_picture_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2480,7 +2480,7 @@
         <Param val="living_picture_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2506,7 +2506,7 @@
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.35" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
@@ -2601,7 +2601,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.4, 0.4)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.55, 0.55)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -2625,7 +2625,7 @@
         <Param val="kitchen_picture_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2651,7 +2651,7 @@
         <Param val="kitchen_picture_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -2703,7 +2703,7 @@
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.35" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
@@ -3721,7 +3721,7 @@
         <Param val="bed_random_isi_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -3747,7 +3747,7 @@
         <Param val="bed_random_isi_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6 , -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3 , -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -3765,8 +3765,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 1 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(1,2)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.2 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -3865,7 +3865,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.4, 0.4)" valType="list" updates="constant" name="size"/>
+        <Param val="(0.55, 0.55)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -3889,7 +3889,7 @@
         <Param val="bed_picture_no" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -3915,7 +3915,7 @@
         <Param val="bed_picture_yes" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.6, -0.4)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0.3, -0.4)" valType="list" updates="constant" name="pos"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -3941,7 +3941,7 @@
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.35" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>

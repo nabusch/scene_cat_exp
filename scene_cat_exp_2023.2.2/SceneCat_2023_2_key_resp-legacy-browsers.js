@@ -262,7 +262,6 @@ psychoJS.start({
     {'name': 'stimuli/img_7w5tw.png', 'path': 'stimuli/img_7w5tw.png'},
     {'name': 'stimuli/img_xesl0.png', 'path': 'stimuli/img_xesl0.png'},
     {'name': 'stimuli/img_hfz8w.png', 'path': 'stimuli/img_hfz8w.png'},
-    {'name': 'stimuli/stimuli_info_140.xlsx', 'path': 'stimuli/stimuli_info_140.xlsx'},
     {'name': 'stimuli/img_t90e2.png', 'path': 'stimuli/img_t90e2.png'},
     {'name': 'stimuli/img_mjxmq.png', 'path': 'stimuli/img_mjxmq.png'},
     {'name': 'stimuli/img_iyxnj.png', 'path': 'stimuli/img_iyxnj.png'},
@@ -452,7 +451,6 @@ psychoJS.start({
     {'name': 'stimuli/img_t2ioc.png', 'path': 'stimuli/img_t2ioc.png'},
     {'name': 'stimuli/train_9.jpg', 'path': 'stimuli/train_9.jpg'},
     {'name': 'stimuli/img_bntrh.png', 'path': 'stimuli/img_bntrh.png'},
-    {'name': 'stimuli/stimuli_info_140_equi_range_bins.xlsx', 'path': 'stimuli/stimuli_info_140_equi_range_bins.xlsx'},
     {'name': 'stimuli/img_ozxpp.png', 'path': 'stimuli/img_ozxpp.png'},
     {'name': 'stimuli/img_68wfw.png', 'path': 'stimuli/img_68wfw.png'},
     {'name': 'stimuli/img_t1cr9.png', 'path': 'stimuli/img_t1cr9.png'},
@@ -472,7 +470,6 @@ psychoJS.start({
     {'name': 'stimuli/img_c0me7.png', 'path': 'stimuli/img_c0me7.png'},
     {'name': 'stimuli/img_t4hvr.png', 'path': 'stimuli/img_t4hvr.png'},
     {'name': 'stimuli/img_fqgem.png', 'path': 'stimuli/img_fqgem.png'},
-    {'name': 'stimuli/scenecat_stimulus_selection_summary.xlsx', 'path': 'stimuli/scenecat_stimulus_selection_summary.xlsx'},
     {'name': 'stimuli/img_hmmra.png', 'path': 'stimuli/img_hmmra.png'},
     {'name': 'stimuli/img_kzg3h.png', 'path': 'stimuli/img_kzg3h.png'},
     {'name': 'stimuli/img_d0k76.png', 'path': 'stimuli/img_d0k76.png'},
@@ -717,7 +714,7 @@ async function experimentInit() {
   intro_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'intro_text',
-    text: 'Herzlich Willkommen zum Experiment\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.\nBitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.\n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
+    text: 'Herzlich Willkommen zum Experiment\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.\nBitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.\n\nBitte verlassen Sie zu keinem Zeitpunkt des Experiments das Full-Screen-Fenster, da sonst der Zwischenstand verloren geht. \n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0.0,
@@ -861,7 +858,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -873,7 +870,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -906,7 +903,7 @@ async function experimentInit() {
     name : 'cat_training_stim', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0.0, pos : [0, 0], size : [0.4, 0.4],
+    ori : 0.0, pos : [0, 0], size : [0.55, 0.55],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
@@ -931,7 +928,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -4.0 
@@ -943,7 +940,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -5.0 
@@ -969,7 +966,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -981,7 +978,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1044,7 +1041,7 @@ async function experimentInit() {
     name : 'memo_training_stim', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0.0, pos : [0, 0], size : [0.4, 0.4],
+    ori : 0.0, pos : [0, 0], size : [0.55, 0.55],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
@@ -1052,7 +1049,7 @@ async function experimentInit() {
   memo_training_slider = new visual.Slider({
     win: psychoJS.window, name: 'memo_training_slider',
     startValue: undefined,
-    size: [0.8, 0.05], pos: [0, (- 0.3)], ori: 0.0, units: psychoJS.window.units,
+    size: [0.8, 0.05], pos: [0, (- 0.325)], ori: 0.0, units: psychoJS.window.units,
     labels: ["d \n sicher alt", "f \n eher alt", "j \n eher neu", "k \nsicher neu"], fontSize: 0.04, ticks: [],
     granularity: 1, style: ["RADIO"],
     color: new util.Color('LightGray'), markerColor: new util.Color([1.0, 1.0, 1.0]), lineColor: new util.Color('White'), 
@@ -1150,7 +1147,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -1162,7 +1159,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1197,7 +1194,7 @@ async function experimentInit() {
     name : 'kitchen_image', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0.0, pos : [0, 0], size : [0.4, 0.4],
+    ori : 0.0, pos : [0, 0], size : [0.55, 0.55],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
@@ -1208,7 +1205,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -1220,7 +1217,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1263,7 +1260,7 @@ async function experimentInit() {
     name : 'memotest_task_stim', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0.0, pos : [0, 0], size : [0.4, 0.4],
+    ori : 0.0, pos : [0, 0], size : [0.55, 0.55],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : 0.0 
@@ -1271,7 +1268,7 @@ async function experimentInit() {
   memotest_task_slider = new visual.Slider({
     win: psychoJS.window, name: 'memotest_task_slider',
     startValue: undefined,
-    size: [0.8, 0.05], pos: [0, (- 0.3)], ori: 0.0, units: psychoJS.window.units,
+    size: [0.8, 0.05], pos: [0, (- 0.325)], ori: 0.0, units: psychoJS.window.units,
     labels: ["d \n sicher alt", "f \n eher alt", "j \n eher neu", "k \nsicher neu"], fontSize: 0.04, ticks: [],
     granularity: 1, style: ["RADIO"],
     color: new util.Color('LightGray'), markerColor: new util.Color([1.0, 1.0, 1.0]), lineColor: new util.Color('White'), 
@@ -1395,7 +1392,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -1.0 
@@ -1407,7 +1404,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -1442,7 +1439,7 @@ async function experimentInit() {
     name : 'living_picture_image', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0.0, pos : [0, 0], size : [0.4, 0.4],
+    ori : 0.0, pos : [0, 0], size : [0.55, 0.55],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
@@ -1453,7 +1450,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -1465,7 +1462,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1615,7 +1612,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -1.0 
@@ -1627,7 +1624,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -1662,7 +1659,7 @@ async function experimentInit() {
     name : 'bed_picture_image', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0.0, pos : [0, 0], size : [0.4, 0.4],
+    ori : 0.0, pos : [0, 0], size : [0.55, 0.55],
     color : new util.Color([1,1,1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -1.0 
@@ -1673,7 +1670,7 @@ async function experimentInit() {
     text: 'f\n\nnein',
     font: 'Open Sans',
     units: undefined, 
-    pos: [(- 0.6), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [(- 0.3), (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -2.0 
@@ -1685,7 +1682,7 @@ async function experimentInit() {
     text: ' j\n\nja',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0.6, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.3, (- 0.4)], height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -3.0 
@@ -1798,7 +1795,7 @@ async function experimentInit() {
   end_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'end_text',
-    text: 'Vielen Dank für Ihre Teilnahme!\nBitte schicken Sie den unten stehenden Code, an folgende Emailadresse, um die Versuchspersonenstunde zu erhalten:\np_torw01@uni-muenster.de\n\nWo und wie Sie die Unterschrift für Ihre VP-Stunde erhalten, wird Ihnen per Email mitgeteilt.\n\nDrücken Sie die LEERTASTE, um das Experiment zu beenden.',
+    text: 'Vielen Dank für Ihre Teilnahme!\nBitte schicken Sie den unten stehenden Code, an folgende Emailadresse, um die Versuchspersonenstunde zu erhalten:\nmkoch6@uni-muenster.de\n\nWo und wie Sie die Unterschrift für Ihre VP-Stunde erhalten, wird Ihnen per Email mitgeteilt.\n\nDrücken Sie die LEERTASTE, um das Experiment zu beenden.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0.0,
@@ -3752,7 +3749,7 @@ function fix_categorization_trainingRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
     // Run 'Begin Routine' code from random_isi_code_cat_training
-    time = 1 + Math.random();
+    time = 0.2 + Math.random();
     // keep track of which components have finished
     fix_categorization_trainingComponents = [];
     fix_categorization_trainingComponents.push(fix_cat_training_question);
@@ -3951,7 +3948,7 @@ function categorization_trainingRoutineEachFrame() {
     
     
     // *cat_training_key* updates
-    if (t >= 0.25 && cat_training_key.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && cat_training_key.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       cat_training_key.tStart = t;  // (not accounting for frame time here)
       cat_training_key.frameNStart = frameN;  // exact frame index
@@ -4125,7 +4122,7 @@ function cat_training_feedbackRoutineEachFrame() {
     // update/draw components on each frame
     
     // *cat_train_feedback_text* updates
-    if (t >= 0.5 && cat_train_feedback_text.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && cat_train_feedback_text.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       cat_train_feedback_text.tStart = t;  // (not accounting for frame time here)
       cat_train_feedback_text.frameNStart = frameN;  // exact frame index
@@ -4133,7 +4130,7 @@ function cat_training_feedbackRoutineEachFrame() {
       cat_train_feedback_text.setAutoDraw(true);
     }
     
-    frameRemains = 0.5 + 0.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 0.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (cat_train_feedback_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       cat_train_feedback_text.setAutoDraw(false);
     }
@@ -4358,7 +4355,7 @@ function memo_fix_isiRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
     // Run 'Begin Routine' code from random_isi_code_memo
-    time = 1 + Math.random();
+    time = 0.2 + Math.random();
     // keep track of which components have finished
     memo_fix_isiComponents = [];
     memo_fix_isiComponents.push(memo_fix_pic);
@@ -4607,7 +4604,7 @@ function memo_training_feedbackRoutineBegin(snapshot) {
     memo_training_feedbackClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
-    routineTimer.add(1.500000);
+    routineTimer.add(0.500000);
     // update component parameters for each repeat
     // Run 'Begin Routine' code from memo_train_feedb_code
     if ((memo_training_slider_key_resp.keys == 'd' || memo_training_slider_key_resp.keys == 'f')) {
@@ -4644,7 +4641,7 @@ function memo_training_feedbackRoutineEachFrame() {
     // update/draw components on each frame
     
     // *memo_train_feedb_text* updates
-    if (t >= 0.5 && memo_train_feedb_text.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && memo_train_feedb_text.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       memo_train_feedb_text.tStart = t;  // (not accounting for frame time here)
       memo_train_feedb_text.frameNStart = frameN;  // exact frame index
@@ -4652,7 +4649,7 @@ function memo_training_feedbackRoutineEachFrame() {
       memo_train_feedb_text.setAutoDraw(true);
     }
     
-    frameRemains = 0.5 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 0.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (memo_train_feedb_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       memo_train_feedb_text.setAutoDraw(false);
     }
@@ -4976,7 +4973,7 @@ function kitchen_random_isiRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
     // Run 'Begin Routine' code from random_isi_kitchen_code
-    time = 1 + Math.random();
+    time = 0.2 + Math.random();
     
     // keep track of which components have finished
     kitchen_random_isiComponents = [];
@@ -5206,7 +5203,7 @@ function kitchen_pictureRoutineEachFrame() {
     
     
     // *kitchen_picture_resp* updates
-    if (t >= 0.35 && kitchen_picture_resp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && kitchen_picture_resp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       kitchen_picture_resp.tStart = t;  // (not accounting for frame time here)
       kitchen_picture_resp.frameNStart = frameN;  // exact frame index
@@ -5989,7 +5986,7 @@ function living_random_isiRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
     // Run 'Begin Routine' code from living_random_isi_code
-    time = 1 + Math.random();
+    time = 0.2 + Math.random();
     // keep track of which components have finished
     living_random_isiComponents = [];
     living_random_isiComponents.push(living_random_isi_fix);
@@ -6208,7 +6205,7 @@ function living_pictureRoutineEachFrame() {
     
     
     // *living_picture_resp* updates
-    if (t >= 0.35 && living_picture_resp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && living_picture_resp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       living_picture_resp.tStart = t;  // (not accounting for frame time here)
       living_picture_resp.frameNStart = frameN;  // exact frame index
@@ -6858,7 +6855,7 @@ function bed_random_isiRoutineBegin(snapshot) {
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
     // Run 'Begin Routine' code from bed_random_isi_code
-    time = 1 + Math.random();
+    time = 0.2 + Math.random();
     // keep track of which components have finished
     bed_random_isiComponents = [];
     bed_random_isiComponents.push(bed_random_isi_fix);
@@ -7077,7 +7074,7 @@ function bed_pictureRoutineEachFrame() {
     
     
     // *bed_picture_resp* updates
-    if (t >= 0.35 && bed_picture_resp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && bed_picture_resp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       bed_picture_resp.tStart = t;  // (not accounting for frame time here)
       bed_picture_resp.frameNStart = frameN;  // exact frame index

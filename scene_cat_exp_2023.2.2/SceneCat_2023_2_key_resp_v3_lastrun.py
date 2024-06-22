@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on Tue Jun 18 12:53:32 2024
+    on Sat Jun 22 15:28:05 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -521,7 +521,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "intro" ---
     intro_text = visual.TextStim(win=win, name='intro_text',
-        text='Herzlich Willkommen zum Experiment\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.\nBitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.\n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
+        text='Herzlich Willkommen zum Experiment\n\nIn diesem Experiment untersuchen wir, wie Fotografien von verschiedenen Kategorien von Räumen wahrgenommen und erinnert werden. Es dauert ca. 30 min.\nBitte begeben Sie sich für die Zeit des Experiments in eine aufrechte Position.\n\nBitte verlassen Sie zu keinem Zeitpunkt des Experiments das Full-Screen-Fenster, da sonst der Zwischenstand verloren geht. \n\nZunächst folgt eine Einverständniserklärung, sowie die Datenschutzerklärung.\n\nWeiter mit der LEERTASTE.',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -617,14 +617,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     fix_cat_training_no = visual.TextStim(win=win, name='fix_cat_training_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     fix_cat_training_yes = visual.TextStim(win=win, name='fix_cat_training_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -650,7 +650,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='cat_training_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -665,14 +665,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     cat_training_no = visual.TextStim(win=win, name='cat_training_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
     cat_training_yes = visual.TextStim(win=win, name='cat_training_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
@@ -688,14 +688,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     cat_train_feedb_no = visual.TextStim(win=win, name='cat_train_feedb_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     cat_train_feedb_yes = visual.TextStim(win=win, name='cat_train_feedb_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -740,12 +740,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='memo_training_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     memo_training_slider = visual.Slider(win=win, name='memo_training_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.325), units=win.units,
         labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
@@ -808,14 +808,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     random_isi_kitchen_no = visual.TextStim(win=win, name='random_isi_kitchen_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     random_isi_kitchen_yes = visual.TextStim(win=win, name='random_isi_kitchen_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -840,21 +840,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='kitchen_image', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     kitchen_picture_no = visual.TextStim(win=win, name='kitchen_picture_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     kitchen_picture_yes = visual.TextStim(win=win, name='kitchen_picture_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -892,12 +892,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='memotest_task_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.325), units=win.units,
         labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
@@ -941,14 +941,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     random_isi_kitchen_no = visual.TextStim(win=win, name='random_isi_kitchen_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     random_isi_kitchen_yes = visual.TextStim(win=win, name='random_isi_kitchen_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -973,21 +973,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='kitchen_image', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     kitchen_picture_no = visual.TextStim(win=win, name='kitchen_picture_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     kitchen_picture_yes = visual.TextStim(win=win, name='kitchen_picture_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1025,12 +1025,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='memotest_task_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.325), units=win.units,
         labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
@@ -1074,14 +1074,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     living_random_isi_no = visual.TextStim(win=win, name='living_random_isi_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     living_random_isi_yes = visual.TextStim(win=win, name='living_random_isi_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
@@ -1106,21 +1106,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='living_picture_image', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     living_picture_no = visual.TextStim(win=win, name='living_picture_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     living_picture_yes = visual.TextStim(win=win, name='living_picture_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1158,12 +1158,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='memotest_task_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.325), units=win.units,
         labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
@@ -1207,14 +1207,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     living_random_isi_no = visual.TextStim(win=win, name='living_random_isi_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     living_random_isi_yes = visual.TextStim(win=win, name='living_random_isi_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
@@ -1239,21 +1239,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='living_picture_image', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     living_picture_no = visual.TextStim(win=win, name='living_picture_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     living_picture_yes = visual.TextStim(win=win, name='living_picture_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1291,12 +1291,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='memotest_task_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.325), units=win.units,
         labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
@@ -1340,14 +1340,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     bed_random_isi_no = visual.TextStim(win=win, name='bed_random_isi_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     bed_random_isi_yes = visual.TextStim(win=win, name='bed_random_isi_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
@@ -1372,21 +1372,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='bed_picture_image', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     bed_picture_no = visual.TextStim(win=win, name='bed_picture_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     bed_picture_yes = visual.TextStim(win=win, name='bed_picture_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1424,12 +1424,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='memotest_task_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.325), units=win.units,
         labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
@@ -1473,14 +1473,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     bed_random_isi_no = visual.TextStim(win=win, name='bed_random_isi_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     bed_random_isi_yes = visual.TextStim(win=win, name='bed_random_isi_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3 , -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
@@ -1505,21 +1505,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='bed_picture_image', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
     bed_picture_no = visual.TextStim(win=win, name='bed_picture_no',
         text='f\n\nnein',
         font='Open Sans',
-        pos=(-0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     bed_picture_yes = visual.TextStim(win=win, name='bed_picture_yes',
         text=' j\n\nja',
         font='Open Sans',
-        pos=(0.6, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.3, -0.4), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1557,12 +1557,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='memotest_task_stim', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.4, 0.4),
+        ori=0.0, pos=(0, 0), size=(0.55, 0.55),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
     memotest_task_slider = visual.Slider(win=win, name='memotest_task_slider',
-        startValue=None, size=(0.8, 0.05), pos=(0, -0.3), units=win.units,
+        startValue=None, size=(0.8, 0.05), pos=(0, -0.325), units=win.units,
         labels=['d \n sicher alt', 'f \n eher alt', 'j \n eher neu', 'k \nsicher neu'],ticks=None, granularity=1,
         style='radio', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor=[1.0000, 1.0000, 1.0000], lineColor='White', colorSpace='rgb',
@@ -1582,7 +1582,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "end" ---
     end_text = visual.TextStim(win=win, name='end_text',
-        text='Vielen Dank für Ihre Teilnahme!\nBitte schicken Sie den unten stehenden Code, an folgende Emailadresse, um die Versuchspersonenstunde zu erhalten:\np_torw01@uni-muenster.de\n\nWo und wie Sie die Unterschrift für Ihre VP-Stunde erhalten, wird Ihnen per Email mitgeteilt.\n\nDrücken Sie die LEERTASTE, um das Experiment zu beenden.',
+        text='Vielen Dank für Ihre Teilnahme!\nBitte schicken Sie den unten stehenden Code, an folgende Emailadresse, um die Versuchspersonenstunde zu erhalten:\nmkoch6@uni-muenster.de\n\nWo und wie Sie die Unterschrift für Ihre VP-Stunde erhalten, wird Ihnen per Email mitgeteilt.\n\nDrücken Sie die LEERTASTE, um das Experiment zu beenden.',
         font='Open Sans',
         pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -2368,7 +2368,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from random_isi_code_cat_training
         # Random Zeit ziehen für Fixationskreuzpräsentation
         import random
-        time=random.uniform(1,2)
+        time=random.uniform(0.2,1)
         # keep track of which components have finished
         fix_categorization_trainingComponents = [fix_cat_training_question, fix_cat_training_no, fix_cat_training_yes, fix_cat_training_pic]
         for thisComponent in fix_categorization_trainingComponents:
@@ -2624,7 +2624,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             waitOnFlip = False
             
             # if cat_training_key is starting this frame...
-            if cat_training_key.status == NOT_STARTED and tThisFlip >= 0.25-frameTolerance:
+            if cat_training_key.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
                 cat_training_key.frameNStart = frameN  # exact frame index
                 cat_training_key.tStart = t  # local t and not account for scr refresh
@@ -2783,7 +2783,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *cat_train_feedback_text* updates
             
             # if cat_train_feedback_text is starting this frame...
-            if cat_train_feedback_text.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+            if cat_train_feedback_text.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
                 cat_train_feedback_text.frameNStart = frameN  # exact frame index
                 cat_train_feedback_text.tStart = t  # local t and not account for scr refresh
@@ -3075,7 +3075,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from random_isi_code_memo
         # Random Zeit ziehen für Fixationskreuzpräsentation
         import random
-        time=random.uniform(1,2)
+        time=random.uniform(0.2,1)
         # keep track of which components have finished
         memo_fix_isiComponents = [memo_fix_pic]
         for thisComponent in memo_fix_isiComponents:
@@ -3335,7 +3335,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # --- Run Routine "memo_training_feedback" ---
         routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 1.5:
+        while continueRoutine and routineTimer.getTime() < 0.5:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -3346,7 +3346,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *memo_train_feedb_text* updates
             
             # if memo_train_feedb_text is starting this frame...
-            if memo_train_feedb_text.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+            if memo_train_feedb_text.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
                 memo_train_feedb_text.frameNStart = frameN  # exact frame index
                 memo_train_feedb_text.tStart = t  # local t and not account for scr refresh
@@ -3364,7 +3364,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if memo_train_feedb_text is stopping this frame...
             if memo_train_feedb_text.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > memo_train_feedb_text.tStartRefresh + 1.0-frameTolerance:
+                if tThisFlipGlobal > memo_train_feedb_text.tStartRefresh + 0.5-frameTolerance:
                     # keep track of stop time/frame for later
                     memo_train_feedb_text.tStop = t  # not accounting for scr refresh
                     memo_train_feedb_text.tStopRefresh = tThisFlipGlobal  # on global time
@@ -3402,7 +3402,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if routineForceEnded:
             routineTimer.reset()
         else:
-            routineTimer.addTime(-1.500000)
+            routineTimer.addTime(-0.500000)
         thisExp.nextEntry()
         
         if thisSession is not None:
@@ -3717,7 +3717,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_kitchen_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             kitchen_random_isiComponents = [random_isi_kitchen_fix, random_isi_kitchen_no, random_isi_kitchen_yes, random_isi_kitchen_question]
             for thisComponent in kitchen_random_isiComponents:
@@ -4029,7 +4029,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if kitchen_picture_resp is starting this frame...
-                if kitchen_picture_resp.status == NOT_STARTED and tThisFlip >= 0.35-frameTolerance:
+                if kitchen_picture_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                     # keep track of start time/frame for later
                     kitchen_picture_resp.frameNStart = frameN  # exact frame index
                     kitchen_picture_resp.tStart = t  # local t and not account for scr refresh
@@ -4243,7 +4243,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_code_memo
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -4637,7 +4637,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_kitchen_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             kitchen_random_isiComponents = [random_isi_kitchen_fix, random_isi_kitchen_no, random_isi_kitchen_yes, random_isi_kitchen_question]
             for thisComponent in kitchen_random_isiComponents:
@@ -4949,7 +4949,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if kitchen_picture_resp is starting this frame...
-                if kitchen_picture_resp.status == NOT_STARTED and tThisFlip >= 0.35-frameTolerance:
+                if kitchen_picture_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                     # keep track of start time/frame for later
                     kitchen_picture_resp.frameNStart = frameN  # exact frame index
                     kitchen_picture_resp.tStart = t  # local t and not account for scr refresh
@@ -5163,7 +5163,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_code_memo
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -5561,7 +5561,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from living_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             living_random_isiComponents = [living_random_isi_fix, living_random_isi_no, living_random_isi_yes, living_random_isi_question]
             for thisComponent in living_random_isiComponents:
@@ -5857,7 +5857,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if living_picture_resp is starting this frame...
-                if living_picture_resp.status == NOT_STARTED and tThisFlip >= 0.35-frameTolerance:
+                if living_picture_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                     # keep track of start time/frame for later
                     living_picture_resp.frameNStart = frameN  # exact frame index
                     living_picture_resp.tStart = t  # local t and not account for scr refresh
@@ -6089,7 +6089,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_code_memo
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -6487,7 +6487,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from living_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             living_random_isiComponents = [living_random_isi_fix, living_random_isi_no, living_random_isi_yes, living_random_isi_question]
             for thisComponent in living_random_isiComponents:
@@ -6783,7 +6783,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if living_picture_resp is starting this frame...
-                if living_picture_resp.status == NOT_STARTED and tThisFlip >= 0.35-frameTolerance:
+                if living_picture_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                     # keep track of start time/frame for later
                     living_picture_resp.frameNStart = frameN  # exact frame index
                     living_picture_resp.tStart = t  # local t and not account for scr refresh
@@ -7015,7 +7015,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_code_memo
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -7413,7 +7413,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from bed_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_no, bed_random_isi_yes, bed_random_isi_question]
             for thisComponent in bed_random_isiComponents:
@@ -7709,7 +7709,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if bed_picture_resp is starting this frame...
-                if bed_picture_resp.status == NOT_STARTED and tThisFlip >= 0.35-frameTolerance:
+                if bed_picture_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                     # keep track of start time/frame for later
                     bed_picture_resp.frameNStart = frameN  # exact frame index
                     bed_picture_resp.tStart = t  # local t and not account for scr refresh
@@ -7941,7 +7941,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_code_memo
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
@@ -8339,7 +8339,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from bed_random_isi_code
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             bed_random_isiComponents = [bed_random_isi_fix, bed_random_isi_no, bed_random_isi_yes, bed_random_isi_question]
             for thisComponent in bed_random_isiComponents:
@@ -8635,7 +8635,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if bed_picture_resp is starting this frame...
-                if bed_picture_resp.status == NOT_STARTED and tThisFlip >= 0.35-frameTolerance:
+                if bed_picture_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                     # keep track of start time/frame for later
                     bed_picture_resp.frameNStart = frameN  # exact frame index
                     bed_picture_resp.tStart = t  # local t and not account for scr refresh
@@ -8867,7 +8867,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from random_isi_code_memo
             # Random Zeit ziehen für Fixationskreuzpräsentation
             import random
-            time=random.uniform(1,2)
+            time=random.uniform(0.2,1)
             # keep track of which components have finished
             memo_fix_isiComponents = [memo_fix_pic]
             for thisComponent in memo_fix_isiComponents:
