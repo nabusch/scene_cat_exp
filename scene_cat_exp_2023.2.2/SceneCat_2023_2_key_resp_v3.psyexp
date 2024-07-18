@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2024.1.1">
+<PsychoPy2experiment encoding="utf-8" version="2023.2.3">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -506,8 +506,8 @@
         <Param val="&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 0.2 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.9 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.9,1.9)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -2138,8 +2138,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 0.2 + Math.random();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.9 + Math.random();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.9,1.9)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -2330,8 +2330,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 0.2 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.9 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.9,1.9)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -3765,8 +3765,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="time = 0.2 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.2,1)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="time = 0.9 + Math.random();" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Random Zeit ziehen für Fixationskreuzpräsentation&amp;#10;import random&amp;#10;time=random.uniform(0.9,1.9)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
