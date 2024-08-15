@@ -27,17 +27,16 @@ library(data.table)
 dirs <- list()
 
 # ADJUST THIS DIRECTORY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# dirs$main <- ("C:/Users/nbusch/Desktop/scene_cat_exp/scene_cat_exp_2023.2/")
-dirs$main <- ("C:/Users/nbusch/sciebo/Research Projects/2023_SceneCat/experiment_code_repo/scene_cat_exp")
+dirs$main <- ("C:/Users/nbusch/sciebo_box_projects/Projects/2023_scenecat/experiment/scene_cat_exp/scene_cat_exp_2023.2.2_english/")
 
 # Directory where to find the image files and the table with image info.
-dirs$images <- paste(dirs$main, "/scene_cat_exp_2023.2/140_stimuli/", sep="")
+dirs$images <- paste("C:/Users/nbusch/sciebo_box_projects/Projects/2023_scenecat/experiment/scene_cat_exp/scene_cat_exp_2023.2/140_stimuli/", sep="")
 
 # Output directory for storing the Excel files.
-dirs$input_files <-paste(dirs$main, "/scene_cat_exp_2023.2.2/input_files", sep="")
+dirs$input_files <-paste(dirs$main, "/input_files", sep="")
 
 # Directory where the R code is located.
-dirs$rcode <-paste(dirs$main, "/scene_cat_exp_2023.2.2/trial_list_generator/", sep="")
+dirs$rcode <-paste(dirs$main, "/trial_list_generator/", sep="")
 setwd(dirs$rcode)
 
 
@@ -46,7 +45,8 @@ setwd(dirs$rcode)
 # Define variables
 # -----------------------------------------------------------------------------
 vars <- list()
-vars$n_subjects              <- 100 # Get input files for so many subjects.
+vars$n_subjects              <- 1000 # Get input files for so many subjects.
+vars$n_sets                  <- 20 # We generate only 20 different sets of input files with many duplicates to arrive at n_subjects inout files. 
 vars$categories              <- c('bedrooms', 'kitchens', 'living_rooms') # Use these scene categories.
 vars$img_extension           <- 'png' #'jpg' or 'png', no dot required. The jpg files are much smaller.
 
@@ -87,11 +87,35 @@ fn_range_bins_typicality(vars, dirs)
 
 source("fn_generate_input_cat_and_mem.R")
 
+# for (isubject in seq(1, vars$n_subjects, by=2)) {
+#  print(sprintf("Generating files for subject %d.", isubject))
+#  
+#  fn_generate_input_cat_and_mem(vars, dirs, isubject)
+# }
+
+# We want to generate only a limited set of inout files with different
+# selections of images. But we want many copies of these selections. To do that,
+# we reset the random seed every n subjects. 
+
+# Generate the sequence for which we # want to reset the seed
+reset_seed_subjects <- seq(1, vars$n_subjects, by=vars$n_sets)
+
+# We do the loop in increments of 2 because for every subject, we create an
+# anti-subject for which old and new items are reversed.
+
 for (isubject in seq(1, vars$n_subjects, by=2)) {
- print(sprintf("Generating files for subject %d.", isubject))
- 
- fn_generate_input_cat_and_mem(vars, dirs, isubject)
+  print(sprintf("Generating files for subject %d.", isubject))
+  
+  
+  # Check if isubject is in the reset_seed_subjects set
+  if (isubject %in% reset_seed_subjects) {
+    set.seed(48149) #ZIP code of our institute.
+    print("Random seed set to 48149")
+  }
+  
+  fn_generate_input_cat_and_mem(vars, dirs, isubject)
 }
+
 
 print("Done!")
 
